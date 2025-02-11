@@ -1,0 +1,17 @@
+@startwbs
+* Reservar um Livro
+** Fazer login no sistema
+*** Inserir nome de usuário
+*** Inserir senha
+*** Confirmar login
+** Buscar livro no catálogo
+*** Digitar nome do livro
+*** Selecionar categoria
+*** Ver resultados
+** Selecionar livro para reservar
+*** Ver detalhes do livro
+*** Verificar disponibilidade
+** Confirmar reserva
+*** Clicar em Reservar
+*** Receber confirmação
+@endwbs

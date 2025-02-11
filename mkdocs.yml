@@ -1,0 +1,15 @@
+site_name: PFE_24.2_8001
+theme:
+  name: null
+  custom_dir: 'cinder'
+  locale: pt_BR
+  highlightjs: true
+  hljs_languages:
+    - yaml
+    - python
+    - html
+    - css
+    - javascript
+plugins:
+  - open-in-new-tab
+repo_url: "https://github.com/jonh-carvalho/PFE_24.2_8001"

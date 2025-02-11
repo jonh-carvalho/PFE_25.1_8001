@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Locais Próximos</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" />
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <h1>Encontre Locais Próximos</h1>
+    <p>Selecione o tipo de local para encontrar hospitais, delegacias ou escolas próximas.</p>
+
+    <label for="place-type">Tipo de Local:</label>
+    <select id="place-type">
+        <option value="hospital">Hospital</option>
+        <option value="police">Delegacia</option>
+        <option value="upa">Upa</option>
+    </select>
+    <button onclick="findNearbyPlaces()">Buscar</button>
+
+    <div id="results"></div>
+    <div id="map"></div>
+
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
