@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    
+    <link rel="shortcut icon" href="../../../../img/favicon.ico">
+
+    
+    <title>06 Http - PFE_24.2_8001</title>
+    
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/v4-shims.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hack-font@3.3.0/build/web/hack.min.css">
+    <link href='//rsms.me/inter/inter.css' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,600,700&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
+    <link href="../../../../css/bootstrap-custom.min.css" rel="stylesheet">
+    <link href="../../../../css/base.min.css" rel="stylesheet">
+    <link href="../../../../css/cinder.min.css" rel="stylesheet">
+
+    
+        
+        <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/styles/github.min.css">
+        
+    
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+            <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+        <![endif]-->
+
+    
+
+     
+</head>
+
+<body>
+
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            
+
+            <!-- Main title -->
+
+            
+              <a class="navbar-brand" href="../../../..">PFE_24.2_8001</a>
+            
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+                <!-- Main navigation -->
+                <ul class="nav navbar-nav">
+                
+                
+                    <li >
+                        <a href="../../../..">Home</a>
+                    </li>
+                
+                
+                
+                    <li class="dropdown active">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"> Disciplina <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../../../aulas/">Aulas</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../../github/">Versionamento</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../../mkdocs/">MkDocs</a>
+</li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Roteiros</a>
+    <ul class="dropdown-menu">
+        
+            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">#React</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../01_Intro/">01 Intro</a>
+</li>
+
+        
+            
+<li >
+    <a href="../02_NodeViteReact/">02 NodeViteReact</a>
+</li>
+
+        
+            
+<li >
+    <a href="../03_Spa/">03 Spa</a>
+</li>
+
+        
+            
+<li >
+    <a href="../04_Componentes/">04 Componentes</a>
+</li>
+
+        
+            
+<li class="active">
+    <a href="./">06 Http</a>
+</li>
+
+        
+            
+<li >
+    <a href="../07_Fetch/">07 Fetch</a>
+</li>
+
+        
+            
+<li >
+    <a href="../07_Lendo%20Json/">07 Lendo Json</a>
+</li>
+
+        
+            
+<li >
+    <a href="../08_Estilizando%20React/">08 Estilizando React</a>
+</li>
+
+        
+            
+<li >
+    <a href="../09_Props/">09 Props</a>
+</li>
+
+        
+            
+<li >
+    <a href="../10_Forms_Props/">10 Forms Props</a>
+</li>
+
+        
+            
+<li >
+    <a href="../11_useState_useRef/">11 useState useRef</a>
+</li>
+
+        
+            
+<li >
+    <a href="../12_ConsumirOverpass/">12_Mapas e Locais(Overpass, Nominatim e OpenStreetMap)</a>
+</li>
+
+        
+            
+<li >
+    <a href="../13_Consumir_Dados_React/">13_React - Mapas e Locais(Overpass, Nominatim e OpenStreetMap)</a>
+</li>
+
+        
+            
+<li >
+    <a href="../14_Login/">14 Login</a>
+</li>
+
+        
+            
+<li >
+    <a href="../15_Deploy/">15 Deploy</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+        
+            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">AHT</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../../AHT/aht/">Análise Hierárquica de Tarefas (AHT)</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+        
+            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Protótipo</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../../Prot%C3%B3tipo/prot%C3%B3tipo/">Protótipo</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+        
+    </ul>
+  </li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Base <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../../../../base/5w2h/">5W2H</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../../../base/Brainstorm/">Brainstorm</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../../../base/documento_de_visao/">Documento de Visão</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../../../base/mapa_mental/">Mapas Mentais</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../../../base/metodologia/">Metodologia</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../../../base/prototipo_alta_fidelidade/">Protótipo</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Sprint <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../../../../sprint/sprint/">Sprint I</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+                    <li >
+                        <a rel="prev" href="../04_Componentes/">
+                            <i class="fas fa-arrow-left"></i> Previous
+                        </a>
+                    </li>
+                    <li >
+                        <a rel="next" href="../07_Fetch/">
+                            Next <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/jonh-carvalho/PFE_24.2_8001/edit/master/docs/_Disciplina/Roteiros/#React/06_Http.md"><i class="fab fa-github"></i> Edit on GitHub</a>
+                    </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+    <div class="container">
+        
+        
+        <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="first-level active"><a href="#1-introducao-ao-protocolo-http">1. Introdução ao Protocolo HTTP</a></li>
+        <li class="first-level "><a href="#http-a-base-da-comunicacao-na-web">HTTP: A Base da Comunicação na Web</a></li>
+            <li class="second-level"><a href="#como-funciona">Como funciona?</a></li>
+                
+            <li class="second-level"><a href="#por-que-o-http-e-importante">Por que o HTTP é importante?</a></li>
+                
+            <li class="second-level"><a href="#http-vs-https">HTTP vs. HTTPS</a></li>
+                
+            <li class="second-level"><a href="#2-metodos-http">2. Métodos HTTP</a></li>
+                
+            <li class="second-level"><a href="#3-status-http">3. Status HTTP</a></li>
+                
+                <li class="third-level"><a href="#1xx-informacional">1xx – Informacional</a></li>
+                <li class="third-level"><a href="#2xx-sucesso">2xx – Sucesso</a></li>
+                <li class="third-level"><a href="#3xx-redirecionamento">3xx – Redirecionamento</a></li>
+                <li class="third-level"><a href="#4xx-erro-do-cliente">4xx – Erro do Cliente</a></li>
+                <li class="third-level"><a href="#5xx-erro-do-servidor">5xx – Erro do Servidor</a></li>
+            <li class="second-level"><a href="#4-exemplo-pratico-de-requisicao-http">4. Exemplo Prático de Requisição HTTP</a></li>
+                
+    </ul>
+</div></div>
+        <div class="col-md-9" role="main">
+
+<p>Aqui está uma sugestão para preparar a aula sobre métodos e status HTTP:</p>
+<h3 id="1-introducao-ao-protocolo-http">1. Introdução ao Protocolo HTTP</h3>
+<h2 id="http-a-base-da-comunicacao-na-web">HTTP: A Base da Comunicação na Web</h2>
+<p><strong>HTTP</strong> é a sigla para <strong>Hypertext Transfer Protocol</strong> ou, em português, <strong>Protocolo de Transferência de Hipertexto</strong>. É o protocolo fundamental que permite a comunicação entre navegadores web (como o Chrome, Firefox, Safari) e servidores web (onde estão hospedados os sites).</p>
+<p><strong>Em resumo, o HTTP é como a linguagem que seu navegador e os servidores da internet usam para "conversar" e mostrar as páginas que você visita.</strong></p>
+<h3 id="como-funciona">Como funciona?</h3>
+<p>1.<strong>Você digita um endereço (URL) na barra de endereços do seu navegador.</strong></p>
+<p>2.<strong>Seu navegador envia uma solicitação HTTP para o servidor onde está hospedado o site.</strong></p>
+<p>3.<strong>O servidor processa a solicitação e envia uma resposta HTTP com o conteúdo da página.</strong></p>
+<p>4.<strong>Seu navegador recebe a resposta e exibe a página na sua tela.</strong></p>
+<p><strong>Imagine o HTTP como um garçom em um restaurante:</strong> você faz um pedido (a solicitação HTTP), o garçom leva o pedido para a cozinha (o servidor), a cozinha prepara o prato (processa a solicitação) e o garçom traz o prato para você (a resposta HTTP).</p>
+<h3 id="por-que-o-http-e-importante">Por que o HTTP é importante?</h3>
+<p><strong>*Base da World Wide Web (WWW):</strong> É o protocolo que permite a existência da internet como a conhecemos, com páginas interligadas por links.</p>
+<p><strong>*Facilita a navegação:</strong> Permite que você navegue entre diferentes páginas de um site e de diferentes sites com facilidade.</p>
+<p><strong>*Transfere diversos tipos de dados:</strong> Não se limita a texto, mas também permite a transferência de imagens, vídeos, arquivos e outros tipos de dados.</p>
+<h3 id="http-vs-https">HTTP vs. HTTPS</h3>
+<p>É comum confundir HTTP com HTTPS. A principal diferença é que o <strong>HTTPS</strong> é uma versão segura do HTTP. Ele utiliza criptografia para proteger a comunicação entre o seu navegador e o servidor, garantindo a privacidade e a integridade dos dados transmitidos. Por isso, é altamente recomendado acessar sites que utilizam HTTPS, especialmente aqueles que envolvem transações financeiras ou informações pessoais.</p>
+<p><strong>Em resumo, o HTTP é o protocolo que torna a internet possível, permitindo que você acesse e interaja com milhões de sites ao redor do mundo.</strong></p>
+<p><strong>Gostaria de saber mais sobre algum aspecto específico do HTTP?</strong> Por exemplo, você pode me perguntar sobre:</p>
+<p><strong>*Métodos HTTP:</strong> GET, POST, PUT, DELETE e outros.</p>
+<p><strong>*Cabeçalhos HTTP:</strong> informações adicionais que acompanham as solicitações e respostas.</p>
+<p><strong>*Códigos de status HTTP:</strong> como 200 (OK), 404 (Não encontrado) e 500 (Erro interno do servidor).</p>
+<p><strong>*Diferenças entre HTTP e HTTPS.</strong></p>
+<p><strong>Se tiver alguma outra dúvida, fique à vontade para perguntar!</strong></p>
+<h3 id="2-metodos-http">2. Métodos HTTP</h3>
+<p>-<strong>GET</strong>: Usado para solicitar dados de um servidor. Não altera o estado do servidor (idempotente).</p>
+<pre><code>- Exemplo: acessar uma página da web ou recuperar uma lista de produtos.
+
+```http
+
+GET /produtos HTTP/1.1
+
+Host: www.exemplo.com
+
+```
+</code></pre>
+<p>-<strong>POST</strong>: Envia dados ao servidor para criar ou modificar um recurso.</p>
+<pre><code>- Exemplo: enviar um formulário de cadastro.
+
+```http
+
+POST /cadastro HTTP/1.1
+
+Host: www.exemplo.com
+
+Content-Type: application/json
+
+{
+
+"nome": "João",
+
+"email": "joao@example.com"
+
+}
+
+```
+</code></pre>
+<p>-<strong>PUT</strong>: Envia dados para substituir um recurso existente no servidor.</p>
+<pre><code>- Exemplo: atualizar o perfil de um usuário.
+</code></pre>
+<p>-<strong>PATCH</strong>: Semelhante ao <code>PUT</code>, mas usado para modificações parciais de um recurso.</p>
+<p>-<strong>DELETE</strong>: Remove um recurso do servidor.</p>
+<pre><code>- Exemplo: excluir uma conta de usuário.
+</code></pre>
+<p>-<strong>HEAD</strong>: Igual ao <code>GET</code>, mas sem o corpo da resposta. Usado para verificar se o recurso existe ou para recuperar metadados.</p>
+<p>-<strong>OPTIONS</strong>: Pergunta ao servidor quais métodos e opções são suportados para um determinado recurso.</p>
+<p>-<strong>TRACE</strong>: Usado para diagnóstico, retorna o conteúdo exato da requisição recebida pelo servidor.</p>
+<blockquote>
+<p><strong>Atividade prática</strong>: Utilize uma ferramenta como o Postman ou <code>curl</code> para testar os métodos HTTP.</p>
+</blockquote>
+<h3 id="3-status-http">3. Status HTTP</h3>
+<p>Os códigos de status HTTP indicam o resultado de uma requisição. Eles são divididos em cinco categorias:</p>
+<h4 id="1xx-informacional">1xx – Informacional</h4>
+<p>Indicam que a requisição foi recebida e está sendo processada.</p>
+<p>-<strong>100 Continue</strong>: O servidor está pronto para receber o corpo da requisição.</p>
+<h4 id="2xx-sucesso">2xx – Sucesso</h4>
+<p>Indicam que a requisição foi bem-sucedida.</p>
+<p>-<strong>200 OK</strong>: A requisição foi bem-sucedida.</p>
+<p>-<strong>201 Created</strong>: Um novo recurso foi criado (geralmente após um <code>POST</code>).</p>
+<p>-<strong>204 No Content</strong>: A requisição foi bem-sucedida, mas não há conteúdo para retornar.</p>
+<h4 id="3xx-redirecionamento">3xx – Redirecionamento</h4>
+<p>Indicam que o cliente precisa realizar uma ação adicional para completar a requisição.</p>
+<p>-<strong>301 Moved Permanently</strong>: O recurso foi movido permanentemente para uma nova URL.</p>
+<p>-<strong>302 Found</strong>: O recurso foi temporariamente movido para outra URL.</p>
+<h4 id="4xx-erro-do-cliente">4xx – Erro do Cliente</h4>
+<p>Indicam que houve um erro por parte do cliente.</p>
+<p>-<strong>400 Bad Request</strong>: A requisição está malformada ou inválida.</p>
+<p>-<strong>401 Unauthorized</strong>: Acesso negado, geralmente por falta de autenticação.</p>
+<p>-<strong>403 Forbidden</strong>: Acesso negado, mesmo com autenticação.</p>
+<p>-<strong>404 Not Found</strong>: O recurso solicitado não foi encontrado no servidor.</p>
+<h4 id="5xx-erro-do-servidor">5xx – Erro do Servidor</h4>
+<p>Indicam que o servidor encontrou um erro ao tentar processar a requisição.</p>
+<p>-<strong>500 Internal Server Error</strong>: Um erro genérico no servidor.</p>
+<p>-<strong>502 Bad Gateway</strong>: O servidor recebeu uma resposta inválida de outro servidor.</p>
+<p>-<strong>503 Service Unavailable</strong>: O servidor está temporariamente indisponível (sobrecarga ou manutenção).</p>
+<h3 id="4-exemplo-pratico-de-requisicao-http">4. Exemplo Prático de Requisição HTTP</h3>
+<ul>
+<li>Montar uma requisição <code>GET</code> e uma <code>POST</code> usando JavaScript com o <code>fetch</code>.</li>
+<li>Mostrar a diferença entre os métodos e como lidar com os diferentes status HTTP retornados.</li>
+</ul>
+<p>```javascript</p>
+<p>fetch('https://api.exemplo.com/recurso')</p>
+<pre><code>.then(response=&gt;{
+
+  if (!response.ok) {
+
+    thrownewError(`Erro: ${response.status}`);
+
+  }
+
+  return response.json();
+
+})
+
+.then(data=&gt; console.log(data))
+
+.catch(error=&gt; console.error(error));
+</code></pre>
+<p>```</p></div>
+        
+        
+    </div>
+
+    
+      <footer class="col-md-12 text-center">
+          
+          
+            <hr>
+            <p>
+            <small>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</small>
+            </p>
+          
+
+          
+          
+      </footer>
+    
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="../../../../js/bootstrap-3.0.3.min.js"></script>
+
+    
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/highlight.min.js"></script>
+        
+                <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/languages/yaml.min.js"></script>
+                <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/languages/python.min.js"></script>
+                <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/languages/html.min.js"></script>
+                <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/languages/css.min.js"></script>
+                <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/languages/javascript.min.js"></script>
+        
+    <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    <script>var base_url = "../../../.."</script>
+    
+    <script src="../../../../js/base.js"></script>
+    <script src="../../../../js/open_in_new_tab.js"></script>
+
+    <div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+    </body>
+
+</html>

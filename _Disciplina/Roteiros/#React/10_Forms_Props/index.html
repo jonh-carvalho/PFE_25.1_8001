@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    
+    <link rel="shortcut icon" href="../../../../img/favicon.ico">
+
+    
+    <title>10 Forms Props - PFE_24.2_8001</title>
+    
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/v4-shims.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hack-font@3.3.0/build/web/hack.min.css">
+    <link href='//rsms.me/inter/inter.css' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,600,700&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
+    <link href="../../../../css/bootstrap-custom.min.css" rel="stylesheet">
+    <link href="../../../../css/base.min.css" rel="stylesheet">
+    <link href="../../../../css/cinder.min.css" rel="stylesheet">
+
+    
+        
+        <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/styles/github.min.css">
+        
+    
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+            <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+        <![endif]-->
+
+    
+
+     
+</head>
+
+<body>
+
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            
+
+            <!-- Main title -->
+
+            
+              <a class="navbar-brand" href="../../../..">PFE_24.2_8001</a>
+            
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+                <!-- Main navigation -->
+                <ul class="nav navbar-nav">
+                
+                
+                    <li >
+                        <a href="../../../..">Home</a>
+                    </li>
+                
+                
+                
+                    <li class="dropdown active">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"> Disciplina <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../../../aulas/">Aulas</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../../github/">Versionamento</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../../mkdocs/">MkDocs</a>
+</li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Roteiros</a>
+    <ul class="dropdown-menu">
+        
+            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">#React</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../01_Intro/">01 Intro</a>
+</li>
+
+        
+            
+<li >
+    <a href="../02_NodeViteReact/">02 NodeViteReact</a>
+</li>
+
+        
+            
+<li >
+    <a href="../03_Spa/">03 Spa</a>
+</li>
+
+        
+            
+<li >
+    <a href="../04_Componentes/">04 Componentes</a>
+</li>
+
+        
+            
+<li >
+    <a href="../06_Http/">06 Http</a>
+</li>
+
+        
+            
+<li >
+    <a href="../07_Fetch/">07 Fetch</a>
+</li>
+
+        
+            
+<li >
+    <a href="../07_Lendo%20Json/">07 Lendo Json</a>
+</li>
+
+        
+            
+<li >
+    <a href="../08_Estilizando%20React/">08 Estilizando React</a>
+</li>
+
+        
+            
+<li >
+    <a href="../09_Props/">09 Props</a>
+</li>
+
+        
+            
+<li class="active">
+    <a href="./">10 Forms Props</a>
+</li>
+
+        
+            
+<li >
+    <a href="../11_useState_useRef/">11 useState useRef</a>
+</li>
+
+        
+            
+<li >
+    <a href="../12_ConsumirOverpass/">12_Mapas e Locais(Overpass, Nominatim e OpenStreetMap)</a>
+</li>
+
+        
+            
+<li >
+    <a href="../13_Consumir_Dados_React/">13_React - Mapas e Locais(Overpass, Nominatim e OpenStreetMap)</a>
+</li>
+
+        
+            
+<li >
+    <a href="../14_Login/">14 Login</a>
+</li>
+
+        
+            
+<li >
+    <a href="../15_Deploy/">15 Deploy</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+        
+            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">AHT</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../../AHT/aht/">Análise Hierárquica de Tarefas (AHT)</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+        
+            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Protótipo</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../../Prot%C3%B3tipo/prot%C3%B3tipo/">Protótipo</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+        
+    </ul>
+  </li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Base <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../../../../base/5w2h/">5W2H</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../../../base/Brainstorm/">Brainstorm</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../../../base/documento_de_visao/">Documento de Visão</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../../../base/mapa_mental/">Mapas Mentais</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../../../base/metodologia/">Metodologia</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../../../base/prototipo_alta_fidelidade/">Protótipo</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Sprint <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../../../../sprint/sprint/">Sprint I</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+                    <li >
+                        <a rel="prev" href="../09_Props/">
+                            <i class="fas fa-arrow-left"></i> Previous
+                        </a>
+                    </li>
+                    <li >
+                        <a rel="next" href="../11_useState_useRef/">
+                            Next <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/jonh-carvalho/PFE_24.2_8001/edit/master/docs/_Disciplina/Roteiros/#React/10_Forms_Props.md"><i class="fab fa-github"></i> Edit on GitHub</a>
+                    </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+    <div class="container">
+        
+        
+        <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="first-level active"><a href="#1-formularios-controlados">1. Formulários Controlados</a></li>
+            <li class="second-level"><a href="#exemplo-de-formulario-controlado-com-usestate">Exemplo de Formulário Controlado com useState</a></li>
+                
+            <li class="second-level"><a href="#vantagens-dos-formularios-controlados">Vantagens dos Formulários Controlados</a></li>
+                
+        <li class="first-level "><a href="#2-formularios-nao-controlados">2. Formulários Não Controlados</a></li>
+            <li class="second-level"><a href="#exemplo-de-formulario-nao-controlado-com-useref">Exemplo de Formulário Não Controlado com useRef</a></li>
+                
+            <li class="second-level"><a href="#vantagens-dos-formularios-nao-controlados">Vantagens dos Formulários Não Controlados</a></li>
+                
+        <li class="first-level "><a href="#3-escolhendo-entre-formularios-controlados-e-nao-controlados">3. Escolhendo entre Formulários Controlados e Não Controlados</a></li>
+        <li class="first-level "><a href="#4-exemplos-de-validacao-em-formularios-controlados">4. Exemplos de Validação em Formulários Controlados</a></li>
+    </ul>
+</div></div>
+        <div class="col-md-9" role="main">
+
+<p>No React, formulários funcionam de maneira semelhante ao HTML tradicional, mas com algumas diferenças importantes devido ao conceito de <strong>estado</strong> e <strong>eventos controlados</strong>. Em vez de apenas enviar dados ao servidor ao submeter o formulário, o React mantém os valores dos campos de entrada sincronizados com o estado do componente. Isso é feito através de formulários <strong>controlados</strong> e <strong>não controlados</strong>.</p>
+<h3 id="1-formularios-controlados">1. Formulários Controlados</h3>
+<p>Em formulários controlados, o estado do React mantém os valores dos campos. Isso significa que o valor de cada campo é controlado por uma variável no estado do componente, permitindo controle total sobre o que é exibido e processado.</p>
+<h4 id="exemplo-de-formulario-controlado-com-usestate">Exemplo de Formulário Controlado com <code>useState</code></h4>
+<p>Aqui está um exemplo de um formulário de login que usa o estado para controlar os valores dos campos:</p>
+<pre><code class="language-jsx">import React, { useState } from 'react';
+
+function FormularioLogin() {
+  const [email, setEmail] = useState('');
+  const [senha, setSenha] = useState('');
+
+  const handleSubmit = (e) =&gt; {
+    e.preventDefault();
+    console.log('Email:', email);
+    console.log('Senha:', senha);
+    // Processar o login
+  };
+
+  return (
+    &lt;form onSubmit={handleSubmit}&gt;
+      &lt;label&gt;
+        Email:
+        &lt;input
+          type=&quot;email&quot;
+          value={email}
+          onChange={(e) =&gt; setEmail(e.target.value)}
+        /&gt;
+      &lt;/label&gt;
+      &lt;label&gt;
+        Senha:
+        &lt;input
+          type=&quot;password&quot;
+          value={senha}
+          onChange={(e) =&gt; setSenha(e.target.value)}
+        /&gt;
+      &lt;/label&gt;
+      &lt;button type=&quot;submit&quot;&gt;Entrar&lt;/button&gt;
+    &lt;/form&gt;
+  );
+}
+
+export default FormularioLogin;
+</code></pre>
+<p>Neste exemplo:</p>
+<ul>
+<li><strong><code>email</code> e <code>senha</code></strong> são estados que armazenam os valores dos campos.</li>
+<li>O <code>onChange</code> atualiza o estado com o valor atual do campo.</li>
+<li>O <code>handleSubmit</code> previne o envio do formulário (<code>e.preventDefault()</code>) e pode ser usado para processar dados ou enviar ao servidor.</li>
+</ul>
+<h4 id="vantagens-dos-formularios-controlados">Vantagens dos Formulários Controlados</h4>
+<ul>
+<li><strong>Controle Total</strong>: O React controla o estado dos campos, permitindo validações e alterações dinâmicas.</li>
+<li><strong>Validação e Manipulação</strong>: Facilidade em validar campos à medida que o usuário digita.</li>
+<li><strong>Sincronização</strong>: Como os dados dos campos estão no estado, é fácil compartilhar e processar dados em outros componentes.</li>
+</ul>
+<h3 id="2-formularios-nao-controlados">2. Formulários Não Controlados</h3>
+<p>Em formulários não controlados, os valores dos campos não são armazenados no estado, mas diretamente nos elementos do DOM. O React pode acessar o valor do campo diretamente com uma referência (<code>ref</code>) apenas quando necessário.</p>
+<h4 id="exemplo-de-formulario-nao-controlado-com-useref">Exemplo de Formulário Não Controlado com <code>useRef</code></h4>
+<p>Aqui está um exemplo de formulário de login usando o <code>useRef</code> para acessar os valores:</p>
+<pre><code class="language-jsx">import React, { useRef } from 'react';
+
+function FormularioLogin() {
+  const emailRef = useRef();
+  const senhaRef = useRef();
+
+  const handleSubmit = (e) =&gt; {
+    e.preventDefault();
+    console.log('Email:', emailRef.current.value);
+    console.log('Senha:', senhaRef.current.value);
+    // Processar o login
+  };
+
+  return (
+    &lt;form onSubmit={handleSubmit}&gt;
+      &lt;label&gt;
+        Email:
+        &lt;input type=&quot;email&quot; ref={emailRef} /&gt;
+      &lt;/label&gt;
+      &lt;label&gt;
+        Senha:
+        &lt;input type=&quot;password&quot; ref={senhaRef} /&gt;
+      &lt;/label&gt;
+      &lt;button type=&quot;submit&quot;&gt;Entrar&lt;/button&gt;
+    &lt;/form&gt;
+  );
+}
+
+export default FormularioLogin;
+</code></pre>
+<p>Neste exemplo:</p>
+<ul>
+<li><strong><code>emailRef</code> e <code>senhaRef</code></strong> são referências (<code>useRef</code>) aos elementos de entrada.</li>
+<li>No <code>handleSubmit</code>, <code>emailRef.current.value</code> e <code>senhaRef.current.value</code> acessam o valor dos campos diretamente.</li>
+</ul>
+<h4 id="vantagens-dos-formularios-nao-controlados">Vantagens dos Formulários Não Controlados</h4>
+<ul>
+<li><strong>Menos Complexidade</strong>: Útil em formulários simples, sem necessidade de armazenar dados no estado.</li>
+<li><strong>Desempenho</strong>: Em formulários complexos, o React evita re-renderizações ao não monitorar o valor de cada campo.</li>
+</ul>
+<h3 id="3-escolhendo-entre-formularios-controlados-e-nao-controlados">3. Escolhendo entre Formulários Controlados e Não Controlados</h3>
+<ul>
+<li>Use <strong>formulários controlados</strong> quando precisar validar ou manipular dados dinamicamente, ou quando o valor dos campos precisa ser sincronizado com outros estados ou componentes.</li>
+<li>Use <strong>formulários não controlados</strong> para formulários simples, onde o valor é lido apenas na submissão ou em momentos específicos, sem necessidade de interação constante.</li>
+</ul>
+<h3 id="4-exemplos-de-validacao-em-formularios-controlados">4. Exemplos de Validação em Formulários Controlados</h3>
+<p>Para adicionar validações, use o estado para verificar condições e exibir mensagens conforme necessário:</p>
+<pre><code class="language-jsx">const handleEmailChange = (e) =&gt; {
+  setEmail(e.target.value);
+  if (!e.target.value.includes('@')) {
+    setErroEmail('Email inválido');
+  } else {
+    setErroEmail('');
+  }
+};
+</code></pre>
+<p>React facilita a criação de formulários altamente dinâmicos, onde a experiência do usuário é controlada diretamente pelo estado do aplicativo.</p></div>
+        
+        
+    </div>
+
+    
+      <footer class="col-md-12 text-center">
+          
+          
+            <hr>
+            <p>
+            <small>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</small>
+            </p>
+          
+
+          
+          
+      </footer>
+    
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="../../../../js/bootstrap-3.0.3.min.js"></script>
+
+    
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/highlight.min.js"></script>
+        
+                <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/languages/yaml.min.js"></script>
+                <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/languages/python.min.js"></script>
+                <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/languages/html.min.js"></script>
+                <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/languages/css.min.js"></script>
+                <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/languages/javascript.min.js"></script>
+        
+    <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    <script>var base_url = "../../../.."</script>
+    
+    <script src="../../../../js/base.js"></script>
+    <script src="../../../../js/open_in_new_tab.js"></script>
+
+    <div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+    </body>
+
+</html>

@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    
+    <link rel="shortcut icon" href="../../../../img/favicon.ico">
+
+    
+    <title>11 useState useRef - PFE_24.2_8001</title>
+    
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/v4-shims.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hack-font@3.3.0/build/web/hack.min.css">
+    <link href='//rsms.me/inter/inter.css' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,600,700&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
+    <link href="../../../../css/bootstrap-custom.min.css" rel="stylesheet">
+    <link href="../../../../css/base.min.css" rel="stylesheet">
+    <link href="../../../../css/cinder.min.css" rel="stylesheet">
+
+    
+        
+        <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/styles/github.min.css">
+        
+    
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+            <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+        <![endif]-->
+
+    
+
+     
+</head>
+
+<body>
+
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            
+
+            <!-- Main title -->
+
+            
+              <a class="navbar-brand" href="../../../..">PFE_24.2_8001</a>
+            
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+                <!-- Main navigation -->
+                <ul class="nav navbar-nav">
+                
+                
+                    <li >
+                        <a href="../../../..">Home</a>
+                    </li>
+                
+                
+                
+                    <li class="dropdown active">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"> Disciplina <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../../../aulas/">Aulas</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../../github/">Versionamento</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../../mkdocs/">MkDocs</a>
+</li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Roteiros</a>
+    <ul class="dropdown-menu">
+        
+            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">#React</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../01_Intro/">01 Intro</a>
+</li>
+
+        
+            
+<li >
+    <a href="../02_NodeViteReact/">02 NodeViteReact</a>
+</li>
+
+        
+            
+<li >
+    <a href="../03_Spa/">03 Spa</a>
+</li>
+
+        
+            
+<li >
+    <a href="../04_Componentes/">04 Componentes</a>
+</li>
+
+        
+            
+<li >
+    <a href="../06_Http/">06 Http</a>
+</li>
+
+        
+            
+<li >
+    <a href="../07_Fetch/">07 Fetch</a>
+</li>
+
+        
+            
+<li >
+    <a href="../07_Lendo%20Json/">07 Lendo Json</a>
+</li>
+
+        
+            
+<li >
+    <a href="../08_Estilizando%20React/">08 Estilizando React</a>
+</li>
+
+        
+            
+<li >
+    <a href="../09_Props/">09 Props</a>
+</li>
+
+        
+            
+<li >
+    <a href="../10_Forms_Props/">10 Forms Props</a>
+</li>
+
+        
+            
+<li class="active">
+    <a href="./">11 useState useRef</a>
+</li>
+
+        
+            
+<li >
+    <a href="../12_ConsumirOverpass/">12_Mapas e Locais(Overpass, Nominatim e OpenStreetMap)</a>
+</li>
+
+        
+            
+<li >
+    <a href="../13_Consumir_Dados_React/">13_React - Mapas e Locais(Overpass, Nominatim e OpenStreetMap)</a>
+</li>
+
+        
+            
+<li >
+    <a href="../14_Login/">14 Login</a>
+</li>
+
+        
+            
+<li >
+    <a href="../15_Deploy/">15 Deploy</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+        
+            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">AHT</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../../AHT/aht/">Análise Hierárquica de Tarefas (AHT)</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+        
+            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Protótipo</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../../Prot%C3%B3tipo/prot%C3%B3tipo/">Protótipo</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+        
+    </ul>
+  </li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Base <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../../../../base/5w2h/">5W2H</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../../../base/Brainstorm/">Brainstorm</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../../../base/documento_de_visao/">Documento de Visão</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../../../base/mapa_mental/">Mapas Mentais</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../../../base/metodologia/">Metodologia</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../../../base/prototipo_alta_fidelidade/">Protótipo</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Sprint <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../../../../sprint/sprint/">Sprint I</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+                    <li >
+                        <a rel="prev" href="../10_Forms_Props/">
+                            <i class="fas fa-arrow-left"></i> Previous
+                        </a>
+                    </li>
+                    <li >
+                        <a rel="next" href="../12_ConsumirOverpass/">
+                            Next <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/jonh-carvalho/PFE_24.2_8001/edit/master/docs/_Disciplina/Roteiros/#React/11_useState_useRef.md"><i class="fab fa-github"></i> Edit on GitHub</a>
+                    </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+    <div class="container">
+        
+        
+        <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="first-level active"><a href="#1-usestate">1. useState</a></li>
+            <li class="second-level"><a href="#como-usestate-funciona">Como useState Funciona</a></li>
+                
+            <li class="second-level"><a href="#exemplo-simples">Exemplo Simples</a></li>
+                
+            <li class="second-level"><a href="#explicacao">Explicação</a></li>
+                
+            <li class="second-level"><a href="#vantagens-do-usestate">Vantagens do useState</a></li>
+                
+        <li class="first-level "><a href="#2-useref">2. useRef</a></li>
+            <li class="second-level"><a href="#como-useref-funciona">Como useRef Funciona</a></li>
+                
+            <li class="second-level"><a href="#exemplo-com-useref">Exemplo com useRef</a></li>
+                
+            <li class="second-level"><a href="#explicacao_1">Explicação</a></li>
+                
+        <li class="first-level "><a href="#diferenca-entre-usestate-e-useref">Diferença entre useState e useRef</a></li>
+        <li class="first-level "><a href="#quando-usar-cada-um">Quando Usar Cada Um</a></li>
+    </ul>
+</div></div>
+        <div class="col-md-9" role="main">
+
+<p>No React, <code>useState</code> e <code>useRef</code> são hooks que ajudam a gerenciar e manipular o estado e referências de um componente funcional. Eles têm finalidades diferentes, mas ambos são essenciais para construir interfaces dinâmicas.</p>
+<h3 id="1-usestate">1. <code>useState</code></h3>
+<p>O hook <code>useState</code> é usado para adicionar e manipular estados em componentes funcionais. O React monitora as mudanças de estado e, quando elas ocorrem, re-renderiza o componente para refletir o novo estado.</p>
+<h4 id="como-usestate-funciona">Como <code>useState</code> Funciona</h4>
+<ul>
+<li>Ao declarar uma variável de estado com <code>useState</code>, ela retorna um <strong>array</strong> com dois elementos:</li>
+<li>O valor atual do estado.</li>
+<li>Uma função que permite atualizar o valor do estado.</li>
+</ul>
+<h4 id="exemplo-simples">Exemplo Simples</h4>
+<p>Aqui, <code>useState</code> é usado para controlar o número de cliques em um botão:</p>
+<pre><code class="language-jsx">import React, { useState } from 'react';
+
+function Contador() {
+  const [contador, setContador] = useState(0);
+
+  const incrementar = () =&gt; {
+    setContador(contador + 1);
+  };
+
+  return (
+    &lt;div&gt;
+      &lt;p&gt;Você clicou {contador} vezes&lt;/p&gt;
+      &lt;button onClick={incrementar}&gt;Clique aqui&lt;/button&gt;
+    &lt;/div&gt;
+  );
+}
+
+export default Contador;
+</code></pre>
+<h4 id="explicacao">Explicação</h4>
+<ul>
+<li><strong>Valor Inicial</strong>: <code>useState(0)</code> define <code>contador</code> com o valor inicial de <code>0</code>.</li>
+<li><strong>Atualização de Estado</strong>: <code>setContador(contador + 1)</code> incrementa o valor de <code>contador</code> em 1 cada vez que o botão é clicado.</li>
+<li><strong>Re-renderização</strong>: Toda vez que <code>contador</code> é atualizado, o React re-renderiza o componente para refletir a nova contagem.</li>
+</ul>
+<h4 id="vantagens-do-usestate">Vantagens do <code>useState</code></h4>
+<ul>
+<li><strong>Reatividade</strong>: Garante que o componente sempre mostre o estado mais recente.</li>
+<li><strong>Controle Total</strong>: Ideal para variáveis que afetam a renderização e a interface, como valores de input, exibições de mensagens, entre outros.</li>
+</ul>
+<h3 id="2-useref">2. <code>useRef</code></h3>
+<p>O hook <code>useRef</code> é usado para criar uma <strong>referência mutável</strong> que persiste entre renderizações de um componente, mas <strong>não provoca re-renderização</strong> quando atualizado. Isso é útil para manipular elementos do DOM diretamente ou para armazenar valores que não precisam desencadear uma re-renderização.</p>
+<h4 id="como-useref-funciona">Como <code>useRef</code> Funciona</h4>
+<ul>
+<li><code>useRef</code> retorna um objeto com uma propriedade <code>.current</code>, que é inicializada com o valor passado como argumento e que pode ser atualizado sem afetar a renderização do componente.</li>
+</ul>
+<h4 id="exemplo-com-useref">Exemplo com <code>useRef</code></h4>
+<p>Aqui está um exemplo em que <code>useRef</code> é usado para referenciar um campo de entrada:</p>
+<pre><code class="language-jsx">import React, { useRef } from 'react';
+
+function FocoInput() {
+  const inputRef = useRef(null);
+
+  const focarInput = () =&gt; {
+    inputRef.current.focus();
+  };
+
+  return (
+    &lt;div&gt;
+      &lt;input ref={inputRef} type=&quot;text&quot; placeholder=&quot;Clique para focar&quot; /&gt;
+      &lt;button onClick={focarInput}&gt;Focar no input&lt;/button&gt;
+    &lt;/div&gt;
+  );
+}
+
+export default FocoInput;
+</code></pre>
+<h4 id="explicacao_1">Explicação</h4>
+<ul>
+<li><strong>Referência ao DOM</strong>: <code>useRef(null)</code> cria uma referência vazia. <code>inputRef.current</code> é associado ao campo de entrada com <code>ref={inputRef}</code>.</li>
+<li><strong>Manipulação Direta do DOM</strong>: <code>inputRef.current.focus()</code> permite que o botão “Focar no input” posicione o cursor no campo de entrada.</li>
+</ul>
+<h3 id="diferenca-entre-usestate-e-useref">Diferença entre <code>useState</code> e <code>useRef</code></h3>
+<table>
+<thead>
+<tr>
+<th>Característica</th>
+<th><code>useState</code></th>
+<th><code>useRef</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Provoca re-renderização</td>
+<td>Sim, ao atualizar o estado</td>
+<td>Não, as mudanças em <code>.current</code> não causam render</td>
+</tr>
+<tr>
+<td>Finalidade</td>
+<td>Gerenciar dados que afetam a renderização</td>
+<td>Referenciar elementos do DOM ou armazenar dados temporários</td>
+</tr>
+<tr>
+<td>Persistência</td>
+<td>Entre re-renderizações</td>
+<td>Entre re-renderizações</td>
+</tr>
+<tr>
+<td>Uso comum</td>
+<td>Campos de formulário, contadores, flags</td>
+<td>Foco em elementos, armazenar IDs de intervalos, variáveis imutáveis</td>
+</tr>
+</tbody>
+</table>
+<h3 id="quando-usar-cada-um">Quando Usar Cada Um</h3>
+<ul>
+<li><strong><code>useState</code></strong> é ideal para dados que impactam a interface e exigem uma atualização visível.</li>
+<li><strong><code>useRef</code></strong> é útil para manipulação direta de elementos DOM ou armazenamento de dados que não devem afetar a renderização.</li>
+</ul>
+<p>Esses hooks complementam a lógica do React, permitindo criar componentes interativos e performáticos com um bom gerenciamento de estado e referências.</p></div>
+        
+        
+    </div>
+
+    
+      <footer class="col-md-12 text-center">
+          
+          
+            <hr>
+            <p>
+            <small>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</small>
+            </p>
+          
+
+          
+          
+      </footer>
+    
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="../../../../js/bootstrap-3.0.3.min.js"></script>
+
+    
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/highlight.min.js"></script>
+        
+                <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/languages/yaml.min.js"></script>
+                <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/languages/python.min.js"></script>
+                <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/languages/html.min.js"></script>
+                <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/languages/css.min.js"></script>
+                <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/languages/javascript.min.js"></script>
+        
+    <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    <script>var base_url = "../../../.."</script>
+    
+    <script src="../../../../js/base.js"></script>
+    <script src="../../../../js/open_in_new_tab.js"></script>
+
+    <div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+    </body>
+
+</html>

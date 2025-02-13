@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    
+    <link rel="shortcut icon" href="../../../../img/favicon.ico">
+
+    
+    <title>12_Mapas e Locais(Overpass, Nominatim e OpenStreetMap) - PFE_24.2_8001</title>
+    
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/v4-shims.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hack-font@3.3.0/build/web/hack.min.css">
+    <link href='//rsms.me/inter/inter.css' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,600,700&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
+    <link href="../../../../css/bootstrap-custom.min.css" rel="stylesheet">
+    <link href="../../../../css/base.min.css" rel="stylesheet">
+    <link href="../../../../css/cinder.min.css" rel="stylesheet">
+
+    
+        
+        <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/styles/github.min.css">
+        
+    
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+            <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+        <![endif]-->
+
+    
+
+     
+</head>
+
+<body>
+
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            
+
+            <!-- Main title -->
+
+            
+              <a class="navbar-brand" href="../../../..">PFE_24.2_8001</a>
+            
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+                <!-- Main navigation -->
+                <ul class="nav navbar-nav">
+                
+                
+                    <li >
+                        <a href="../../../..">Home</a>
+                    </li>
+                
+                
+                
+                    <li class="dropdown active">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"> Disciplina <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../../../aulas/">Aulas</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../../github/">Versionamento</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../../mkdocs/">MkDocs</a>
+</li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Roteiros</a>
+    <ul class="dropdown-menu">
+        
+            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">#React</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../01_Intro/">01 Intro</a>
+</li>
+
+        
+            
+<li >
+    <a href="../02_NodeViteReact/">02 NodeViteReact</a>
+</li>
+
+        
+            
+<li >
+    <a href="../03_Spa/">03 Spa</a>
+</li>
+
+        
+            
+<li >
+    <a href="../04_Componentes/">04 Componentes</a>
+</li>
+
+        
+            
+<li >
+    <a href="../06_Http/">06 Http</a>
+</li>
+
+        
+            
+<li >
+    <a href="../07_Fetch/">07 Fetch</a>
+</li>
+
+        
+            
+<li >
+    <a href="../07_Lendo%20Json/">07 Lendo Json</a>
+</li>
+
+        
+            
+<li >
+    <a href="../08_Estilizando%20React/">08 Estilizando React</a>
+</li>
+
+        
+            
+<li >
+    <a href="../09_Props/">09 Props</a>
+</li>
+
+        
+            
+<li >
+    <a href="../10_Forms_Props/">10 Forms Props</a>
+</li>
+
+        
+            
+<li >
+    <a href="../11_useState_useRef/">11 useState useRef</a>
+</li>
+
+        
+            
+<li class="active">
+    <a href="./">12_Mapas e Locais(Overpass, Nominatim e OpenStreetMap)</a>
+</li>
+
+        
+            
+<li >
+    <a href="../13_Consumir_Dados_React/">13_React - Mapas e Locais(Overpass, Nominatim e OpenStreetMap)</a>
+</li>
+
+        
+            
+<li >
+    <a href="../14_Login/">14 Login</a>
+</li>
+
+        
+            
+<li >
+    <a href="../15_Deploy/">15 Deploy</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+        
+            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">AHT</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../../AHT/aht/">Análise Hierárquica de Tarefas (AHT)</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+        
+            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Protótipo</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../../Prot%C3%B3tipo/prot%C3%B3tipo/">Protótipo</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+        
+    </ul>
+  </li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Base <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../../../../base/5w2h/">5W2H</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../../../base/Brainstorm/">Brainstorm</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../../../base/documento_de_visao/">Documento de Visão</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../../../base/mapa_mental/">Mapas Mentais</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../../../base/metodologia/">Metodologia</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../../../base/prototipo_alta_fidelidade/">Protótipo</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Sprint <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../../../../sprint/sprint/">Sprint I</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+                    <li >
+                        <a rel="prev" href="../11_useState_useRef/">
+                            <i class="fas fa-arrow-left"></i> Previous
+                        </a>
+                    </li>
+                    <li >
+                        <a rel="next" href="../13_Consumir_Dados_React/">
+                            Next <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/jonh-carvalho/PFE_24.2_8001/edit/master/docs/_Disciplina/Roteiros/#React/12_ConsumirOverpass.md"><i class="fab fa-github"></i> Edit on GitHub</a>
+                    </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+    <div class="container">
+        
+        
+        <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="first-level active"><a href="#12_mapas-e-locaisoverpass-nominatim-e-openstreetmap">12_Mapas e Locais(Overpass, Nominatim e OpenStreetMap)</a></li>
+            <li class="second-level"><a href="#explicacao-das-adicoes">Explicação das Adições</a></li>
+                
+    </ul>
+</div></div>
+        <div class="col-md-9" role="main">
+
+<h1 id="12_mapas-e-locaisoverpass-nominatim-e-openstreetmap">12_Mapas e Locais(Overpass, Nominatim e OpenStreetMap)</h1>
+<p>Para adicionar um mapa com marcadores dos locais encontrados, podemos usar a biblioteca <strong>Leaflet.js</strong>, uma biblioteca de JavaScript para mapas interativos. Aqui está o código HTML e JavaScript atualizado que inclui um mapa e adiciona marcadores para cada local encontrado:</p>
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;pt-BR&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Locais Próximos&lt;/title&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://unpkg.com/leaflet@1.9.3/dist/leaflet.css&quot; /&gt;
+    &lt;style&gt;
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: auto;
+        }
+        select, button {
+            padding: 10px;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+        #results {
+            margin-top: 20px;
+        }
+        #map {
+            height: 400px;
+            width: 100%;
+            margin-top: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .result-item {
+            margin-bottom: 10px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Encontre Locais Próximos&lt;/h1&gt;
+    &lt;p&gt;Selecione o tipo de local para encontrar hospitais, delegacias ou escolas próximas.&lt;/p&gt;
+
+    &lt;label for=&quot;place-type&quot;&gt;Tipo de Local:&lt;/label&gt;
+    &lt;select id=&quot;place-type&quot;&gt;
+        &lt;option value=&quot;hospital&quot;&gt;Hospital&lt;/option&gt;
+        &lt;option value=&quot;police&quot;&gt;Delegacia&lt;/option&gt;
+        &lt;option value=&quot;school&quot;&gt;Escola&lt;/option&gt;
+    &lt;/select&gt;
+    &lt;button onclick=&quot;findNearbyPlaces()&quot;&gt;Buscar&lt;/button&gt;
+
+    &lt;div id=&quot;results&quot;&gt;&lt;/div&gt;
+    &lt;div id=&quot;map&quot;&gt;&lt;/div&gt;
+
+    &lt;script src=&quot;https://unpkg.com/leaflet@1.9.3/dist/leaflet.js&quot;&gt;&lt;/script&gt;
+    &lt;script&gt;
+        // Coordenadas de localização inicial (São Paulo)
+        const latitude = -23.55052;
+        const longitude = -46.633308;
+
+        // Inicializando o mapa com o Leaflet
+        const map = L.map('map').setView([latitude, longitude], 13);
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19,
+            attribution: '© OpenStreetMap'
+        }).addTo(map);
+
+        async function findNearbyPlaces() {
+            const type = document.getElementById('place-type').value;
+            const url = `https://overpass-api.de/api/interpreter?data=[out:json];node[&quot;amenity&quot;=&quot;${type}&quot;](around:3000,${latitude},${longitude});out;`;
+
+            try {
+                const response = await fetch(url);
+                const data = await response.json();
+                displayResults(data);
+            } catch (error) {
+                console.error(&quot;Erro ao buscar dados:&quot;, error);
+                document.getElementById('results').innerHTML = '&lt;p&gt;Erro ao buscar dados. Tente novamente.&lt;/p&gt;';
+            }
+        }
+
+        function displayResults(data) {
+            const resultsContainer = document.getElementById('results');
+            resultsContainer.innerHTML = ''; // Limpar resultados anteriores
+            map.eachLayer((layer) =&gt; { if (layer instanceof L.Marker) map.removeLayer(layer); }); // Remover marcadores anteriores
+
+            if (data.elements.length === 0) {
+                resultsContainer.innerHTML = '&lt;p&gt;Nenhum local encontrado.&lt;/p&gt;';
+                return;
+            }
+
+            data.elements.forEach(element =&gt; {
+                const name = element.tags.name || 'Nome não disponível';
+                const address = element.tags['addr:street'] || 'Endereço não disponível';
+
+                // Exibir resultados em texto
+                const resultItem = document.createElement('div');
+                resultItem.className = 'result-item';
+                resultItem.innerHTML = `&lt;strong&gt;${name}&lt;/strong&gt;&lt;br&gt;Endereço: ${address}&lt;br&gt;Latitude: ${element.lat}, Longitude: ${element.lon}`;
+                resultsContainer.appendChild(resultItem);
+
+                // Adicionar marcador no mapa
+                const marker = L.marker([element.lat, element.lon]).addTo(map);
+                marker.bindPopup(`&lt;strong&gt;${name}&lt;/strong&gt;&lt;br&gt;Endereço: ${address}`).openPopup();
+            });
+
+            // Centralizar o mapa no último resultado encontrado
+            const lastLocation = data.elements[data.elements.length - 1];
+            map.setView([lastLocation.lat, lastLocation.lon], 13);
+        }
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<h3 id="explicacao-das-adicoes">Explicação das Adições</h3>
+<ol>
+<li>
+<p><strong>Leaflet CSS e JS</strong>:</p>
+</li>
+<li>
+<p>Importamos a biblioteca Leaflet com a URL para o CSS e JS, o que permite criar o mapa interativo.</p>
+</li>
+<li>
+<p><strong>Mapa Inicial</strong>:</p>
+</li>
+<li>
+<p>Inicializamos o mapa com <code>L.map()</code> e configuramos para focar na localização inicial (São Paulo, SP). Usamos o <code>L.tileLayer</code> para carregar o mapa do OpenStreetMap.</p>
+</li>
+<li>
+<p><strong>Marcadores de Resultados</strong>:</p>
+</li>
+<li>
+<p>Na função <code>displayResults</code>, além de exibir os locais encontrados em uma lista, adicionamos um marcador no mapa para cada local.</p>
+</li>
+<li>Usamos <code>L.marker()</code> para adicionar um marcador nas coordenadas de cada local. Com <code>bindPopup()</code>, cada marcador exibe o nome e o endereço ao ser clicado.</li>
+<li>
+<p><strong>Centralizar o Mapa</strong>:</p>
+</li>
+<li>
+<p>Após adicionar os marcadores, centralizamos o mapa na localização do último local encontrado.</p>
+</li>
+</ol>
+<p>Esse exemplo básico é funcional e pode ser aprimorado adicionando geolocalização automática e ajustando o zoom do mapa para cobrir todos os pontos ao mesmo tempo.</p></div>
+        
+        
+    </div>
+
+    
+      <footer class="col-md-12 text-center">
+          
+          
+            <hr>
+            <p>
+            <small>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</small>
+            </p>
+          
+
+          
+          
+      </footer>
+    
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="../../../../js/bootstrap-3.0.3.min.js"></script>
+
+    
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/highlight.min.js"></script>
+        
+                <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/languages/yaml.min.js"></script>
+                <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/languages/python.min.js"></script>
+                <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/languages/html.min.js"></script>
+                <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/languages/css.min.js"></script>
+                <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/languages/javascript.min.js"></script>
+        
+    <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    <script>var base_url = "../../../.."</script>
+    
+    <script src="../../../../js/base.js"></script>
+    <script src="../../../../js/open_in_new_tab.js"></script>
+
+    <div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+    </body>
+
+</html>

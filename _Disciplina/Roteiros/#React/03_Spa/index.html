@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    
+    <link rel="shortcut icon" href="../../../../img/favicon.ico">
+
+    
+    <title>03 Spa - PFE_24.2_8001</title>
+    
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/v4-shims.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hack-font@3.3.0/build/web/hack.min.css">
+    <link href='//rsms.me/inter/inter.css' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,600,700&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
+    <link href="../../../../css/bootstrap-custom.min.css" rel="stylesheet">
+    <link href="../../../../css/base.min.css" rel="stylesheet">
+    <link href="../../../../css/cinder.min.css" rel="stylesheet">
+
+    
+        
+        <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/styles/github.min.css">
+        
+    
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+            <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+        <![endif]-->
+
+    
+
+     
+</head>
+
+<body>
+
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            
+
+            <!-- Main title -->
+
+            
+              <a class="navbar-brand" href="../../../..">PFE_24.2_8001</a>
+            
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+                <!-- Main navigation -->
+                <ul class="nav navbar-nav">
+                
+                
+                    <li >
+                        <a href="../../../..">Home</a>
+                    </li>
+                
+                
+                
+                    <li class="dropdown active">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"> Disciplina <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../../../aulas/">Aulas</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../../github/">Versionamento</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../../mkdocs/">MkDocs</a>
+</li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Roteiros</a>
+    <ul class="dropdown-menu">
+        
+            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">#React</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../01_Intro/">01 Intro</a>
+</li>
+
+        
+            
+<li >
+    <a href="../02_NodeViteReact/">02 NodeViteReact</a>
+</li>
+
+        
+            
+<li class="active">
+    <a href="./">03 Spa</a>
+</li>
+
+        
+            
+<li >
+    <a href="../04_Componentes/">04 Componentes</a>
+</li>
+
+        
+            
+<li >
+    <a href="../06_Http/">06 Http</a>
+</li>
+
+        
+            
+<li >
+    <a href="../07_Fetch/">07 Fetch</a>
+</li>
+
+        
+            
+<li >
+    <a href="../07_Lendo%20Json/">07 Lendo Json</a>
+</li>
+
+        
+            
+<li >
+    <a href="../08_Estilizando%20React/">08 Estilizando React</a>
+</li>
+
+        
+            
+<li >
+    <a href="../09_Props/">09 Props</a>
+</li>
+
+        
+            
+<li >
+    <a href="../10_Forms_Props/">10 Forms Props</a>
+</li>
+
+        
+            
+<li >
+    <a href="../11_useState_useRef/">11 useState useRef</a>
+</li>
+
+        
+            
+<li >
+    <a href="../12_ConsumirOverpass/">12_Mapas e Locais(Overpass, Nominatim e OpenStreetMap)</a>
+</li>
+
+        
+            
+<li >
+    <a href="../13_Consumir_Dados_React/">13_React - Mapas e Locais(Overpass, Nominatim e OpenStreetMap)</a>
+</li>
+
+        
+            
+<li >
+    <a href="../14_Login/">14 Login</a>
+</li>
+
+        
+            
+<li >
+    <a href="../15_Deploy/">15 Deploy</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+        
+            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">AHT</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../../AHT/aht/">Análise Hierárquica de Tarefas (AHT)</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+        
+            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Protótipo</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../../Prot%C3%B3tipo/prot%C3%B3tipo/">Protótipo</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+        
+    </ul>
+  </li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Base <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../../../../base/5w2h/">5W2H</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../../../base/Brainstorm/">Brainstorm</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../../../base/documento_de_visao/">Documento de Visão</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../../../base/mapa_mental/">Mapas Mentais</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../../../base/metodologia/">Metodologia</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../../../base/prototipo_alta_fidelidade/">Protótipo</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Sprint <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../../../../sprint/sprint/">Sprint I</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+                    <li >
+                        <a rel="prev" href="../02_NodeViteReact/">
+                            <i class="fas fa-arrow-left"></i> Previous
+                        </a>
+                    </li>
+                    <li >
+                        <a rel="next" href="../04_Componentes/">
+                            Next <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/jonh-carvalho/PFE_24.2_8001/edit/master/docs/_Disciplina/Roteiros/#React/03_Spa.md"><i class="fab fa-github"></i> Edit on GitHub</a>
+                    </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+    <div class="container">
+        
+        
+        <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="first-level active"><a href="#spa">SPA</a></li>
+            <li class="second-level"><a href="#caracteristicas-principais-de-uma-spa">Características principais de uma SPA:</a></li>
+                
+            <li class="second-level"><a href="#vantagens-de-uma-spa">Vantagens de uma SPA:</a></li>
+                
+            <li class="second-level"><a href="#desvantagens">Desvantagens:</a></li>
+                
+            <li class="second-level"><a href="#exemplos-de-spas">Exemplos de SPAs:</a></li>
+                
+        <li class="first-level "><a href="#criando-um-spa-para-um-evento-com-react-e-vite">Criando um SPA para um Evento com React e Vite</a></li>
+            <li class="second-level"><a href="#entendendo-o-contexto">Entendendo o Contexto</a></li>
+                
+                <li class="third-level"><a href="#estrutura-proposta">Estrutura Proposta</a></li>
+            <li class="second-level"><a href="#componentes-principais">Componentes Principais:</a></li>
+                
+            <li class="second-level"><a href="#outras-paginas">Outras páginas:</a></li>
+                
+            <li class="second-level"><a href="#funcionalidades-essenciais">Funcionalidades Essenciais:</a></li>
+                
+            <li class="second-level"><a href="#tecnologias-adicionais">Tecnologias Adicionais:</a></li>
+                
+            <li class="second-level"><a href="#exemplo-de-componente-eventcard">Exemplo de Componente EventCard:</a></li>
+                
+            <li class="second-level"><a href="#use-o-codigo-com-cuidado">Use o código com cuidado.</a></li>
+                
+            <li class="second-level"><a href="#proximos-passos">Próximos Passos:</a></li>
+                
+            <li class="second-level"><a href="#consideracoes-adicionais">Considerações Adicionais:</a></li>
+                
+    </ul>
+</div></div>
+        <div class="col-md-9" role="main">
+
+<h2 id="spa">SPA</h2>
+<p>Uma <strong>SPA</strong> (Single Page Application) é um tipo de aplicação web em que todo o conteúdo necessário para navegar pelo site é carregado inicialmente ou dinamicamente sem recarregar a página inteira. Ao contrário de um site tradicional, onde cada vez que o usuário clica em um link ou navega para uma nova seção há um carregamento completo da página, em uma SPA apenas o conteúdo específico da página é atualizado, o que proporciona uma experiência de usuário mais rápida e fluida.</p>
+<h3 id="caracteristicas-principais-de-uma-spa">Características principais de uma SPA:</h3>
+<p>1. <strong>Carregamento único de página</strong>:</p>
+<ul>
+<li>Na primeira visita do usuário, a aplicação faz um grande carregamento inicial, mas depois disso, todo o conteúdo é dinamicamente atualizado na mesma página sem a necessidade de recarregar toda a estrutura da página.</li>
+</ul>
+<p>2. <strong>Navegação mais rápida</strong>:</p>
+<ul>
+<li>Como o navegador não precisa recarregar toda a página e apenas atualiza partes do conteúdo, a navegação é mais rápida em comparação com aplicações tradicionais que recarregam a página inteira a cada clique.</li>
+</ul>
+<p>3. <strong>Uso de APIs</strong>:</p>
+<ul>
+<li>Geralmente, uma SPA se comunica com o servidor através de APIs, como REST ou GraphQL, para buscar dados dinamicamente. A página permanece carregada enquanto os dados são atualizados.</li>
+</ul>
+<p>4. <strong>Histórico de navegação</strong>:</p>
+<ul>
+<li>As SPAs utilizam o histórico do navegador para manipular as URLs sem realmente recarregar a página, o que permite que o botão de "voltar" e "avançar" do navegador funcionem normalmente. Ferramentas como o <strong>React Router</strong> ajudam a gerenciar esse comportamento.</li>
+</ul>
+<p>5. <strong>Frameworks e bibliotecas comuns</strong>:</p>
+<ul>
+<li>Frameworks como <strong>React</strong>, <strong>Vue.js</strong>, <strong>Angular</strong>, e ferramentas como <strong>Vite</strong> ou <strong>Webpack</strong> são amplamente usadas para construir SPAs. Eles permitem um carregamento eficiente e a criação de componentes reutilizáveis.</li>
+</ul>
+<h3 id="vantagens-de-uma-spa">Vantagens de uma SPA:</h3>
+<ul>
+<li>
+<p><strong>Melhor experiência do usuário (UX)</strong>: Navegação suave, sem interrupções devido a recarregamentos de página.</p>
+</li>
+<li>
+<p><strong>Aplicações mais interativas</strong>: Ideal para aplicativos ricos em interação, como redes sociais, dashboards e sistemas de gerenciamento.</p>
+</li>
+<li>
+<p><strong>Desempenho aprimorado</strong>: Depois do carregamento inicial, as requisições são menores e mais rápidas, já que apenas os dados mudam, e não o layout completo da página.</p>
+</li>
+</ul>
+<h3 id="desvantagens">Desvantagens:</h3>
+<ul>
+<li>
+<p><strong>SEO</strong>: Embora o SEO para SPAs tenha melhorado com técnicas como server-side rendering (SSR) e prerendering, ainda pode ser mais desafiador quando comparado a sites tradicionais.</p>
+</li>
+<li>
+<p><strong>Carregamento inicial maior</strong>: A aplicação pode ter um tempo de carregamento inicial mais longo devido à necessidade de carregar grande parte do conteúdo e do código de uma vez.</p>
+</li>
+</ul>
+<h3 id="exemplos-de-spas">Exemplos de SPAs:</h3>
+<ul>
+<li>
+<p>Aplicativos de redes sociais como <strong>Facebook</strong> e <strong>Instagram</strong>.</p>
+</li>
+<li>
+<p>Sistemas de email como <strong>Gmail</strong>.</p>
+</li>
+<li>
+<p>Aplicativos de gestão como <strong>Trello</strong>.</p>
+</li>
+<li>
+<p>Sites com grande interatividade, como dashboards ou plataformas de e-learning.</p>
+</li>
+</ul>
+<p>Em resumo, uma SPA oferece uma navegação mais fluida e rápida, especialmente útil para aplicações dinâmicas e interativas, mas exige um planejamento cuidadoso em termos de carregamento inicial e SEO.</p>
+<h2 id="criando-um-spa-para-um-evento-com-react-e-vite">Criando um SPA para um Evento com React e Vite</h2>
+<h3 id="entendendo-o-contexto">Entendendo o Contexto</h3>
+<p>Antes de propormos uma estrutura para o SPA, é importante entender alguns detalhes sobre o evento:</p>
+<ul>
+<li>
+<p>Tipo de evento: Conferência, workshop, feira, etc.</p>
+</li>
+<li>
+<p>Público-alvo: Profissionais, estudantes, público geral.</p>
+</li>
+<li>
+<p>Funcionalidades: Agenda, palestrantes, inscrição, chat, etc.</p>
+</li>
+<li>
+<p>Design: Estilo visual, identidade visual do evento.</p>
+</li>
+<li>
+<p>Integrações: Plataformas de pagamento, sistemas de gestão de eventos.</p>
+</li>
+</ul>
+<h4 id="estrutura-proposta">Estrutura Proposta</h4>
+<p>Com base em um cenário geral, podemos propor uma estrutura básica para o SPA:</p>
+<p>my-event-app/
+    public/
+        index.html
+    src/
+        components/
+            Header.jsx
+            Footer.jsx
+            Navbar.jsx
+            EventCard.jsx
+            SpeakerCard.jsx
+            // ... outros componentes</p>
+<pre><code>    pages/
+        Home.jsx
+        Schedule.jsx
+        Speakers.jsx
+        About.jsx
+        Registration.jsx
+        // ... outras páginas
+
+    utils/
+        api.js // Para chamadas à API
+        helpers.js // Funções auxiliares
+
+    styles/
+        global.css
+        theme.css
+
+    App.jsx
+    index.css
+    main.jsx
+</code></pre>
+<h3 id="componentes-principais">Componentes Principais:</h3>
+<ul>
+<li>
+<p>Header: Contém o logo, menu de navegação e outras informações gerais.</p>
+</li>
+<li>
+<p>Footer: Contém informações de contato, redes sociais e outros links relevantes.</p>
+</li>
+<li>
+<p>Navbar: Menu de navegação principal.</p>
+</li>
+<li>
+<p>EventCard: Componente para exibir informações sobre cada evento (título, data, horário, descrição).</p>
+</li>
+<li>SpeakerCard: Componente para exibir informações sobre cada palestrante (nome, foto, bio).</li>
+</ul>
+<h3 id="outras-paginas">Outras páginas:</h3>
+<ul>
+<li>
+<p>Home: Página inicial com informações gerais sobre o evento.</p>
+</li>
+<li>
+<p>Schedule: Agenda completa do evento.</p>
+</li>
+<li>
+<p>Speakers: Lista de palestrantes.</p>
+</li>
+<li>
+<p>About: Informações sobre os organizadores e patrocinadores.</p>
+</li>
+<li>
+<p>Registration: Formulário de inscrição.</p>
+</li>
+</ul>
+<h3 id="funcionalidades-essenciais">Funcionalidades Essenciais:</h3>
+<ul>
+<li>
+<p>Navegação: Implementar navegação entre as diferentes páginas utilizando um roteador como o React Router.</p>
+</li>
+<li>
+<p>Carregamento de dados: Utilizar o Fetch API ou uma biblioteca como Axios para buscar dados da API do evento (agenda, palestrantes, etc.).</p>
+</li>
+<li>
+<p>Gerenciamento de estado: Utilizar um gerenciador de estado como o Redux ou o Context API para compartilhar dados entre componentes.</p>
+</li>
+<li>
+<p>Formulários: Implementar formulários para inscrição, busca e outras interações.</p>
+</li>
+<li>
+<p>Responsividade: Garantir que o SPA funcione em diferentes dispositivos (desktop, mobile, tablet).</p>
+</li>
+<li>
+<p>Acessibilidade: Seguir as diretrizes de acessibilidade para garantir que o SPA seja utilizável por todos.</p>
+</li>
+</ul>
+<h3 id="tecnologias-adicionais">Tecnologias Adicionais:</h3>
+<ul>
+<li>
+<p>Styling: Utilizar CSS, Sass ou uma biblioteca de estilos como o Material UI ou o Tailwind CSS.</p>
+</li>
+<li>
+<p>Icones: Utilizar bibliotecas de ícones como o FontAwesome ou o Material Icons.</p>
+</li>
+<li>
+<p>Animações: Utilizar bibliotecas de animação como o Framer Motion ou o React Spring.</p>
+</li>
+<li>
+<p>Testes: Implementar testes unitários e de integração para garantir a qualidade do código.</p>
+</li>
+</ul>
+<h3 id="exemplo-de-componente-eventcard">Exemplo de Componente EventCard:</h3>
+<pre><code class="language-js">import React from 'react';
+
+function EventCard({ title, date, description }) {
+  return (
+    `&lt;div className=&quot;event-card&quot;&gt;`
+      `&lt;h2&gt;`{title}`&lt;/h2&gt;`
+      `&lt;p&gt;`{date}`&lt;/p&gt;`
+      `&lt;p&gt;`{description}`&lt;/p&gt;`
+    `&lt;/div&gt;`
+  );
+}
+
+
+export default EventCard;
+</code></pre>
+<h3 id="use-o-codigo-com-cuidado">Use o código com cuidado.</h3>
+<h3 id="proximos-passos">Próximos Passos:</h3>
+<ul>
+<li>
+<p>Definir a arquitetura: Escolher uma arquitetura de componentes e como organizar o código.</p>
+</li>
+<li>
+<p>Criar o design: Desenvolver o design visual do SPA.</p>
+</li>
+<li>
+<p>Implementar as funcionalidades: Desenvolver cada componente e funcionalidade de acordo com o design e os requisitos do evento.</p>
+</li>
+<li>
+<p>Testar e depurar: Realizar testes e corrigir bugs.</p>
+</li>
+<li>
+<p>Deploy: Hospedar o SPA em um servidor.</p>
+</li>
+</ul>
+<h3 id="consideracoes-adicionais">Considerações Adicionais:</h3>
+<ul>
+<li>
+<p>Personalização: Adaptar a estrutura e as funcionalidades de acordo com as necessidades específicas do evento.</p>
+</li>
+<li>
+<p>Otimização: Otimizar o desempenho do SPA para garantir uma boa experiência do usuário.</p>
+</li>
+<li>
+<p>Segurança: Implementar medidas de segurança para proteger os dados dos usuários.</p>
+</li>
+</ul></div>
+        
+        
+    </div>
+
+    
+      <footer class="col-md-12 text-center">
+          
+          
+            <hr>
+            <p>
+            <small>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</small>
+            </p>
+          
+
+          
+          
+      </footer>
+    
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="../../../../js/bootstrap-3.0.3.min.js"></script>
+
+    
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/highlight.min.js"></script>
+        
+                <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/languages/yaml.min.js"></script>
+                <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/languages/python.min.js"></script>
+                <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/languages/html.min.js"></script>
+                <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/languages/css.min.js"></script>
+                <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/languages/javascript.min.js"></script>
+        
+    <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    <script>var base_url = "../../../.."</script>
+    
+    <script src="../../../../js/base.js"></script>
+    <script src="../../../../js/open_in_new_tab.js"></script>
+
+    <div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+    </body>
+
+</html>
