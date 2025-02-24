@@ -4,6 +4,8 @@
 |----------|----------|
 | __01__ - 10/02/25   | ----------------------------------------------- |
 | __02__ - 17/02/25   | - Apresentação da Disciplina <br> - Processo de Desenvolvimento <br> - [Do Cascata ao Ágil](../assets/Aulas/Do%20Cascata%20ao%20Ágil%20-%20Front-End.pdf)|
+| __03__ - 24/02/25   | - [Scrum](../assets/Aulas/Mapa+do+Scrum+Framework+utilizado+nas+aulas.pdf) |
+
 
 <!--
 | __03__ - 22/08/24   | - Apresentação de Tema do Projeto<br>- Configuração de [ Ambiente de Desenvolvimento](https://liveestacio-my.sharepoint.com/:w:/g/personal/00661711722_professores_ibmec_edu_br/EU2fCcJwgTFLvWNyOSUtNWABAykAdvtuiY2eOTitau10zA?e=NyuXZm)<br> |
