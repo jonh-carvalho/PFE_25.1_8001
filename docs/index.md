@@ -2,10 +2,10 @@
 
 ## Grupos
 
-* [PFE_25.1_8001_I_](https://github.com/Projetos-de-Extensao/PFE_2)x
-* [PFE_25.1_8001_II_x](https://github.com/Projetos-de-Extensao/PFE_2)
-* [PFE_25.1_8001_III_x](https://github.com/Projetos-de-Extensao/PFE_2)
-* [PFE_25.1_8001_IV_x](https://github.com/Projetos-de-Extensao/PFE_2)
+* [PFE_25.1_8001_I](https://github.com/Projetos-de-Extensao/PFE_25.1_8001_I)
+* [PFE_25.1_8001_II](https://github.com/Projetos-de-Extensao/PFE_25.1_8001_II)
+* [PFE_25.1_8001_III](https://github.com/Projetos-de-Extensao/PFE_25.1_8001_III)
+* [PFE_25.1_8001_IV](https://github.com/Projetos-de-Extensao/PFE_25.1_8001_IV)
 
 ## Sobre
 
