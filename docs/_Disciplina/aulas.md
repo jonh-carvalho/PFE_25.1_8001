@@ -1,13 +1,9 @@
 # Aulas
 
-| Aula                     | Conteúdo                                                                                                                                                                                                                            |
-| ------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| __01__ - 10/02/25  | -----------------------------------------------                                                                                                                                                                                      |
-| __02__ - 17/02/25 | - Apresentação da Disciplina  
-
-- Processo de Desenvolvimento  
-- [Do Cascata ao Ágil](../assets/Aulas/Do%20Cascata%20ao%20Ágil%20-%20Front-End.pdf)  
-- Configuração de [Ambiente de Desenvolvimento](https://liveestacio-my.sharepoint.com/:w:/g/personal/00661711722_professores_ibmec_edu_br/EU2fCcJwgTFLvWNyOSUtNWABAykAdvtuiY2eOTitau10zA?e=NyuXZm) |
+| Aula                     | Conteúdo  |
+| ------------------------ | ---------------------- |
+| __01__ - 10/02/25  | ---------------------------- |
+| __02__ - 17/02/25 | - Apresentação da Disciplina  - Processo de Desenvolvimento  - [Do Cascata ao Ágil](../assets/Aulas/Do%20Cascata%20ao%20Ágil%20-%20Front-End.pdf) <br> - Configuração de [ Ambiente de Desenvolvimento](https://liveestacio-my.sharepoint.com/:w:/g/personal/00661711722_professores_ibmec_edu_br/EU2fCcJwgTFLvWNyOSUtNWABAykAdvtuiY2eOTitau10zA?e=NyuXZm) |
 | __03__ - 24/02/25 | -[Scrum](../assets/Aulas/Mapa+do+Scrum+Framework+utilizado+nas+aulas.pdf) |
 | __04__ - 10/03/25 | - Site Mkdocs <br> - Roteiro Github <br>- Configuração repositório Github <br> - Apresentação de Tema do Projeto <br> - Principais Funcionalidades do Projeto <br> - Design Thinking|
 | __05__ - 17/03/25   | - [User Stories](../assets/Aulas/Scrum.pdf) |
