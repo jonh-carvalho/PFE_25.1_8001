@@ -20,7 +20,8 @@ Iniciamos o projeto através dos levantamentos iniciais da equipe, após discuss
 
 ### Tela Login
 
-[![Prototipo 1]
+Prototipo 1
+![Alt text](https://example.com/image.jpg "Image Title")
 
 ### Tela Cadastro 1
 
