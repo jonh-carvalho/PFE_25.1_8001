@@ -1,8 +1,7 @@
-site_name: PFE_25.1_8002
+site_name: PFE_25.1_8001
 theme:
   name: null
   custom_dir: 'cinder'
-  locale: pt_BR
   highlightjs: true
   hljs_languages:
     - yaml

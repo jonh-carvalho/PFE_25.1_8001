@@ -10,8 +10,9 @@
 | __06__ - 24/03/25   | - <img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXdKHyFoK-nwhwV0wwRXI8yPIinvwlJqDc4dLjmcGKo1S4U2vMBLySzhUF2DKYEAkdOtSZy-yRXzUHXmDpMNIwhGzKqtkjSDY68h2yPh_NyZ4L5WLAskMnE-Wy-6KamnHr5J2_oxgSet67dIvXUgWg?key=HMoLx71qiGBnt5NdK3Zc1bHf" style="height: 100px; width:200px;"/> <br> - [Brainstorm](../assets/Aulas/O%20processo%20de brainstorm.pdf) <br> - [Mapa Mental](../assets/Aulas/Mapa%20Mental.pdf) |
 | __07__ - 31/03/25   | - Documento de Visão <br> - Protótipo de baixa fidelidade <br> - [Análise de Tarefas - AHT](../assets/Aulas/Análise%20de%20Tarefas.pdf) <br> - [Roteiro](https://jonh-carvalho.github.io/PFE_25.1_8001/_Disciplina/Roteiros/EpicsFeaturesUserStories/) |
 | __08__ - 07/04/25   | AP1 |
+| __09__ - 13/04/25   | [Avaliação de Interfaces](../assets/Aulas/Avaliação_de_Interfaces.pdf) <br> - [Introdução ao React](../assets/Aulas/Introducao-ao-Reactjs.pdf)|
 <!--
 | __09__ - 03/10/24   | [Avaliação de Interfaces](../assets/Aulas/Avaliação_de_Interfaces.pdf) | 
-| __10__ - 10/10/24   | [Introdução ao React](../assets/Aulas/Introducao-ao-Reactjs.pdf) | 
+| __10__ - 10/10/24   |  | 
 | __11__ - 17/10/24   | App React Vite - [Componentes](../_Disciplina/Roteiros/React/Componentes.md) |
 -->
