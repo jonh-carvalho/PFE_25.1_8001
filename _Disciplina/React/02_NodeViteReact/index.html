@@ -191,7 +191,7 @@
         
             
 <li >
-    <a href="../../Roteiros/EpicsFeaturesUserStories%20copy/">06Histórias de usuário</a>
+    <a href="../../Roteiros/EpicsFeaturesUserStories%20copy/">06 - Análise de Tarefas</a>
 </li>
 
         
@@ -321,9 +321,9 @@
             <li class="second-level"><a href="#construindo-o-app-um-contador-simples">Construindo o App: Um Contador Simples</a></li>
                 
                 <li class="third-level"><a href="#demonstracao-de-outros-conceitos">Demonstração de Outros Conceitos</a></li>
-            <li class="second-level"><a href="#proximos-passos">Próximos Passos</a></li>
+                <li class="third-level"><a href="#proximos-passos">Próximos Passos</a></li>
+            <li class="second-level"><a href="#exemplo-mais-completo-uma-lista-de-tarefas">Exemplo mais completo: Uma lista de tarefas</a></li>
                 
-                <li class="third-level"><a href="#exemplo-mais-completo-uma-lista-de-tarefas">Exemplo mais completo: Uma lista de tarefas</a></li>
     </ul>
 </div></div>
         <div class="col-md-9" role="main">
@@ -335,13 +335,13 @@
 <p><strong>1. Instale o Node.js e npm (ou yarn):</strong></p>
 <ul>
 <li>Certifique-se de ter o Node.js instalado em sua máquina. Você pode baixá-lo em <a href="https://nodejs.org/">https://nodejs.org/</a>.</li>
-<li>Download the node.js LTS binary for Windows and extract it to your desired location Add the path of the nodejs folder to the PATH environment variable:</li>
+<li>Se estiver instalado faça o download do node.js LTS binary for Windows e extraia para o local desejado(Ex: c:\node) e adicione PATH do da pasta do node na variável de ambiente PATH.</li>
 </ul>
 <blockquote>
-<p>Shortcut winkey+R and enter: <strong>rundll32 sysdm.cpl,EditEnvironmentVariables</strong></p>
+<p>Tecla Windows + R =&gt; digite <strong>rundll32 sysdm.cpl,EditEnvironmentVariables</strong></p>
 </blockquote>
 <p><strong>2. Crie um novo projeto:</strong></p>
-<pre><code class="language-bash">  npm create vite@latest my-react-app --template react
+<pre><code class="language-bash">npm create vite@latest my-react-app --template react
 </code></pre>
 <p>Substitua <code>my-react-app</code> pelo nome desejado para seu projeto.</p>
 <p><strong>3. Instale as dependências:</strong></p>
@@ -389,15 +389,15 @@ export default App;
 <li><strong>Listas:</strong> Renderizar listas de elementos usando o método <code>map</code>.</li>
 <li><strong>Eventos:</strong> Manipular diversos tipos de eventos (e.g., <code>onMouseOver</code>, <code>onSubmit</code>).</li>
 </ul>
-<h2 id="proximos-passos">Próximos Passos</h2>
+<h3 id="proximos-passos">Próximos Passos</h3>
 <ul>
 <li><strong>Redux:</strong> Gerencie o estado global de sua aplicação.</li>
 <li><strong>React Router:</strong> Crie rotas para navegar entre diferentes páginas.</li>
 <li><strong>Hooks:</strong> Utilize hooks personalizados para criar lógica reutilizável.</li>
 <li><strong>Styled Components:</strong> Estilize seus componentes de forma mais declarativa.</li>
 </ul>
-<h3 id="exemplo-mais-completo-uma-lista-de-tarefas"><strong>Exemplo mais completo: Uma lista de tarefas</strong></h3>
-<pre><code class="language-js">import React, { useState } from'react';
+<h2 id="exemplo-mais-completo-uma-lista-de-tarefas"><strong>Exemplo mais completo: Uma lista de tarefas</strong></h2>
+<pre><code class="language-jsx">import React, { useState } from'react';
 
 functionApp() {
   const [tasks, setTasks] = useState([]);
