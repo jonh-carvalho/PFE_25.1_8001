@@ -1,4 +1,4 @@
-#  Criando um App React com Vite
+# Criando um App React com Vite
 
 ## Por que usar Vite?
 
@@ -9,14 +9,14 @@ Vite é uma ferramenta de construção de front-end que oferece um desenvolvimen
 **1. Instale o Node.js e npm (ou yarn):**
 
 * Certifique-se de ter o Node.js instalado em sua máquina. Você pode baixá-lo em [https://nodejs.org/](https://nodejs.org/).
-* Download the node.js LTS binary for Windows and extract it to your desired location Add the path of the nodejs folder to the PATH environment variable:
+* Se estiver instalado faça o download do node.js LTS binary for Windows e extraia para o local desejado(Ex: c:\node) e adicione PATH do da pasta do node na variável de ambiente PATH.
 
-> Shortcut winkey+R and enter: **rundll32 sysdm.cpl,EditEnvironmentVariables**
+> Tecla Windows + R => digite **rundll32 sysdm.cpl,EditEnvironmentVariables**
 
 **2. Crie um novo projeto:**
 
 ```bash
-  npm create vite@latest my-react-app --template react
+npm create vite@latest my-react-app --template react
 ```
 
 Substitua `my-react-app` pelo nome desejado para seu projeto.
@@ -78,16 +78,16 @@ Outro pontos fundamentais do React:
 * **Listas:** Renderizar listas de elementos usando o método `map`.
 * **Eventos:** Manipular diversos tipos de eventos (e.g., `onMouseOver`, `onSubmit`).
 
-## Próximos Passos
+### Próximos Passos
 
 * **Redux:** Gerencie o estado global de sua aplicação.
 * **React Router:** Crie rotas para navegar entre diferentes páginas.
 * **Hooks:** Utilize hooks personalizados para criar lógica reutilizável.
 * **Styled Components:** Estilize seus componentes de forma mais declarativa.
 
-### **Exemplo mais completo: Uma lista de tarefas**
+## **Exemplo mais completo: Uma lista de tarefas**
 
-```js
+```jsx
 import React, { useState } from'react';
 
 functionApp() {

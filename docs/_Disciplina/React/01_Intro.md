@@ -1,6 +1,5 @@
 # Introdução ao React com HTML e CDN
 
-
 ## Objetivo
 
 Apresentar os conceitos básicos do React e como integrá-lo em uma página HTML utilizando um link para a CDN, sem a necessidade de um ambiente de desenvolvimento local como o Node.js.
@@ -27,7 +26,8 @@ Apresentar os conceitos básicos do React e como integrá-lo em uma página HTML
 
 ### **3. Estrutura Básica do Projeto**
 
-* **HTML Básico**: 
+* **HTML Básico**
+
 * Comece com a criação de uma página HTML simples contendo um elemento `<div>` que será usado como “ponto de montagem” para o React.
 
 ```html
