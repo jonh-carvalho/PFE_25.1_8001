@@ -1,15 +1,15 @@
 ---
 id: sprint
-title: Sprint I
+title: Sprint Planning
 ---
 
-# Interação 1 (05/02/24 à 12/04/2024)
+## Interação 1 (10/02/25 à 07/04/2024)
 
+### Planejamento de Interação
 
-## Planejamento de Interação
 #### Presentes na reunião: XXXXX
 
-###  Lista de Tarefas da Interação
+#### Lista de Tarefas da Interação
 
 |Tarefa|Responsabilidade|
 |---|----|
@@ -24,47 +24,43 @@ title: Sprint I
 |[Entrevistas](https://github.com/xxx/xxx.md) |XXX e XXXXX|
 |[Prototipação.](https://github.com/xxx/xxx.md) |XXX e XXXXX|
 
-## Sprint Retrospective/Review Meeting
+#### Sprint Retrospective/Review Meeting
 
-#### Presentes na reunião: XXXX
+##### Dúvidas da Interação
 
-### Dividas da Interação
-- 
-- 
-- 
-- 
+- 1
+- 2
+- 3
+- 4
 
-### Riscos Encontrados
+#### Riscos Encontrados
 
 - Nenhum: Plano de gerenciamento de riscos não implementado.
 
+#### Pontos Positivos
 
-### Pontos Positivos
+- 1
+- 2
+- 3
+- 4
 
--
--
-- 
--
 ![pontos positivos](../assets/Sprints/S1-positivos.png)
 
-### Pontos Negativos
+#### Pontos Negativos
 
--
--
-- 
--
+- 1
+- 2
+- 3
+
 ![pontos negativos](../assets/Sprints/S1-negativos.png)
 
-### O que podemos melhorar?
+#### O que podemos melhorar?
+
 - Ter mais foco na reuniões para evitar o desperdício de tempo.
 - A equipe deve ter mais autonomia em relação à falta de membros.
-- Podemos utilizar algo ferramenta de timebox para maior efetividade nas reuniões, sugestão: https://timebox.cedrotech.com/
+- Podemos utilizar algo ferramenta de timebox para maior efetividade nas reuniões, sugestão: [](https://timebox.cedrotech.com/)
 
-
-### Ferramentas utilizadas
+#### Ferramentas utilizadas
 
 - Reunião: [Hangouts](https://hangouts.google.com/)
 - Colheita dos pontos: [Mentimeter](https://www.mentimeter.com/)
-
-
-
