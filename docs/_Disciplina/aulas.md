@@ -23,7 +23,7 @@
 |__19__ - 23/06/25   | --- |
 |__20__ - 30/06/25   | AS |
 <!--
-| __09__ - 03/10/24   | [Avaliação de Interfaces](../assets/Aulas/Avaliação_de_Interfaces.pdf) | 
+
 | __10__ - 10/10/24   |  | 
 | __11__ - 17/10/24   | App React Vite - [Componentes](../_Disciplina/Roteiros/React/Componentes.md) |
 -->
