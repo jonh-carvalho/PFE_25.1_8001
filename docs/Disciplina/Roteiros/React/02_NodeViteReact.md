@@ -11,7 +11,11 @@ Vite é uma ferramenta de construção de front-end que oferece um desenvolvimen
 * Certifique-se de ter o Node.js instalado em sua máquina. Você pode baixá-lo em [https://nodejs.org/](https://nodejs.org/).
 * Se estiver instalado faça o download do node.js LTS binary for Windows e extraia para o local desejado(Ex: c:\node) e adicione PATH do da pasta do node na variável de ambiente PATH.
 
-> Tecla Windows + R => digite **rundll32 sysdm.cpl,EditEnvironmentVariables**
+> Tecla Windows + R => digite:
+
+```bash
+rundll32 sysdm.cpl,EditEnvironmentVariables
+```
 
 **2. Crie um novo projeto:**
 
