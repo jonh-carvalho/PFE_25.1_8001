@@ -6,9 +6,9 @@ Apresentar os conceitos básicos do React e como integrá-lo em uma página HTML
 
 ---
 
-## **Estrutura do Roteiro:**
+### **Estrutura do Roteiro:**
 
-### **1. Introdução ao React**
+#### **1. Introdução ao React**
 
 * **Definição**: React é uma biblioteca JavaScript criada pelo Facebook para criar interfaces de usuário de forma declarativa e eficiente.
 * **Vantagens**:
@@ -18,13 +18,13 @@ Apresentar os conceitos básicos do React e como integrá-lo em uma página HTML
 
 ---
 
-### 2. Preparando o Ambiente
+#### 2. Preparando o Ambiente
 
 * Não é necessário instalar nada localmente para este exemplo inicial, vamos usar uma página HTML e um link para a biblioteca via CDN.
 
 ---
 
-### **3. Estrutura Básica do Projeto**
+#### **3. Estrutura Básica do Projeto**
 
 * **HTML Básico**
 
@@ -53,7 +53,7 @@ Apresentar os conceitos básicos do React e como integrá-lo em uma página HTML
 
 ---
 
-### 4. Criando um Elemento React
+#### 4. Criando um Elemento React
 
 Crie o arquivo `app.js` com o seguinte código:
 
