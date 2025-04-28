@@ -1,4 +1,4 @@
-# 04 - Design Thinking
+# 04 - **Design Thinking**
 
 Aqui está um exemplo de projeto de **Design Thinking** para resolver um problema comum, seguindo as cinco etapas do processo:
 
