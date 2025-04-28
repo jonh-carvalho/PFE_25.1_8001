@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    
+    <link rel="shortcut icon" href="../../../img/favicon.ico">
+
+    
+    <title>06 - Análise de Tarefas - PFE_25.1_8001</title>
+    
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/v4-shims.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hack-font@3.3.0/build/web/hack.min.css">
+    <link href='//rsms.me/inter/inter.css' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,600,700&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
+    <link href="../../../css/bootstrap-custom.min.css" rel="stylesheet">
+    <link href="../../../css/base.min.css" rel="stylesheet">
+    <link href="../../../css/cinder.min.css" rel="stylesheet">
+
+    
+        
+        <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/styles/github.min.css">
+        
+    
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+            <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+        <![endif]-->
+
+    
+
+     
+</head>
+
+<body>
+
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            
+
+            <!-- Main title -->
+
+            
+              <a class="navbar-brand" href="../../..">PFE_25.1_8001</a>
+            
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+                <!-- Main navigation -->
+                <ul class="nav navbar-nav">
+                
+                
+                    <li >
+                        <a href="../../..">Home</a>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Design Thinking <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../../../Design%20Thinking/5w2h/">5W2H</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../../Design%20Thinking/Brainstorm/">Brainstorm</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../../Design%20Thinking/designthinking/">Design Thinking</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../../Design%20Thinking/historiasdeusuario/">História de Usuário</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../../Design%20Thinking/mapa_mental/">Mapas Mentais</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../../Design%20Thinking/pesquisa/">Pesquisa</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../../Design%20Thinking/prototipo_baixa_fidelidade/">Protótipo</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown active">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Disciplina <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../../aulas/">Aulas</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../github/">Versionamento</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../mkdocs/">MkDocs</a>
+</li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Roteiros</a>
+    <ul class="dropdown-menu">
+        
+            
+<li class="active">
+    <a href="./">06 - Análise de Tarefas</a>
+</li>
+
+        
+            
+<li >
+    <a href="../DesignThinking/">04 - Design Thinking</a>
+</li>
+
+        
+            
+<li >
+    <a href="../EpicsFeaturesUserStories/">09 - Histórias de usuário</a>
+</li>
+
+        
+            
+<li >
+    <a href="../receitas/">04 - Compartilhamento de Receitas</a>
+</li>
+
+        
+            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">React</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../React/01_Intro/">01 - Introdução ao React com HTML e CDN</a>
+</li>
+
+        
+            
+<li >
+    <a href="../React/02_NodeViteReact/">Criando um App React com Vite</a>
+</li>
+
+        
+            
+<li >
+    <a href="../React/03_Spa/">03 Spa</a>
+</li>
+
+        
+            
+<li >
+    <a href="../React/04_Componentes/">04 Componentes</a>
+</li>
+
+        
+            
+<li >
+    <a href="../React/06_Http/">06 Http</a>
+</li>
+
+        
+            
+<li >
+    <a href="../React/07_Fetch/">07 Fetch</a>
+</li>
+
+        
+            
+<li >
+    <a href="../React/07_Lendo%20Json/">07 Lendo Json</a>
+</li>
+
+        
+            
+<li >
+    <a href="../React/08_Estilizando%20React/">08 Estilizando React</a>
+</li>
+
+        
+            
+<li >
+    <a href="../React/09_Props/">09 Props</a>
+</li>
+
+        
+            
+<li >
+    <a href="../React/10_Forms_Props/">10 Forms Props</a>
+</li>
+
+        
+            
+<li >
+    <a href="../React/11_useState_useRef/">11 useState useRef</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+        
+    </ul>
+  </li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Sprint Planning <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../../../Sprint%20Planning/sprint/">Sprint Planning</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+                    <li >
+                        <a rel="prev" href="../../mkdocs/">
+                            <i class="fas fa-arrow-left"></i> Previous
+                        </a>
+                    </li>
+                    <li >
+                        <a rel="next" href="../DesignThinking/">
+                            Next <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/jonh-carvalho/PFE_25.1_8001/edit/master/docs/Disciplina/Roteiros/Aht.md"><i class="fab fa-github"></i> Edit on GitHub</a>
+                    </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+    <div class="container">
+        
+        
+        <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="first-level active"><a href="#06-analise-de-tarefas">06 - Análise de Tarefas</a></li>
+            <li class="second-level"><a href="#1-objetivo-da-analise-de-tarefas">1. Objetivo da Análise de Tarefas</a></li>
+                
+            <li class="second-level"><a href="#2-publico-alvo-personas">2. Público-Alvo (Personas)</a></li>
+                
+            <li class="second-level"><a href="#3-metodos-de-coleta-de-dados">3. Métodos de Coleta de Dados</a></li>
+                
+            <li class="second-level"><a href="#4-principais-tarefas-a-serem-analisadas">4. Principais Tarefas a Serem Analisadas</a></li>
+                
+            <li class="second-level"><a href="#5-ferramentas-utilizadas">5. Ferramentas Utilizadas</a></li>
+                
+            <li class="second-level"><a href="#6-resultados-esperados">6. Resultados Esperados</a></li>
+                
+            <li class="second-level"><a href="#7-proximos-passos">7. Próximos Passos</a></li>
+                
+                <li class="third-level"><a href="#visualizacao-do-diagrama">Visualização do Diagrama:</a></li>
+                <li class="third-level"><a href="#como-usar">Como Usar:</a></li>
+                <li class="third-level"><a href="#caracteristicas-do-prototipo">Características do Protótipo:</a></li>
+                <li class="third-level"><a href="#como-visualizar">Como Visualizar:</a></li>
+                <li class="third-level"><a href="#variacoes-possiveis">Variações Possíveis:</a></li>
+    </ul>
+</div></div>
+        <div class="col-md-9" role="main">
+
+<h1 id="06-analise-de-tarefas">06 - <strong>Análise de Tarefas</strong></h1>
+<p><strong>Contexto:</strong>  </p>
+<p>Uma empresa de e-commerce está desenvolvendo um <strong>novo aplicativo web</strong> para facilitar a gestão de pedidos, estoque e atendimento ao cliente. A equipe de UX/UI precisa realizar uma <strong>análise de tarefas</strong> para entender como os usuários (vendedores, gerentes e clientes) interagem com o sistema atual e identificar oportunidades de melhoria.  </p>
+<hr />
+<h2 id="1-objetivo-da-analise-de-tarefas"><strong>1. Objetivo da Análise de Tarefas</strong></h2>
+<ul>
+<li>Mapear as principais tarefas realizadas pelos usuários no sistema atual.  </li>
+<li>Identificar pontos de dificuldade, redundâncias e oportunidades de otimização.  </li>
+<li>Validar se o novo aplicativo atenderá às necessidades dos usuários.  </li>
+</ul>
+<hr />
+<h2 id="2-publico-alvo-personas"><strong>2. Público-Alvo (Personas)</strong></h2>
+<table>
+<thead>
+<tr>
+<th>Perfil</th>
+<th>Tarefas Principais</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Vendedor</strong></td>
+<td>Registrar pedidos, consultar estoque</td>
+</tr>
+<tr>
+<td><strong>Gerente</strong></td>
+<td>Aprovar descontos, gerar relatórios</td>
+</tr>
+<tr>
+<td><strong>Cliente</strong></td>
+<td>Acompanhar pedido, solicitar suporte</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="3-metodos-de-coleta-de-dados"><strong>3. Métodos de Coleta de Dados</strong></h2>
+<ul>
+<li><strong>Entrevistas com usuários:</strong> Perguntar sobre fluxos de trabalho e desafios.  </li>
+<li><strong>Observação contextual:</strong> Acompanhar usuários em seu ambiente real.  </li>
+<li><strong>Questionários online:</strong> Coletar feedback quantitativo.  </li>
+<li><strong>Análise de logs:</strong> Verificar padrões de uso no sistema atual.  </li>
+</ul>
+<hr />
+<h2 id="4-principais-tarefas-a-serem-analisadas"><strong>4. Principais Tarefas a Serem Analisadas</strong></h2>
+<table>
+<thead>
+<tr>
+<th>Tarefa</th>
+<th>Passos Identificados</th>
+<th>Possíveis Problemas</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Registrar pedido</strong></td>
+<td>1. Buscar cliente → 2. Adicionar itens → 3. Aplicar desconto (se necessário) → 4. Finalizar venda</td>
+<td>Lentidão na busca de produtos</td>
+</tr>
+<tr>
+<td><strong>Consultar estoque</strong></td>
+<td>1. Filtrar por categoria → 2. Ver disponibilidade → 3. Checar previsão de reposição</td>
+<td>Dados desatualizados</td>
+</tr>
+<tr>
+<td><strong>Gerar relatório</strong></td>
+<td>1. Selecionar período → 2. Escolher métricas → 3. Exportar PDF/Excel</td>
+<td>Interface confusa</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="5-ferramentas-utilizadas"><strong>5. Ferramentas Utilizadas</strong></h2>
+<ul>
+<li><strong>Mapeamento de fluxo:</strong> <strong>Figma</strong> ou <strong>Miro</strong> para diagramas.  </li>
+<li><strong>Gravação de sessões:</strong> <strong>Hotjar</strong> ou <strong>Lookback</strong> para análise de interações.  </li>
+<li><strong>Organização de dados:</strong> <strong>Excel</strong> ou <strong>Airtable</strong> para catalogar tarefas.  </li>
+</ul>
+<hr />
+<h2 id="6-resultados-esperados"><strong>6. Resultados Esperados</strong></h2>
+<ul>
+<li><strong>Lista de tarefas críticas</strong> a serem otimizadas no novo app.  </li>
+<li><strong>Protótipo de fluxos</strong> aprimorados (ex.: checkout em menos etapas).  </li>
+<li><strong>Relatório de insights</strong> com recomendações para a equipe de desenvolvimento.  </li>
+</ul>
+<hr />
+<h2 id="7-proximos-passos"><strong>7. Próximos Passos</strong></h2>
+<ol>
+<li>Validar os resultados com stakeholders.  </li>
+<li>Priorizar melhorias com base na análise.  </li>
+<li>Aplicar mudanças no design do novo aplicativo.  </li>
+</ol>
+<hr />
+<p><strong>Conclusão:</strong><br />
+A análise de tarefas ajudará a garantir que o novo aplicativo web seja <strong>intuitivo, eficiente e alinhado</strong> com as necessidades reais dos usuários.  </p>
+<hr />
+<p>Aqui está um diagrama <strong>WBS (Work Breakdown Structure)</strong> em <strong>PlantUML</strong> para representar as tarefas da análise de tarefas do aplicativo web:</p>
+<pre><code class="language-plantuml">@startwbs
+skinparam monochrome true
+skinparam shadowing false
+skinparam ArrowColor #000000
+skinparam BackgroundColor #FFFFFF
+
+* Análise de Tarefas - Aplicativo Web de E-commerce
+** 1. Definição de Objetivos
+*** 1.1. Identificar tarefas críticas dos usuários
+*** 1.2. Mapear pontos de dificuldade
+*** 1.3. Validar requisitos do novo app
+** 2. Coleta de Dados
+*** 2.1. Entrevistas com usuários (Vendedores, Gerentes, Clientes)
+*** 2.2. Observação contextual
+*** 2.3. Questionários online
+*** 2.4. Análise de logs do sistema atual
+** 3. Análise das Tarefas Principais
+*** 3.1. Registrar Pedido
+**** 3.1.1. Buscar cliente
+**** 3.1.2. Adicionar itens
+**** 3.1.3. Aplicar desconto (se necessário)
+**** 3.1.4. Finalizar venda
+*** 3.2. Consultar Estoque
+**** 3.2.1. Filtrar por categoria
+**** 3.2.2. Ver disponibilidade
+**** 3.2.3. Checar previsão de reposição
+*** 3.3. Gerar Relatório
+**** 3.3.1. Selecionar período
+**** 3.3.2. Escolher métricas
+**** 3.3.3. Exportar (PDF/Excel)
+** 4. Identificação de Problemas
+*** 4.1. Lentidão na busca de produtos
+*** 4.2. Dados de estoque desatualizados
+*** 4.3. Interface confusa para relatórios
+** 5. Proposta de Melhorias
+*** 5.1. Otimizar fluxo de checkout
+*** 5.2. Melhorar sincronização de estoque
+*** 5.3. Redesenhar interface de relatórios
+** 6. Validação e Priorização
+*** 6.1. Apresentar insights aos stakeholders
+*** 6.2. Priorizar melhorias
+*** 6.3. Ajustar protótipos
+@endwbs
+</code></pre>
+<h3 id="visualizacao-do-diagrama"><strong>Visualização do Diagrama:</strong></h3>
+<p>O diagrama organiza as tarefas em uma estrutura hierárquica, mostrando:</p>
+<ol>
+<li><strong>Objetivos</strong> da análise.</li>
+<li><strong>Métodos de coleta de dados</strong>.</li>
+<li><strong>Tarefas principais</strong> com subtarefas detalhadas.</li>
+<li><strong>Problemas identificados</strong>.</li>
+<li><strong>Propostas de melhorias</strong>.</li>
+<li><strong>Validação final</strong> com stakeholders.</li>
+</ol>
+<h3 id="como-usar"><strong>Como Usar:</strong></h3>
+<ul>
+<li>Copie o código e cole em um editor PlantUML (como <a href="https://www.planttext.com/">PlantText</a> ou integrado a ferramentas como VS Code).</li>
+<li>O diagrama será gerado automaticamente.</li>
+</ul>
+<hr />
+<p>Aqui está um protótipo de <strong>fluxo de tarefas em formato wireframe</strong> usando <strong>PlantUML Salt</strong>, simulando telas básicas do aplicativo web de e-commerce:</p>
+<pre><code class="language-plantuml">@startsalt
+{
+  {#white+lightgrey}
+  {* &lt;b&gt;Aplicativo Web - Fluxo de Tarefas (Wireframe)&lt;/b&gt; }
+
+  // --- Tela: Registrar Pedido --- //
+  {T &quot;Registrar Pedido&quot; 
+    [Buscar cliente    | input:___________ 🔍]
+    [Lista de produtos | ( ) Produto A  $10.00]
+    [                  | ( ) Produto B  $15.00]
+    [                  | (✔) Produto C  $20.00]
+    [Desconto (%)      | input:___5%     [Aplicar]]
+    [Total: $35.00     | [Finalizar Venda]]
+  }
+
+  // --- Tela: Consultar Estoque --- //
+  {T &quot;Consultar Estoque&quot;
+    [Filtrar por: | dropdown: Categoria ▼]
+    [Itens no estoque:]
+    {#
+      | Produto | Qtd | Reposição |
+      |---------|-----|-----------|
+      | A       | 50  | 05/04     |
+      | B       | 0   | 10/04     |
+      | C       | 120 | -         |
+    }
+    [Atualizar Estoque]
+  }
+
+  // --- Tela: Gerar Relatório --- //
+  {T &quot;Gerar Relatório&quot;
+    [Período: | 01/03/2024 ▾ to 31/03/2024 ▾]
+    [Métricas:]
+    [ (✔) Vendas por dia  ]
+    [ (✔) Produtos mais vendidos ]
+    [ ( ) Ticket médio    ]
+    [Formato: | (✔) PDF   ( ) Excel ]
+    [ [Gerar Relatório] ]
+  }
+
+  // --- Notas --- //
+  note right
+    &lt;b&gt;Problemas identificados:&lt;/b&gt;
+    1. Campo de busca lento
+    2. Atualização de estoque não automática
+    3. Opções de relatório pouco intuitivas
+  end note
+}
+@endsalt
+</code></pre>
+<hr />
+<h3 id="caracteristicas-do-prototipo"><strong>Características do Protótipo:</strong></h3>
+<ol>
+<li><strong>Registrar Pedido</strong>:</li>
+<li>Campo de busca com ícone de lupa 🔍</li>
+<li>Lista de produtos selecionáveis (checkboxes)</li>
+<li>Seção para aplicar desconto</li>
+<li>
+<p>Botão de ação principal</p>
+</li>
+<li>
+<p><strong>Consultar Estoque</strong>:</p>
+</li>
+<li>Dropdown para filtro</li>
+<li>Tabela de dados simulada</li>
+<li>
+<p>Botão para atualização manual (problema identificado)</p>
+</li>
+<li>
+<p><strong>Gerar Relatório</strong>:</p>
+</li>
+<li>Seletores de período</li>
+<li>Checkboxes para métricas</li>
+<li>
+<p>Opções de formato de exportação</p>
+</li>
+<li>
+<p><strong>Anotações</strong>:</p>
+</li>
+<li>Destaque dos 3 principais problemas de UX</li>
+</ol>
+<hr />
+<h3 id="como-visualizar"><strong>Como Visualizar:</strong></h3>
+<ol>
+<li>Copie o código para qualquer editor PlantUML (como <a href="https://www.planttext.com/">PlantText</a>)</li>
+<li>O resultado será um wireframe estático com:</li>
+<li>Elementos interativos simulados (inputs, dropdowns, checkboxes)</li>
+<li>Organização visual por telas</li>
+<li>Anotações contextuais</li>
+</ol>
+<h3 id="variacoes-possiveis"><strong>Variações Possíveis:</strong></h3>
+<ul>
+<li>Para <strong>fluxos navegacionais</strong>, adicione setas entre telas:</li>
+</ul>
+<pre><code class="language-plantuml">  @startsalt
+  {
+    [Tela 1] -&gt; [Tela 2] -&gt; [Tela 3]
+  }
+  @endsalt
+</code></pre>
+<ul>
+<li>Para <strong>detalhar componentes</strong>, use notação <code>+</code>:</li>
+</ul>
+<pre><code class="language-plantuml">  @startsalt
+  {
+    + Botão Primário [Confirmar]
+    + Botão Secundário [Cancelar]
+  }
+  @endsalt
+</code></pre>
+<p>Este formato é ideal para <strong>discussões iniciais</strong> com a equipe, permitindo ajustes rápidos antes de protótipos high-fidelity.</p>
+<hr /></div>
+        
+        
+    </div>
+
+    
+      <footer class="col-md-12 text-center">
+          
+          
+            <hr>
+            <p>
+            <small>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</small>
+            </p>
+          
+
+          
+          
+      </footer>
+    
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="../../../js/bootstrap-3.0.3.min.js"></script>
+
+    
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/highlight.min.js"></script>
+        
+                <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/languages/yaml.min.js"></script>
+                <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/languages/python.min.js"></script>
+                <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/languages/html.min.js"></script>
+                <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/languages/css.min.js"></script>
+                <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/languages/javascript.min.js"></script>
+        
+    <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    <script>var base_url = "../../.."</script>
+    
+    <script src="../../../js/base.js"></script>
+    <script src="../../../js/open_in_new_tab.js"></script>
+
+    <div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+    </body>
+
+</html>
