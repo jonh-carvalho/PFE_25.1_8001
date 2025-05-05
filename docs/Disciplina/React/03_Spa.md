@@ -1,8 +1,10 @@
-## SPA
+# 03 - **Criando um App React SPA**
+
+## Introdução
 
 Uma **SPA** (Single Page Application) é um tipo de aplicação web em que todo o conteúdo necessário para navegar pelo site é carregado inicialmente ou dinamicamente sem recarregar a página inteira. Ao contrário de um site tradicional, onde cada vez que o usuário clica em um link ou navega para uma nova seção há um carregamento completo da página, em uma SPA apenas o conteúdo específico da página é atualizado, o que proporciona uma experiência de usuário mais rápida e fluida.
 
-### Características principais de uma SPA:
+### Características principais de uma SPA
 
 1\. **Carregamento único de página**:
 
@@ -18,13 +20,13 @@ Uma **SPA** (Single Page Application) é um tipo de aplicação web em que todo 
 
 4\. **Histórico de navegação**:
 
-   - As SPAs utilizam o histórico do navegador para manipular as URLs sem realmente recarregar a página, o que permite que o botão de "voltar" e "avançar" do navegador funcionem normalmente. Ferramentas como o **React Router** ajudam a gerenciar esse comportamento.
+- As SPAs utilizam o histórico do navegador para manipular as URLs sem realmente recarregar a página, o que permite que o botão de "voltar" e "avançar" do navegador funcionem normalmente. Ferramentas como o **React Router** ajudam a gerenciar esse comportamento.
 
 5\. **Frameworks e bibliotecas comuns**:
 
-   - Frameworks como **React**, **Vue.js**, **Angular**, e ferramentas como **Vite** ou **Webpack** são amplamente usadas para construir SPAs. Eles permitem um carregamento eficiente e a criação de componentes reutilizáveis.
+- Frameworks como **React**, **Vue.js**, **Angular**, e ferramentas como **Vite** ou **Webpack** são amplamente usadas para construir SPAs. Eles permitem um carregamento eficiente e a criação de componentes reutilizáveis.
 
-### Vantagens de uma SPA:
+### Vantagens de uma SPA
 
 - **Melhor experiência do usuário (UX)**: Navegação suave, sem interrupções devido a recarregamentos de página.
 
@@ -32,13 +34,13 @@ Uma **SPA** (Single Page Application) é um tipo de aplicação web em que todo 
 
 - **Desempenho aprimorado**: Depois do carregamento inicial, as requisições são menores e mais rápidas, já que apenas os dados mudam, e não o layout completo da página.
 
-### Desvantagens:
+### Desvantagens
 
 - **SEO**: Embora o SEO para SPAs tenha melhorado com técnicas como server-side rendering (SSR) e prerendering, ainda pode ser mais desafiador quando comparado a sites tradicionais.
 
 - **Carregamento inicial maior**: A aplicação pode ter um tempo de carregamento inicial mais longo devido à necessidade de carregar grande parte do conteúdo e do código de uma vez.
 
-### Exemplos de SPAs:
+### Exemplos de SPAs
 
 - Aplicativos de redes sociais como **Facebook** e **Instagram**.
 
@@ -66,43 +68,45 @@ Antes de propormos uma estrutura para o SPA, é importante entender alguns detal
   
 - Integrações: Plataformas de pagamento, sistemas de gestão de eventos.
 
-#### Estrutura Proposta
+### Estrutura Proposta
 
 Com base em um cenário geral, podemos propor uma estrutura básica para o SPA:
 
-my-event-app/
-	public/
-    	index.html
-  	src/
-    	components/
-      		Header.jsx
-      		Footer.jsx
-      		Navbar.jsx
-      		EventCard.jsx
-      		SpeakerCard.jsx
-      		// ... outros componentes
+```
+  my-event-app/
+   public/
+   index.html
+   src/
+     components/
+       Header.jsx
+       Footer.jsx
+       Navbar.jsx
+       EventCard.jsx
+       SpeakerCard.jsx
+       // ... outros componentes
 
-    	pages/
-      		Home.jsx
-      		Schedule.jsx
-      		Speakers.jsx
-      		About.jsx
-      		Registration.jsx
-      		// ... outras páginas
+     pages/
+        Home.jsx
+        Schedule.jsx
+        Speakers.jsx
+        About.jsx
+        Registration.jsx
+        // ... outras páginas
 
-    	utils/
-      		api.js // Para chamadas à API
-      		helpers.js // Funções auxiliares
+     utils/
+        api.js // Para chamadas à API
+        helpers.js // Funções auxiliares
 
-    	styles/
-      		global.css
-      		theme.css
+     styles/
+        global.css
+        theme.css
 
-    	App.jsx
-    	index.css
-    	main.jsx
-		
-### Componentes Principais:
+     App.jsx
+     index.css
+     main.jsx
+```
+
+### Componentes Principais
 
 - Header: Contém o logo, menu de navegação e outras informações gerais.
 
@@ -113,7 +117,7 @@ my-event-app/
 - EventCard: Componente para exibir informações sobre cada evento (título, data, horário, descrição).
 - SpeakerCard: Componente para exibir informações sobre cada palestrante (nome, foto, bio).
 
-### Outras páginas:
+### Outras páginas
 
 - Home: Página inicial com informações gerais sobre o evento.
 
@@ -125,7 +129,7 @@ my-event-app/
 
 - Registration: Formulário de inscrição.
 
-### Funcionalidades Essenciais:
+### Funcionalidades Essenciais
 
 - Navegação: Implementar navegação entre as diferentes páginas utilizando um roteador como o React Router.
 
@@ -139,7 +143,7 @@ my-event-app/
 
 - Acessibilidade: Seguir as diretrizes de acessibilidade para garantir que o SPA seja utilizável por todos.
 
-### Tecnologias Adicionais:
+### Tecnologias Adicionais
 
 - Styling: Utilizar CSS, Sass ou uma biblioteca de estilos como o Material UI ou o Tailwind CSS.
 
@@ -149,7 +153,7 @@ my-event-app/
 
 - Testes: Implementar testes unitários e de integração para garantir a qualidade do código.
 
-### Exemplo de Componente EventCard:
+### Exemplo de Componente EventCard
 
 ```js
 import React from 'react';
@@ -164,13 +168,12 @@ function EventCard({ title, date, description }) {
   );
 }
 
-
 export default EventCard;
 ```
 
-### Use o código com cuidado.
+### Use o código com cuidado
 
-### Próximos Passos:
+### Próximos Passos
 
 - Definir a arquitetura: Escolher uma arquitetura de componentes e como organizar o código.
 
@@ -182,7 +185,7 @@ export default EventCard;
 
 - Deploy: Hospedar o SPA em um servidor.
 
-### Considerações Adicionais:
+### Considerações Adicionais
 
 - Personalização: Adaptar a estrutura e as funcionalidades de acordo com as necessidades específicas do evento.
 
