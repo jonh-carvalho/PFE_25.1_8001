@@ -11,7 +11,7 @@
     <link rel="shortcut icon" href="../../../img/favicon.ico">
 
     
-    <title>04 - Compartilhamento de Receitas - PFE_25.1_8001</title>
+    <title>05 - Diferenças entre Pages e Components - PFE_25.1_8001</title>
     
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
@@ -104,73 +104,73 @@
         
             
 <li >
-    <a href="../../React/01_Intro/">01 - Introdução ao React com HTML e CDN</a>
+    <a href="../01_Intro/">01 - Introdução ao React com HTML e CDN</a>
 </li>
 
         
             
 <li >
-    <a href="../../React/02_NodeViteReact/">02 - Criando um App React com Vite</a>
+    <a href="../02_NodeViteReact/">02 - Criando um App React com Vite</a>
 </li>
 
         
             
 <li >
-    <a href="../../React/03_Spa/">03 - Criando um App React SPA</a>
+    <a href="../03_Spa/">03 - Criando um App React SPA</a>
 </li>
 
         
             
 <li >
-    <a href="../../React/04_Componentes/">04 - Criando um App React SPA</a>
+    <a href="../04_Componentes/">04 - Criando um App React SPA</a>
+</li>
+
+        
+            
+<li class="active">
+    <a href="./">05 - Diferenças entre Pages e Components</a>
 </li>
 
         
             
 <li >
-    <a href="../../React/05_Pages_Components/">05 - Diferenças entre Pages e Components</a>
+    <a href="../06_Http/">06 Http</a>
 </li>
 
         
             
 <li >
-    <a href="../../React/06_Http/">06 Http</a>
+    <a href="../07_Fetch/">07 Fetch</a>
 </li>
 
         
             
 <li >
-    <a href="../../React/07_Fetch/">07 Fetch</a>
+    <a href="../07_Lendo%20Json/">07 Lendo Json</a>
 </li>
 
         
             
 <li >
-    <a href="../../React/07_Lendo%20Json/">07 Lendo Json</a>
+    <a href="../08_Estilizando%20React/">08 Estilizando React</a>
 </li>
 
         
             
 <li >
-    <a href="../../React/08_Estilizando%20React/">08 Estilizando React</a>
+    <a href="../09_Props/">09 Props</a>
 </li>
 
         
             
 <li >
-    <a href="../../React/09_Props/">09 Props</a>
+    <a href="../10_Forms_Props/">10 Forms Props</a>
 </li>
 
         
             
 <li >
-    <a href="../../React/10_Forms_Props/">10 Forms Props</a>
-</li>
-
-        
-            
-<li >
-    <a href="../../React/11_useState_useRef/">11 useState useRef</a>
+    <a href="../11_useState_useRef/">11 useState useRef</a>
 </li>
 
         
@@ -185,25 +185,25 @@
         
             
 <li >
-    <a href="../Aht/">06 - Análise de Tarefas</a>
+    <a href="../../Roteiros/Aht/">06 - Análise de Tarefas</a>
 </li>
 
         
             
 <li >
-    <a href="../DesignThinking/">04 - Design Thinking</a>
+    <a href="../../Roteiros/DesignThinking/">04 - Design Thinking</a>
 </li>
 
         
             
 <li >
-    <a href="../EpicsFeaturesUserStories/">09 - Histórias de usuário</a>
+    <a href="../../Roteiros/EpicsFeaturesUserStories/">09 - Histórias de usuário</a>
 </li>
 
         
             
-<li class="active">
-    <a href="./">04 - Compartilhamento de Receitas</a>
+<li >
+    <a href="../../Roteiros/receitas/">04 - Compartilhamento de Receitas</a>
 </li>
 
         
@@ -285,17 +285,17 @@
 
             <ul class="nav navbar-nav navbar-right">
                     <li >
-                        <a rel="prev" href="../EpicsFeaturesUserStories/">
+                        <a rel="prev" href="../04_Componentes/">
                             <i class="fas fa-arrow-left"></i> Previous
                         </a>
                     </li>
                     <li >
-                        <a rel="next" href="../../../_Design%20Thinking/5w2h/">
+                        <a rel="next" href="../06_Http/">
                             Next <i class="fas fa-arrow-right"></i>
                         </a>
                     </li>
                     <li>
-                        <a href="https://github.com/jonh-carvalho/PFE_25.1_8001/edit/master/docs/Disciplina/Roteiros/receitas.md"><i class="fab fa-github"></i> Edit on GitHub</a>
+                        <a href="https://github.com/jonh-carvalho/PFE_25.1_8001/edit/master/docs/Disciplina/React/05_Pages_Components.md"><i class="fab fa-github"></i> Edit on GitHub</a>
                     </li>
             </ul>
         </div>
@@ -307,81 +307,122 @@
         
         <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
-        <li class="first-level active"><a href="#04-compartilhamento-de-receitas">04 - Compartilhamento de Receitas</a></li>
-            <li class="second-level"><a href="#objetivo-do-projeto">Objetivo do Projeto</a></li>
+        <li class="first-level active"><a href="#05-diferencas-entre-pages-e-components">05 - Diferenças entre Pages e Components</a></li>
+            <li class="second-level"><a href="#organizando-o-app">Organizando o App</a></li>
                 
-            <li class="second-level"><a href="#organizacao-do-product-backlog">Organização do Product Backlog</a></li>
-                
-            <li class="second-level"><a href="#sprints-backlog-4-sprints-de-2-semanas">Sprints Backlog (4 Sprints de 2 Semanas)</a></li>
-                
-            <li class="second-level"><a href="#dinamica">Dinâmica</a></li>
-                
+                <li class="third-level"><a href="#diferenca-entre-pages-e-components">Diferença entre Pages e Components</a></li>
+                <li class="third-level"><a href="#organizacao-de-pages-e-components">Organização de Pages e Components</a></li>
+                <li class="third-level"><a href="#resumo-da-organizacao">Resumo da Organização</a></li>
     </ul>
 </div></div>
         <div class="col-md-9" role="main">
 
-<h1 id="04-compartilhamento-de-receitas">04 - <strong>Compartilhamento de Receitas</strong></h1>
-<p><strong>Tema Proposto:</strong><br />
-<strong>"Desenvolvimento de uma Plataforma Web Colaborativa para Compartilhamento de Receitas"</strong><br />
-<em>(Tecnologias: HTML, CSS, JavaScript)</em>  </p>
-<hr />
-<h3 id="objetivo-do-projeto"><strong>Objetivo do Projeto</strong></h3>
-<p>Criar uma plataforma web onde usuários possam:<br />
-1. Cadastrar/login com perfil personalizado.<br />
-2. Compartilhar receitas com fotos, ingredientes e modo de preparo.<br />
-3. Buscar receitas por ingredientes, categorias ou dificuldade.<br />
-4. Curtir, comentar e salvar receitas favoritas.<br />
-5. Visualizar estatísticas básicas (ex.: receitas mais populares).  </p>
-<hr />
-<h3 id="organizacao-do-product-backlog"><strong>Organização do Product Backlog</strong></h3>
-<p><strong>User Stories Priorizadas:</strong><br />
-1. <strong>Como usuário</strong>, quero me cadastrar/logar para ter um perfil personalizado.<br />
-   - <em>Critérios de Aceitação</em>: Formulário de cadastro, validação de campos, armazenamento em LocalStorage.<br />
-2. <strong>Como usuário</strong>, quero criar e publicar receitas com título, descrição, ingredientes, modo de preparo e imagem.<br />
-   - <em>Critérios de Aceitação</em>: Formulário de criação, upload de imagem (mock), exibição em grid/card.<br />
-3. <strong>Como usuário</strong>, quero buscar receitas por palavra-chave, categoria ou dificuldade.<br />
-   - <em>Critérios de Aceitação</em>: Barra de busca, filtros dinâmicos, resultados em tempo real.<br />
-4. <strong>Como usuário</strong>, quero curtir e comentar receitas para interagir com a comunidade.<br />
-   - <em>Critérios de Aceitação</em>: Botão de curtir, contador de likes, campo de comentários.<br />
-5. <strong>Como usuário</strong>, quero salvar receitas em uma lista de favoritos.<br />
-   - <em>Critérios de Aceitação</em>: Botão "Salvar", sessão de favoritos no perfil do usuário.<br />
-6. <strong>Como visitante</strong>, quero visualizar receitas sem login para explorar o conteúdo.<br />
-   - <em>Critérios de Aceitação</em>: Acesso público às receitas, restrição de funcionalidades para não cadastrados.  </p>
-<hr />
-<h3 id="sprints-backlog-4-sprints-de-2-semanas"><strong>Sprints Backlog (4 Sprints de 2 Semanas)</strong></h3>
-<p><strong>Sprint 1: Fundação do Projeto</strong><br />
-- <strong>Meta da Sprint</strong>: Protótipo funcional com cadastro/login e estrutura básica.<br />
-- <strong>Tarefas</strong>:<br />
-  - Criar layout responsivo com HTML/CSS (header, footer, grid de receitas).<br />
-  - Implementar formulário de cadastro/login (mock de autenticação via LocalStorage).<br />
-  - Desenvolver página inicial com cards de receitas estáticos (exibição mock).  </p>
-<p><strong>Sprint 2: Funcionalidades Principais</strong><br />
-- <strong>Meta da Sprint</strong>: Publicação e busca de receitas.<br />
-- <strong>Tarefas</strong>:<br />
-  - Implementar formulário de criação de receitas (com upload de imagem simulado).<br />
-  - Armazenar receitas no LocalStorage e exibi-las dinamicamente.<br />
-  - Desenvolver barra de busca com filtro por título e categoria.  </p>
-<p><strong>Sprint 3: Interação e Personalização</strong><br />
-- <strong>Meta da Sprint</strong>: Permitir curtidas, comentários e favoritos.<br />
-- <strong>Tarefas</strong>:<br />
-  - Adicionar botões de curtir e contagem de likes.<br />
-  - Implementar seção de comentários com LocalStorage.<br />
-  - Criar página de perfil do usuário com lista de receitas salvas.  </p>
-<p><strong>Sprint 4: Refinamento e Entrega</strong><br />
-- <strong>Meta da Sprint</strong>: Polir a experiência do usuário e preparar para deploy.<br />
-- <strong>Tarefas</strong>:<br />
-  - Adicionar animações/transições com CSS/JavaScript.<br />
-  - Criar página de estatísticas (ex.: receitas mais curtidas).<br />
-  - Testes de usabilidade e ajustes finais.<br />
-  - Publicar o projeto em um servidor estático (ex.: GitHub Pages).  </p>
-<hr />
-<h3 id="dinamica"><strong>Dinâmica</strong></h3>
+<h1 id="05-diferencas-entre-pages-e-components">05 - <strong>Diferenças entre Pages e Components</strong></h1>
+<h2 id="organizando-o-app">Organizando o App</h2>
+<p>A organização de uma aplicação <strong>React</strong> pode ser melhorada ao diferenciar <strong>Pages</strong> (páginas) de <strong>Components</strong> (componentes). A distinção entre essas duas categorias é importante para manter o código escalável, reutilizável e de fácil manutenção. Vou explicar a diferença e como você pode organizá-los de forma eficiente.</p>
+<h3 id="diferenca-entre-pages-e-components">Diferença entre <strong>Pages</strong> e <strong>Components</strong></h3>
 <ol>
-<li><strong>Simulação de Priorização</strong>: Dividir os alunos em grupos para priorizar o product backlog com base em valor, complexidade e riscos.  </li>
-<li><strong>Role Play</strong>: Designar papéis (Product Owner, Scrum Master, Dev Team) para planejar sprints e resolver impedimentos.  </li>
-<li><strong>Adaptação a Mudanças</strong>: Na metade do projeto, pode ocorrer uma nova user story (ex.: "Compartilhar receitas nas redes sociais") para praticar replanejamento.  </li>
-<li><strong>Retrospectivas</strong>: Após cada sprint, discutir aprendizados e ajustar o processo.</li>
-</ol></div>
+<li><strong>Pages (Páginas)</strong>:</li>
+<li><strong>O que são</strong>: São componentes que representam rotas individuais da aplicação, geralmente associadas a uma URL específica. Cada <strong>Page</strong> é uma "página" completa e geralmente agrupa vários componentes.</li>
+<li><strong>Função</strong>: Uma page contém a estrutura e layout principal da página e usa outros componentes para construir sua interface. É responsável por representar uma tela completa da aplicação.</li>
+<li>
+<p><strong>Exemplo</strong>: HomePage, AboutPage, ContactPage, DashboardPage, etc.</p>
+</li>
+<li>
+<p><strong>Components (Componentes)</strong>:</p>
+</li>
+<li><strong>O que são</strong>: São blocos reutilizáveis menores de interface, que podem ser usados em várias páginas. Componentes são mais modulares e têm uma única responsabilidade, como um botão, um formulário, ou uma tabela.</li>
+<li><strong>Função</strong>: Eles não estão vinculados a uma URL específica e podem ser combinados dentro de <strong>Pages</strong> ou outros componentes.</li>
+<li><strong>Exemplo</strong>: Navbar, Footer, Button, Card, Modal, FormField, etc.</li>
+</ol>
+<h3 id="organizacao-de-pages-e-components">Organização de <strong>Pages</strong> e <strong>Components</strong></h3>
+<p>Uma boa prática é criar pastas separadas para <strong>Pages</strong> e <strong>Components</strong> no diretório <code>src</code>. Isso ajuda a organizar o código e deixar claro o propósito de cada arquivo.</p>
+<h4 id="estrutura-de-diretorio-recomendada">Estrutura de diretório recomendada</h4>
+<pre><code class="language-bash">src/
+│
+├── components/
+│   ├── Button.jsx
+│   ├── Card.jsx
+│   ├── Navbar.jsx
+│   └── Footer.jsx
+│
+├── pages/
+│   ├── HomePage.jsx
+│   ├── AboutPage.jsx
+│   ├── ContactPage.jsx
+│   └── DashboardPage.jsx
+│
+├── App.jsx
+├── main.jsx
+└── index.css
+</code></pre>
+<h4 id="exemplo-de-uso-pratico">Exemplo de uso prático</h4>
+<h5 id="homepagejsx-pagina"><strong>HomePage.jsx</strong> (Página)</h5>
+<pre><code class="language-jsx">import React from 'react';
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
+import Features from '../components/Features';
+import Hero from '../components/Hero';
+
+function HomePage() {
+  return (
+    &lt;&gt;
+      &lt;Navbar /&gt;
+      &lt;Hero /&gt;
+      &lt;Features /&gt;
+      &lt;Footer /&gt;
+    &lt;/&gt;
+  );
+}
+
+export default HomePage;
+</code></pre>
+<p>Aqui, a página <strong>HomePage</strong> serve como a estrutura principal da página de "Home", e ela reutiliza componentes como <strong>Navbar</strong>, <strong>Hero</strong>, <strong>Features</strong> e <strong>Footer</strong>. Cada componente pode ser reutilizado em outras páginas, mantendo o código modular.</p>
+<h5 id="navbarjsx-componente"><strong>Navbar.jsx</strong> (Componente)</h5>
+<pre><code class="language-jsx">function Navbar() {
+  return (
+    &lt;nav&gt;
+      &lt;h1&gt;Logo&lt;/h1&gt;
+      &lt;ul&gt;
+        &lt;li&gt;&lt;a href=&quot;/&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;/about&quot;&gt;About&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;/contact&quot;&gt;Contact&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/nav&gt;
+  );
+}
+
+export default Navbar;
+</code></pre>
+<p>O <strong>Navbar</strong> é um componente que pode ser utilizado em várias páginas, como <strong>HomePage</strong>, <strong>AboutPage</strong> e <strong>ContactPage</strong>. Ele contém a lógica e a estrutura do menu de navegação.</p>
+<h5 id="aboutpagejsx-pagina"><strong>AboutPage.jsx</strong> (Página)</h5>
+<pre><code class="language-jsx">import React from 'react';
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
+
+function AboutPage() {
+  return (
+    &lt;&gt;
+      &lt;Navbar /&gt;
+      &lt;section className=&quot;about&quot;&gt;
+        &lt;h1&gt;About Us&lt;/h1&gt;
+        &lt;p&gt;We are a company that values...&lt;/p&gt;
+      &lt;/section&gt;
+      &lt;Footer /&gt;
+    &lt;/&gt;
+  );
+}
+
+export default AboutPage;
+</code></pre>
+<p>Aqui, a <strong>AboutPage</strong> também reutiliza os mesmos componentes de <strong>Navbar</strong> e <strong>Footer</strong>, mas tem um conteúdo único no corpo da página, como a seção "About Us".</p>
+<h3 id="resumo-da-organizacao">Resumo da Organização</h3>
+<ul>
+<li><strong>Páginas</strong> (<strong>Pages</strong>) representam <strong>rotas</strong> e normalmente combinam vários <strong>componentes</strong> para formar uma tela completa.</li>
+<li><strong>Componentes</strong> (<strong>Components</strong>) são elementos mais simples e reutilizáveis que compõem partes da interface.</li>
+<li>Manter pastas separadas para páginas e componentes ajuda na escalabilidade e clareza do código.</li>
+</ul>
+<p>Ao seguir essa organização, você mantém o código mais estruturado, fácil de entender e de escalar conforme a aplicação cresce.</p></div>
         
         
     </div>
