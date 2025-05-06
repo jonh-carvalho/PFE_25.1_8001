@@ -11,7 +11,7 @@
     <link rel="shortcut icon" href="../../../img/favicon.ico">
 
     
-    <title>04 Componentes - PFE_25.1_8001</title>
+    <title>04 - Criando um App React SPA - PFE_25.1_8001</title>
     
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
@@ -122,7 +122,7 @@
         
             
 <li class="active">
-    <a href="./">04 Componentes</a>
+    <a href="./">04 - Criando um App React SPA</a>
 </li>
 
         
@@ -301,25 +301,24 @@
         
         <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
-        <li class="first-level active"><a href="#criar-um-spa-single-page-application-utilizando-react-com-vite">Criar um SPA (Single Page Application) utilizando React com Vite</a></li>
-        <li class="first-level "><a href="#passos-para-criar-um-spa-react-com-vite">Passos para criar um SPA React com Vite:</a></li>
-        <li class="first-level "><a href="#expandindo-sua-spa">Expandindo sua SPA</a></li>
-            <li class="second-level"><a href="#1-hero-section">1. Hero Section</a></li>
+        <li class="first-level active"><a href="#04-criando-um-app-react-spa">04 - Criando um App React SPA</a></li>
+            <li class="second-level"><a href="#criar-um-spa-single-page-application-utilizando-react-com-vite">Criar um SPA (Single Page Application) utilizando React com Vite</a></li>
                 
-            <li class="second-level"><a href="#2-features-section">2. Features Section</a></li>
+                <li class="third-level"><a href="#passos">Passos</a></li>
+            <li class="second-level"><a href="#expandindo-sua-spa">Expandindo sua SPA</a></li>
                 
-            <li class="second-level"><a href="#3-testimonial-section">3. Testimonial Section</a></li>
-                
-            <li class="second-level"><a href="#como-combinar-esses-componentes">Como combinar esses componentes:</a></li>
-                
-            <li class="second-level"><a href="#estilos-css">Estilos (CSS)</a></li>
-                
+                <li class="third-level"><a href="#1-hero-section">1. Hero Section</a></li>
+                <li class="third-level"><a href="#2-features-section">2. Features Section</a></li>
+                <li class="third-level"><a href="#3-testimonial-section">3. Testimonial Section</a></li>
+                <li class="third-level"><a href="#como-combinar-esses-componentes">Como combinar esses componentes</a></li>
+                <li class="third-level"><a href="#estilos-css">Estilos (CSS)</a></li>
     </ul>
 </div></div>
         <div class="col-md-9" role="main">
 
-<h3 id="criar-um-spa-single-page-application-utilizando-react-com-vite">Criar um SPA (Single Page Application) utilizando <strong>React</strong> com <strong>Vite</strong></h3>
-<h3 id="passos-para-criar-um-spa-react-com-vite">Passos para criar um SPA React com Vite:</h3>
+<h1 id="04-criando-um-app-react-spa">04 - <strong>Criando um App React SPA</strong></h1>
+<h2 id="criar-um-spa-single-page-application-utilizando-react-com-vite">Criar um SPA (Single Page Application) utilizando <strong>React</strong> com <strong>Vite</strong></h2>
+<h3 id="passos">Passos</h3>
 <p>1. <strong>Instalar o Vite</strong>:
    Vite é uma ferramenta de construção que facilita a criação de apps modernos com uma performance excelente. Para começar, abra seu terminal e execute o seguinte comando:</p>
 <pre><code class="language-bash">   npm create vite@latest my-spa-app
@@ -332,31 +331,24 @@
 </ul>
 <p>2. <strong>Instalar as dependências</strong>:
    Após criar o projeto, vá para a pasta do projeto e instale as dependências:</p>
-<pre><code>   cd my-spa-app
+<pre><code class="language-bash">   cd my-spa-app
 
    npm install
 </code></pre>
 <p>3. <strong>Estrutura de pastas</strong>:
    Ao concluir, a estrutura do projeto será algo como:</p>
-<pre><code>public
-
+<pre><code class="language-text">public
 src
-
-    assets
-
-    App.jsx
-
-    main.jsx
-
-    index.css
-
-    index.html
-
-vite.config.js
+  assets
+  App.jsx
+  main.jsx
+  index.css
+  index.html
+  vite.config.js
 </code></pre>
 <p>4. <strong>Iniciar o servidor de desenvolvimento</strong>:</p>
 <p>Agora você pode iniciar o servidor de desenvolvimento e ver o app rodando:</p>
-<pre><code>   npm run dev
+<pre><code class="language-bash">   npm run dev
 </code></pre>
 <p>5. <strong>Criando Componentes de Rotas (React Router)</strong>:
    Para um SPA, é comum utilizar o <strong>React Router</strong> para navegação. Instale-o:</p>
@@ -488,7 +480,7 @@ function Testimonials() {
 
 export default Testimonials;
 </code></pre>
-<h3 id="como-combinar-esses-componentes">Como combinar esses componentes:</h3>
+<h3 id="como-combinar-esses-componentes">Como combinar esses componentes</h3>
 <p>Agora você pode combinar esses componentes dentro do arquivo principal <code>App.jsx</code>:</p>
 <pre><code class="language-js">
 import Hero from './components/Hero';
