@@ -9,7 +9,7 @@ Vite é uma ferramenta de construção de front-end que oferece um desenvolvimen
 **1. Instale o Node.js e npm (ou yarn):**
 
 * Certifique-se de ter o Node.js instalado em sua máquina. Você pode baixá-lo em [https://nodejs.org/](https://nodejs.org/).
-* Se estiver instalado faça o download do node.js LTS binary for Windows e extraia para o local desejado(Ex: c:\node) e adicione PATH do da pasta do node na variável de ambiente PATH.
+* No laboratório se estiver instalado faça o download do [node.js LTS binary](https://nodejs.org/dist/v22.15.0/node-v22.15.0-win-x64.zip) for Windows e extraia o zip para o local desejado(Ex: c:\node) e adicione PATH do da pasta do node na variável de ambiente PATH.
 
 > Tecla Windows + R => digite:
 
