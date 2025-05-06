@@ -1,6 +1,8 @@
-### Criar um SPA (Single Page Application) utilizando **React** com **Vite**
+# 04 - **Criando um App React SPA**
 
-### Passos para criar um SPA React com Vite:
+## Criar um SPA (Single Page Application) utilizando **React** com **Vite**
+
+### Passos
 
 1\. **Instalar o Vite**:
    Vite é uma ferramenta de construção que facilita a criação de apps modernos com uma performance excelente. Para começar, abra seu terminal e execute o seguinte comando:
@@ -18,7 +20,7 @@
 2\. **Instalar as dependências**:
    Após criar o projeto, vá para a pasta do projeto e instale as dependências:
 
-```
+```bash
    cd my-spa-app
 
    npm install
@@ -27,29 +29,22 @@
 3\. **Estrutura de pastas**:
    Ao concluir, a estrutura do projeto será algo como:
 
-```
+```text
 public
-
 src
-
-	assets
-
-	App.jsx
-
-	main.jsx
-
-	index.css
-
-	index.html
-
-vite.config.js
+  assets
+  App.jsx
+  main.jsx
+  index.css
+  index.html
+  vite.config.js
 ```
 
 4\. **Iniciar o servidor de desenvolvimento**:
 
    Agora você pode iniciar o servidor de desenvolvimento e ver o app rodando:
 
-```
+```bash
    npm run dev
 ```
 
@@ -211,7 +206,7 @@ function Testimonials() {
 export default Testimonials;
 ```
 
-### Como combinar esses componentes:
+### Como combinar esses componentes
 
 Agora você pode combinar esses componentes dentro do arquivo principal `App.jsx`:
 
