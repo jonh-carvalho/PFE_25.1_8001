@@ -11,7 +11,7 @@
     <link rel="shortcut icon" href="../../../img/favicon.ico">
 
     
-    <title>08 Estilizando React - PFE_25.1_8001</title>
+    <title>06 - Estilizar um app React - PFE_25.1_8001</title>
     
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
@@ -133,8 +133,20 @@
 
         
             
+<li class="active">
+    <a href="./">06 - Estilizar um app React</a>
+</li>
+
+        
+            
 <li >
     <a href="../06_Http/">06 Http</a>
+</li>
+
+        
+            
+<li >
+    <a href="../06_Props/">06 Props</a>
 </li>
 
         
@@ -147,18 +159,6 @@
             
 <li >
     <a href="../07_Lendo%20Json/">07 Lendo Json</a>
-</li>
-
-        
-            
-<li class="active">
-    <a href="./">08 Estilizando React</a>
-</li>
-
-        
-            
-<li >
-    <a href="../09_Props/">09 Props</a>
 </li>
 
         
@@ -285,17 +285,17 @@
 
             <ul class="nav navbar-nav navbar-right">
                     <li >
-                        <a rel="prev" href="../07_Lendo%20Json/">
+                        <a rel="prev" href="../05_Pages_Components/">
                             <i class="fas fa-arrow-left"></i> Previous
                         </a>
                     </li>
                     <li >
-                        <a rel="next" href="../09_Props/">
+                        <a rel="next" href="../06_Http/">
                             Next <i class="fas fa-arrow-right"></i>
                         </a>
                     </li>
                     <li>
-                        <a href="https://github.com/jonh-carvalho/PFE_25.1_8001/edit/master/docs/Disciplina/React/08_Estilizando React.md"><i class="fab fa-github"></i> Edit on GitHub</a>
+                        <a href="https://github.com/jonh-carvalho/PFE_25.1_8001/edit/master/docs/Disciplina/React/06_Estilizando React.md"><i class="fab fa-github"></i> Edit on GitHub</a>
                     </li>
             </ul>
         </div>
@@ -307,36 +307,37 @@
         
         <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
-        <li class="first-level active"><a href="#conceitos-principais-do-css-in-js">Conceitos Principais do CSS-in-JS</a></li>
-        <li class="first-level "><a href="#vantagens-do-css-in-js">Vantagens do CSS-in-JS</a></li>
-        <li class="first-level "><a href="#desvantagens-do-css-in-js">Desvantagens do CSS-in-JS</a></li>
-        <li class="first-level "><a href="#quando-usar-css-in-js">Quando Usar CSS-in-JS?</a></li>
-        <li class="first-level "><a href="#1-crie-o-projeto-com-vite">1. Crie o projeto com Vite</a></li>
-        <li class="first-level "><a href="#2-instale-o-styled-components">2. Instale o Styled Components</a></li>
-        <li class="first-level "><a href="#3-configure-um-componente-com-styled-components">3. Configure um Componente com Styled Components</a></li>
-        <li class="first-level "><a href="#4-execute-o-app">4. Execute o app</a></li>
+        <li class="first-level active"><a href="#06-estilizar-um-app-react">06 - Estilizar um app React</a></li>
+            <li class="second-level"><a href="#introducao">Introdução</a></li>
+                
+                <li class="third-level"><a href="#css-in-js">CSS-in-JS</a></li>
+                <li class="third-level"><a href="#styled-components">Styled Components</a></li>
+                <li class="third-level"><a href="#adicionar-ao-exemplo-acima-o-uso-de-css-modules">Adicionar ao exemplo acima o uso de CSS Modules</a></li>
     </ul>
 </div></div>
         <div class="col-md-9" role="main">
 
-<p>Para estilizar um app React, há várias abordagens populares, incluindo:</p>
+<h1 id="06-estilizar-um-app-react">06 - <strong>Estilizar um app React</strong></h1>
+<h2 id="introducao">Introdução</h2>
+<p>Há várias abordagens populares, incluindo:</p>
 <ol>
 <li><strong>CSS Modules</strong>: cria escopo local para o CSS, evitando conflito entre estilos.</li>
-<li><strong>Styled Components</strong>: utiliza JavaScript para escrever CSS dentro de componentes. Cada componente tem estilos únicos, facilitando a modularidade.</li>
-<li><strong>Emotion</strong>: semelhante ao Styled Components, também permite escrever CSS com JavaScript e oferece suporte para temas.</li>
 <li><strong>Tailwind CSS</strong>: usa classes utilitárias no HTML/JSX para estilizar elementos, dispensando a criação de folhas de estilo externas.</li>
 <li><strong>Sass/SCSS</strong>: extensão do CSS que permite o uso de variáveis, aninhamento e mixins.</li>
 <li><strong>CSS-in-JS Libraries</strong>: além do Styled Components e Emotion, há outras como Stitches e Linaria que também suportam CSS no JavaScript.</li>
+<li><strong>Styled Components</strong>: utiliza JavaScript para escrever CSS dentro de componentes. Cada componente tem estilos únicos, facilitando a modularidade.</li>
+<li><strong>Emotion</strong>: semelhante ao Styled Components, também permite escrever CSS com JavaScript e oferece suporte para temas.</li>
 </ol>
+<h3 id="css-in-js">CSS-in-JS</h3>
 <p>CSS-in-JS é uma abordagem que permite escrever CSS diretamente em JavaScript, popular em frameworks de componentes como React. Com CSS-in-JS, o estilo fica associado ao componente, garantindo um escopo mais controlado e, geralmente, um código mais modular. Essa técnica ganhou destaque com o desenvolvimento de bibliotecas como Styled Components, Emotion, Linaria e Stitches.</p>
-<h3 id="conceitos-principais-do-css-in-js">Conceitos Principais do CSS-in-JS</h3>
+<h4 id="conceitos-principais-do-css-in-js">Conceitos Principais do CSS-in-JS</h4>
 <ol>
 <li><strong>Escopo Local de Estilos</strong>: O CSS aplicado a um componente não interfere no estilo de outros, resolvendo o problema de conflitos globais entre classes.</li>
 <li><strong>Estilo Dinâmico</strong>: CSS-in-JS permite o uso de lógica JavaScript para aplicar estilos, como condicionais baseadas em props.</li>
 <li><strong>Modularidade</strong>: Com CSS encapsulado em cada componente, os estilos são mais reutilizáveis e menos propensos a duplicação.</li>
 <li><strong>Estilos Condicionais e Temas</strong>: Permite facilmente criar estilos que respondem a variáveis globais, como temas claros e escuros.</li>
 </ol>
-<h3 id="vantagens-do-css-in-js">Vantagens do CSS-in-JS</h3>
+<h4 id="vantagens-do-css-in-js">Vantagens do CSS-in-JS</h4>
 <ol>
 <li><strong>Modularidade e Escopo de Estilos</strong>: Cada componente tem seu estilo próprio, o que melhora a manutenção e evita vazamentos de estilo.</li>
 <li><strong>Estilos Dinâmicos</strong>: Torna fácil alterar o CSS de um componente com base em seu estado ou propriedades.</li>
@@ -344,7 +345,7 @@
 <li><strong>Temas</strong>: Facilita a implementação de temas, especialmente com bibliotecas que suportam Theme Providers.</li>
 <li><strong>SSR (Server-Side Rendering)</strong>: Algumas bibliotecas de CSS-in-JS oferecem suporte para renderização do CSS no servidor, útil em aplicações SSR como Next.js.</li>
 </ol>
-<h3 id="desvantagens-do-css-in-js">Desvantagens do CSS-in-JS</h3>
+<h4 id="desvantagens-do-css-in-js">Desvantagens do CSS-in-JS</h4>
 <ol>
 <li><strong>Sobrecarga de Desempenho</strong>: CSS-in-JS pode aumentar o tempo de carregamento em projetos de grande escala, devido ao tempo extra necessário para processar e aplicar estilos.</li>
 <li><strong>Maior Tamanho de Bundle</strong>: Como o CSS é incluído nos arquivos JavaScript, o tamanho do bundle pode ser maior, impactando o desempenho.</li>
@@ -352,22 +353,25 @@
 <li><strong>Compatibilidade</strong>: O uso de CSS-in-JS com algumas bibliotecas externas pode exigir configurações adicionais para garantir o escopo e funcionamento correto dos estilos.</li>
 <li><strong>Erro de Sintaxe</strong>: Como CSS-in-JS combina JavaScript e CSS, erros de sintaxe se tornam mais comuns ao misturar código JavaScript e CSS juntos.</li>
 </ol>
-<h3 id="quando-usar-css-in-js">Quando Usar CSS-in-JS?</h3>
-<p>O CSS-in-JS é recomendado para:
-- <strong>Componentes de Interface Complexos</strong>: Quando os estilos precisam ser dinâmicos, como em componentes que mudam com o estado do usuário.
-- <strong>Projetos com Temas</strong>: Em projetos que exigem mudança de temas, como em interfaces de modo claro e escuro.
-- <strong>Aplicações Baseadas em Componentes</strong>: Especialmente em ambientes como React e Vue, onde o CSS escopado em cada componente pode ser vantajoso.</p>
+<h4 id="quando-usar-css-in-js">Quando Usar CSS-in-JS?</h4>
+<p>O CSS-in-JS é recomendado para:</p>
+<ul>
+<li><strong>Componentes de Interface Complexos</strong>: Quando os estilos precisam ser dinâmicos, como em componentes que mudam com o estado do usuário.</li>
+<li><strong>Projetos com Temas</strong>: Em projetos que exigem mudança de temas, como em interfaces de modo claro e escuro.</li>
+<li><strong>Aplicações Baseadas em Componentes</strong>: Especialmente em ambientes como React e Vue, onde o CSS escopado em cada componente pode ser vantajoso.</li>
+</ul>
 <p>Por outro lado, para projetos simples ou onde o desempenho é uma preocupação central, o CSS tradicional, CSS Modules, ou até bibliotecas como Tailwind CSS podem ser mais adequados.</p>
+<h3 id="styled-components">Styled Components</h3>
 <p>Abaixo, segue um exemplo de como criar um app Vite com React usando Styled Components:</p>
-<h3 id="1-crie-o-projeto-com-vite">1. Crie o projeto com Vite</h3>
+<h4 id="1-crie-o-projeto-com-vite">1. Crie o projeto com Vite</h4>
 <pre><code class="language-bash">npm create vite@latest nome-do-projeto --template react
 cd nome-do-projeto
 npm install
 </code></pre>
-<h3 id="2-instale-o-styled-components">2. Instale o Styled Components</h3>
+<h4 id="2-instale-o-styled-components">2. Instale o Styled Components</h4>
 <pre><code class="language-bash">npm install styled-components
 </code></pre>
-<h3 id="3-configure-um-componente-com-styled-components">3. Configure um Componente com Styled Components</h3>
+<h4 id="3-configure-um-componente-com-styled-components">3. Configure um Componente com Styled Components</h4>
 <p>No arquivo <code>App.jsx</code>, importe <code>styled-components</code> e crie um botão estilizado:</p>
 <pre><code class="language-jsx">import React from 'react';
 import styled from 'styled-components';
@@ -397,11 +401,57 @@ function App() {
 
 export default App;
 </code></pre>
-<h3 id="4-execute-o-app">4. Execute o app</h3>
+<h4 id="4-execute-o-app">4. Execute o app</h4>
 <p>Para iniciar o app e ver os estilos aplicados:</p>
 <pre><code class="language-bash">npm run dev
 </code></pre>
-<p>Esse exemplo configura um botão com estilos customizados usando o <code>styled-components</code>, permitindo criar componentes reutilizáveis e bem encapsulados.</p></div>
+<p>Esse exemplo configura um botão com estilos customizados usando o <code>styled-components</code>, permitindo criar componentes reutilizáveis e bem encapsulados.</p>
+<h3 id="adicionar-ao-exemplo-acima-o-uso-de-css-modules">Adicionar ao exemplo acima o uso de CSS Modules</h3>
+<p>CSS Modules é uma abordagem que permite criar estilos escopados localmente, evitando conflitos globais. Abaixo, segue um exemplo de como usar CSS Modules no mesmo projeto:</p>
+<h4 id="1-crie-um-arquivo-css-module">1. Crie um arquivo CSS Module</h4>
+<p>No diretório <code>src</code>, crie um arquivo chamado <code>App.module.css</code> com o seguinte conteúdo:</p>
+<pre><code class="language-css">.titulo {
+  color: #2c3e50;
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.botao {
+  background-color: #e74c3c;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.botao:hover {
+  background-color: #c0392b;
+}
+</code></pre>
+<h4 id="2-importe-e-use-o-css-module-no-componente">2. Importe e use o CSS Module no componente</h4>
+<p>No arquivo <code>App.jsx</code>, importe o CSS Module e aplique as classes:</p>
+<pre><code class="language-jsx">import React from 'react';
+import styles from './App.module.css';
+
+function App() {
+  return (
+    &lt;div&gt;
+      &lt;h1 className={styles.titulo}&gt;Meu App com CSS Modules&lt;/h1&gt;
+      &lt;button className={styles.botao}&gt;Clique aqui&lt;/button&gt;
+    &lt;/div&gt;
+  );
+}
+
+export default App;
+</code></pre>
+<h4 id="3-execute-o-app">3. Execute o app</h4>
+<p>Para iniciar o app e ver os estilos aplicados:</p>
+<pre><code class="language-bash">npm run dev
+</code></pre>
+<p>Esse exemplo demonstra como usar CSS Modules para criar estilos escopados localmente, garantindo que as classes CSS sejam únicas e evitando conflitos globais.</p></div>
         
         
     </div>
