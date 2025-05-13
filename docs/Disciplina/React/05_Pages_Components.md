@@ -1,20 +1,23 @@
-# 05 - **Diferenças entre Pages e Components**
+# 05 - Pages e Components
 
-## Organizando o App
+## Introdução
 
 A organização de uma aplicação **React** pode ser melhorada ao diferenciar **Pages** (páginas) de **Components** (componentes). A distinção entre essas duas categorias é importante para manter o código escalável, reutilizável e de fácil manutenção. Vou explicar a diferença e como você pode organizá-los de forma eficiente.
 
 ### Diferença entre **Pages** e **Components**
 
-1. **Pages (Páginas)**:
-   - **O que são**: São componentes que representam rotas individuais da aplicação, geralmente associadas a uma URL específica. Cada **Page** é uma "página" completa e geralmente agrupa vários componentes.
-   - **Função**: Uma page contém a estrutura e layout principal da página e usa outros componentes para construir sua interface. É responsável por representar uma tela completa da aplicação.
-   - **Exemplo**: HomePage, AboutPage, ContactPage, DashboardPage, etc.
+#### **Pages**
 
-2. **Components (Componentes)**:
-   - **O que são**: São blocos reutilizáveis menores de interface, que podem ser usados em várias páginas. Componentes são mais modulares e têm uma única responsabilidade, como um botão, um formulário, ou uma tabela.
-   - **Função**: Eles não estão vinculados a uma URL específica e podem ser combinados dentro de **Pages** ou outros componentes.
-   - **Exemplo**: Navbar, Footer, Button, Card, Modal, FormField, etc.
+- **O que são**: São componentes que representam rotas individuais da aplicação, geralmente associadas a uma URL específica. Cada **Page** é uma "página" completa e geralmente agrupa vários componentes.
+
+- **Função**: Uma page contém a estrutura e layout principal da página e usa outros componentes para construir sua interface. É responsável por representar uma tela completa da aplicação.
+- **Exemplo**: HomePage, AboutPage, ContactPage, DashboardPage, etc.
+
+#### **Components (Componentes)**
+
+- **O que são**: São blocos reutilizáveis menores de interface, que podem ser usados em várias páginas. Componentes são mais modulares e têm uma única responsabilidade, como um botão, um formulário, ou uma tabela.
+- **Função**: Eles não estão vinculados a uma URL específica e podem ser combinados dentro de **Pages** ou outros componentes.
+- **Exemplo**: Navbar, Footer, Button, Card, Modal, FormField, etc.
 
 ### Organização de **Pages** e **Components**
 
