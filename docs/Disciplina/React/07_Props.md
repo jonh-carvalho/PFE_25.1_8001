@@ -1,4 +1,8 @@
-No React, **props** (abreviação de "properties") são parâmetros passados para componentes para transmitir dados e customizar o comportamento desses componentes. Com props, um componente pai pode enviar informações para um componente filho, permitindo uma comunicação unidirecional, que é uma característica fundamental da arquitetura do React.
+# 07 - **Props**
+
+## Introdução
+
+Props - (abreviação de "properties") são parâmetros passados para componentes para transmitir dados e customizar o comportamento desses componentes. Com props, um componente pai pode enviar informações para um componente filho, permitindo uma comunicação unidirecional, que é uma característica fundamental da arquitetura do React.
 
 ### Conceitos Principais de Props
 
