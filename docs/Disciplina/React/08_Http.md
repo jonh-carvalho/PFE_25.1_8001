@@ -155,14 +155,14 @@ Indicam que o servidor encontrou um erro ao tentar processar a requisição.
 - Montar uma requisição `GET` e uma `POST` usando JavaScript com o `fetch`.
 - Mostrar a diferença entre os métodos e como lidar com os diferentes status HTTP retornados.
   
-```javascript
+```js
 fetch("https://api.exemplo.com/recurso")
-  .then((response) => {
-    if (!response.ok) {
-      throw new Error(`Erro: ${response.status}`);
-    }
-    return response.json();
-  })
-  .then((data) => console.log(data))
-  .catch((error) => console.error(error));
+   .then((response) => {
+      if (!response.ok) {
+         throw new Error(`Erro: ${response.status}`);
+         }
+         return response.json();
+         })
+         .then((data) => console.log(data))
+         .catch((error) => console.error(error));
 ```
