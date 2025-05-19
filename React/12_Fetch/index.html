@@ -11,7 +11,7 @@
     <link rel="shortcut icon" href="../../img/favicon.ico">
 
     
-    <title>10 Fetch - PFE_25.1_8001</title>
+    <title>12 - Fetch - PFE_25.1_8001</title>
     
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
@@ -195,25 +195,25 @@
                         
                             
 <li >
-    <a href="../08_Http/">08 - Protocolo HTTP</a>
-</li>
-
-                        
-                            
-<li >
-    <a href="../09_Lendo%20Dados/">09 Lendo Dados</a>
-</li>
-
-                        
-                            
-<li >
     <a href="../09_UseState_useRef/">09 - useState e useRef</a>
 </li>
 
                         
                             
+<li >
+    <a href="../10_Http/">10 - Protocolo HTTP</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../11_Lendo%20Dados/">11 Lendo Dados</a>
+</li>
+
+                        
+                            
 <li class="active">
-    <a href="./">10 Fetch</a>
+    <a href="./">12 - Fetch</a>
 </li>
 
                         
@@ -291,7 +291,7 @@
 
             <ul class="nav navbar-nav navbar-right">
                     <li >
-                        <a rel="prev" href="../09_UseState_useRef/">
+                        <a rel="prev" href="../11_Lendo%20Dados/">
                             <i class="fas fa-arrow-left"></i> Previous
                         </a>
                     </li>
@@ -301,7 +301,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="https://github.com/jonh-carvalho/PFE_25.1_8001/edit/master/docs/React/10_Fetch.md"><i class="fab fa-github"></i> Edit on GitHub</a>
+                        <a href="https://github.com/jonh-carvalho/PFE_25.1_8001/edit/master/docs/React/12_Fetch.md"><i class="fab fa-github"></i> Edit on GitHub</a>
                     </li>
             </ul>
         </div>
@@ -313,16 +313,24 @@
         
         <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
-        <li class="first-level active"><a href="#caracteristicas-principais-do-fetch">Características principais do fetch:</a></li>
-        <li class="first-level "><a href="#exemplo-basico-de-uso-do-fetch">Exemplo básico de uso do fetch:</a></li>
-        <li class="first-level "><a href="#um-exemplo-de-como-usar-o-fetch-com-a-api-do-jsonplaceholder-uma-api-publica-para-testes-e-prototipagem">Um exemplo de como usar o fetch com a API do JSONPlaceholder, uma API pública para testes e prototipagem:</a></li>
-        <li class="first-level "><a href="#exemplo-de-requisicao-get">Exemplo de requisição GET</a></li>
-        <li class="first-level "><a href="#exemplo-de-requisicao-post">Exemplo de requisição POST</a></li>
-        <li class="first-level "><a href="#explicacao">Explicação:</a></li>
+        <li class="first-level active"><a href="#12-fetch">12 - Fetch</a></li>
+            <li class="second-level"><a href="#caracteristicas-principais-do-fetch">Características principais do fetch:</a></li>
+                
+            <li class="second-level"><a href="#exemplo-basico-de-uso-do-fetch">Exemplo básico de uso do fetch:</a></li>
+                
+            <li class="second-level"><a href="#um-exemplo-de-como-usar-o-fetch-com-a-api-do-jsonplaceholder-uma-api-publica-para-testes-e-prototipagem">Um exemplo de como usar o fetch com a API do JSONPlaceholder, uma API pública para testes e prototipagem:</a></li>
+                
+            <li class="second-level"><a href="#exemplo-de-requisicao-get">Exemplo de requisição GET</a></li>
+                
+            <li class="second-level"><a href="#exemplo-de-requisicao-post">Exemplo de requisição POST</a></li>
+                
+            <li class="second-level"><a href="#explicacao">Explicação:</a></li>
+                
     </ul>
 </div></div>
         <div class="col-md-9" role="main">
 
+<h1 id="12-fetch">12 - Fetch</h1>
 <p><code>fetch</code> é uma API nativa do JavaScript que permite realizar requisições HTTP de forma simples e moderna. Ela é usada principalmente para buscar (ou "fetch") recursos de um servidor, como dados de uma API, arquivos ou outros tipos de conteúdo. O <code>fetch</code> retorna uma <em>Promise</em>, o que significa que ele trabalha de forma assíncrona, permitindo que o JavaScript continue a executar outras operações enquanto a requisição está em andamento.</p>
 <h3 id="caracteristicas-principais-do-fetch">Características principais do <code>fetch</code>:</h3>
 <ol>

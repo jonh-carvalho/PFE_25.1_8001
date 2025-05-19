@@ -11,7 +11,7 @@
     <link rel="shortcut icon" href="../../img/favicon.ico">
 
     
-    <title>09 Lendo Dados - PFE_25.1_8001</title>
+    <title>11 Lendo Dados - PFE_25.1_8001</title>
     
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
@@ -195,25 +195,25 @@
                         
                             
 <li >
-    <a href="../08_Http/">08 - Protocolo HTTP</a>
-</li>
-
-                        
-                            
-<li class="active">
-    <a href="./">09 Lendo Dados</a>
-</li>
-
-                        
-                            
-<li >
     <a href="../09_UseState_useRef/">09 - useState e useRef</a>
 </li>
 
                         
                             
 <li >
-    <a href="../10_Fetch/">10 Fetch</a>
+    <a href="../10_Http/">10 - Protocolo HTTP</a>
+</li>
+
+                        
+                            
+<li class="active">
+    <a href="./">11 Lendo Dados</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../12_Fetch/">12 - Fetch</a>
 </li>
 
                         
@@ -291,17 +291,17 @@
 
             <ul class="nav navbar-nav navbar-right">
                     <li >
-                        <a rel="prev" href="../08_Http/">
+                        <a rel="prev" href="../10_Http/">
                             <i class="fas fa-arrow-left"></i> Previous
                         </a>
                     </li>
                     <li >
-                        <a rel="next" href="../09_UseState_useRef/">
+                        <a rel="next" href="../12_Fetch/">
                             Next <i class="fas fa-arrow-right"></i>
                         </a>
                     </li>
                     <li>
-                        <a href="https://github.com/jonh-carvalho/PFE_25.1_8001/edit/master/docs/React/09_Lendo Dados.md"><i class="fab fa-github"></i> Edit on GitHub</a>
+                        <a href="https://github.com/jonh-carvalho/PFE_25.1_8001/edit/master/docs/React/11_Lendo Dados.md"><i class="fab fa-github"></i> Edit on GitHub</a>
                     </li>
             </ul>
         </div>
@@ -313,21 +313,22 @@
         
         <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
-        <li class="first-level active"><a href="#1-exibindo-dados-com-const">1. Exibindo dados com const</a></li>
-        <li class="first-level "><a href="#2-exibindo-dados-com-importacao-direta-de-json">2. Exibindo dados com importação direta de JSON</a></li>
-            <li class="second-level"><a href="#passo-1-crie-o-arquivo-json">Passo 1: Crie o arquivo JSON</a></li>
+        <li class="first-level active"><a href="#11-lendo-dados">11 Lendo Dados</a></li>
+            <li class="second-level"><a href="#1-exibindo-dados-com-const">1. Exibindo dados com const</a></li>
                 
-            <li class="second-level"><a href="#passo-2-importe-o-json-no-componente">Passo 2: Importe o JSON no componente</a></li>
+            <li class="second-level"><a href="#2-exibindo-dados-com-importacao-direta-de-json">2. Exibindo dados com importação direta de JSON</a></li>
                 
-        <li class="first-level "><a href="#3-exibindo-dados-com-fetch">3. Exibindo dados com fetch</a></li>
-            <li class="second-level"><a href="#passo-1-crie-o-arquivo-json-no-diretorio-public">Passo 1: Crie o arquivo JSON no diretório public</a></li>
+                <li class="third-level"><a href="#passo-1-crie-o-arquivo-json">Passo 1: Crie o arquivo JSON</a></li>
+                <li class="third-level"><a href="#passo-2-importe-o-json-no-componente">Passo 2: Importe o JSON no componente</a></li>
+            <li class="second-level"><a href="#3-exibindo-dados-com-fetch">3. Exibindo dados com fetch</a></li>
                 
-            <li class="second-level"><a href="#passo-2-use-fetch-para-buscar-o-arquivo-json">Passo 2: Use fetch para buscar o arquivo JSON</a></li>
-                
+                <li class="third-level"><a href="#passo-1-crie-o-arquivo-json-no-diretorio-public">Passo 1: Crie o arquivo JSON no diretório public</a></li>
+                <li class="third-level"><a href="#passo-2-use-fetch-para-buscar-o-arquivo-json">Passo 2: Use fetch para buscar o arquivo JSON</a></li>
     </ul>
 </div></div>
         <div class="col-md-9" role="main">
 
+<h1 id="11-lendo-dados">11 Lendo Dados</h1>
 <p>Exibir dados no seu aplicativo Vite com React usando três abordagens diferentes: com <code>const</code>, importação direta e usando <code>fetch</code>.</p>
 <h3 id="1-exibindo-dados-com-const">1. Exibindo dados com <code>const</code></h3>
 <p>Se os dados forem pequenos e você quiser armazená-los diretamente no código, pode usar uma constante.</p>
