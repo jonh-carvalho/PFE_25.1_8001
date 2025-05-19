@@ -1,3 +1,5 @@
+# 12 - Fetch 
+
 `fetch` é uma API nativa do JavaScript que permite realizar requisições HTTP de forma simples e moderna. Ela é usada principalmente para buscar (ou "fetch") recursos de um servidor, como dados de uma API, arquivos ou outros tipos de conteúdo. O `fetch` retorna uma *Promise*, o que significa que ele trabalha de forma assíncrona, permitindo que o JavaScript continue a executar outras operações enquanto a requisição está em andamento.
 
 ### Características principais do `fetch`:
