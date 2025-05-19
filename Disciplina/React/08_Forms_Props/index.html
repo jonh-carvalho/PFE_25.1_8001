@@ -11,7 +11,7 @@
     <link rel="shortcut icon" href="../../../img/favicon.ico">
 
     
-    <title>11 Forms Props - PFE_25.1_8001</title>
+    <title>08 - Forms Props - PFE_25.1_8001</title>
     
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
@@ -151,6 +151,12 @@
 
         
             
+<li class="active">
+    <a href="./">08 - Forms Props</a>
+</li>
+
+        
+            
 <li >
     <a href="../08_Http/">08 - Protocolo HTTP</a>
 </li>
@@ -164,19 +170,13 @@
         
             
 <li >
-    <a href="../10_Fetch/">10 Fetch</a>
-</li>
-
-        
-            
-<li class="active">
-    <a href="./">11 Forms Props</a>
+    <a href="../09_UseState_useRef/">09 - useState e useRef</a>
 </li>
 
         
             
 <li >
-    <a href="../12_useState_useRef/">12 useState useRef</a>
+    <a href="../10_Fetch/">10 Fetch</a>
 </li>
 
         
@@ -291,17 +291,17 @@
 
             <ul class="nav navbar-nav navbar-right">
                     <li >
-                        <a rel="prev" href="../10_Fetch/">
+                        <a rel="prev" href="../07_Props/">
                             <i class="fas fa-arrow-left"></i> Previous
                         </a>
                     </li>
                     <li >
-                        <a rel="next" href="../12_useState_useRef/">
+                        <a rel="next" href="../08_Http/">
                             Next <i class="fas fa-arrow-right"></i>
                         </a>
                     </li>
                     <li>
-                        <a href="https://github.com/jonh-carvalho/PFE_25.1_8001/edit/master/docs/Disciplina/React/11_Forms_Props.md"><i class="fab fa-github"></i> Edit on GitHub</a>
+                        <a href="https://github.com/jonh-carvalho/PFE_25.1_8001/edit/master/docs/Disciplina/React/08_Forms_Props.md"><i class="fab fa-github"></i> Edit on GitHub</a>
                     </li>
             </ul>
         </div>
@@ -313,22 +313,24 @@
         
         <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
-        <li class="first-level active"><a href="#1-formularios-controlados">1. Formulários Controlados</a></li>
-            <li class="second-level"><a href="#exemplo-de-formulario-controlado-com-usestate">Exemplo de Formulário Controlado com useState</a></li>
+        <li class="first-level active"><a href="#08-forms-props">08 - Forms Props</a></li>
+            <li class="second-level"><a href="#1-formularios-controlados">1. Formulários Controlados</a></li>
                 
-            <li class="second-level"><a href="#vantagens-dos-formularios-controlados">Vantagens dos Formulários Controlados</a></li>
+                <li class="third-level"><a href="#exemplo-de-formulario-controlado-com-usestate">Exemplo de Formulário Controlado com useState</a></li>
+                <li class="third-level"><a href="#vantagens-dos-formularios-controlados">Vantagens dos Formulários Controlados</a></li>
+            <li class="second-level"><a href="#2-formularios-nao-controlados">2. Formulários Não Controlados</a></li>
                 
-        <li class="first-level "><a href="#2-formularios-nao-controlados">2. Formulários Não Controlados</a></li>
-            <li class="second-level"><a href="#exemplo-de-formulario-nao-controlado-com-useref">Exemplo de Formulário Não Controlado com useRef</a></li>
+                <li class="third-level"><a href="#exemplo-de-formulario-nao-controlado-com-useref">Exemplo de Formulário Não Controlado com useRef</a></li>
+                <li class="third-level"><a href="#vantagens-dos-formularios-nao-controlados">Vantagens dos Formulários Não Controlados</a></li>
+            <li class="second-level"><a href="#3-escolhendo-entre-formularios-controlados-e-nao-controlados">3. Escolhendo entre Formulários Controlados e Não Controlados</a></li>
                 
-            <li class="second-level"><a href="#vantagens-dos-formularios-nao-controlados">Vantagens dos Formulários Não Controlados</a></li>
+            <li class="second-level"><a href="#4-exemplos-de-validacao-em-formularios-controlados">4. Exemplos de Validação em Formulários Controlados</a></li>
                 
-        <li class="first-level "><a href="#3-escolhendo-entre-formularios-controlados-e-nao-controlados">3. Escolhendo entre Formulários Controlados e Não Controlados</a></li>
-        <li class="first-level "><a href="#4-exemplos-de-validacao-em-formularios-controlados">4. Exemplos de Validação em Formulários Controlados</a></li>
     </ul>
 </div></div>
         <div class="col-md-9" role="main">
 
+<h1 id="08-forms-props">08 - Forms Props</h1>
 <p>No React, formulários funcionam de maneira semelhante ao HTML tradicional, mas com algumas diferenças importantes devido ao conceito de <strong>estado</strong> e <strong>eventos controlados</strong>. Em vez de apenas enviar dados ao servidor ao submeter o formulário, o React mantém os valores dos campos de entrada sincronizados com o estado do componente. Isso é feito através de formulários <strong>controlados</strong> e <strong>não controlados</strong>.</p>
 <h3 id="1-formularios-controlados">1. Formulários Controlados</h3>
 <p>Em formulários controlados, o estado do React mantém os valores dos campos. Isso significa que o valor de cada campo é controlado por uma variável no estado do componente, permitindo controle total sobre o que é exibido e processado.</p>
