@@ -11,7 +11,7 @@
     <link rel="shortcut icon" href="../../img/favicon.ico">
 
     
-    <title>Hooks (Foco em Componentes Funcionais) - PFE_25.1_8001</title>
+    <title>010 - Hooks (Foco em Componentes Funcionais) - PFE_25.1_8001</title>
     
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
@@ -201,7 +201,7 @@
                         
                             
 <li class="active">
-    <a href="./">Hooks (Foco em Componentes Funcionais)</a>
+    <a href="./">010 - Hooks (Foco em Componentes Funcionais)</a>
 </li>
 
                         
@@ -319,36 +319,162 @@
         
         <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
-        <li class="first-level active"><a href="#hooks-foco-em-componentes-funcionais">Hooks (Foco em Componentes Funcionais)</a></li>
-            <li class="second-level"><a href="#introducao">Introdução</a></li>
+        <li class="first-level active"><a href="#010-hooks-foco-em-componentes-funcionais">010 - Hooks (Foco em Componentes Funcionais)</a></li>
+            <li class="second-level"><a href="#1-usestate-estado-em-componentes-funcionais">1. : useState (Estado em Componentes Funcionais)</a></li>
                 
-                <li class="third-level"><a href="#1-usestate-estado-em-componentes-funcionais">1. - useState (Estado em Componentes Funcionais)</a></li>
-                <li class="third-level"><a href="#2-useeffect-efeitos-colaterais">** 2. - useEffect (Efeitos Colaterais)**</a></li>
+        <li class="first-level "><a href="#conteudo-teorico-estado-em-react-usestate">Conteúdo Teórico: Estado em React (useState)</a></li>
+            <li class="second-level"><a href="#1-o-que-e-estado-em-react">1. O que é Estado em React?</a></li>
+                
+            <li class="second-level"><a href="#2-diferenca-entre-props-e-state">2. Diferença entre props e state</a></li>
+                
+            <li class="second-level"><a href="#3-sintaxe-do-usestate">3. Sintaxe do useState</a></li>
+                
+            <li class="second-level"><a href="#4-atualizacoes-assincronas-e-imutabilidade">4. Atualizações Assíncronas e Imutabilidade</a></li>
+                
+                <li class="third-level"><a href="#a-atualizacoes-assincronas">a) Atualizações Assíncronas</a></li>
+                <li class="third-level"><a href="#b-imutabilidade">b) Imutabilidade</a></li>
+            <li class="second-level"><a href="#resumo-visual">Resumo Visual</a></li>
+                
+                <li class="third-level"><a href="#boas-praticas">Boas Práticas:</a></li>
+                <li class="third-level"><a href="#exemplo-pratico">Exemplo Prático:</a></li>
+                <li class="third-level"><a href="#exercicio">Exercício:</a></li>
+            <li class="second-level"><a href="#2-useeffect-efeitos-colaterais">2. : useEffect (Efeitos Colaterais)</a></li>
+                
+                <li class="third-level"><a href="#conteudo-teorico">Conteúdo Teórico:</a></li>
+                <li class="third-level"><a href="#exemplo-pratico_1">Exemplo Prático:</a></li>
+                <li class="third-level"><a href="#exercicio_1">Exercício:</a></li>
+            <li class="second-level"><a href="#3-usecontext-compartilhamento-de-estado">3. : useContext (Compartilhamento de Estado)</a></li>
+                
                 <li class="third-level"><a href="#conteudo-teorico_1">Conteúdo Teórico:</a></li>
-                <li class="third-level"><a href="#3-createcontext-compartilhamento-de-estado">3. - createContext (Compartilhamento de Estado)</a></li>
-                <li class="third-level"><a href="#-useref-referencias-e-valores-mutaveis">. - useRef (Referências e Valores Mutáveis)</a></li>
-                <li class="third-level"><a href="#5-usereducer-estado-complexo">5. - useReducer (Estado Complexo)</a></li>
-                <li class="third-level"><a href="#exercicio-final-do-modulo">Exercício Final do Módulo</a></li>
+                <li class="third-level"><a href="#exemplo-pratico_2">Exemplo Prático:</a></li>
+                <li class="third-level"><a href="#exercicio_2">Exercício:</a></li>
+            <li class="second-level"><a href="#4-useref-referencias-e-valores-mutaveis">4. : useRef (Referências e Valores Mutáveis)</a></li>
+                
+                <li class="third-level"><a href="#conteudo-teorico_2">Conteúdo Teórico:</a></li>
+                <li class="third-level"><a href="#exemplo-pratico_3">Exemplo Prático:</a></li>
+                <li class="third-level"><a href="#exercicio_3">Exercício:</a></li>
+            <li class="second-level"><a href="#5-usereducer-estado-complexo">5. : useReducer (Estado Complexo)</a></li>
+                
+                <li class="third-level"><a href="#conteudo-teorico_3">Conteúdo Teórico:</a></li>
+                <li class="third-level"><a href="#exemplo-pratico_4">Exemplo Prático:</a></li>
+                <li class="third-level"><a href="#exercicio_4">Exercício:</a></li>
+            <li class="second-level"><a href="#exercicio-final-do-modulo">Exercício Final do Módulo</a></li>
+                
                 <li class="third-level"><a href="#recursos-adicionais">Recursos Adicionais:</a></li>
     </ul>
 </div></div>
         <div class="col-md-9" role="main">
 
-<h1 id="hooks-foco-em-componentes-funcionais"><strong>Hooks (Foco em Componentes Funcionais)</strong></h1>
-<hr />
-<h2 id="introducao">Introdução</h2>
+<h1 id="010-hooks-foco-em-componentes-funcionais">010 - <strong>Hooks (Foco em Componentes Funcionais)</strong></h1>
 <p><strong>Objetivo:</strong> Dominar os principais Hooks do React para gerenciar estado, efeitos colaterais e referências em componentes funcionais.  </p>
-<h3 id="1-usestate-estado-em-componentes-funcionais"><strong>1. - useState (Estado em Componentes Funcionais)</strong></h3>
-<h4 id="conteudo-teorico"><strong>Conteúdo Teórico:</strong></h4>
+<hr />
+<h2 id="1-usestate-estado-em-componentes-funcionais"><strong>1. : useState (Estado em Componentes Funcionais)</strong></h2>
+<h1 id="conteudo-teorico-estado-em-react-usestate"><strong>Conteúdo Teórico: Estado em React (useState)</strong></h1>
+<h2 id="1-o-que-e-estado-em-react"><strong>1. O que é Estado em React?</strong></h2>
+<p>O <strong>estado (state)</strong> em React representa os dados dinâmicos de um componente. Ele permite que o componente:<br />
+- <strong>Armazene informações</strong> que podem mudar ao longo do tempo.<br />
+- <strong>Re-renderize</strong> a interface quando o estado é atualizado.<br />
+- <strong>Gerencie interações do usuário</strong> (cliques, formulários, etc.).  </p>
+<p><strong>Exemplo:</strong> Um contador que incrementa quando o usuário clica em um botão.  </p>
+<hr />
+<h2 id="2-diferenca-entre-props-e-state"><strong>2. Diferença entre <code>props</code> e <code>state</code></strong></h2>
+<table>
+<thead>
+<tr>
+<th><strong><code>props</code></strong></th>
+<th><strong><code>state</code></strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Passado de um componente <strong>pai para filho</strong>.</td>
+<td>Gerenciado <strong>internamente</strong> pelo componente.</td>
+</tr>
+<tr>
+<td><strong>Imutável</strong> (não pode ser modificado pelo componente filho).</td>
+<td><strong>Mutável</strong> (pode ser atualizado com <code>setState</code>).</td>
+</tr>
+<tr>
+<td>Usado para <strong>comunicação entre componentes</strong>.</td>
+<td>Usado para <strong>controle interno do componente</strong>.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Exemplo:</strong>  </p>
+<pre><code class="language-jsx">// Componente Pai (passa props)
+&lt;PaiComponente nome=&quot;João&quot; /&gt;  
+
+// Componente Filho (usa props + state)
+function FilhoComponente({ nome }) {
+  const [idade, setIdade] = useState(25); // Estado interno
+  return &lt;p&gt;{nome} tem {idade} anos.&lt;/p&gt;;
+}
+</code></pre>
+<hr />
+<h2 id="3-sintaxe-do-usestate"><strong>3. Sintaxe do <code>useState</code></strong></h2>
+<p>O <code>useState</code> é um <strong>Hook</strong> que retorna um array com:<br />
+1. <strong>Valor atual do estado</strong> (<code>state</code>).<br />
+2. <strong>Função para atualizá-lo</strong> (<code>setState</code>).  </p>
+<pre><code class="language-jsx">const [state, setState] = useState(initialValue);
+</code></pre>
+<p><strong>Exemplo:</strong>  </p>
+<pre><code class="language-jsx">import { useState } from 'react';
+
+function Counter() {
+  const [count, setCount] = useState(0); // Estado inicial = 0
+
+  return (
+    &lt;button onClick={() =&gt; setCount(count + 1)}&gt;
+      Clicou {count} vezes
+    &lt;/button&gt;
+  );
+}
+</code></pre>
+<hr />
+<h2 id="4-atualizacoes-assincronas-e-imutabilidade"><strong>4. Atualizações Assíncronas e Imutabilidade</strong></h2>
+<h3 id="a-atualizacoes-assincronas"><strong>a) Atualizações Assíncronas</strong></h3>
 <ul>
-<li>O que é estado em React?  </li>
-<li>Diferença entre <code>props</code> e <code>state</code>.  </li>
-<li>Sintaxe do <code>useState</code>:<br />
+<li>O React <strong>não atualiza o estado imediatamente</strong> (é agendado).  </li>
+<li>Se precisar do <strong>valor anterior</strong>, use a forma funcional:<br />
 <code>jsx
-  const [state, setState] = useState(initialValue);</code></li>
-<li>Atualizações assíncronas e imutabilidade.  </li>
+  setCount(prevCount =&gt; prevCount + 1); // Garante a atualização correta</code></li>
 </ul>
-<h4 id="exemplo-pratico"><strong>Exemplo Prático:</strong></h4>
+<h3 id="b-imutabilidade"><strong>b) Imutabilidade</strong></h3>
+<ul>
+<li><strong>Nunca modifique o estado diretamente!</strong><br />
+  ❌ <code>state.count = 5</code> (Errado!)<br />
+  ✅ <code>setCount(5)</code> (Correto!)  </li>
+</ul>
+<p><strong>Exemplo com Objetos:</strong>  </p>
+<pre><code class="language-jsx">const [user, setUser] = useState({ name: 'Ana', age: 30 });
+
+// ❌ Errado (mutação direta)
+user.age = 31; // Não re-renderiza!
+
+// ✅ Correto (cria um novo objeto)
+setUser({ ...user, age: 31 }); // Spread operator
+</code></pre>
+<hr />
+<h2 id="resumo-visual"><strong>Resumo Visual</strong></h2>
+<pre><code class="language-jsx">import { useState } from 'react';
+
+function Example() {
+  // 1. Declaração do estado
+  const [value, setValue] = useState('');
+
+  // 2. Atualização com imutabilidade
+  const handleChange = (e) =&gt; {
+    setValue(e.target.value); // ✅ Atualiza corretamente
+  };
+
+  return &lt;input value={value} onChange={handleChange} /&gt;;
+}
+</code></pre>
+<h3 id="boas-praticas"><strong>Boas Práticas:</strong></h3>
+<p>✔ Use <code>useState</code> para dados que mudam e afetam a UI.<br />
+✔ Atualize o estado <strong>apenas com <code>setState</code></strong> (nunca diretamente).<br />
+✔ Para estados complexos, considere <code>useReducer</code>.  </p>
+<h3 id="exemplo-pratico"><strong>Exemplo Prático:</strong></h3>
 <pre><code class="language-jsx">import { useState } from 'react';
 
 function Counter() {
@@ -362,14 +488,14 @@ function Counter() {
   );
 }
 </code></pre>
-<h4 id="exercicio"><strong>Exercício:</strong></h4>
+<h3 id="exercicio"><strong>Exercício:</strong></h3>
 <ol>
 <li>Crie um componente <code>ToggleButton</code> que alterna entre "Ligado" e "Desligado".  </li>
 <li>Faça um contador que permita incrementar, decrementar e resetar o valor.  </li>
 </ol>
 <hr />
-<h3 id="2-useeffect-efeitos-colaterais">** 2. - useEffect (Efeitos Colaterais)**</h3>
-<h3 id="conteudo-teorico_1"><strong>Conteúdo Teórico:</strong></h3>
+<h2 id="2-useeffect-efeitos-colaterais"><strong>2. : useEffect (Efeitos Colaterais)</strong></h2>
+<h3 id="conteudo-teorico"><strong>Conteúdo Teórico:</strong></h3>
 <ul>
 <li>O que são efeitos colaterais? (API calls, subscriptions, timers).  </li>
 <li>Sintaxe:<br />
@@ -378,7 +504,7 @@ function Counter() {
 <li>Dependências vazias (<code>[]</code>) vs com dependências.  </li>
 <li>Cleanup function (<code>return () =&gt; { ... }</code>).  </li>
 </ul>
-<h4 id="exemplo-pratico_1"><strong>Exemplo Prático:</strong></h4>
+<h3 id="exemplo-pratico_1"><strong>Exemplo Prático:</strong></h3>
 <pre><code class="language-jsx">import { useState, useEffect } from 'react';
 
 function Timer() {
@@ -395,20 +521,20 @@ function Timer() {
   return &lt;p&gt;Tempo: {seconds} segundos&lt;/p&gt;;
 }
 </code></pre>
-<h4 id="exercicio_1"><strong>Exercício:</strong></h4>
+<h3 id="exercicio_1"><strong>Exercício:</strong></h3>
 <ol>
 <li>Crie um componente que busca dados de uma API (ex: <a href="https://jsonplaceholder.typicode.com/posts">JSONPlaceholder</a>) e exibe em uma lista.  </li>
 <li>Implemente um <code>useEffect</code> que atualize o título da página com um contador.  </li>
 </ol>
 <hr />
-<h3 id="3-createcontext-compartilhamento-de-estado"><strong>3. - createContext (Compartilhamento de Estado)</strong></h3>
-<h4 id="conteudo-teorico_2"><strong>Conteúdo Teórico:</strong></h4>
+<h2 id="3-usecontext-compartilhamento-de-estado"><strong>3. : useContext (Compartilhamento de Estado)</strong></h2>
+<h3 id="conteudo-teorico_1"><strong>Conteúdo Teórico:</strong></h3>
 <ul>
 <li>Problema do "prop drilling".  </li>
 <li>Criar e consumir um Context.  </li>
 <li><code>createContext</code>, <code>Provider</code> e <code>useContext</code>.  </li>
 </ul>
-<h4 id="exemplo-pratico_2"><strong>Exemplo Prático:</strong></h4>
+<h3 id="exemplo-pratico_2"><strong>Exemplo Prático:</strong></h3>
 <pre><code class="language-jsx">import { createContext, useContext, useState } from 'react';
 
 const ThemeContext = createContext();
@@ -433,20 +559,20 @@ function Toolbar() {
   );
 }
 </code></pre>
-<h4 id="exercicio_2"><strong>Exercício:</strong></h4>
+<h3 id="exercicio_2"><strong>Exercício:</strong></h3>
 <ol>
 <li>Crie um contexto <code>UserContext</code> que armazene o nome do usuário e permita alterá-lo.  </li>
 <li>Consuma esse contexto em dois componentes diferentes.  </li>
 </ol>
 <hr />
-<h3 id="-useref-referencias-e-valores-mutaveis"><strong>. - useRef (Referências e Valores Mutáveis)</strong></h3>
-<h4 id="conteudo-teorico_3"><strong>Conteúdo Teórico:</strong></h4>
+<h2 id="4-useref-referencias-e-valores-mutaveis"><strong>4. : useRef (Referências e Valores Mutáveis)</strong></h2>
+<h3 id="conteudo-teorico_2"><strong>Conteúdo Teórico:</strong></h3>
 <ul>
 <li>Diferença entre <code>useRef</code> e <code>useState</code>.  </li>
 <li>Acessar elementos DOM diretamente.  </li>
 <li>Armazenar valores mutáveis sem rerenderizar.  </li>
 </ul>
-<h4 id="exemplo-pratico_3"><strong>Exemplo Prático:</strong></h4>
+<h3 id="exemplo-pratico_3"><strong>Exemplo Prático:</strong></h3>
 <pre><code class="language-jsx">import { useRef } from 'react';
 
 function TextInput() {
@@ -464,14 +590,14 @@ function TextInput() {
   );
 }
 </code></pre>
-<h4 id="exercicio_3"><strong>Exercício:</strong></h4>
+<h3 id="exercicio_3"><strong>Exercício:</strong></h3>
 <ol>
 <li>Crie um componente que armazene o número de renders usando <code>useRef</code>.  </li>
 <li>Faça um "scroll to top" usando <code>useRef</code>.  </li>
 </ol>
 <hr />
-<h3 id="5-usereducer-estado-complexo"><strong>5. - useReducer (Estado Complexo)</strong></h3>
-<h4 id="conteudo-teorico_4"><strong>Conteúdo Teórico:</strong></h4>
+<h2 id="5-usereducer-estado-complexo"><strong>5. : useReducer (Estado Complexo)</strong></h2>
+<h3 id="conteudo-teorico_3"><strong>Conteúdo Teórico:</strong></h3>
 <ul>
 <li>Quando usar <code>useReducer</code> vs <code>useState</code>.  </li>
 <li>Sintaxe:<br />
@@ -479,7 +605,7 @@ function TextInput() {
   const [state, dispatch] = useReducer(reducer, initialState);</code></li>
 <li>Padrão de ações (<code>{ type, payload }</code>).  </li>
 </ul>
-<h4 id="exemplo-pratico_4"><strong>Exemplo Prático:</strong></h4>
+<h3 id="exemplo-pratico_4"><strong>Exemplo Prático:</strong></h3>
 <pre><code class="language-jsx">import { useReducer } from 'react';
 
 function reducer(state, action) {
@@ -505,15 +631,15 @@ function Counter() {
   );
 }
 </code></pre>
-<h4 id="exercicio_4"><strong>Exercício:</strong></h4>
+<h3 id="exercicio_4"><strong>Exercício:</strong></h3>
 <ol>
 <li>Implemente um carrinho de compras usando <code>useReducer</code>.  </li>
 <li>Crie um formulário com validação usando <code>useReducer</code>.  </li>
 </ol>
 <hr />
-<h3 id="exercicio-final-do-modulo"><strong>Exercício Final do Módulo</strong></h3>
-<p><strong>Desafio:</strong> Construa um <strong>"Todo List"</strong> usando:  </p>
-<p>✅ <code>useState</code> para gerenciar a lista de tarefas.<br />
+<h2 id="exercicio-final-do-modulo"><strong>Exercício Final do Módulo</strong></h2>
+<p><strong>Desafio:</strong> Construa um <strong>"Todo List"</strong> usando:<br />
+✅ <code>useState</code> para gerenciar a lista de tarefas.<br />
 ✅ <code>useEffect</code> para salvar no <code>localStorage</code>.<br />
 ✅ <code>useReducer</code> para ações como adicionar, remover e marcar como concluída.<br />
 ✅ <code>useContext</code> para um tema claro/escuro.<br />
