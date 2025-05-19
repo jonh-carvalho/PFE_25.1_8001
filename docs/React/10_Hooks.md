@@ -1,11 +1,10 @@
-# 010 - **Hooks (Foco em Componentes Funcionais)**  
+# **010 - Hooks (Foco em Componentes Funcionais)**  
 
 **Objetivo:** Dominar os principais Hooks do React para gerenciar estado, efeitos colaterais e referências em componentes funcionais.  
 
 ---
 
-## **1. : useState (Estado em Componentes Funcionais)**
-# **Conteúdo Teórico: Estado em React (useState)**  
+## **1.: useState (Estado em Componentes Funcionais)**
 
 ## **1. O que é Estado em React?**  
 O **estado (state)** em React representa os dados dinâmicos de um componente. Ele permite que o componente:  
@@ -115,6 +114,7 @@ function Example() {
 ✔ Atualize o estado **apenas com `setState`** (nunca diretamente).  
 ✔ Para estados complexos, considere `useReducer`.  
 
+ 
 
 ### **Exemplo Prático:**
 ```jsx
@@ -138,7 +138,7 @@ function Counter() {
 
 ---
 
-## **2. : useEffect (Efeitos Colaterais)**
+## **2. - useEffect (Efeitos Colaterais)**
 ### **Conteúdo Teórico:**
 - O que são efeitos colaterais? (API calls, subscriptions, timers).  
 - Sintaxe:  
@@ -173,7 +173,7 @@ function Timer() {
 
 ---
 
-## **3. : useContext (Compartilhamento de Estado)**
+## **3. - useContext (Compartilhamento de Estado)**
 ### **Conteúdo Teórico:**
 - Problema do "prop drilling".  
 - Criar e consumir um Context.  
@@ -212,7 +212,7 @@ function Toolbar() {
 
 ---
 
-## **4. : useRef (Referências e Valores Mutáveis)**
+## **4. - useRef (Referências e Valores Mutáveis)**
 ### **Conteúdo Teórico:**
 - Diferença entre `useRef` e `useState`.  
 - Acessar elementos DOM diretamente.  
@@ -244,7 +244,7 @@ function TextInput() {
 
 ---
 
-## **5. : useReducer (Estado Complexo)**
+## **5. - useReducer (Estado Complexo)**
 ### **Conteúdo Teórico:**
 - Quando usar `useReducer` vs `useState`.  
 - Sintaxe:  
@@ -301,3 +301,4 @@ function Counter() {
 - [Documentação Oficial dos Hooks](https://react.dev/reference/react)  
 - [React Hooks Cheat Sheet](https://react-hooks-cheatsheet.com/)  
 
+Esse roteiro garante uma aprendizagem prática e gradual dos Hooks mais importantes do React! 🚀
