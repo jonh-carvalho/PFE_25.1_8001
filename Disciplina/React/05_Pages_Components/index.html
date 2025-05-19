@@ -11,7 +11,7 @@
     <link rel="shortcut icon" href="../../../img/favicon.ico">
 
     
-    <title>05 - Diferenças entre Pages e Components - PFE_25.1_8001</title>
+    <title>05 - Pages e Components - PFE_25.1_8001</title>
     
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
@@ -128,7 +128,7 @@
         
             
 <li class="active">
-    <a href="./">05 - Diferenças entre Pages e Components</a>
+    <a href="./">05 - Pages e Components</a>
 </li>
 
         
@@ -140,37 +140,37 @@
         
             
 <li >
-    <a href="../06_Http/">06 Http</a>
+    <a href="../07_Props/">07 - Props</a>
 </li>
 
         
             
 <li >
-    <a href="../06_Props/">06 Props</a>
+    <a href="../08_Http/">08 - Protocolo HTTP</a>
 </li>
 
         
             
 <li >
-    <a href="../07_Fetch/">07 Fetch</a>
+    <a href="../09_Lendo%20Dados/">09 Lendo Dados</a>
 </li>
 
         
             
 <li >
-    <a href="../07_Lendo%20Json/">07 Lendo Json</a>
+    <a href="../10_Fetch/">10 Fetch</a>
 </li>
 
         
             
 <li >
-    <a href="../10_Forms_Props/">10 Forms Props</a>
+    <a href="../11_Forms_Props/">11 Forms Props</a>
 </li>
 
         
             
 <li >
-    <a href="../11_useState_useRef/">11 useState useRef</a>
+    <a href="../12_useState_useRef/">12 useState useRef</a>
 </li>
 
         
@@ -307,8 +307,8 @@
         
         <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
-        <li class="first-level active"><a href="#05-diferencas-entre-pages-e-components">05 - Diferenças entre Pages e Components</a></li>
-            <li class="second-level"><a href="#organizando-o-app">Organizando o App</a></li>
+        <li class="first-level active"><a href="#05-pages-e-components">05 - Pages e Components</a></li>
+            <li class="second-level"><a href="#introducao">Introdução</a></li>
                 
                 <li class="third-level"><a href="#diferenca-entre-pages-e-components">Diferença entre Pages e Components</a></li>
                 <li class="third-level"><a href="#organizacao-de-pages-e-components">Organização de Pages e Components</a></li>
@@ -317,24 +317,26 @@
 </div></div>
         <div class="col-md-9" role="main">
 
-<h1 id="05-diferencas-entre-pages-e-components">05 - <strong>Diferenças entre Pages e Components</strong></h1>
-<h2 id="organizando-o-app">Organizando o App</h2>
+<h1 id="05-pages-e-components">05 - Pages e Components</h1>
+<h2 id="introducao">Introdução</h2>
 <p>A organização de uma aplicação <strong>React</strong> pode ser melhorada ao diferenciar <strong>Pages</strong> (páginas) de <strong>Components</strong> (componentes). A distinção entre essas duas categorias é importante para manter o código escalável, reutilizável e de fácil manutenção. Vou explicar a diferença e como você pode organizá-los de forma eficiente.</p>
 <h3 id="diferenca-entre-pages-e-components">Diferença entre <strong>Pages</strong> e <strong>Components</strong></h3>
-<ol>
-<li><strong>Pages (Páginas)</strong>:</li>
-<li><strong>O que são</strong>: São componentes que representam rotas individuais da aplicação, geralmente associadas a uma URL específica. Cada <strong>Page</strong> é uma "página" completa e geralmente agrupa vários componentes.</li>
-<li><strong>Função</strong>: Uma page contém a estrutura e layout principal da página e usa outros componentes para construir sua interface. É responsável por representar uma tela completa da aplicação.</li>
+<h4 id="pages"><strong>Pages</strong></h4>
+<ul>
 <li>
-<p><strong>Exemplo</strong>: HomePage, AboutPage, ContactPage, DashboardPage, etc.</p>
+<p><strong>O que são</strong>: São componentes que representam rotas individuais da aplicação, geralmente associadas a uma URL específica. Cada <strong>Page</strong> é uma "página" completa e geralmente agrupa vários componentes.</p>
 </li>
 <li>
-<p><strong>Components (Componentes)</strong>:</p>
+<p><strong>Função</strong>: Uma page contém a estrutura e layout principal da página e usa outros componentes para construir sua interface. É responsável por representar uma tela completa da aplicação.</p>
 </li>
+<li><strong>Exemplo</strong>: HomePage, AboutPage, ContactPage, DashboardPage, etc.</li>
+</ul>
+<h4 id="components-componentes"><strong>Components (Componentes)</strong></h4>
+<ul>
 <li><strong>O que são</strong>: São blocos reutilizáveis menores de interface, que podem ser usados em várias páginas. Componentes são mais modulares e têm uma única responsabilidade, como um botão, um formulário, ou uma tabela.</li>
 <li><strong>Função</strong>: Eles não estão vinculados a uma URL específica e podem ser combinados dentro de <strong>Pages</strong> ou outros componentes.</li>
 <li><strong>Exemplo</strong>: Navbar, Footer, Button, Card, Modal, FormField, etc.</li>
-</ol>
+</ul>
 <h3 id="organizacao-de-pages-e-components">Organização de <strong>Pages</strong> e <strong>Components</strong></h3>
 <p>Uma boa prática é criar pastas separadas para <strong>Pages</strong> e <strong>Components</strong> no diretório <code>src</code>. Isso ajuda a organizar o código e deixar claro o propósito de cada arquivo.</p>
 <h4 id="estrutura-de-diretorio-recomendada">Estrutura de diretório recomendada</h4>

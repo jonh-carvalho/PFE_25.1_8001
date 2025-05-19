@@ -11,7 +11,7 @@
     <link rel="shortcut icon" href="../../../img/favicon.ico">
 
     
-    <title>06 Http - PFE_25.1_8001</title>
+    <title>07 - Props - PFE_25.1_8001</title>
     
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
@@ -128,7 +128,7 @@
         
             
 <li >
-    <a href="../05_Pages_Components/">05 - Diferenças entre Pages e Components</a>
+    <a href="../05_Pages_Components/">05 - Pages e Components</a>
 </li>
 
         
@@ -140,37 +140,37 @@
         
             
 <li class="active">
-    <a href="./">06 Http</a>
+    <a href="./">07 - Props</a>
 </li>
 
         
             
 <li >
-    <a href="../06_Props/">06 Props</a>
+    <a href="../08_Http/">08 - Protocolo HTTP</a>
 </li>
 
         
             
 <li >
-    <a href="../07_Fetch/">07 Fetch</a>
+    <a href="../09_Lendo%20Dados/">09 Lendo Dados</a>
 </li>
 
         
             
 <li >
-    <a href="../07_Lendo%20Json/">07 Lendo Json</a>
+    <a href="../10_Fetch/">10 Fetch</a>
 </li>
 
         
             
 <li >
-    <a href="../10_Forms_Props/">10 Forms Props</a>
+    <a href="../11_Forms_Props/">11 Forms Props</a>
 </li>
 
         
             
 <li >
-    <a href="../11_useState_useRef/">11 useState useRef</a>
+    <a href="../12_useState_useRef/">12 useState useRef</a>
 </li>
 
         
@@ -290,12 +290,12 @@
                         </a>
                     </li>
                     <li >
-                        <a rel="next" href="../06_Props/">
+                        <a rel="next" href="../08_Http/">
                             Next <i class="fas fa-arrow-right"></i>
                         </a>
                     </li>
                     <li>
-                        <a href="https://github.com/jonh-carvalho/PFE_25.1_8001/edit/master/docs/Disciplina/React/06_Http.md"><i class="fab fa-github"></i> Edit on GitHub</a>
+                        <a href="https://github.com/jonh-carvalho/PFE_25.1_8001/edit/master/docs/Disciplina/React/07_Props.md"><i class="fab fa-github"></i> Edit on GitHub</a>
                     </li>
             </ul>
         </div>
@@ -307,148 +307,105 @@
         
         <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
-        <li class="first-level active"><a href="#1-introducao-ao-protocolo-http">1. Introdução ao Protocolo HTTP</a></li>
-        <li class="first-level "><a href="#http-a-base-da-comunicacao-na-web">HTTP: A Base da Comunicação na Web</a></li>
-            <li class="second-level"><a href="#como-funciona">Como funciona?</a></li>
+        <li class="first-level active"><a href="#07-props">07 - Props</a></li>
+            <li class="second-level"><a href="#introducao">Introdução</a></li>
                 
-            <li class="second-level"><a href="#por-que-o-http-e-importante">Por que o HTTP é importante?</a></li>
-                
-            <li class="second-level"><a href="#http-vs-https">HTTP vs. HTTPS</a></li>
-                
-            <li class="second-level"><a href="#2-metodos-http">2. Métodos HTTP</a></li>
-                
-            <li class="second-level"><a href="#3-status-http">3. Status HTTP</a></li>
-                
-                <li class="third-level"><a href="#1xx-informacional">1xx – Informacional</a></li>
-                <li class="third-level"><a href="#2xx-sucesso">2xx – Sucesso</a></li>
-                <li class="third-level"><a href="#3xx-redirecionamento">3xx – Redirecionamento</a></li>
-                <li class="third-level"><a href="#4xx-erro-do-cliente">4xx – Erro do Cliente</a></li>
-                <li class="third-level"><a href="#5xx-erro-do-servidor">5xx – Erro do Servidor</a></li>
-            <li class="second-level"><a href="#4-exemplo-pratico-de-requisicao-http">4. Exemplo Prático de Requisição HTTP</a></li>
-                
+                <li class="third-level"><a href="#conceitos-principais-de-props">Conceitos Principais de Props</a></li>
+                <li class="third-level"><a href="#usando-props-no-react">Usando Props no React</a></li>
+                <li class="third-level"><a href="#exemplos-de-props-dinamicos-e-interacao-com-funcoes">Exemplos de Props Dinâmicos e Interação com Funções</a></li>
+                <li class="third-level"><a href="#vantagens-das-props">Vantagens das Props</a></li>
     </ul>
 </div></div>
         <div class="col-md-9" role="main">
 
-<p>Aqui está uma sugestão para preparar a aula sobre métodos e status HTTP:</p>
-<h3 id="1-introducao-ao-protocolo-http">1. Introdução ao Protocolo HTTP</h3>
-<h2 id="http-a-base-da-comunicacao-na-web">HTTP: A Base da Comunicação na Web</h2>
-<p><strong>HTTP</strong> é a sigla para <strong>Hypertext Transfer Protocol</strong> ou, em português, <strong>Protocolo de Transferência de Hipertexto</strong>. É o protocolo fundamental que permite a comunicação entre navegadores web (como o Chrome, Firefox, Safari) e servidores web (onde estão hospedados os sites).</p>
-<p><strong>Em resumo, o HTTP é como a linguagem que seu navegador e os servidores da internet usam para "conversar" e mostrar as páginas que você visita.</strong></p>
-<h3 id="como-funciona">Como funciona?</h3>
-<p>1.<strong>Você digita um endereço (URL) na barra de endereços do seu navegador.</strong></p>
-<p>2.<strong>Seu navegador envia uma solicitação HTTP para o servidor onde está hospedado o site.</strong></p>
-<p>3.<strong>O servidor processa a solicitação e envia uma resposta HTTP com o conteúdo da página.</strong></p>
-<p>4.<strong>Seu navegador recebe a resposta e exibe a página na sua tela.</strong></p>
-<p><strong>Imagine o HTTP como um garçom em um restaurante:</strong> você faz um pedido (a solicitação HTTP), o garçom leva o pedido para a cozinha (o servidor), a cozinha prepara o prato (processa a solicitação) e o garçom traz o prato para você (a resposta HTTP).</p>
-<h3 id="por-que-o-http-e-importante">Por que o HTTP é importante?</h3>
-<p><strong>*Base da World Wide Web (WWW):</strong> É o protocolo que permite a existência da internet como a conhecemos, com páginas interligadas por links.</p>
-<p><strong>*Facilita a navegação:</strong> Permite que você navegue entre diferentes páginas de um site e de diferentes sites com facilidade.</p>
-<p><strong>*Transfere diversos tipos de dados:</strong> Não se limita a texto, mas também permite a transferência de imagens, vídeos, arquivos e outros tipos de dados.</p>
-<h3 id="http-vs-https">HTTP vs. HTTPS</h3>
-<p>É comum confundir HTTP com HTTPS. A principal diferença é que o <strong>HTTPS</strong> é uma versão segura do HTTP. Ele utiliza criptografia para proteger a comunicação entre o seu navegador e o servidor, garantindo a privacidade e a integridade dos dados transmitidos. Por isso, é altamente recomendado acessar sites que utilizam HTTPS, especialmente aqueles que envolvem transações financeiras ou informações pessoais.</p>
-<p><strong>Em resumo, o HTTP é o protocolo que torna a internet possível, permitindo que você acesse e interaja com milhões de sites ao redor do mundo.</strong></p>
-<p><strong>Gostaria de saber mais sobre algum aspecto específico do HTTP?</strong> Por exemplo, você pode me perguntar sobre:</p>
-<p><strong>*Métodos HTTP:</strong> GET, POST, PUT, DELETE e outros.</p>
-<p><strong>*Cabeçalhos HTTP:</strong> informações adicionais que acompanham as solicitações e respostas.</p>
-<p><strong>*Códigos de status HTTP:</strong> como 200 (OK), 404 (Não encontrado) e 500 (Erro interno do servidor).</p>
-<p><strong>*Diferenças entre HTTP e HTTPS.</strong></p>
-<p><strong>Se tiver alguma outra dúvida, fique à vontade para perguntar!</strong></p>
-<h3 id="2-metodos-http">2. Métodos HTTP</h3>
-<p>-<strong>GET</strong>: Usado para solicitar dados de um servidor. Não altera o estado do servidor (idempotente).</p>
-<pre><code>- Exemplo: acessar uma página da web ou recuperar uma lista de produtos.
+<h1 id="07-props">07 - <strong>Props</strong></h1>
+<h2 id="introducao">Introdução</h2>
+<p>Props - (abreviação de "properties") são parâmetros passados para componentes para transmitir dados e customizar o comportamento desses componentes. Com props, um componente pai pode enviar informações para um componente filho, permitindo uma comunicação unidirecional, que é uma característica fundamental da arquitetura do React.</p>
+<h3 id="conceitos-principais-de-props">Conceitos Principais de Props</h3>
+<ol>
+<li><strong>Imutabilidade</strong>: Props são imutáveis dentro do componente filho. Ou seja, um componente filho não deve alterar as props que recebe; ele pode apenas lê-las.</li>
+<li><strong>Unidirecional</strong>: Os dados fluem do componente pai para o filho, não ao contrário. Isso ajuda a manter uma estrutura de dados previsível e facilita a depuração.</li>
+<li><strong>Transmissão de Dados e Funções</strong>: Props podem transmitir valores (como números, strings, objetos e arrays) e funções, permitindo que o componente pai controle o comportamento do filho.</li>
+</ol>
+<h3 id="usando-props-no-react">Usando Props no React</h3>
+<p>Para ilustrar o uso de props, vamos criar um exemplo básico de um componente que exibe informações de um usuário.</p>
+<h4 id="passo-1-definir-o-componente-pai">Passo 1: Definir o Componente Pai</h4>
+<p>No exemplo a seguir, o componente pai <code>App</code> envia dados ao componente filho <code>Usuario</code> por meio de props:</p>
+<pre><code class="language-jsx">import React from 'react';
+import Usuario from './Usuario';
 
-```http
-
-GET /produtos HTTP/1.1
-
-Host: www.exemplo.com
-
-```
-</code></pre>
-<p>-<strong>POST</strong>: Envia dados ao servidor para criar ou modificar um recurso.</p>
-<pre><code>- Exemplo: enviar um formulário de cadastro.
-
-```http
-
-POST /cadastro HTTP/1.1
-
-Host: www.exemplo.com
-
-Content-Type: application/json
-
-{
-
-"nome": "João",
-
-"email": "joao@example.com"
-
+function App() {
+  return (
+    &lt;div&gt;
+      &lt;h1&gt;Lista de Usuários&lt;/h1&gt;
+      &lt;Usuario nome=&quot;Alice&quot; idade={28} /&gt;
+      &lt;Usuario nome=&quot;Carlos&quot; idade={34} /&gt;
+    &lt;/div&gt;
+  );
 }
 
-```
+export default App;
 </code></pre>
-<p>-<strong>PUT</strong>: Envia dados para substituir um recurso existente no servidor.</p>
-<pre><code>- Exemplo: atualizar o perfil de um usuário.
+<h4 id="passo-2-criar-o-componente-filho">Passo 2: Criar o Componente Filho</h4>
+<p>No componente <code>Usuario</code>, recebemos as props <code>nome</code> e <code>idade</code> e as exibimos:</p>
+<pre><code class="language-jsx">import React from 'react';
+
+function Usuario(props) {
+  return (
+    &lt;div&gt;
+      &lt;h2&gt;Nome: {props.nome}&lt;/h2&gt;
+      &lt;p&gt;Idade: {props.idade} anos&lt;/p&gt;
+    &lt;/div&gt;
+  );
+}
+
+export default Usuario;
 </code></pre>
-<p>-<strong>PATCH</strong>: Semelhante ao <code>PUT</code>, mas usado para modificações parciais de um recurso.</p>
-<p>-<strong>DELETE</strong>: Remove um recurso do servidor.</p>
-<pre><code>- Exemplo: excluir uma conta de usuário.
+<h4 id="usando-desestruturacao-para-simplificar">Usando Desestruturação para Simplificar</h4>
+<p>É comum usar desestruturação para tornar o código mais legível:</p>
+<pre><code class="language-jsx">function Usuario({ nome, idade }) {
+  return (
+    &lt;div&gt;
+      &lt;h2&gt;Nome: {nome}&lt;/h2&gt;
+      &lt;p&gt;Idade: {idade} anos&lt;/p&gt;
+    &lt;/div&gt;
+  );
+}
 </code></pre>
-<p>-<strong>HEAD</strong>: Igual ao <code>GET</code>, mas sem o corpo da resposta. Usado para verificar se o recurso existe ou para recuperar metadados.</p>
-<p>-<strong>OPTIONS</strong>: Pergunta ao servidor quais métodos e opções são suportados para um determinado recurso.</p>
-<p>-<strong>TRACE</strong>: Usado para diagnóstico, retorna o conteúdo exato da requisição recebida pelo servidor.</p>
-<blockquote>
-<p><strong>Atividade prática</strong>: Utilize uma ferramenta como o Postman ou <code>curl</code> para testar os métodos HTTP.</p>
-</blockquote>
-<h3 id="3-status-http">3. Status HTTP</h3>
-<p>Os códigos de status HTTP indicam o resultado de uma requisição. Eles são divididos em cinco categorias:</p>
-<h4 id="1xx-informacional">1xx – Informacional</h4>
-<p>Indicam que a requisição foi recebida e está sendo processada.</p>
-<p>-<strong>100 Continue</strong>: O servidor está pronto para receber o corpo da requisição.</p>
-<h4 id="2xx-sucesso">2xx – Sucesso</h4>
-<p>Indicam que a requisição foi bem-sucedida.</p>
-<p>-<strong>200 OK</strong>: A requisição foi bem-sucedida.</p>
-<p>-<strong>201 Created</strong>: Um novo recurso foi criado (geralmente após um <code>POST</code>).</p>
-<p>-<strong>204 No Content</strong>: A requisição foi bem-sucedida, mas não há conteúdo para retornar.</p>
-<h4 id="3xx-redirecionamento">3xx – Redirecionamento</h4>
-<p>Indicam que o cliente precisa realizar uma ação adicional para completar a requisição.</p>
-<p>-<strong>301 Moved Permanently</strong>: O recurso foi movido permanentemente para uma nova URL.</p>
-<p>-<strong>302 Found</strong>: O recurso foi temporariamente movido para outra URL.</p>
-<h4 id="4xx-erro-do-cliente">4xx – Erro do Cliente</h4>
-<p>Indicam que houve um erro por parte do cliente.</p>
-<p>-<strong>400 Bad Request</strong>: A requisição está malformada ou inválida.</p>
-<p>-<strong>401 Unauthorized</strong>: Acesso negado, geralmente por falta de autenticação.</p>
-<p>-<strong>403 Forbidden</strong>: Acesso negado, mesmo com autenticação.</p>
-<p>-<strong>404 Not Found</strong>: O recurso solicitado não foi encontrado no servidor.</p>
-<h4 id="5xx-erro-do-servidor">5xx – Erro do Servidor</h4>
-<p>Indicam que o servidor encontrou um erro ao tentar processar a requisição.</p>
-<p>-<strong>500 Internal Server Error</strong>: Um erro genérico no servidor.</p>
-<p>-<strong>502 Bad Gateway</strong>: O servidor recebeu uma resposta inválida de outro servidor.</p>
-<p>-<strong>503 Service Unavailable</strong>: O servidor está temporariamente indisponível (sobrecarga ou manutenção).</p>
-<h3 id="4-exemplo-pratico-de-requisicao-http">4. Exemplo Prático de Requisição HTTP</h3>
+<h3 id="exemplos-de-props-dinamicos-e-interacao-com-funcoes">Exemplos de Props Dinâmicos e Interação com Funções</h3>
+<p>Props podem ser usados também para enviar funções de callback. Vamos adicionar um botão que exibe uma mensagem quando clicado, passando a função de callback como prop.</p>
+<h4 id="componente-pai-appjs">Componente Pai (<code>App.js</code>):</h4>
+<pre><code class="language-jsx">function App() {
+  const handleClick = (nome) =&gt; {
+    alert(`Olá, ${nome}!`);
+  };
+
+  return (
+    &lt;div&gt;
+      &lt;Usuario nome=&quot;Alice&quot; idade={28} onClick={handleClick} /&gt;
+    &lt;/div&gt;
+  );
+}
+</code></pre>
+<h4 id="componente-filho-usuariojs">Componente Filho (<code>Usuario.js</code>):</h4>
+<pre><code class="language-jsx">function Usuario({ nome, idade, onClick }) {
+  return (
+    &lt;div&gt;
+      &lt;h2&gt;Nome: {nome}&lt;/h2&gt;
+      &lt;p&gt;Idade: {idade} anos&lt;/p&gt;
+      &lt;button onClick={() =&gt; onClick(nome)}&gt;Diga Olá&lt;/button&gt;
+    &lt;/div&gt;
+  );
+}
+</code></pre>
+<p>Aqui, a função <code>handleClick</code> é passada ao componente <code>Usuario</code> e chamada ao clicar no botão. O resultado é um alerta exibindo o nome do usuário.</p>
+<h3 id="vantagens-das-props">Vantagens das Props</h3>
 <ul>
-<li>Montar uma requisição <code>GET</code> e uma <code>POST</code> usando JavaScript com o <code>fetch</code>.</li>
-<li>Mostrar a diferença entre os métodos e como lidar com os diferentes status HTTP retornados.</li>
+<li><strong>Reusabilidade</strong>: Componentes podem ser criados de forma genérica e usados em diferentes partes da aplicação.</li>
+<li><strong>Isolamento de Dados</strong>: Com a passagem de dados por props, é mais fácil manter o estado da aplicação previsível.</li>
+<li><strong>Separação de Responsabilidades</strong>: O componente pai é responsável por gerenciar dados e lógica, enquanto o filho apenas renderiza e exibe as informações.</li>
 </ul>
-<p>```javascript</p>
-<p>fetch('https://api.exemplo.com/recurso')</p>
-<pre><code>.then(response=&gt;{
-
-  if (!response.ok) {
-
-    thrownewError(`Erro: ${response.status}`);
-
-  }
-
-  return response.json();
-
-})
-
-.then(data=&gt; console.log(data))
-
-.catch(error=&gt; console.error(error));
-</code></pre>
-<p>```</p></div>
+<p>Props são fundamentais para a comunicação entre componentes no React, ajudando a manter o código modular, flexível e fácil de manter.</p></div>
         
         
     </div>

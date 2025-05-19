@@ -11,7 +11,7 @@
     <link rel="shortcut icon" href="../../../img/favicon.ico">
 
     
-    <title>10 Forms Props - PFE_25.1_8001</title>
+    <title>12 useState useRef - PFE_25.1_8001</title>
     
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
@@ -128,7 +128,7 @@
         
             
 <li >
-    <a href="../05_Pages_Components/">05 - Diferenças entre Pages e Components</a>
+    <a href="../05_Pages_Components/">05 - Pages e Components</a>
 </li>
 
         
@@ -140,37 +140,37 @@
         
             
 <li >
-    <a href="../06_Http/">06 Http</a>
+    <a href="../07_Props/">07 - Props</a>
 </li>
 
         
             
 <li >
-    <a href="../06_Props/">06 Props</a>
+    <a href="../08_Http/">08 - Protocolo HTTP</a>
 </li>
 
         
             
 <li >
-    <a href="../07_Fetch/">07 Fetch</a>
+    <a href="../09_Lendo%20Dados/">09 Lendo Dados</a>
 </li>
 
         
             
 <li >
-    <a href="../07_Lendo%20Json/">07 Lendo Json</a>
+    <a href="../10_Fetch/">10 Fetch</a>
+</li>
+
+        
+            
+<li >
+    <a href="../11_Forms_Props/">11 Forms Props</a>
 </li>
 
         
             
 <li class="active">
-    <a href="./">10 Forms Props</a>
-</li>
-
-        
-            
-<li >
-    <a href="../11_useState_useRef/">11 useState useRef</a>
+    <a href="./">12 useState useRef</a>
 </li>
 
         
@@ -285,17 +285,17 @@
 
             <ul class="nav navbar-nav navbar-right">
                     <li >
-                        <a rel="prev" href="../07_Lendo%20Json/">
+                        <a rel="prev" href="../11_Forms_Props/">
                             <i class="fas fa-arrow-left"></i> Previous
                         </a>
                     </li>
                     <li >
-                        <a rel="next" href="../11_useState_useRef/">
+                        <a rel="next" href="../../Roteiros/Aht/">
                             Next <i class="fas fa-arrow-right"></i>
                         </a>
                     </li>
                     <li>
-                        <a href="https://github.com/jonh-carvalho/PFE_25.1_8001/edit/master/docs/Disciplina/React/10_Forms_Props.md"><i class="fab fa-github"></i> Edit on GitHub</a>
+                        <a href="https://github.com/jonh-carvalho/PFE_25.1_8001/edit/master/docs/Disciplina/React/12_useState_useRef.md"><i class="fab fa-github"></i> Edit on GitHub</a>
                     </li>
             </ul>
         </div>
@@ -307,138 +307,139 @@
         
         <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
-        <li class="first-level active"><a href="#1-formularios-controlados">1. Formulários Controlados</a></li>
-            <li class="second-level"><a href="#exemplo-de-formulario-controlado-com-usestate">Exemplo de Formulário Controlado com useState</a></li>
+        <li class="first-level active"><a href="#1-usestate">1. useState</a></li>
+            <li class="second-level"><a href="#como-usestate-funciona">Como useState Funciona</a></li>
                 
-            <li class="second-level"><a href="#vantagens-dos-formularios-controlados">Vantagens dos Formulários Controlados</a></li>
+            <li class="second-level"><a href="#exemplo-simples">Exemplo Simples</a></li>
                 
-        <li class="first-level "><a href="#2-formularios-nao-controlados">2. Formulários Não Controlados</a></li>
-            <li class="second-level"><a href="#exemplo-de-formulario-nao-controlado-com-useref">Exemplo de Formulário Não Controlado com useRef</a></li>
+            <li class="second-level"><a href="#explicacao">Explicação</a></li>
                 
-            <li class="second-level"><a href="#vantagens-dos-formularios-nao-controlados">Vantagens dos Formulários Não Controlados</a></li>
+            <li class="second-level"><a href="#vantagens-do-usestate">Vantagens do useState</a></li>
                 
-        <li class="first-level "><a href="#3-escolhendo-entre-formularios-controlados-e-nao-controlados">3. Escolhendo entre Formulários Controlados e Não Controlados</a></li>
-        <li class="first-level "><a href="#4-exemplos-de-validacao-em-formularios-controlados">4. Exemplos de Validação em Formulários Controlados</a></li>
+        <li class="first-level "><a href="#2-useref">2. useRef</a></li>
+            <li class="second-level"><a href="#como-useref-funciona">Como useRef Funciona</a></li>
+                
+            <li class="second-level"><a href="#exemplo-com-useref">Exemplo com useRef</a></li>
+                
+            <li class="second-level"><a href="#explicacao_1">Explicação</a></li>
+                
+        <li class="first-level "><a href="#diferenca-entre-usestate-e-useref">Diferença entre useState e useRef</a></li>
+        <li class="first-level "><a href="#quando-usar-cada-um">Quando Usar Cada Um</a></li>
     </ul>
 </div></div>
         <div class="col-md-9" role="main">
 
-<p>No React, formulários funcionam de maneira semelhante ao HTML tradicional, mas com algumas diferenças importantes devido ao conceito de <strong>estado</strong> e <strong>eventos controlados</strong>. Em vez de apenas enviar dados ao servidor ao submeter o formulário, o React mantém os valores dos campos de entrada sincronizados com o estado do componente. Isso é feito através de formulários <strong>controlados</strong> e <strong>não controlados</strong>.</p>
-<h3 id="1-formularios-controlados">1. Formulários Controlados</h3>
-<p>Em formulários controlados, o estado do React mantém os valores dos campos. Isso significa que o valor de cada campo é controlado por uma variável no estado do componente, permitindo controle total sobre o que é exibido e processado.</p>
-<h4 id="exemplo-de-formulario-controlado-com-usestate">Exemplo de Formulário Controlado com <code>useState</code></h4>
-<p>Aqui está um exemplo de um formulário de login que usa o estado para controlar os valores dos campos:</p>
+<p>No React, <code>useState</code> e <code>useRef</code> são hooks que ajudam a gerenciar e manipular o estado e referências de um componente funcional. Eles têm finalidades diferentes, mas ambos são essenciais para construir interfaces dinâmicas.</p>
+<h3 id="1-usestate">1. <code>useState</code></h3>
+<p>O hook <code>useState</code> é usado para adicionar e manipular estados em componentes funcionais. O React monitora as mudanças de estado e, quando elas ocorrem, re-renderiza o componente para refletir o novo estado.</p>
+<h4 id="como-usestate-funciona">Como <code>useState</code> Funciona</h4>
+<ul>
+<li>Ao declarar uma variável de estado com <code>useState</code>, ela retorna um <strong>array</strong> com dois elementos:</li>
+<li>O valor atual do estado.</li>
+<li>Uma função que permite atualizar o valor do estado.</li>
+</ul>
+<h4 id="exemplo-simples">Exemplo Simples</h4>
+<p>Aqui, <code>useState</code> é usado para controlar o número de cliques em um botão:</p>
 <pre><code class="language-jsx">import React, { useState } from 'react';
 
-function FormularioLogin() {
-  const [email, setEmail] = useState('');
-  const [senha, setSenha] = useState('');
+function Contador() {
+  const [contador, setContador] = useState(0);
 
-  const handleSubmit = (e) =&gt; {
-    e.preventDefault();
-    console.log('Email:', email);
-    console.log('Senha:', senha);
-    // Processar o login
+  const incrementar = () =&gt; {
+    setContador(contador + 1);
   };
 
   return (
-    &lt;form onSubmit={handleSubmit}&gt;
-      &lt;label&gt;
-        Email:
-        &lt;input
-          type=&quot;email&quot;
-          value={email}
-          onChange={(e) =&gt; setEmail(e.target.value)}
-        /&gt;
-      &lt;/label&gt;
-      &lt;label&gt;
-        Senha:
-        &lt;input
-          type=&quot;password&quot;
-          value={senha}
-          onChange={(e) =&gt; setSenha(e.target.value)}
-        /&gt;
-      &lt;/label&gt;
-      &lt;button type=&quot;submit&quot;&gt;Entrar&lt;/button&gt;
-    &lt;/form&gt;
+    &lt;div&gt;
+      &lt;p&gt;Você clicou {contador} vezes&lt;/p&gt;
+      &lt;button onClick={incrementar}&gt;Clique aqui&lt;/button&gt;
+    &lt;/div&gt;
   );
 }
 
-export default FormularioLogin;
+export default Contador;
 </code></pre>
-<p>Neste exemplo:</p>
+<h4 id="explicacao">Explicação</h4>
 <ul>
-<li><strong><code>email</code> e <code>senha</code></strong> são estados que armazenam os valores dos campos.</li>
-<li>O <code>onChange</code> atualiza o estado com o valor atual do campo.</li>
-<li>O <code>handleSubmit</code> previne o envio do formulário (<code>e.preventDefault()</code>) e pode ser usado para processar dados ou enviar ao servidor.</li>
+<li><strong>Valor Inicial</strong>: <code>useState(0)</code> define <code>contador</code> com o valor inicial de <code>0</code>.</li>
+<li><strong>Atualização de Estado</strong>: <code>setContador(contador + 1)</code> incrementa o valor de <code>contador</code> em 1 cada vez que o botão é clicado.</li>
+<li><strong>Re-renderização</strong>: Toda vez que <code>contador</code> é atualizado, o React re-renderiza o componente para refletir a nova contagem.</li>
 </ul>
-<h4 id="vantagens-dos-formularios-controlados">Vantagens dos Formulários Controlados</h4>
+<h4 id="vantagens-do-usestate">Vantagens do <code>useState</code></h4>
 <ul>
-<li><strong>Controle Total</strong>: O React controla o estado dos campos, permitindo validações e alterações dinâmicas.</li>
-<li><strong>Validação e Manipulação</strong>: Facilidade em validar campos à medida que o usuário digita.</li>
-<li><strong>Sincronização</strong>: Como os dados dos campos estão no estado, é fácil compartilhar e processar dados em outros componentes.</li>
+<li><strong>Reatividade</strong>: Garante que o componente sempre mostre o estado mais recente.</li>
+<li><strong>Controle Total</strong>: Ideal para variáveis que afetam a renderização e a interface, como valores de input, exibições de mensagens, entre outros.</li>
 </ul>
-<h3 id="2-formularios-nao-controlados">2. Formulários Não Controlados</h3>
-<p>Em formulários não controlados, os valores dos campos não são armazenados no estado, mas diretamente nos elementos do DOM. O React pode acessar o valor do campo diretamente com uma referência (<code>ref</code>) apenas quando necessário.</p>
-<h4 id="exemplo-de-formulario-nao-controlado-com-useref">Exemplo de Formulário Não Controlado com <code>useRef</code></h4>
-<p>Aqui está um exemplo de formulário de login usando o <code>useRef</code> para acessar os valores:</p>
+<h3 id="2-useref">2. <code>useRef</code></h3>
+<p>O hook <code>useRef</code> é usado para criar uma <strong>referência mutável</strong> que persiste entre renderizações de um componente, mas <strong>não provoca re-renderização</strong> quando atualizado. Isso é útil para manipular elementos do DOM diretamente ou para armazenar valores que não precisam desencadear uma re-renderização.</p>
+<h4 id="como-useref-funciona">Como <code>useRef</code> Funciona</h4>
+<ul>
+<li><code>useRef</code> retorna um objeto com uma propriedade <code>.current</code>, que é inicializada com o valor passado como argumento e que pode ser atualizado sem afetar a renderização do componente.</li>
+</ul>
+<h4 id="exemplo-com-useref">Exemplo com <code>useRef</code></h4>
+<p>Aqui está um exemplo em que <code>useRef</code> é usado para referenciar um campo de entrada:</p>
 <pre><code class="language-jsx">import React, { useRef } from 'react';
 
-function FormularioLogin() {
-  const emailRef = useRef();
-  const senhaRef = useRef();
+function FocoInput() {
+  const inputRef = useRef(null);
 
-  const handleSubmit = (e) =&gt; {
-    e.preventDefault();
-    console.log('Email:', emailRef.current.value);
-    console.log('Senha:', senhaRef.current.value);
-    // Processar o login
+  const focarInput = () =&gt; {
+    inputRef.current.focus();
   };
 
   return (
-    &lt;form onSubmit={handleSubmit}&gt;
-      &lt;label&gt;
-        Email:
-        &lt;input type=&quot;email&quot; ref={emailRef} /&gt;
-      &lt;/label&gt;
-      &lt;label&gt;
-        Senha:
-        &lt;input type=&quot;password&quot; ref={senhaRef} /&gt;
-      &lt;/label&gt;
-      &lt;button type=&quot;submit&quot;&gt;Entrar&lt;/button&gt;
-    &lt;/form&gt;
+    &lt;div&gt;
+      &lt;input ref={inputRef} type=&quot;text&quot; placeholder=&quot;Clique para focar&quot; /&gt;
+      &lt;button onClick={focarInput}&gt;Focar no input&lt;/button&gt;
+    &lt;/div&gt;
   );
 }
 
-export default FormularioLogin;
+export default FocoInput;
 </code></pre>
-<p>Neste exemplo:</p>
+<h4 id="explicacao_1">Explicação</h4>
 <ul>
-<li><strong><code>emailRef</code> e <code>senhaRef</code></strong> são referências (<code>useRef</code>) aos elementos de entrada.</li>
-<li>No <code>handleSubmit</code>, <code>emailRef.current.value</code> e <code>senhaRef.current.value</code> acessam o valor dos campos diretamente.</li>
+<li><strong>Referência ao DOM</strong>: <code>useRef(null)</code> cria uma referência vazia. <code>inputRef.current</code> é associado ao campo de entrada com <code>ref={inputRef}</code>.</li>
+<li><strong>Manipulação Direta do DOM</strong>: <code>inputRef.current.focus()</code> permite que o botão “Focar no input” posicione o cursor no campo de entrada.</li>
 </ul>
-<h4 id="vantagens-dos-formularios-nao-controlados">Vantagens dos Formulários Não Controlados</h4>
+<h3 id="diferenca-entre-usestate-e-useref">Diferença entre <code>useState</code> e <code>useRef</code></h3>
+<table>
+<thead>
+<tr>
+<th>Característica</th>
+<th><code>useState</code></th>
+<th><code>useRef</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Provoca re-renderização</td>
+<td>Sim, ao atualizar o estado</td>
+<td>Não, as mudanças em <code>.current</code> não causam render</td>
+</tr>
+<tr>
+<td>Finalidade</td>
+<td>Gerenciar dados que afetam a renderização</td>
+<td>Referenciar elementos do DOM ou armazenar dados temporários</td>
+</tr>
+<tr>
+<td>Persistência</td>
+<td>Entre re-renderizações</td>
+<td>Entre re-renderizações</td>
+</tr>
+<tr>
+<td>Uso comum</td>
+<td>Campos de formulário, contadores, flags</td>
+<td>Foco em elementos, armazenar IDs de intervalos, variáveis imutáveis</td>
+</tr>
+</tbody>
+</table>
+<h3 id="quando-usar-cada-um">Quando Usar Cada Um</h3>
 <ul>
-<li><strong>Menos Complexidade</strong>: Útil em formulários simples, sem necessidade de armazenar dados no estado.</li>
-<li><strong>Desempenho</strong>: Em formulários complexos, o React evita re-renderizações ao não monitorar o valor de cada campo.</li>
+<li><strong><code>useState</code></strong> é ideal para dados que impactam a interface e exigem uma atualização visível.</li>
+<li><strong><code>useRef</code></strong> é útil para manipulação direta de elementos DOM ou armazenamento de dados que não devem afetar a renderização.</li>
 </ul>
-<h3 id="3-escolhendo-entre-formularios-controlados-e-nao-controlados">3. Escolhendo entre Formulários Controlados e Não Controlados</h3>
-<ul>
-<li>Use <strong>formulários controlados</strong> quando precisar validar ou manipular dados dinamicamente, ou quando o valor dos campos precisa ser sincronizado com outros estados ou componentes.</li>
-<li>Use <strong>formulários não controlados</strong> para formulários simples, onde o valor é lido apenas na submissão ou em momentos específicos, sem necessidade de interação constante.</li>
-</ul>
-<h3 id="4-exemplos-de-validacao-em-formularios-controlados">4. Exemplos de Validação em Formulários Controlados</h3>
-<p>Para adicionar validações, use o estado para verificar condições e exibir mensagens conforme necessário:</p>
-<pre><code class="language-jsx">const handleEmailChange = (e) =&gt; {
-  setEmail(e.target.value);
-  if (!e.target.value.includes('@')) {
-    setErroEmail('Email inválido');
-  } else {
-    setErroEmail('');
-  }
-};
-</code></pre>
-<p>React facilita a criação de formulários altamente dinâmicos, onde a experiência do usuário é controlada diretamente pelo estado do aplicativo.</p></div>
+<p>Esses hooks complementam a lógica do React, permitindo criar componentes interativos e performáticos com um bom gerenciamento de estado e referências.</p></div>
         
         
     </div>
