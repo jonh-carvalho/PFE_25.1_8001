@@ -1,7 +1,4 @@
-<<<<<<< HEAD
 # **Hooks (Foco em Componentes Funcionais)**
-
-
 
 ---
 ## Introdução
@@ -137,10 +134,8 @@ function Example() {
 ✔ Atualize o estado **apenas com `setState`** (nunca diretamente).  
 ✔ Para estados complexos, considere `useReducer`.  
 
- 
-
 ### **Exemplo Prático:**
->>>>>>> 8582fb73395d2d82a327f4e7234c24d8e7160102
+
 ```jsx
 import { useState } from 'react';
 
@@ -156,21 +151,15 @@ function Counter() {
 }
 ```
 
-<<<<<<< HEAD
-#### **Exercício:**
-=======
 ### **Exercício:**
->>>>>>> 8582fb73395d2d82a327f4e7234c24d8e7160102
+
 1. Crie um componente `ToggleButton` que alterna entre "Ligado" e "Desligado".  
 2. Faça um contador que permita incrementar, decrementar e resetar o valor.  
 
 ---
 
-<<<<<<< HEAD
-### ** 2. - useEffect (Efeitos Colaterais)**
-=======
 ## **2. - useEffect (Efeitos Colaterais)**
->>>>>>> 8582fb73395d2d82a327f4e7234c24d8e7160102
+
 ### **Conteúdo Teórico:**
 - O que são efeitos colaterais? (API calls, subscriptions, timers).  
 - Sintaxe:  
@@ -180,11 +169,8 @@ function Counter() {
 - Dependências vazias (`[]`) vs com dependências.  
 - Cleanup function (`return () => { ... }`).  
 
-<<<<<<< HEAD
-#### **Exemplo Prático:**
-=======
 ### **Exemplo Prático:**
->>>>>>> 8582fb73395d2d82a327f4e7234c24d8e7160102
+
 ```jsx
 import { useState, useEffect } from 'react';
 
@@ -203,12 +189,8 @@ function Timer() {
 }
 ```
 
-<<<<<<< HEAD
-#### **Exercício:**
-
-=======
 ### **Exercício:**
->>>>>>> 8582fb73395d2d82a327f4e7234c24d8e7160102
+
 1. Crie um componente que busca dados de uma API (ex: [JSONPlaceholder](https://jsonplaceholder.typicode.com/posts)) e exibe em uma lista.  
 2. Implemente um `useEffect` que atualize o título da página com um contador.  
 
@@ -217,20 +199,12 @@ function Timer() {
 <<<<<<< HEAD
 ### **3. - createContext (Compartilhamento de Estado)**
 
-#### **Conteúdo Teórico:**
-=======
-## **3. - useContext (Compartilhamento de Estado)**
-### **Conteúdo Teórico:**
->>>>>>> 8582fb73395d2d82a327f4e7234c24d8e7160102
 - Problema do "prop drilling".  
 - Criar e consumir um Context.  
 - `createContext`, `Provider` e `useContext`.  
 
-<<<<<<< HEAD
-#### **Exemplo Prático:**
-=======
 ### **Exemplo Prático:**
->>>>>>> 8582fb73395d2d82a327f4e7234c24d8e7160102
+
 ```jsx
 import { createContext, useContext, useState } from 'react';
 
@@ -257,11 +231,8 @@ function Toolbar() {
 }
 ```
 
-<<<<<<< HEAD
-#### **Exercício:**
-=======
 ### **Exercício:**
->>>>>>> 8582fb73395d2d82a327f4e7234c24d8e7160102
+
 1. Crie um contexto `UserContext` que armazene o nome do usuário e permita alterá-lo.  
 2. Consuma esse contexto em dois componentes diferentes.  
 
@@ -279,11 +250,8 @@ function Toolbar() {
 - Acessar elementos DOM diretamente.  
 - Armazenar valores mutáveis sem rerenderizar.  
 
-<<<<<<< HEAD
-#### **Exemplo Prático:**
-=======
 ### **Exemplo Prático:**
->>>>>>> 8582fb73395d2d82a327f4e7234c24d8e7160102
+
 ```jsx
 import { useRef } from 'react';
 
@@ -303,26 +271,17 @@ function TextInput() {
 }
 ```
 
-<<<<<<< HEAD
-#### **Exercício:**
-
-=======
 ### **Exercício:**
->>>>>>> 8582fb73395d2d82a327f4e7234c24d8e7160102
+
 1. Crie um componente que armazene o número de renders usando `useRef`.  
 2. Faça um "scroll to top" usando `useRef`.  
 
 ---
 
-<<<<<<< HEAD
-### **5. - useReducer (Estado Complexo)**
-
-#### **Conteúdo Teórico:**
-
-=======
 ## **5. - useReducer (Estado Complexo)**
+
 ### **Conteúdo Teórico:**
->>>>>>> 8582fb73395d2d82a327f4e7234c24d8e7160102
+
 - Quando usar `useReducer` vs `useState`.  
 - Sintaxe:  
   ```jsx
@@ -330,11 +289,8 @@ function TextInput() {
   ```
 - Padrão de ações (`{ type, payload }`).  
 
-<<<<<<< HEAD
-#### **Exemplo Prático:**
-=======
 ### **Exemplo Prático:**
->>>>>>> 8582fb73395d2d82a327f4e7234c24d8e7160102
+
 ```jsx
 import { useReducer } from 'react';
 
@@ -362,26 +318,17 @@ function Counter() {
 }
 ```
 
-<<<<<<< HEAD
 #### **Exercício:**
 
-=======
-### **Exercício:**
->>>>>>> 8582fb73395d2d82a327f4e7234c24d8e7160102
 1. Implemente um carrinho de compras usando `useReducer`.  
 2. Crie um formulário com validação usando `useReducer`.  
 
 ---
 
-<<<<<<< HEAD
 ### **Exercício Final do Módulo**
 
 **Desafio:** Construa um **"Todo List"** usando:  
 
-=======
-## **Exercício Final do Módulo**
-**Desafio:** Construa um **"Todo List"** usando:  
->>>>>>> 8582fb73395d2d82a327f4e7234c24d8e7160102
 ✅ `useState` para gerenciar a lista de tarefas.  
 ✅ `useEffect` para salvar no `localStorage`.  
 ✅ `useReducer` para ações como adicionar, remover e marcar como concluída.  
@@ -393,8 +340,3 @@ function Counter() {
 ### **Recursos Adicionais:**
 - [Documentação Oficial dos Hooks](https://react.dev/reference/react)  
 - [React Hooks Cheat Sheet](https://react-hooks-cheatsheet.com/)  
-<<<<<<< HEAD
-=======
-
-Esse roteiro garante uma aprendizagem prática e gradual dos Hooks mais importantes do React! 🚀
->>>>>>> 8582fb73395d2d82a327f4e7234c24d8e7160102
