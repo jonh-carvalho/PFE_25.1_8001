@@ -11,7 +11,7 @@
     <link rel="shortcut icon" href="../../../img/favicon.ico">
 
     
-    <title>09 - useState e useRef - PFE_25.1_8001</title>
+    <title>12 useState useRef - PFE_25.1_8001</title>
     
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
@@ -152,12 +152,6 @@
         
             
 <li >
-    <a href="../08_Forms_Props/">08 - Forms Props</a>
-</li>
-
-        
-            
-<li >
     <a href="../08_Http/">08 - Protocolo HTTP</a>
 </li>
 
@@ -169,14 +163,20 @@
 
         
             
-<li class="active">
-    <a href="./">09 - useState e useRef</a>
+<li >
+    <a href="../10_Fetch/">10 Fetch</a>
 </li>
 
         
             
 <li >
-    <a href="../10_Fetch/">10 Fetch</a>
+    <a href="../11_Forms_Props/">11 Forms Props</a>
+</li>
+
+        
+            
+<li class="active">
+    <a href="./">12 useState useRef</a>
 </li>
 
         
@@ -291,17 +291,17 @@
 
             <ul class="nav navbar-nav navbar-right">
                     <li >
-                        <a rel="prev" href="../09_Lendo%20Dados/">
+                        <a rel="prev" href="../11_Forms_Props/">
                             <i class="fas fa-arrow-left"></i> Previous
                         </a>
                     </li>
                     <li >
-                        <a rel="next" href="../10_Fetch/">
+                        <a rel="next" href="../../Roteiros/Aht/">
                             Next <i class="fas fa-arrow-right"></i>
                         </a>
                     </li>
                     <li>
-                        <a href="https://github.com/jonh-carvalho/PFE_25.1_8001/edit/master/docs/Disciplina/React/09_UseState_useRef.md"><i class="fab fa-github"></i> Edit on GitHub</a>
+                        <a href="https://github.com/jonh-carvalho/PFE_25.1_8001/edit/master/docs/Disciplina/React/12_useState_useRef.md"><i class="fab fa-github"></i> Edit on GitHub</a>
                     </li>
             </ul>
         </div>
@@ -313,27 +313,28 @@
         
         <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
-        <li class="first-level active"><a href="#09-usestate-e-useref">09 - useState e useRef</a></li>
-            <li class="second-level"><a href="#1-usestate">1. useState</a></li>
+        <li class="first-level active"><a href="#1-usestate">1. useState</a></li>
+            <li class="second-level"><a href="#como-usestate-funciona">Como useState Funciona</a></li>
                 
-                <li class="third-level"><a href="#como-usestate-funciona">Como useState Funciona</a></li>
-                <li class="third-level"><a href="#exemplo-simples">Exemplo Simples</a></li>
-                <li class="third-level"><a href="#explicacao">Explicação</a></li>
-                <li class="third-level"><a href="#vantagens-do-usestate">Vantagens do useState</a></li>
-            <li class="second-level"><a href="#2-useref">2. useRef</a></li>
+            <li class="second-level"><a href="#exemplo-simples">Exemplo Simples</a></li>
                 
-                <li class="third-level"><a href="#como-useref-funciona">Como useRef Funciona</a></li>
-                <li class="third-level"><a href="#exemplo-com-useref">Exemplo com useRef</a></li>
-                <li class="third-level"><a href="#explicacao_1">Explicação</a></li>
-            <li class="second-level"><a href="#diferenca-entre-usestate-e-useref">Diferença entre useState e useRef</a></li>
+            <li class="second-level"><a href="#explicacao">Explicação</a></li>
                 
-            <li class="second-level"><a href="#quando-usar-cada-um">Quando Usar Cada Um</a></li>
+            <li class="second-level"><a href="#vantagens-do-usestate">Vantagens do useState</a></li>
                 
+        <li class="first-level "><a href="#2-useref">2. useRef</a></li>
+            <li class="second-level"><a href="#como-useref-funciona">Como useRef Funciona</a></li>
+                
+            <li class="second-level"><a href="#exemplo-com-useref">Exemplo com useRef</a></li>
+                
+            <li class="second-level"><a href="#explicacao_1">Explicação</a></li>
+                
+        <li class="first-level "><a href="#diferenca-entre-usestate-e-useref">Diferença entre useState e useRef</a></li>
+        <li class="first-level "><a href="#quando-usar-cada-um">Quando Usar Cada Um</a></li>
     </ul>
 </div></div>
         <div class="col-md-9" role="main">
 
-<h1 id="09-usestate-e-useref">09 - useState e useRef</h1>
 <p>No React, <code>useState</code> e <code>useRef</code> são hooks que ajudam a gerenciar e manipular o estado e referências de um componente funcional. Eles têm finalidades diferentes, mas ambos são essenciais para construir interfaces dinâmicas.</p>
 <h3 id="1-usestate">1. <code>useState</code></h3>
 <p>O hook <code>useState</code> é usado para adicionar e manipular estados em componentes funcionais. O React monitora as mudanças de estado e, quando elas ocorrem, re-renderiza o componente para refletir o novo estado.</p>
