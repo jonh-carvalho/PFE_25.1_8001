@@ -1,4 +1,4 @@
-# **Hooks (Foco em Componentes Funcionais)**
+# 10 - **Hooks (Foco em Componentes Funcionais)**
 
 ---
 ## Introdução
@@ -8,26 +8,20 @@
 ### **1. - useState (Estado em Componentes Funcionais)**
 
 #### **Conteúdo Teórico:**
+
 - O que é estado em React?  
 - Diferença entre `props` e `state`.  
 - Sintaxe do `useState`:  
+
   ```jsx
   const [state, setState] = useState(initialValue);
   ```
 - Atualizações assíncronas e imutabilidade.  
 
-#### **Exemplo Prático:**
-=======
-# **010 - Hooks (Foco em Componentes Funcionais)**  
+#### **1. O que é Estado em React?**  
 
-**Objetivo:** Dominar os principais Hooks do React para gerenciar estado, efeitos colaterais e referências em componentes funcionais.  
-
----
-
-## **1.: useState (Estado em Componentes Funcionais)**
-
-## **1. O que é Estado em React?**  
 O **estado (state)** em React representa os dados dinâmicos de um componente. Ele permite que o componente:  
+
 - **Armazene informações** que podem mudar ao longo do tempo.  
 - **Re-renderize** a interface quando o estado é atualizado.  
 - **Gerencie interações do usuário** (cliques, formulários, etc.).  
@@ -36,7 +30,7 @@ O **estado (state)** em React representa os dados dinâmicos de um componente. E
 
 ---
 
-## **2. Diferença entre `props` e `state`**  
+#### **2. Diferença entre `props` e `state`**  
 
 | **`props`**                          | **`state`**                          |
 |--------------------------------------|--------------------------------------|
@@ -45,6 +39,7 @@ O **estado (state)** em React representa os dados dinâmicos de um componente. E
 | Usado para **comunicação entre componentes**. | Usado para **controle interno do componente**. |
 
 **Exemplo:**  
+
 ```jsx
 // Componente Pai (passa props)
 <PaiComponente nome="João" />  
@@ -58,7 +53,8 @@ function FilhoComponente({ nome }) {
 
 ---
 
-## **3. Sintaxe do `useState`**  
+#### **3. Sintaxe do `useState`**  
+
 O `useState` é um **Hook** que retorna um array com:  
 1. **Valor atual do estado** (`state`).  
 2. **Função para atualizá-lo** (`setState`).  
@@ -68,6 +64,7 @@ const [state, setState] = useState(initialValue);
 ```
 
 **Exemplo:**  
+
 ```jsx
 import { useState } from 'react';
 
@@ -84,21 +81,22 @@ function Counter() {
 
 ---
 
-## **4. Atualizações Assíncronas e Imutabilidade**  
+#### **4. Atualizações Assíncronas e Imutabilidade**  
 
-### **a) Atualizações Assíncronas**  
+##### **a) Atualizações Assíncronas**  
 - O React **não atualiza o estado imediatamente** (é agendado).  
 - Se precisar do **valor anterior**, use a forma funcional:  
   ```jsx
   setCount(prevCount => prevCount + 1); // Garante a atualização correta
   ```
 
-### **b) Imutabilidade**  
+#### **b) Imutabilidade**  
 - **Nunca modifique o estado diretamente!**  
   ❌ `state.count = 5` (Errado!)  
   ✅ `setCount(5)` (Correto!)  
 
 **Exemplo com Objetos:**  
+
 ```jsx
 const [user, setUser] = useState({ name: 'Ana', age: 30 });
 
@@ -111,7 +109,7 @@ setUser({ ...user, age: 31 }); // Spread operator
 
 ---
 
-## **Resumo Visual**  
+#### **Resumo Visual**  
 
 ```jsx
 import { useState } from 'react';
@@ -130,6 +128,7 @@ function Example() {
 ```
 
 ### **Boas Práticas:**  
+
 ✔ Use `useState` para dados que mudam e afetam a UI.  
 ✔ Atualize o estado **apenas com `setState`** (nunca diretamente).  
 ✔ Para estados complexos, considere `useReducer`.  
@@ -158,9 +157,9 @@ function Counter() {
 
 ---
 
-## **2. - useEffect (Efeitos Colaterais)**
+### **2. - useEffect (Efeitos Colaterais)**
 
-### **Conteúdo Teórico:**
+#### **Conteúdo Teórico:**
 - O que são efeitos colaterais? (API calls, subscriptions, timers).  
 - Sintaxe:  
   ```jsx
@@ -169,7 +168,7 @@ function Counter() {
 - Dependências vazias (`[]`) vs com dependências.  
 - Cleanup function (`return () => { ... }`).  
 
-### **Exemplo Prático:**
+#### **Exemplo Prático:**
 
 ```jsx
 import { useState, useEffect } from 'react';
@@ -189,21 +188,20 @@ function Timer() {
 }
 ```
 
-### **Exercício:**
+#### **Exercício:**
 
 1. Crie um componente que busca dados de uma API (ex: [JSONPlaceholder](https://jsonplaceholder.typicode.com/posts)) e exibe em uma lista.  
 2. Implemente um `useEffect` que atualize o título da página com um contador.  
 
 ---
 
-<<<<<<< HEAD
 ### **3. - createContext (Compartilhamento de Estado)**
 
 - Problema do "prop drilling".  
 - Criar e consumir um Context.  
 - `createContext`, `Provider` e `useContext`.  
 
-### **Exemplo Prático:**
+#### **Exemplo Prático:**
 
 ```jsx
 import { createContext, useContext, useState } from 'react';
@@ -231,26 +229,20 @@ function Toolbar() {
 }
 ```
 
-### **Exercício:**
+#### **Exercício:**
 
 1. Crie um contexto `UserContext` que armazene o nome do usuário e permita alterá-lo.  
 2. Consuma esse contexto em dois componentes diferentes.  
 
 ---
-
-<<<<<<< HEAD
-### **. - useRef (Referências e Valores Mutáveis)**
+### **4. - useRef (Referências e Valores Mutáveis)**
 
 #### **Conteúdo Teórico:**
-=======
-## **4. - useRef (Referências e Valores Mutáveis)**
-### **Conteúdo Teórico:**
->>>>>>> 8582fb73395d2d82a327f4e7234c24d8e7160102
 - Diferença entre `useRef` e `useState`.  
 - Acessar elementos DOM diretamente.  
 - Armazenar valores mutáveis sem rerenderizar.  
 
-### **Exemplo Prático:**
+#### **Exemplo Prático:**
 
 ```jsx
 import { useRef } from 'react';
@@ -271,25 +263,26 @@ function TextInput() {
 }
 ```
 
-### **Exercício:**
+#### **Exercício:**
 
 1. Crie um componente que armazene o número de renders usando `useRef`.  
 2. Faça um "scroll to top" usando `useRef`.  
 
 ---
 
-## **5. - useReducer (Estado Complexo)**
+### **5. - useReducer (Estado Complexo)**
 
-### **Conteúdo Teórico:**
+#### **Conteúdo Teórico:**
 
 - Quando usar `useReducer` vs `useState`.  
 - Sintaxe:  
+  
   ```jsx
   const [state, dispatch] = useReducer(reducer, initialState);
   ```
 - Padrão de ações (`{ type, payload }`).  
 
-### **Exemplo Prático:**
+#### **Exemplo Prático:**
 
 ```jsx
 import { useReducer } from 'react';
