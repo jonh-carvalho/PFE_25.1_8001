@@ -23,6 +23,12 @@ A organização de uma aplicação **React** pode ser melhorada ao diferenciar *
 
 Uma boa prática é criar pastas separadas para **Pages** e **Components** no diretório `src`. Isso ajuda a organizar o código e deixar claro o propósito de cada arquivo.
 
+### Criar o projeto
+
+```bash
+   npm create vite@latest pages_app
+```
+
 #### Estrutura de diretório recomendada
 
 ```bash
