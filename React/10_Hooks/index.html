@@ -331,6 +331,7 @@
                 <li class="third-level"><a href="#4-useref-referencias-e-valores-mutaveis">4. - useRef (Referências e Valores Mutáveis)</a></li>
                 <li class="third-level"><a href="#5-usereducer-estado-complexo">5. - useReducer (Estado Complexo)</a></li>
                 <li class="third-level"><a href="#exercicio-final-do-modulo">Exercício Final do Módulo</a></li>
+                <li class="third-level"><a href="#todo-list-avancada-com-react-hooks">Todo List Avançada com React Hooks</a></li>
                 <li class="third-level"><a href="#recursos-adicionais">Recursos Adicionais:</a></li>
     </ul>
 </div></div>
@@ -625,6 +626,229 @@ function Counter() {
 ✅ <code>useReducer</code> para ações como adicionar, remover e marcar como concluída.<br />
 ✅ <code>useContext</code> para um tema claro/escuro.<br />
 ✅ <code>useRef</code> para focar no input ao adicionar uma tarefa.  </p>
+<h3 id="todo-list-avancada-com-react-hooks">Todo List Avançada com React Hooks</h3>
+<p>Vou construir uma aplicação Todo List completa utilizando todos os Hooks solicitados. Vamos dividir em partes lógicas:</p>
+<h4 id="1-estrutura-inicial-e-contexto-de-tema">1. Estrutura Inicial e Contexto de Tema</h4>
+<pre><code class="language-jsx">import React, { useState, useEffect, useReducer, useContext, useRef, createContext } from 'react';
+
+// Contexto para o tema
+const ThemeContext = createContext();
+
+// Reducer para gerenciar as ações das tarefas
+function todoReducer(state, action) {
+  switch (action.type) {
+    case 'ADD_TODO':
+      return [...state, { id: Date.now(), text: action.payload, completed: false }];
+    case 'TOGGLE_TODO':
+      return state.map(todo =&gt;
+        todo.id === action.payload ? { ...todo, completed: !todo.completed } : todo
+      );
+    case 'DELETE_TODO':
+      return state.filter(todo =&gt; todo.id !== action.payload);
+    default:
+      return state;
+  }
+}
+</code></pre>
+<h4 id="2-componente-principal-app">2. Componente Principal App</h4>
+<pre><code class="language-jsx">function App() {
+  const [theme, setTheme] = useState('light');
+  const [todos, dispatch] = useReducer(todoReducer, []);
+  const inputRef = useRef(null);
+
+  // Carregar tarefas do localStorage ao iniciar
+  useEffect(() =&gt; {
+    const savedTodos = localStorage.getItem('todos');
+    if (savedTodos) {
+      dispatch({ type: 'INIT_TODOS', payload: JSON.parse(savedTodos) });
+    }
+  }, []);
+
+  // Salvar tarefas no localStorage quando mudam
+  useEffect(() =&gt; {
+    localStorage.setItem('todos', JSON.stringify(todos));
+  }, [todos]);
+
+  // Alternar tema
+  const toggleTheme = () =&gt; {
+    setTheme(prevTheme =&gt; prevTheme === 'light' ? 'dark' : 'light');
+  };
+
+  return (
+    &lt;ThemeContext.Provider value={{ theme, toggleTheme }}&gt;
+      &lt;div className={`app ${theme}`}&gt;
+        &lt;h1&gt;Todo List&lt;/h1&gt;
+        &lt;TodoForm dispatch={dispatch} inputRef={inputRef} /&gt;
+        &lt;TodoList todos={todos} dispatch={dispatch} /&gt;
+      &lt;/div&gt;
+    &lt;/ThemeContext.Provider&gt;
+  );
+}
+</code></pre>
+<h4 id="3-componente-todoform">3. Componente TodoForm</h4>
+<pre><code class="language-jsx">function TodoForm({ dispatch, inputRef }) {
+  const [text, setText] = useState('');
+  const { theme } = useContext(ThemeContext);
+
+  const handleSubmit = e =&gt; {
+    e.preventDefault();
+    if (text.trim()) {
+      dispatch({ type: 'ADD_TODO', payload: text });
+      setText('');
+      inputRef.current.focus();
+    }
+  };
+
+  return (
+    &lt;form onSubmit={handleSubmit}&gt;
+      &lt;input
+        ref={inputRef}
+        type=&quot;text&quot;
+        value={text}
+        onChange={e =&gt; setText(e.target.value)}
+        placeholder=&quot;Adicione uma tarefa&quot;
+        className={`input-${theme}`}
+      /&gt;
+      &lt;button type=&quot;submit&quot; className={`button-${theme}`}&gt;Adicionar&lt;/button&gt;
+    &lt;/form&gt;
+  );
+}
+</code></pre>
+<h4 id="4-componente-todolist">4. Componente TodoList</h4>
+<pre><code class="language-jsx">function TodoList({ todos, dispatch }) {
+  const { theme, toggleTheme } = useContext(ThemeContext);
+
+  if (todos.length === 0) {
+    return &lt;p className={`no-tasks-${theme}`}&gt;Nenhuma tarefa adicionada ainda&lt;/p&gt;;
+  }
+
+  return (
+    &lt;div&gt;
+      &lt;button onClick={toggleTheme} className={`theme-button ${theme}`}&gt;
+        Alternar para tema {theme === 'light' ? 'escuro' : 'claro'}
+      &lt;/button&gt;
+      &lt;ul className={`todo-list ${theme}`}&gt;
+        {todos.map(todo =&gt; (
+          &lt;TodoItem key={todo.id} todo={todo} dispatch={dispatch} /&gt;
+        ))}
+      &lt;/ul&gt;
+    &lt;/div&gt;
+  );
+}
+</code></pre>
+<h4 id="5-componente-todoitem">5. Componente TodoItem</h4>
+<pre><code class="language-jsx">function TodoItem({ todo, dispatch }) {
+  const { theme } = useContext(ThemeContext);
+
+  return (
+    &lt;li className={`todo-item ${theme} ${todo.completed ? 'completed' : ''}`}&gt;
+      &lt;span
+        onClick={() =&gt; dispatch({ type: 'TOGGLE_TODO', payload: todo.id })}
+        className=&quot;todo-text&quot;
+      &gt;
+        {todo.text}
+      &lt;/span&gt;
+      &lt;button
+        onClick={() =&gt; dispatch({ type: 'DELETE_TODO', payload: todo.id })}
+        className={`delete-button ${theme}`}
+      &gt;
+        ×
+      &lt;/button&gt;
+    &lt;/li&gt;
+  );
+}
+</code></pre>
+<h4 id="6-estilos-css-exemplo-basico">6. Estilos CSS (exemplo básico)</h4>
+<pre><code class="language-css">.app {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.light {
+  background-color: #fff;
+  color: #333;
+}
+
+.dark {
+  background-color: #333;
+  color: #fff;
+}
+
+.input-light {
+  padding: 8px;
+  border: 1px solid #ddd;
+}
+
+.input-dark {
+  padding: 8px;
+  border: 1px solid #555;
+  background-color: #444;
+  color: white;
+}
+
+.todo-list {
+  list-style: none;
+  padding: 0;
+}
+
+.todo-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  margin: 5px 0;
+  border-radius: 4px;
+}
+
+.todo-item.light {
+  background-color: #f5f5f5;
+}
+
+.todo-item.dark {
+  background-color: #444;
+}
+
+.completed {
+  text-decoration: line-through;
+  opacity: 0.7;
+}
+
+.delete-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2em;
+}
+
+.delete-button.light {
+  color: #ff4444;
+}
+
+.delete-button.dark {
+  color: #ff8888;
+}
+
+.theme-button {
+  padding: 5px 10px;
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+</code></pre>
+<h4 id="7-como-usar-a-aplicacao">7. Como usar a aplicação</h4>
+<ol>
+<li><strong>Adicionar tarefa</strong>: Digite no campo de texto e pressione Enter ou clique em "Adicionar"</li>
+<li><strong>Completar tarefa</strong>: Clique no texto da tarefa</li>
+<li><strong>Remover tarefa</strong>: Clique no botão "×" ao lado da tarefa</li>
+<li><strong>Alternar tema</strong>: Clique no botão "Alternar tema"</li>
+</ol>
+<h4 id="recursos-utilizados">Recursos utilizados:</h4>
+<ul>
+<li><code>useState</code>: Para gerenciar o estado do tema e do texto do input</li>
+<li><code>useEffect</code>: Para persistir as tarefas no localStorage</li>
+<li><code>useReducer</code>: Para gerenciar as operações CRUD das tarefas</li>
+<li><code>useContext</code>: Para compartilhar o tema entre todos os componentes</li>
+<li><code>useRef</code>: Para focar automaticamente no input após adicionar uma tarefa</li>
+</ul>
 <hr />
 <h3 id="recursos-adicionais"><strong>Recursos Adicionais:</strong></h3>
 <ul>
