@@ -55,7 +55,7 @@ Abaixo, segue um exemplo de como criar um app Vite com React usando Styled Compo
 #### 1. Crie o projeto com Vite
 
 ```bash
-npm create vite@latest nome-do-projeto --template react
+npm create vite@latest styled_app --template react
 cd nome-do-projeto
 npm install
 ```
