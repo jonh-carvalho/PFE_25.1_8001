@@ -165,7 +165,7 @@
                         
                             
 <li >
-    <a href="../04_Componentes/">04 - Criando um App React SPA</a>
+    <a href="../04_Componentes/">04 - Componentes em uma SPA</a>
 </li>
 
                         
@@ -418,10 +418,10 @@ function Counter() {
 <h5 id="a-atualizacoes-assincronas"><strong>a) Atualizações Assíncronas</strong></h5>
 <ul>
 <li>O React <strong>não atualiza o estado imediatamente</strong> (é agendado).  </li>
-<li>Se precisar do <strong>valor anterior</strong>, use a forma funcional:<br />
-<code>jsx
-  setCount(prevCount =&gt; prevCount + 1); // Garante a atualização correta</code></li>
+<li>Se precisar do <strong>valor anterior</strong>, use a forma funcional: </li>
 </ul>
+<p><code>jsx
+  setCount(prevCount =&gt; prevCount + 1); // Garante a atualização correta</code></p>
 <h4 id="b-imutabilidade"><strong>b) Imutabilidade</strong></h4>
 <ul>
 <li><strong>Nunca modifique o estado diretamente!</strong><br />
