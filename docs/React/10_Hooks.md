@@ -85,12 +85,14 @@ function Counter() {
 
 ##### **a) Atualizações Assíncronas**  
 - O React **não atualiza o estado imediatamente** (é agendado).  
-- Se precisar do **valor anterior**, use a forma funcional:  
+- Se precisar do **valor anterior**, use a forma funcional: 
+ 
   ```jsx
   setCount(prevCount => prevCount + 1); // Garante a atualização correta
   ```
 
 #### **b) Imutabilidade**  
+
 - **Nunca modifique o estado diretamente!**  
   ❌ `state.count = 5` (Errado!)  
   ✅ `setCount(5)` (Correto!)  
