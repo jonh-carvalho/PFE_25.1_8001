@@ -3,9 +3,9 @@
 ## Grupos
 
 * [PFE_25.1_8001_I](https://github.com/Projetos-de-Extensao/PFE_25.1_8001_I)
-* [PFE_25.1_8001_II](https://github.com/Projetos-de-Extensao/PFE_25.1_8001_II)
+* [PFE_25.1_8001_BetoCuenca](https://github.com/Projetos-de-Extensao/PFE_25.1_8001_II)
 * [PFE_25.1_8001_III](https://github.com/Projetos-de-Extensao/PFE_25.1_8001_III)
-* [PFE_25.1_8001_IV](https://github.com/Projetos-de-Extensao/PFE_25.1_8001_IV)
+* [PFE_25.1_8001_Ingressou](https://github.com/Projetos-de-Extensao/PFE_25.1_8001_IV)
 
 ## Sobre
 
