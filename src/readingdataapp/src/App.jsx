@@ -1,6 +1,7 @@
 import './App.css'
 import data from './data.json'
 import React, { useState, useEffect } from 'react';
+import CountryInfo from './components/CountryInfo';
 
 const users = [
   { id: 1, name: "John Doe", email: "john@example.com" },
@@ -33,6 +34,8 @@ function App() {
 
   return (
     <>
+      <CountryInfo />
+
       <div>
         <h1>Users List (Usando Const)</h1>
         <ul>

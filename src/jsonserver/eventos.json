@@ -1,0 +1,104 @@
+{
+  "eventos": [
+    {
+      "id": 1,
+      "nome": "Festival de Música Urbana",
+      "data": "2025-06-20",
+      "estado": "SP",
+      "cidade": "São Paulo",
+      "hora_inicio": "18:00",
+      "hora_fim": "23:00",
+      "descricao": "Festival com bandas de música urbana e DJs renomados."
+    },
+    {
+      "id": 2,
+      "nome": "Encontro de Rock Nacional",
+      "data": "2025-07-05",
+      "estado": "RJ",
+      "cidade": "Rio de Janeiro",
+      "hora_inicio": "17:00",
+      "hora_fim": "22:00",
+      "descricao": "Show com as melhores bandas de rock nacional."
+    },
+    {
+      "id": 3,
+      "nome": "Noite do Samba",
+      "data": "2025-08-12",
+      "estado": "BA",
+      "cidade": "Salvador",
+      "hora_inicio": "19:00",
+      "hora_fim": "01:00",
+      "descricao": "Evento dedicado ao samba com artistas locais."
+    },
+    {
+      "id": 4,
+      "nome": "Festival Eletrônico",
+      "data": "2025-09-10",
+      "estado": "SC",
+      "cidade": "Florianópolis",
+      "hora_inicio": "20:00",
+      "hora_fim": "04:00",
+      "descricao": "Festa de música eletrônica com DJs internacionais."
+    },
+    {
+      "id": 5,
+      "nome": "Jazz na Praça",
+      "data": "2025-10-03",
+      "estado": "MG",
+      "cidade": "Belo Horizonte",
+      "hora_inicio": "16:00",
+      "hora_fim": "21:00",
+      "descricao": "Apresentações de jazz ao ar livre."
+    },
+    {
+      "id": 6,
+      "nome": "Festival de Forró",
+      "data": "2025-11-15",
+      "estado": "PE",
+      "cidade": "Recife",
+      "hora_inicio": "18:00",
+      "hora_fim": "02:00",
+      "descricao": "Festival com grandes nomes do forró."
+    },
+    {
+      "id": 7,
+      "nome": "Pop Music Night",
+      "data": "2025-12-01",
+      "estado": "RS",
+      "cidade": "Porto Alegre",
+      "hora_inicio": "19:30",
+      "hora_fim": "00:30",
+      "descricao": "Noite especial com artistas pop."
+    },
+    {
+      "id": 8,
+      "nome": "Festival Sertanejo",
+      "data": "2026-01-20",
+      "estado": "GO",
+      "cidade": "Goiânia",
+      "hora_inicio": "17:00",
+      "hora_fim": "23:59",
+      "descricao": "Os maiores nomes do sertanejo em um só evento."
+    },
+    {
+      "id": 9,
+      "nome": "MPB ao Vivo",
+      "data": "2026-02-14",
+      "estado": "DF",
+      "cidade": "Brasília",
+      "hora_inicio": "18:00",
+      "hora_fim": "22:00",
+      "descricao": "Show de música popular brasileira com artistas consagrados."
+    },
+    {
+      "id": 10,
+      "nome": "Festival Indie",
+      "data": "2026-03-10",
+      "estado": "PR",
+      "cidade": "Curitiba",
+      "hora_inicio": "20:00",
+      "hora_fim": "02:00",
+      "descricao": "Festival com bandas independentes e novas tendências."
+    }
+  ]
+}

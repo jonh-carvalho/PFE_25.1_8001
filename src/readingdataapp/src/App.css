@@ -40,3 +40,36 @@
 .read-the-docs {
   color: #888;
 }
+
+.country-info {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.country-selector {
+  margin: 20px 0;
+}
+
+.country-selector input {
+  padding: 8px;
+  margin-left: 10px;
+}
+
+.country-details {
+  background-color: #f5f5f5;
+  padding: 20px;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+.loading {
+  color: #666;
+  font-style: italic;
+}
+
+.error {
+  color: #d32f2f;
+  font-weight: bold;
+}

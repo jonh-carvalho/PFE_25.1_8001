@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MusicVibe</title>
+    <link rel="stylesheet" href="cadastro.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container header-container">
+            <div class="logo">
+                <img src="src/logoMusicaVibe.svg" alt="Logo MusicVibe">
+            </div>
+            <nav class="nav">
+                <a href="#">Sobre Nós</a>
+                <a href="#">Categorias</a>
+                <a href="#">Em Alta</a>
+                <a href="#">Shows</a>
+            </nav>
+            <div class="user-info">
+                <img src="src/user-icon.svg" alt="Usuário" class="user-icon">
+                <span>Jonh de Carvalho</span>
+            </div>
+        </div>
+    </header>
+
+    <section class="cadastro-evento-section">
+        <form class="cadastro-evento-form">
+            <h2 class="cadastro-evento-title">Cadastro do evento</h2>
+            <div class="form-row">
+                <label for="nome" class="form-label">Nome</label>
+                <input type="text" id="nome" name="nome" placeholder="Digite o nome da clínica" class="input-full">
+            </div>
+            <div class="form-row">
+                <div class="form-col">
+                    <label for="data" class="form-label">Datas do evento</label>
+                    <input type="text" id="data" name="data" placeholder="Selecione as datas">
+                </div>
+            </div>
+            <div class="form-row double">
+                <div class="form-col">
+                    <label for="estado" class="form-label">Estado</label>
+                    <input type="text" id="estado" name="estado" placeholder="Digite o CPF/CNPJ">
+                </div>
+                <div class="form-col">
+                    <label for="cidade" class="form-label">Cidade</label>
+                    <input type="text" id="cidade" name="cidade" placeholder="Selecione sua uf">
+                </div>
+            </div>
+            <div class="form-row double">
+                <div class="form-col">
+                    <label for="hora-inicio" class="form-label">Hora de início</label>
+                    <input type="text" id="hora-inicio" name="hora-inicio" placeholder="Digite o horário">
+                </div>
+                <div class="form-col">
+                    <label for="hora-fim" class="form-label">Hora de termino</label>
+                    <input type="text" id="hora-fim" name="hora-fim" placeholder="Digite o horário">
+                </div>
+            </div>
+            <div class="form-row">
+                <label for="descricao" class="form-label">Descrição</label>
+                <textarea id="descricao" name="descricao" placeholder="Digite o nome da clínica"></textarea>
+            </div>
+            <div class="form-row center">
+                <button type="submit" class="btn-avancar">Avançar</button>
+            </div>
+        </form>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-columns">
+                <div class="social">
+                    <a href="#"><img src="src/logoInstragram.png" alt="Instagram"></a>
+                    <a href="#"><img src="src/logoFacebook.png" alt="Facebook"></a>
+                </div>
+                <div class="links">
+                    <a href="#">Início</a>
+                    <a href="#">Sobre Nós</a>
+                    <a href="#">Categorias</a>
+                    <a href="#">Eventos em Alta</a>
+                </div>
+                <div class="contact">
+                    <p><img src="src/email.svg" alt="Email"> suporte@musicvibe.com</p>
+                    <p><img src="src/Icon awesome-phone-alt.svg" alt="Telefone"> +21 123 456</p>
+                    <p><img src="src/Icon calendar.svg" alt="Dias de Funcionamento"> Segunda - Domingo</p>
+                    <p><img src="src/Icon feather-clock.svg" alt="Horário"> 8:00 AM - 10:00 PM (BRT)</p>
+                    <p><img src="src/map-pin.svg" alt="Endereço"> Brasil</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 MusicVibe. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./index.js"></script>
+</body>
+</html>
