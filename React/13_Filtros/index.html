@@ -463,7 +463,7 @@ export const fetchCategories = async () =&gt; {
 // Poderíamos adicionar aqui funções para buscar itens com filtros/query do json-server
 // Ex: export const fetchItemsByQuery = async (query) =&gt; { ... fetch(`${API_URL}/items?${query}`) ... }
 </code></pre>
-<h4 id="componente-principal-srcappjsx">Componente Principal (src/App.jsx):</h4>
+<h4 id="componente-principal"><strong>Componente Principal</strong></h4>
 <p>Este componente orquestrará os demais e gerenciará o estado principal (lista de itens, termo de busca, filtro selecionado, itens selecionados).</p>
 <pre><code class="language-jsx">// src/App.jsx
 import React, { useState, useEffect, useMemo } from 'react';
@@ -552,7 +552,14 @@ function App() {
 
 export default App;
 </code></pre>
-<h4 id="componente-de-busca-srccomponentssearchbarjsx">Componente de Busca (src/components/SearchBar.jsx):</h4>
+<p>Este componente é responsável por:</p>
+<ul>
+<li>Gerenciar o estado geral da aplicação: Ele controla quais itens são buscados da API, quais categorias estão disponíveis, o termo de busca atual, a categoria selecionada para filtro e quais itens estão selecionados pelo usuário.</li>
+<li>Buscar dados iniciais: Ao ser montado, ele busca a lista de itens e categorias da API (simulada pelo json-server).</li>
+<li>Orquestrar os componentes filhos: Ele renderiza e passa dados e funções para os componentes SearchBar, FilterOptions e ItemList.</li>
+<li>Lidar com a lógica de filtragem e seleção: Ele calcula quais itens devem ser exibidos com base nos filtros e na busca, e gerencia a lista de itens selecionados.</li>
+</ul>
+<h4 id="componente-de-busca"><strong>Componente de Busca:</strong></h4>
 <p>Um input simples para o usuário digitar o termo de busca.</p>
 <pre><code class="language-jsx">// src/components/SearchBar.jsx
 import React, { useState } from 'react';
@@ -579,7 +586,7 @@ function SearchBar({ onSearch }) {
 
 export default SearchBar;
 </code></pre>
-<h4 id="componente-de-filtros-srccomponentsfilteroptionsjsx">Componente de Filtros (src/components/FilterOptions.jsx):</h4>
+<h4 id="componente-de-filtros"><strong>Componente de Filtros</strong></h4>
 <p>Um select (ou botões/checkboxes) para filtrar por categoria.</p>
 <pre><code class="language-jsx">// src/components/FilterOptions.jsx
 import React from 'react';
@@ -633,6 +640,12 @@ function ItemList({ items, selectedItems, onItemSelect }) {
 
 export default ItemList;
 </code></pre>
+<ul>
+<li>O componente FilterOptions é um elemento de UI reutilizável para filtragem baseada em categorias.</li>
+<li>Ele recebe a lista de categories disponíveis e a selectedCategory como props para exibir o estado atual.</li>
+<li>Quando o usuário altera a seleção no menu suspenso, ele chama a função onCategoryChange (também passada como prop), permitindo que um componente pai (como App.jsx) atualize o estado da aplicação e filtre novamente os itens de acordo.</li>
+<li>Inclui uma opção padrão "Todas" para limpar o filtro de categoria.</li>
+</ul>
 <h4 id="componente-de-item-srccomponentsitemjsx">Componente de Item (src/components/Item.jsx):</h4>
 <p>Exibe as informações de um único item e lida com sua seleção.</p>
 <pre><code class="language-jsx">// src/components/Item.jsx
