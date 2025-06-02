@@ -337,8 +337,8 @@
             <li class="second-level"><a href="#tecnologias">Tecnologias:</a></li>
                 
                 <li class="third-level"><a href="#passos-e-conceitos-a-serem-abordados">Passos e Conceitos a Serem Abordados:</a></li>
-            <li class="second-level"><a href="#conclusao">Conclusão:</a></li>
-                
+                <li class="third-level"><a href="#conceitos-de-react-demonstrados">Conceitos de React Demonstrados:</a></li>
+                <li class="third-level"><a href="#conclusao">Conclusão:</a></li>
     </ul>
 </div></div>
         <div class="col-md-9" role="main">
@@ -463,7 +463,8 @@ export const fetchCategories = async () =&gt; {
 // Poderíamos adicionar aqui funções para buscar itens com filtros/query do json-server
 // Ex: export const fetchItemsByQuery = async (query) =&gt; { ... fetch(`${API_URL}/items?${query}`) ... }
 </code></pre>
-<p>Componente Principal (src/App.jsx): Este componente orquestrará os demais e gerenciará o estado principal (lista de itens, termo de busca, filtro selecionado, itens selecionados).</p>
+<h4 id="componente-principal-srcappjsx">Componente Principal (src/App.jsx):</h4>
+<p>Este componente orquestrará os demais e gerenciará o estado principal (lista de itens, termo de busca, filtro selecionado, itens selecionados).</p>
 <pre><code class="language-jsx">// src/App.jsx
 import React, { useState, useEffect, useMemo } from 'react';
 import SearchBar from './components/SearchBar';
@@ -550,8 +551,9 @@ function App() {
 
 
 export default App;
-Componente de Busca (src/components/SearchBar.jsx): Um input simples para o usuário digitar o termo de busca.
 </code></pre>
+<h4 id="componente-de-busca-srccomponentssearchbarjsx">Componente de Busca (src/components/SearchBar.jsx):</h4>
+<p>Um input simples para o usuário digitar o termo de busca.</p>
 <pre><code class="language-jsx">// src/components/SearchBar.jsx
 import React, { useState } from 'react';
 
@@ -577,7 +579,8 @@ function SearchBar({ onSearch }) {
 
 export default SearchBar;
 </code></pre>
-<p>Componente de Filtros (src/components/FilterOptions.jsx): Um select (ou botões/checkboxes) para filtrar por categoria.</p>
+<h4 id="componente-de-filtros-srccomponentsfilteroptionsjsx">Componente de Filtros (src/components/FilterOptions.jsx):</h4>
+<p>Um select (ou botões/checkboxes) para filtrar por categoria.</p>
 <pre><code class="language-jsx">// src/components/FilterOptions.jsx
 import React from 'react';
 
@@ -603,7 +606,8 @@ function FilterOptions({ categories, selectedCategory, onCategoryChange }) {
 
 export default FilterOptions;
 </code></pre>
-<p>Componente de Lista de Itens (src/components/ItemList.jsx): Renderiza a lista de componentes Item.</p>
+<h4 id="componente-de-lista-de-itens-srccomponentsitemlistjsx">Componente de Lista de Itens (src/components/ItemList.jsx):</h4>
+<p>Renderiza a lista de componentes Item.</p>
 <pre><code class="language-jsx">// src/components/ItemList.jsx
 import React from 'react';
 import Item from './Item';
@@ -629,7 +633,8 @@ function ItemList({ items, selectedItems, onItemSelect }) {
 
 export default ItemList;
 </code></pre>
-<p>Componente de Item (src/components/Item.jsx): Exibe as informações de um único item e lida com sua seleção.</p>
+<h4 id="componente-de-item-srccomponentsitemjsx">Componente de Item (src/components/Item.jsx):</h4>
+<p>Exibe as informações de um único item e lida com sua seleção.</p>
 <pre><code class="language-jsx">// src/components/Item.jsx
 import React from 'react';
 
@@ -656,7 +661,8 @@ function Item({ item, isSelected, onSelect }) {
 
 export default Item;
 </code></pre>
-<p>Estilos Básicos (src/App.css ou src/index.css): Adicione alguns estilos para tornar a aplicação mais apresentável.</p>
+<h4 id="estilos-basicos-srcappcss-ou-srcindexcss">Estilos Básicos (src/App.css ou src/index.css):</h4>
+<p>Adicione alguns estilos para tornar a aplicação mais apresentável.</p>
 <pre><code class="language-css">/* src/App.css ou src/index.css */
 body {
   font-family: sans-serif;
@@ -707,7 +713,7 @@ body {
   border-radius: 4px;
 }
 </code></pre>
-<p>Conceitos de React Demonstrados:</p>
+<h3 id="conceitos-de-react-demonstrados">Conceitos de React Demonstrados:</h3>
 <ul>
 <li>Componentização: Divisão da UI em SearchBar, FilterOptions, ItemList, Item.</li>
 <li>Estado (useState): Gerenciamento de searchTerm, selectedCategory, allItems, selectedItems.</li>
@@ -720,7 +726,7 @@ body {
 <li>Memoização (useMemo): Para otimizar o cálculo da lista filtrada, evitando recálculos desnecessários se as dependências (allItems, searchTerm, selectedCategory) não mudarem.</li>
 <li>Imutabilidade: Ao atualizar o Set de selectedItems, criamos um novo Set para garantir que o React detecte a mudança de estado corretamente.</li>
 </ul>
-<h2 id="conclusao">Conclusão:</h2>
+<h3 id="conclusao">Conclusão:</h3>
 <p>Nessa aplicação, voce pode buscar itens, filtrar por categoria, selecionar itens individualmente ou em grupo, e exibir informações sobre os itens selecionados.</p></div>
         
         
