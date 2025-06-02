@@ -1,0 +1,28 @@
+{
+  "produtos": [
+    {
+      "id": 1,
+      "nome": "Notebook Dell Inspiron",
+      "descricao": "Notebook com processador Intel Core i5, 8GB RAM, 256GB SSD.",
+      "preco": 3500.00,
+      "estoque": 12,
+      "categoria": "Informática"
+    },
+    {
+      "id": 2,
+      "nome": "Smartphone Samsung Galaxy S21",
+      "descricao": "Smartphone com tela de 6.2 polegadas, 128GB, câmera tripla.",
+      "preco": 2800.00,
+      "estoque": 8,
+      "categoria": "Celulares"
+    },
+    {
+      "id": 3,
+      "nome": "Fone de Ouvido Bluetooth JBL",
+      "descricao": "Fone de ouvido sem fio com bateria de longa duração.",
+      "preco": 350.00,
+      "estoque": 25,
+      "categoria": "Acessórios"
+    }
+  ]
+}
