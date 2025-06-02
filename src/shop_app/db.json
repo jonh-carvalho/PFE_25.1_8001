@@ -1,0 +1,17 @@
+{
+  "items": [
+    { "id": 1, "name": "Laptop Moderno", "category": "Eletrônicos", "price": 4500.00, "inStock": true },
+    { "id": 2, "name": "Smartphone Avançado", "category": "Eletrônicos", "price": 3200.00, "inStock": false },
+    { "id": 3, "name": "Livro de React", "category": "Livros", "price": 120.00, "inStock": true },
+    { "id": 4, "name": "Cafeteira Elétrica", "category": "Casa", "price": 250.00, "inStock": true },
+    { "id": 5, "name": "Fone de Ouvido Bluetooth", "category": "Eletrônicos", "price": 350.00, "inStock": true },
+    { "id": 6, "name": "Teclado Mecânico", "category": "Acessórios", "price": 450.00, "inStock": false },
+    { "id": 7, "name": "Mouse Gamer", "category": "Acessórios", "price": 220.00, "inStock": true }
+  ],
+  "categories": [
+    { "id": "cat1", "name": "Eletrônicos" },
+    { "id": "cat2", "name": "Livros" },
+    { "id": "cat3", "name": "Casa" },
+    { "id": "cat4", "name": "Acessórios" }
+  ]
+}

@@ -1,0 +1,165 @@
+/* src/App.css ou src/index.css */
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 20px;
+  background-color: #f4f4f4;
+}
+
+.app-container {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.controls {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+  align-items: center;
+}
+
+.search-bar input,
+.filter-options select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1em;
+}
+
+.search-bar input {
+  flex-grow: 1;
+}
+
+.item-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.selection-info {
+  background-color: #fff3cd;
+  border: 1px solid #ffeeba;
+  color: #856404;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 4px;
+}
+
+/* Estilos para a galeria de itens */
+.item-gallery {
+  display: flex;
+  flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha */
+  gap: 16px; /* Espaçamento entre os cards */
+  padding: 0;
+  justify-content: flex-start; /* Ou center, space-around, etc. */
+}
+
+/* Estilos para cada card de item */
+.item-card {
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  /* Cálculo para 5 itens por linha, considerando o 'gap':
+         Cada item ocupa 20% da largura.
+         O gap é distribuído. (gap * (num_colunas - 1)) / num_colunas
+         Ex: (16px * 4) / 5 = 12.8px
+      */
+  flex: 0 0 calc(20% - 12.8px); /* Ajuste fino para o gap */
+  box-sizing: border-box; /* Garante que padding e border não afetem a largura total */
+  margin-bottom: 16px; /* Para espaçamento vertical quando os itens quebram linha */
+}
+
+.item-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.item-card h3 {
+  margin-top: 0;
+  margin-bottom: 8px;
+  font-size: 1.1em;
+  color: #333;
+}
+
+.item-card p {
+  margin: 0;
+  font-size: 1em;
+  color: #666;
+}
+
+/* Estilos para a visualização detalhada do item */
+.item-detail-view {
+  background-color: #f9f9f9;
+  padding: 25px;
+  border-radius: 8px;
+  border: 1px solid #eee;
+  margin-top: 20px;
+}
+
+.item-detail-view h2 {
+  margin-top: 0;
+  color: #333;
+}
+
+.item-detail-view p {
+  font-size: 1.1em;
+  line-height: 1.6;
+  color: #555;
+}
+
+.item-detail-view .back-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  margin-bottom: 20px;
+  transition: background-color 0.2s ease;
+}
+
+.item-detail-view .back-button:hover {
+  background-color: #0056b3;
+}
+
+/* Media Queries para responsividade */
+@media (max-width: 1200px) {
+  .item-card {
+    flex: 0 0 calc(25% - 12px); /* 4 cards por linha - (16px * 3) / 4 = 12px */
+  }
+}
+
+@media (max-width: 992px) {
+  .item-card {
+    flex: 0 0 calc(33.333% - 10.67px); /* 3 cards por linha - (16px * 2) / 3 = 10.67px */
+  }
+}
+
+@media (max-width: 768px) {
+  .controls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .search-bar input,
+  .filter-options select {
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .item-card {
+    flex: 0 0 calc(50% - 8px); /* 2 cards por linha - (16px * 1) / 2 = 8px */
+  }
+}
+
+@media (max-width: 576px) {
+  .item-card {
+    flex: 0 0 100%; /* 1 card por linha, não precisa subtrair gap */
+  }
+}
