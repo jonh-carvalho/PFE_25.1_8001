@@ -10,9 +10,9 @@ Criar uma lista de itens (por exemplo, produtos, tarefas, posts) que podem ser b
 - React: Para a construção da interface do usuário.
 - json-server: Para simular uma API RESTful de forma simples.
 
-Estrutura de Pastas Sugerida:
+**Estrutura de Pastas Sugerida:**
 
-plaintext
+```plaintext
 /meu-app-react
 |-- public/
 |-- src/
@@ -32,14 +32,23 @@ plaintext
 |-- db.json  (para o json-server)
 |-- package.json
 |-- vite.config.js
+```
 
 ### Passos e Conceitos a Serem Abordados:
 
 **Configuração do Ambiente:**
 
-- Criar um novo projeto Vite com React: npm create vite@latest meu-app-react -- --template react
+- Criar um novo projeto Vite com React: 
+  
+```bash 
+npm create vite@latest meu-app-react -- --template react
+```	
 
-- Instalar json-server: npm install json-server (ou npm install -g json-server para instalação global).
+- Instalar json-server: 
+  
+```bash 
+npm install json-server (ou npm install -g json-server para instalação global).
+```	
 
 - Criar o arquivo db.json na raiz do projeto.
 
@@ -54,7 +63,8 @@ plaintext
     "preview": "vite preview",
     "server": "json-server --watch db.json --port 3001"
   }
-}```
+}
+```
 
 - Iniciar o json-server em um terminal: npm run server.
 - Iniciar o app Vite em outro terminal: npm run dev.
@@ -119,7 +129,9 @@ export const fetchCategories = async () => {
 // Ex: export const fetchItemsByQuery = async (query) => { ... fetch(`${API_URL}/items?${query}`) ... }
 ```	
 
-Componente Principal (src/App.jsx): Este componente orquestrará os demais e gerenciará o estado principal (lista de itens, termo de busca, filtro selecionado, itens selecionados).
+#### **Componente Principal**
+
+Este componente orquestrará os demais e gerenciará o estado principal (lista de itens, termo de busca, filtro selecionado, itens selecionados).
 
 ```jsx
 // src/App.jsx
@@ -208,9 +220,19 @@ function App() {
 
 
 export default App;
-Componente de Busca (src/components/SearchBar.jsx): Um input simples para o usuário digitar o termo de busca.
-```	
+```
 
+Este componente é responsável por:
+
+- Gerenciar o estado geral da aplicação: Ele controla quais itens são buscados da API, quais categorias estão disponíveis, o termo de busca atual, a categoria selecionada para filtro e quais itens estão selecionados pelo usuário.
+- Buscar dados iniciais: Ao ser montado, ele busca a lista de itens e categorias da API (simulada pelo json-server).
+- Orquestrar os componentes filhos: Ele renderiza e passa dados e funções para os componentes SearchBar, FilterOptions e ItemList.
+- Lidar com a lógica de filtragem e seleção: Ele calcula quais itens devem ser exibidos com base nos filtros e na busca, e gerencia a lista de itens selecionados.
+
+#### **Componente de Busca:**
+
+Um input simples para o usuário digitar o termo de busca.
+	
 ```jsx
 // src/components/SearchBar.jsx
 import React, { useState } from 'react';
@@ -238,7 +260,9 @@ function SearchBar({ onSearch }) {
 export default SearchBar;
 ```
 
-Componente de Filtros (src/components/FilterOptions.jsx): Um select (ou botões/checkboxes) para filtrar por categoria.
+#### **Componente de Filtros**
+
+Um select (ou botões/checkboxes) para filtrar por categoria.
 
 ```jsx
 // src/components/FilterOptions.jsx
@@ -267,7 +291,9 @@ function FilterOptions({ categories, selectedCategory, onCategoryChange }) {
 export default FilterOptions;
 ```
 
-Componente de Lista de Itens (src/components/ItemList.jsx): Renderiza a lista de componentes Item.
+#### Componente de Lista de Itens (src/components/ItemList.jsx):
+
+Renderiza a lista de componentes Item.
 
 ```jsx
 // src/components/ItemList.jsx
@@ -296,7 +322,14 @@ function ItemList({ items, selectedItems, onItemSelect }) {
 export default ItemList;
 ```
 
-Componente de Item (src/components/Item.jsx): Exibe as informações de um único item e lida com sua seleção.
+- O componente FilterOptions é um elemento de UI reutilizável para filtragem baseada em categorias.
+- Ele recebe a lista de categories disponíveis e a selectedCategory como props para exibir o estado atual.
+- Quando o usuário altera a seleção no menu suspenso, ele chama a função onCategoryChange (também passada como prop), permitindo que um componente pai (como App.jsx) atualize o estado da aplicação e filtre novamente os itens de acordo.
+- Inclui uma opção padrão "Todas" para limpar o filtro de categoria.
+
+#### Componente de Item (src/components/Item.jsx): 
+
+Exibe as informações de um único item e lida com sua seleção.
 
 ```jsx
 // src/components/Item.jsx
@@ -326,7 +359,9 @@ function Item({ item, isSelected, onSelect }) {
 export default Item;
 ```
 
-Estilos Básicos (src/App.css ou src/index.css): Adicione alguns estilos para tornar a aplicação mais apresentável.
+#### Estilos Básicos (src/App.css ou src/index.css):
+
+Adicione alguns estilos para tornar a aplicação mais apresentável.
 
 ```css
 /* src/App.css ou src/index.css */
@@ -380,7 +415,7 @@ body {
 }
 ```
 
-Conceitos de React Demonstrados:
+### Conceitos de React Demonstrados:
 
 - Componentização: Divisão da UI em SearchBar, FilterOptions, ItemList, Item.
 - Estado (useState): Gerenciamento de searchTerm, selectedCategory, allItems, selectedItems.
@@ -393,6 +428,6 @@ Conceitos de React Demonstrados:
 - Memoização (useMemo): Para otimizar o cálculo da lista filtrada, evitando recálculos desnecessários se as dependências (allItems, searchTerm, selectedCategory) não mudarem.
 - Imutabilidade: Ao atualizar o Set de selectedItems, criamos um novo Set para garantir que o React detecte a mudança de estado corretamente.
 
-## Conclusão:
+### Conclusão:
 
 Nessa aplicação, voce pode buscar itens, filtrar por categoria, selecionar itens individualmente ou em grupo, e exibir informações sobre os itens selecionados.
