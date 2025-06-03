@@ -1,356 +1,243 @@
 <!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    
-    
-    <link rel="shortcut icon" href="../../../img/favicon.ico">
-
-    
-    <title>09 - Histórias de usuário - PFE_25.1_8001</title>
-    
-
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/v4-shims.css">
-    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hack-font@3.3.0/build/web/hack.min.css">
-    <link href='//rsms.me/inter/inter.css' rel='stylesheet' type='text/css'>
-    <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,600,700&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
-    <link href="../../../css/bootstrap-custom.min.css" rel="stylesheet">
-    <link href="../../../css/base.min.css" rel="stylesheet">
-    <link href="../../../css/cinder.min.css" rel="stylesheet">
-
-    
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
-        <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/styles/github.min.css">
         
-    
+        
+        <link rel="shortcut icon" href="../../../img/favicon.ico">
+        <title>09 - Histórias de usuário - PFE_25.1_8001</title>
+        <link href="../../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../../../css/brands.min.css" rel="stylesheet">
+        <link href="../../../css/solid.min.css" rel="stylesheet">
+        <link href="../../../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../../../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/yaml.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/python.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/html.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/css.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/javascript.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
 
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-            <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
-            <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
-        <![endif]-->
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../../..">PFE_25.1_8001</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-    
-
-     
-</head>
-
-<body>
-
-    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
-    <div class="container">
-
-        <!-- Collapsed navigation -->
-        <div class="navbar-header">
-            <!-- Expander button -->
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            
-
-            <!-- Main title -->
-
-            
-              <a class="navbar-brand" href="../../..">PFE_25.1_8001</a>
-            
-        </div>
-
-        <!-- Expanded navigation -->
-        <div class="navbar-collapse collapse">
-                <!-- Main navigation -->
-                <ul class="nav navbar-nav">
-                
-                
-                    <li >
-                        <a href="../../..">Home</a>
-                    </li>
-                
-                
-                
-                    <li class="dropdown active">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Disciplina <b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                        
-                            
-<li >
-    <a href="../../Github%20CodeSpace/">GitHub Codespaces</a>
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href="../../.." class="nav-link">Home</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle active" aria-current="page" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Disciplina</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../Github%20CodeSpace/" class="dropdown-item">GitHub Codespaces</a>
 </li>
-
-                        
-                            
-<li >
-    <a href="../../aulas/">Aulas</a>
+                                    
+<li>
+    <a href="../../aulas/" class="dropdown-item">Aulas</a>
 </li>
-
-                        
-                            
-<li >
-    <a href="../../github/">Versionamento</a>
+                                    
+<li>
+    <a href="../../github/" class="dropdown-item">Versionamento</a>
 </li>
-
-                        
-                            
-<li >
-    <a href="../../mkdocs/">MkDocs</a>
+                                    
+<li>
+    <a href="../../mkdocs/" class="dropdown-item">MkDocs</a>
 </li>
-
-                        
-                            
+                                    
   <li class="dropdown-submenu">
-    <a tabindex="-1" href="">Roteiros</a>
+    <a href="#" class="dropdown-item">Roteiros</a>
     <ul class="dropdown-menu">
-        
             
-<li >
-    <a href="../Aht/">06 - Análise de Tarefas</a>
+<li>
+    <a href="../Aht/" class="dropdown-item">06 - Análise de Tarefas</a>
 </li>
-
-        
             
-<li >
-    <a href="../DesignThinking/">04 - Design Thinking</a>
+<li>
+    <a href="../DesignThinking/" class="dropdown-item">04 - Design Thinking</a>
 </li>
-
-        
             
-<li class="active">
-    <a href="./">09 - Histórias de usuário</a>
+<li>
+    <a href="./" class="dropdown-item active" aria-current="page">09 - Histórias de usuário</a>
 </li>
-
-        
             
-<li >
-    <a href="../receitas/">04 - Compartilhamento de Receitas</a>
+<li>
+    <a href="../receitas/" class="dropdown-item">04 - Compartilhamento de Receitas</a>
 </li>
-
-        
     </ul>
   </li>
-
-                        
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">React</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../React/01_Intro/" class="dropdown-item">01 - Introdução ao React com HTML e CDN</a>
+</li>
+                                    
+<li>
+    <a href="../../../React/02_NodeViteReact/" class="dropdown-item">02 - Criando um App React com Vite</a>
+</li>
+                                    
+<li>
+    <a href="../../../React/03_Spa/" class="dropdown-item">03 - Criando um App React SPA</a>
+</li>
+                                    
+<li>
+    <a href="../../../React/04_Componentes/" class="dropdown-item">04 - Componentes em uma SPA</a>
+</li>
+                                    
+<li>
+    <a href="../../../React/05_Pages_Components/" class="dropdown-item">05 - Pages e Components</a>
+</li>
+                                    
+<li>
+    <a href="../../../React/06_Estilizando%20React/" class="dropdown-item">06 - Estilizar um app React</a>
+</li>
+                                    
+<li>
+    <a href="../../../React/07_Props/" class="dropdown-item">07 - Props</a>
+</li>
+                                    
+<li>
+    <a href="../../../React/08_Forms_Props/" class="dropdown-item">08 - Forms Props</a>
+</li>
+                                    
+<li>
+    <a href="../../../React/09_UseState_useRef/" class="dropdown-item">09 - useState e useRef</a>
+</li>
+                                    
+<li>
+    <a href="../../../React/10_Hooks/" class="dropdown-item">10 - Hooks (Foco em Componentes Funcionais)</a>
+</li>
+                                    
+<li>
+    <a href="../../../React/10_Http/" class="dropdown-item">10 - Protocolo HTTP</a>
+</li>
+                                    
+<li>
+    <a href="../../../React/11_Lendo%20Dados/" class="dropdown-item">11 Lendo Dados</a>
+</li>
+                                    
+<li>
+    <a href="../../../React/12_Fetch/" class="dropdown-item">12 - Fetch</a>
+</li>
+                                    
+<li>
+    <a href="../../../React/13_FetchApi/" class="dropdown-item">13 - Consumir Fetch API Pública</a>
+</li>
+                                    
+<li>
+    <a href="../../../React/14_Filtros/" class="dropdown-item">14 - Filtros</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false"> Design Thinking</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../_Design%20Thinking/5w2h/" class="dropdown-item">5W2H</a>
+</li>
+                                    
+<li>
+    <a href="../../../_Design%20Thinking/Brainstorm/" class="dropdown-item">Brainstorm</a>
+</li>
+                                    
+<li>
+    <a href="../../../_Design%20Thinking/designthinking/" class="dropdown-item">Design Thinking</a>
+</li>
+                                    
+<li>
+    <a href="../../../_Design%20Thinking/historiasdeusuario/" class="dropdown-item">História de Usuário</a>
+</li>
+                                    
+<li>
+    <a href="../../../_Design%20Thinking/mapa_mental/" class="dropdown-item">Mapas Mentais</a>
+</li>
+                                    
+<li>
+    <a href="../../../_Design%20Thinking/pesquisa/" class="dropdown-item">Pesquisa</a>
+</li>
+                                    
+<li>
+    <a href="../../../_Design%20Thinking/prototipo_baixa_fidelidade/" class="dropdown-item">Protótipo</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false"> Sprint Planning</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../_Sprint%20Planning/sprint/" class="dropdown-item">Sprint Planning</a>
+</li>
+                                </ul>
+                            </li>
                         </ul>
-                    </li>
-                
-                
-                
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">React <b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                        
-                            
-<li >
-    <a href="../../../React/01_Intro/">01 - Introdução ao React com HTML e CDN</a>
-</li>
 
-                        
-                            
-<li >
-    <a href="../../../React/02_NodeViteReact/">02 - Criando um App React com Vite</a>
-</li>
-
-                        
-                            
-<li >
-    <a href="../../../React/03_Spa/">03 - Criando um App React SPA</a>
-</li>
-
-                        
-                            
-<li >
-    <a href="../../../React/04_Componentes/">04 - Componentes em uma SPA</a>
-</li>
-
-                        
-                            
-<li >
-    <a href="../../../React/05_Pages_Components/">05 - Pages e Components</a>
-</li>
-
-                        
-                            
-<li >
-    <a href="../../../React/06_Estilizando%20React/">06 - Estilizar um app React</a>
-</li>
-
-                        
-                            
-<li >
-    <a href="../../../React/07_Props/">07 - Props</a>
-</li>
-
-                        
-                            
-<li >
-    <a href="../../../React/08_Forms_Props/">08 - Forms Props</a>
-</li>
-
-                        
-                            
-<li >
-    <a href="../../../React/09_UseState_useRef/">09 - useState e useRef</a>
-</li>
-
-                        
-                            
-<li >
-    <a href="../../../React/10_Hooks/">10 - Hooks (Foco em Componentes Funcionais)</a>
-</li>
-
-                        
-                            
-<li >
-    <a href="../../../React/10_Http/">10 - Protocolo HTTP</a>
-</li>
-
-                        
-                            
-<li >
-    <a href="../../../React/11_Lendo%20Dados/">11 Lendo Dados</a>
-</li>
-
-                        
-                            
-<li >
-    <a href="../../../React/12_Fetch/">12 - Fetch</a>
-</li>
-
-                        
-                            
-<li >
-    <a href="../../../React/13_FetchApi/">13 - Consumir Fetch API Pública</a>
-</li>
-
-                        
-                            
-<li >
-    <a href="../../../React/14_Filtros/">14 - Filtros</a>
-</li>
-
-                        
-                        </ul>
-                    </li>
-                
-                
-                
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"> Design Thinking <b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                        
-                            
-<li >
-    <a href="../../../_Design%20Thinking/5w2h/">5W2H</a>
-</li>
-
-                        
-                            
-<li >
-    <a href="../../../_Design%20Thinking/Brainstorm/">Brainstorm</a>
-</li>
-
-                        
-                            
-<li >
-    <a href="../../../_Design%20Thinking/designthinking/">Design Thinking</a>
-</li>
-
-                        
-                            
-<li >
-    <a href="../../../_Design%20Thinking/historiasdeusuario/">História de Usuário</a>
-</li>
-
-                        
-                            
-<li >
-    <a href="../../../_Design%20Thinking/mapa_mental/">Mapas Mentais</a>
-</li>
-
-                        
-                            
-<li >
-    <a href="../../../_Design%20Thinking/pesquisa/">Pesquisa</a>
-</li>
-
-                        
-                            
-<li >
-    <a href="../../../_Design%20Thinking/prototipo_baixa_fidelidade/">Protótipo</a>
-</li>
-
-                        
-                        </ul>
-                    </li>
-                
-                
-                
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"> Sprint Planning <b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                        
-                            
-<li >
-    <a href="../../../_Sprint%20Planning/sprint/">Sprint Planning</a>
-</li>
-
-                        
-                        </ul>
-                    </li>
-                
-                
-                </ul>
-
-            <ul class="nav navbar-nav navbar-right">
-                    <li >
-                        <a rel="prev" href="../DesignThinking/">
-                            <i class="fas fa-arrow-left"></i> Previous
-                        </a>
-                    </li>
-                    <li >
-                        <a rel="next" href="../receitas/">
-                            Next <i class="fas fa-arrow-right"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://github.com/jonh-carvalho/PFE_25.1_8001/edit/master/docs/Disciplina/Roteiros/EpicsFeaturesUserStories.md"><i class="fab fa-github"></i> Edit on GitHub</a>
-                    </li>
-            </ul>
+                    <ul class="nav navbar-nav ms-md-auto">
+                            <li class="nav-item">
+                                <a rel="prev" href="../DesignThinking/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../receitas/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="https://github.com/jonh-carvalho/PFE_25.1_8001/edit/master/docs/Disciplina/Roteiros/EpicsFeaturesUserStories.md" class="nav-link"><i class="fa-brands fa-github"></i> Edit on GitHub</a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
         </div>
-    </div>
-</div>
 
-    <div class="container">
-        
-        
-        <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
-    <ul class="nav bs-sidenav">
-        <li class="first-level active"><a href="#09-historias-de-usuario">09 - Histórias de usuário</a></li>
-            <li class="second-level"><a href="#personas">Personas</a></li>
-                
-                <li class="third-level"><a href="#1-historias-para-vendedores">1. Histórias para Vendedores</a></li>
-                <li class="third-level"><a href="#2-historias-para-gerentes">2. Histórias para Gerentes</a></li>
-                <li class="third-level"><a href="#3-historias-para-clientes">3. Histórias para Clientes</a></li>
-                <li class="third-level"><a href="#4-historias-tecnicas-derivadas-dos-problemas-identificados">4. Histórias Técnicas (Derivadas dos Problemas Identificados)</a></li>
-                <li class="third-level"><a href="#priorizacao-moscow">Priorização (MoSCoW)</a></li>
-                <li class="third-level"><a href="#mapeamento-para-prototipo">Mapeamento para Protótipo</a></li>
-                <li class="third-level"><a href="#proximos-passos">Próximos Passos</a></li>
-                <li class="third-level"><a href="#1-hierarquia-de-organizacao">1. Hierarquia de Organização</a></li>
-                <li class="third-level"><a href="#2-exemplo-pratico-baseado-no-cenario-anterior">2. Exemplo Prático (Baseado no Cenário Anterior)</a></li>
-                <li class="third-level"><a href="#3-como-priorizar-no-backlog">3. Como Priorizar no Backlog</a></li>
-                <li class="third-level"><a href="#4-ferramentas-para-organizacao">4. Ferramentas para Organização</a></li>
-                <li class="third-level"><a href="#5-dicas-para-refinamento">5. Dicas para Refinamento</a></li>
-                <li class="third-level"><a href="#6-exemplo-de-sprint-backlog">6. Exemplo de Sprint Backlog</a></li>
-                <li class="third-level"><a href="#7-validacao-com-stakeholders">7. Validação com Stakeholders</a></li>
-    </ul>
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#09-historias-de-usuario" class="nav-link">09 - Histórias de usuário</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#personas" class="nav-link">Personas</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
 </div></div>
-        <div class="col-md-9" role="main">
+                    <div class="col-md-9" role="main">
 
 <h1 id="09-historias-de-usuario">09 - <strong>Histórias de usuário</strong></h1>
 <p>A partir do cenário, análise de tarefas e protótipo, podemos levantar as seguintes <strong>histórias de usuário</strong> utilizando o formato padrão ("Como [persona], quero [ação] para [benefício]"):</p>
@@ -592,50 +479,27 @@
 <li>Ajustar prioridades com base no feedback (ex.: adiantar US07 se clientes exigirem rastreamento).  </li>
 </ul>
 <p>Essa estrutura mantém o backlog <strong>focado no valor do usuário</strong> e <strong>adaptável a mudanças</strong>, seguindo os princípios do Scrum.</p></div>
-        
-        
-    </div>
+            </div>
+        </div>
 
-    
-      <footer class="col-md-12 text-center">
-          
-          
+        <footer class="col-md-12">
             <hr>
-            <p>
-            <small>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</small>
-            </p>
-          
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../../../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "../../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../../js/base.js"></script>
+        <script src="../../../js/open_in_new_tab.js"></script>
 
-          
-          
-      </footer>
-    
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="../../../js/bootstrap-3.0.3.min.js"></script>
-
-    
-    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/highlight.min.js"></script>
-        
-                <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/languages/yaml.min.js"></script>
-                <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/languages/python.min.js"></script>
-                <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/languages/html.min.js"></script>
-                <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/languages/css.min.js"></script>
-                <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/languages/javascript.min.js"></script>
-        
-    <script>hljs.initHighlightingOnLoad();</script>
-    
-
-    <script>var base_url = "../../.."</script>
-    
-    <script src="../../../js/base.js"></script>
-    <script src="../../../js/open_in_new_tab.js"></script>
-
-    <div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+        <div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
                 <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
-                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
               <table class="table">
@@ -670,6 +534,6 @@
         </div>
     </div>
 </div>
-    </body>
 
+    </body>
 </html>
