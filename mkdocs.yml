@@ -1,7 +1,6 @@
 site_name: PFE_25.1_8001
 theme:
-  name: null
-  custom_dir: 'cinder'
+  name: united
   highlightjs: true
   hljs_languages:
     - yaml

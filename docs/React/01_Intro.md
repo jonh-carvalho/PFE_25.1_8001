@@ -1,24 +1,27 @@
-# 01 - Introdução ao React com HTML e CDN
+---
+id: introreact
+title: 01 - Introdução ao React com HTML e CDN
+---
 
-## Objetivo
+# **React com HTML e CDN**
 
 Apresentar os conceitos básicos do React e como integrá-lo em uma página HTML utilizando um link para a CDN, sem a necessidade de um ambiente de desenvolvimento local como o Node.js.
 
 ---
 
-### **Estrutura do Roteiro:**
-
 #### **1. Introdução ao React**
 
-* **Definição**: React é uma biblioteca JavaScript criada pelo Facebook para criar interfaces de usuário de forma declarativa e eficiente.
-* **Vantagens**:
-* Componentes reutilizáveis.
-* Atualizações rápidas do DOM (Virtual DOM).
-* Facilita a criação de Single Page Applications (SPAs).
+**Definição**: React é uma biblioteca JavaScript criada pelo Facebook para criar interfaces de usuário de forma declarativa e eficiente.
+
+**Vantagens**:
+
+  - Componentes reutilizáveis**
+  - Atualizações rápidas do DOM (Virtual DOM)
+  - Facilita a criação de Single Page Applications (SPAs)
 
 ---
 
-#### 2. Preparando o Ambiente
+#### **2. Preparando o Ambiente**
 
 * Não é necessário instalar nada localmente para este exemplo inicial, vamos usar uma página HTML e um link para a biblioteca via CDN.
 
@@ -26,7 +29,7 @@ Apresentar os conceitos básicos do React e como integrá-lo em uma página HTML
 
 #### **3. Estrutura Básica do Projeto**
 
-* **HTML Básico**
+**HTML Básico**
 
 * Comece com a criação de uma página HTML simples contendo um elemento `<div>` que será usado como “ponto de montagem” para o React.
 
@@ -53,7 +56,7 @@ Apresentar os conceitos básicos do React e como integrá-lo em uma página HTML
 
 ---
 
-#### 4. Criando um Elemento React
+#### **4. Criando um Elemento React**
 
 Crie o arquivo `app.js` com o seguinte código:
 

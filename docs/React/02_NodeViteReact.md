@@ -1,10 +1,16 @@
-# 02 - **Criando um App React com Vite**
+---
+id: introreact
+title: 02 - Criando um App React com Vite
+---
 
-## Por que usar [Vite](https://vite.dev/)?
+# **Criando um App React com Vite**
+
+
+### **Por que usar [Vite](https://vite.dev/)?**
 
 Vite é uma ferramenta de construção de front-end que oferece um desenvolvimento rápido e uma experiência de usuário aprimorada, especialmente para projetos React. Ela é mais leve e rápida que ferramentas como Webpack, proporcionando hot module replacement (HMR) quase instantâneo.
 
-### Criando o Projeto
+### **Criando o Projeto**
 
 **1. Instale o Node.js e npm (ou yarn):**
 
