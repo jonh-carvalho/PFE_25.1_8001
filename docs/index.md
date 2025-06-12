@@ -1,23 +1,61 @@
-## Projeto Front-End
+---
+hide:
+    - navigation
+    - toc
+    - template: home.html
+---
 
-## Grupos
+### Grupos
 
-* [PFE_25.1_8001_I](https://github.com/Projetos-de-Extensao/PFE_25.1_8001_I)
-* [PFE_25.1_8001_BetoCuenca](https://github.com/Projetos-de-Extensao/PFE_25.1_8001_II)
-* [PFE_25.1_8001_III](https://github.com/Projetos-de-Extensao/PFE_25.1_8001_III)
-* [PFE_25.1_8001_Ingressou](https://github.com/Projetos-de-Extensao/PFE_25.1_8001_IV)
+<div class="grid cards" markdown>
 
-## Sobre
+-   :material-github:{ .lg .right } __PFE_25.1_8001_I__
 
-Disciplina que apresenta os passos para a construção de Projeto Front-End.
+    ---
 
-## Ferramentas
+    XXxxx Xxxx
 
-**Linguagens**: HTML, CSS e Javascript
+    [:octicons-arrow-right-24: Repositório](https://github.com/Projetos-de-Extensao/PFE_25.1_8001_I)
 
-**Tecnologias**:
+-   :material-github:{ .lg .right } __PFE_25.1_8001_II_BetoCuenca__
 
-* Visual Studio Code
-* Github
+    ---
 
-As APs deverão ser enviadas no Github e publicadas no github pages.
+    XXxxx Xxxx
+
+    [:octicons-arrow-right-24: Repositório](https://github.com/Projetos-de-Extensao/PFE_25.1_8001_II)
+
+-   :material-github:{ .lg .right } __PFE_25.1_8001_III__
+
+    ---
+
+    XXxxx Xxxx
+
+    [:octicons-arrow-right-24: Repositório](https://github.com/Projetos-de-Extensao/PFE_25.1_8001_III)
+
+-   :material-github:{ .lg .right } __PFE_25.1_8001_Ingressou__
+
+    ---
+
+    XXxxx Xxxx
+
+    [:octicons-arrow-right-24: Repositório](https://github.com/Projetos-de-Extensao/PFE_25.1_8001_IV)
+</div>
+
+!!! warning "Projeto Front-End"
+
+    Disciplina que apresenta os passos para a construção de Projeto Front-End.
+
+    **Linguagens**: HTML, CSS e Javascript
+
+    **Tecnologias**:
+
+    * Visual Studio Code
+    * Github
+
+    As APs deverão ser enviadas no Github e publicadas no github pages.
+
+
+
+
+
