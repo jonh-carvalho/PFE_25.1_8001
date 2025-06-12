@@ -5,7 +5,7 @@ site_name: PFE_25.1_8001
 copyright: Copyright ©️ 2025, jonh-carvalho / 2025, Jonh Carvalho
 
 extra_css:
-  - stylesheets/extra.css
+  - css/extra.css
 
 markdown_extensions:
   # Tooltips
