@@ -9,6 +9,7 @@ hide:
 
 <div class="grid cards" style="grid-template-columns: repeat(2, 1fr); background: var(--md-default-bg-color);" markdown>
 -   :material-github:{ .lg .right } __PFE_25.1_8001_I__
+
     ---
 
     Arthur Riess Cunha,	Bernardo Cicchelli,	Caique Rechuan Meirelles, Felipe Maia, João Vitor Rodrigues Donda
