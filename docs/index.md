@@ -13,7 +13,7 @@ hide:
 
     ---
 
-    XXxxx Xxxx
+    Arthur Riess Cunha,	Bernardo Cicchelli,	Caique Rechuan Meirelles, Felipe Maia, João Vitor Rodrigues Donda
 
     [:octicons-arrow-right-24: Repositório](https://github.com/Projetos-de-Extensao/PFE_25.1_8001_I)
 
@@ -21,7 +21,7 @@ hide:
 
     ---
 
-    XXxxx Xxxx
+    Bernardo Casanovas Linhares, Guilherme Reis Itaborahy Magalhães, Anderson Lima de Araújo Júnior
 
     [:octicons-arrow-right-24: Repositório](https://github.com/Projetos-de-Extensao/PFE_25.1_8001_II)
 
@@ -29,7 +29,7 @@ hide:
 
     ---
 
-    XXxxx Xxxx
+    Enzo Zambrotti, João Pedro Ginglass, João Victor de Carvalho Guimarães, Pietro Baldo Albuquerque, Vinícius Marinho Queiroz	
 
     [:octicons-arrow-right-24: Repositório](https://github.com/Projetos-de-Extensao/PFE_25.1_8001_III)
 
@@ -37,7 +37,7 @@ hide:
 
     ---
 
-    XXxxx Xxxx
+    Ana Clara Henrique,	Gabriel Barreto Borges, Keanu Santos Germano, Victor da Conceição, Yago Carvalho de Souza
 
     [:octicons-arrow-right-24: Repositório](https://github.com/Projetos-de-Extensao/PFE_25.1_8001_IV)
 </div>
