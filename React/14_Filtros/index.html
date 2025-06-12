@@ -1,701 +1,313 @@
-<!DOCTYPE html>
-<html lang="en" data-bs-theme="light">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        
-        
-        
-        <link rel="shortcut icon" href="../../img/favicon.ico">
-        <title>14 - Filtros - PFE_25.1_8001</title>
-        <link href="../../css/bootstrap.min.css" rel="stylesheet">
-        <link href="../../css/fontawesome.min.css" rel="stylesheet">
-        <link href="../../css/brands.min.css" rel="stylesheet">
-        <link href="../../css/solid.min.css" rel="stylesheet">
-        <link href="../../css/v4-font-face.min.css" rel="stylesheet">
-        <link href="../../css/base.css" rel="stylesheet">
-        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
-        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/yaml.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/python.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/html.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/css.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/javascript.min.js"></script>
-        <script>hljs.highlightAll();</script> 
-    </head>
-
-    <body>
-        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
-            <div class="container">
-                <a class="navbar-brand" href="../..">PFE_25.1_8001</a>
-                <!-- Expander button -->
-                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <!-- Expanded navigation -->
-                <div id="navbar-collapse" class="navbar-collapse collapse">
-                        <!-- Main navigation -->
-                        <ul class="nav navbar-nav">
-                            <li class="nav-item">
-                                <a href="../.." class="nav-link">Home</a>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Disciplina</a>
-                                <ul class="dropdown-menu">
-                                    
-<li>
-    <a href="../../Disciplina/Github%20CodeSpace/" class="dropdown-item">GitHub Codespaces</a>
-</li>
-                                    
-<li>
-    <a href="../../Disciplina/aulas/" class="dropdown-item">Aulas</a>
-</li>
-                                    
-<li>
-    <a href="../../Disciplina/github/" class="dropdown-item">Versionamento</a>
-</li>
-                                    
-<li>
-    <a href="../../Disciplina/mkdocs/" class="dropdown-item">MkDocs</a>
-</li>
-                                    
-  <li class="dropdown-submenu">
-    <a href="#" class="dropdown-item">Roteiros</a>
-    <ul class="dropdown-menu">
-            
-<li>
-    <a href="../../Disciplina/Roteiros/Aht/" class="dropdown-item">06 - Análise de Tarefas</a>
-</li>
-            
-<li>
-    <a href="../../Disciplina/Roteiros/DesignThinking/" class="dropdown-item">04 - Design Thinking</a>
-</li>
-            
-<li>
-    <a href="../../Disciplina/Roteiros/EpicsFeaturesUserStories/" class="dropdown-item">09 - Histórias de usuário</a>
-</li>
-            
-<li>
-    <a href="../../Disciplina/Roteiros/receitas/" class="dropdown-item">04 - Compartilhamento de Receitas</a>
-</li>
-    </ul>
-  </li>
-                                </ul>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a href="#" class="nav-link dropdown-toggle active" aria-current="page" role="button" data-bs-toggle="dropdown"  aria-expanded="false">React</a>
-                                <ul class="dropdown-menu">
-                                    
-<li>
-    <a href="../01_Intro/" class="dropdown-item">01 - Introdução ao React com HTML e CDN</a>
-</li>
-                                    
-<li>
-    <a href="../02_NodeViteReact/" class="dropdown-item">02 - Criando um App React com Vite</a>
-</li>
-                                    
-<li>
-    <a href="../03_Spa/" class="dropdown-item">03 - Criando um App React SPA</a>
-</li>
-                                    
-<li>
-    <a href="../04_Componentes/" class="dropdown-item">04 - Componentes em uma SPA</a>
-</li>
-                                    
-<li>
-    <a href="../05_Pages_Components/" class="dropdown-item">05 - Pages e Components</a>
-</li>
-                                    
-<li>
-    <a href="../06_Estilizando%20React/" class="dropdown-item">06 - Estilizar um app React</a>
-</li>
-                                    
-<li>
-    <a href="../07_Props/" class="dropdown-item">07 - Props</a>
-</li>
-                                    
-<li>
-    <a href="../08_Forms_Props/" class="dropdown-item">08 - Forms Props</a>
-</li>
-                                    
-<li>
-    <a href="../09_UseState_useRef/" class="dropdown-item">09 - useState e useRef</a>
-</li>
-                                    
-<li>
-    <a href="../10_Hooks/" class="dropdown-item">10 - Hooks (Foco em Componentes Funcionais)</a>
-</li>
-                                    
-<li>
-    <a href="../10_Http/" class="dropdown-item">10 - Protocolo HTTP</a>
-</li>
-                                    
-<li>
-    <a href="../11_Lendo%20Dados/" class="dropdown-item">11 Lendo Dados</a>
-</li>
-                                    
-<li>
-    <a href="../12_Fetch/" class="dropdown-item">12 - Fetch</a>
-</li>
-                                    
-<li>
-    <a href="../13_FetchApi/" class="dropdown-item">13 - Consumir Fetch API Pública</a>
-</li>
-                                    
-<li>
-    <a href="./" class="dropdown-item active" aria-current="page">14 - Filtros</a>
-</li>
-                                </ul>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false"> Design Thinking</a>
-                                <ul class="dropdown-menu">
-                                    
-<li>
-    <a href="../../_Design%20Thinking/5w2h/" class="dropdown-item">5W2H</a>
-</li>
-                                    
-<li>
-    <a href="../../_Design%20Thinking/Brainstorm/" class="dropdown-item">Brainstorm</a>
-</li>
-                                    
-<li>
-    <a href="../../_Design%20Thinking/designthinking/" class="dropdown-item">Design Thinking</a>
-</li>
-                                    
-<li>
-    <a href="../../_Design%20Thinking/historiasdeusuario/" class="dropdown-item">História de Usuário</a>
-</li>
-                                    
-<li>
-    <a href="../../_Design%20Thinking/mapa_mental/" class="dropdown-item">Mapas Mentais</a>
-</li>
-                                    
-<li>
-    <a href="../../_Design%20Thinking/pesquisa/" class="dropdown-item">Pesquisa</a>
-</li>
-                                    
-<li>
-    <a href="../../_Design%20Thinking/prototipo_baixa_fidelidade/" class="dropdown-item">Protótipo</a>
-</li>
-                                </ul>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false"> Sprint Planning</a>
-                                <ul class="dropdown-menu">
-                                    
-<li>
-    <a href="../../_Sprint%20Planning/sprint/" class="dropdown-item">Sprint Planning</a>
-</li>
-                                </ul>
-                            </li>
-                        </ul>
-
-                    <ul class="nav navbar-nav ms-md-auto">
-                            <li class="nav-item">
-                                <a rel="prev" href="../13_FetchApi/" class="nav-link">
-                                    <i class="fa fa-arrow-left"></i> Previous
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a rel="next" href="../../_Design%20Thinking/5w2h/" class="nav-link">
-                                    Next <i class="fa fa-arrow-right"></i>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="https://github.com/jonh-carvalho/PFE_25.1_8001/edit/master/docs/React/14_Filtros.md" class="nav-link"><i class="fa-brands fa-github"></i> Edit on GitHub</a>
-                            </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <div class="container">
-            <div class="row">
-                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
-    <div class="navbar-header">
-        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
-            <span class="fa fa-angle-down"></span>
-        </button>
-    </div>
-
-    
-    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
-        <ul class="nav flex-column">
-            
-            <li class="nav-item" data-bs-level="1"><a href="#14-filtros" class="nav-link">14 - Filtros</a>
-              <ul class="nav flex-column">
-            <li class="nav-item" data-bs-level="2"><a href="#objetivo-do-aplicativo" class="nav-link">Objetivo do Aplicativo:</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-bs-level="2"><a href="#tecnologias" class="nav-link">Tecnologias:</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-              </ul>
-            </li>
-        </ul>
-    </div>
-</div></div>
-                    <div class="col-md-9" role="main">
-
-<h1 id="14-filtros">14 - Filtros</h1>
-<h2 id="objetivo-do-aplicativo">Objetivo do Aplicativo:</h2>
-<p>Criar uma lista de itens (por exemplo, produtos, tarefas, posts) que podem ser buscados por texto, filtrados por categorias (ou outros critérios) e selecionados individualmente ou em grupo.</p>
-<h2 id="tecnologias">Tecnologias:</h2>
-<ul>
-<li>Vite: Para um setup de projeto React rápido e moderno.</li>
-<li>React: Para a construção da interface do usuário.</li>
-<li>json-server: Para simular uma API RESTful de forma simples.</li>
-</ul>
-<p><strong>Estrutura de Pastas Sugerida:</strong></p>
-<pre><code class="language-plaintext">/meu-app-react
-|-- public/
-|-- src/
-|   |-- assets/
-|   |-- components/
-|   |   |-- SearchBar.jsx
-|   |   |-- FilterOptions.jsx
-|   |   |-- ItemList.jsx
-|   |   |-- Item.jsx
-|   |-- services/
-|   |   |-- api.js
-|   |-- hooks/
-|   |   |-- useItems.js
-|   |-- App.jsx
-|   |-- main.jsx
-|   |-- index.css
-|-- db.json  (para o json-server)
-|-- package.json
-|-- vite.config.js
-</code></pre>
-<h3 id="passos-e-conceitos-a-serem-abordados">Passos e Conceitos a Serem Abordados:</h3>
-<p><strong>Configuração do Ambiente:</strong></p>
-<ul>
-<li>Criar um novo projeto Vite com React: </li>
-</ul>
-<pre><code class="language-bash">npm create vite@latest meu-app-react -- --template react
-</code></pre>
-<ul>
-<li>Instalar json-server: </li>
-</ul>
-<pre><code class="language-bash">npm install json-server (ou npm install -g json-server para instalação global).
-</code></pre>
-<ul>
-<li>
-<p>Criar o arquivo db.json na raiz do projeto.</p>
-</li>
-<li>
-<p>Adicionar um script no package.json para iniciar o json-server:</p>
-</li>
-</ul>
-<pre><code class="language-json">{
-  &quot;scripts&quot;: {
-    &quot;dev&quot;: &quot;vite&quot;,
-    &quot;build&quot;: &quot;vite build&quot;,
-    &quot;lint&quot;: &quot;eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0&quot;,
-    &quot;preview&quot;: &quot;vite preview&quot;,
-    &quot;server&quot;: &quot;json-server --watch db.json --port 3001&quot;
-  }
-}
-</code></pre>
-<ul>
-<li>Iniciar o json-server em um terminal: npm run server.</li>
-<li>Iniciar o app Vite em outro terminal: npm run dev.</li>
-</ul>
-<blockquote>
-<p>db.json (Exemplo de Dados): Este arquivo servirá como nosso "banco de dados" para o json-server.</p>
-</blockquote>
-<pre><code class="language-json">{
-  &quot;items&quot;: [
-    { &quot;id&quot;: 1, &quot;name&quot;: &quot;Laptop Moderno&quot;, &quot;category&quot;: &quot;Eletrônicos&quot;, &quot;price&quot;: 4500.00, &quot;inStock&quot;: true },
-    { &quot;id&quot;: 2, &quot;name&quot;: &quot;Smartphone Avançado&quot;, &quot;category&quot;: &quot;Eletrônicos&quot;, &quot;price&quot;: 3200.00, &quot;inStock&quot;: false },
-    { &quot;id&quot;: 3, &quot;name&quot;: &quot;Livro de React&quot;, &quot;category&quot;: &quot;Livros&quot;, &quot;price&quot;: 120.00, &quot;inStock&quot;: true },
-    { &quot;id&quot;: 4, &quot;name&quot;: &quot;Cafeteira Elétrica&quot;, &quot;category&quot;: &quot;Casa&quot;, &quot;price&quot;: 250.00, &quot;inStock&quot;: true },
-    { &quot;id&quot;: 5, &quot;name&quot;: &quot;Fone de Ouvido Bluetooth&quot;, &quot;category&quot;: &quot;Eletrônicos&quot;, &quot;price&quot;: 350.00, &quot;inStock&quot;: true },
-    { &quot;id&quot;: 6, &quot;name&quot;: &quot;Teclado Mecânico&quot;, &quot;category&quot;: &quot;Acessórios&quot;, &quot;price&quot;: 450.00, &quot;inStock&quot;: false },
-    { &quot;id&quot;: 7, &quot;name&quot;: &quot;Mouse Gamer&quot;, &quot;category&quot;: &quot;Acessórios&quot;, &quot;price&quot;: 220.00, &quot;inStock&quot;: true }
-  ],
-  &quot;categories&quot;: [
-    { &quot;id&quot;: &quot;cat1&quot;, &quot;name&quot;: &quot;Eletrônicos&quot; },
-    { &quot;id&quot;: &quot;cat2&quot;, &quot;name&quot;: &quot;Livros&quot; },
-    { &quot;id&quot;: &quot;cat3&quot;, &quot;name&quot;: &quot;Casa&quot; },
-    { &quot;id&quot;: &quot;cat4&quot;, &quot;name&quot;: &quot;Acessórios&quot; }
-  ]
-}
-</code></pre>
-<p>Serviço da API (src/services/api.js): Um módulo para centralizar as chamadas à API.</p>
-<pre><code class="language-jsx">// javascript
-// src/services/api.js
-const API_URL = 'http://localhost:3001';
-
-export const fetchItems = async () =&gt; {
-  try {
-    const response = await fetch(`${API_URL}/items`);
-    if (!response.ok) {
-      throw new Error('Erro ao buscar itens');
-    }
-    return await response.json();
-  } catch (error) {
-    console.error(&quot;Falha ao buscar itens:&quot;, error);
-    return []; // Retorna array vazio em caso de erro para não quebrar a UI
-  }
-};
-
-export const fetchCategories = async () =&gt; {
-  try {
-    const response = await fetch(`${API_URL}/categories`);
-    if (!response.ok) {
-      throw new Error('Erro ao buscar categorias');
-    }
-    return await response.json();
-  } catch (error) {
-    console.error(&quot;Falha ao buscar categorias:&quot;, error);
-    return [];
-  }
-};
-
-
-// Poderíamos adicionar aqui funções para buscar itens com filtros/query do json-server
-// Ex: export const fetchItemsByQuery = async (query) =&gt; { ... fetch(`${API_URL}/items?${query}`) ... }
-</code></pre>
-<h4 id="componente-principal"><strong>Componente Principal</strong></h4>
-<p>Este componente orquestrará os demais e gerenciará o estado principal (lista de itens, termo de busca, filtro selecionado, itens selecionados).</p>
-<pre><code class="language-jsx">// src/App.jsx
-import React, { useState, useEffect, useMemo } from 'react';
-import SearchBar from './components/SearchBar';
-import FilterOptions from './components/FilterOptions';
-import ItemList from './components/ItemList';
-import { fetchItems, fetchCategories } from './services/api';
-import './App.css'; // Crie este arquivo para estilos básicos
-
-function App() {
-  const [allItems, setAllItems] = useState([]);
-  const [categories, setCategories] = useState([]);
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState(''); // 'all' ou '' para todos
-  const [selectedItems, setSelectedItems] = useState(new Set()); // Usar Set para IDs únicos
-
-  useEffect(() =&gt; {
-    const loadData = async () =&gt; {
-      const itemsData = await fetchItems();
-      const categoriesData = await fetchCategories();
-      setAllItems(itemsData);
-      setCategories(categoriesData);
-    };
-    loadData();
-  }, []);
-
-  const handleSearchChange = (term) =&gt; {
-    setSearchTerm(term.toLowerCase());
-  };
-
-  const handleCategoryChange = (category) =&gt; {
-    setSelectedCategory(category);
-  };
-
-  const handleItemSelect = (itemId) =&gt; {
-    setSelectedItems(prevSelectedItems =&gt; {
-      const newSelectedItems = new Set(prevSelectedItems);
-      if (newSelectedItems.has(itemId)) {
-        newSelectedItems.delete(itemId);
-      } else {
-        newSelectedItems.add(itemId);
-      }
-      return newSelectedItems;
-    });
-  };
-
-  const filteredItems = useMemo(() =&gt; {
-    return allItems
-      .filter(item =&gt;
-        item.name.toLowerCase().includes(searchTerm)
-      )
-      .filter(item =&gt;
-        selectedCategory === '' || item.category === selectedCategory
-      );
-  }, [allItems, searchTerm, selectedCategory]);
-
-  return (
-    &lt;div className=&quot;app-container&quot;&gt;
-      &lt;h1&gt;Catálogo de Itens Interativo&lt;/h1&gt;
-
-      &lt;div className=&quot;controls&quot;&gt;
-        &lt;SearchBar onSearch={handleSearchChange} /&gt;
-        &lt;FilterOptions
-          categories={categories}
-          selectedCategory={selectedCategory}
-          onCategoryChange={handleCategoryChange}
-        /&gt;
-      &lt;/div&gt;
-
-      {selectedItems.size &gt; 0 &amp;&amp; (
-        &lt;div className=&quot;selection-info&quot;&gt;
-          &lt;p&gt;{selectedItems.size} item(s) selecionado(s).&lt;/p&gt;
-          {/* Poderia adicionar botões de ação para itens selecionados aqui */}
-        &lt;/div&gt;
-      )}
-
-      &lt;ItemList
-        items={filteredItems}
-        selectedItems={selectedItems}
-        onItemSelect={handleItemSelect}
-      /&gt;
-    &lt;/div&gt;
-  );
-}
-
-
-export default App;
-</code></pre>
-<p>Este componente é responsável por:</p>
-<ul>
-<li>Gerenciar o estado geral da aplicação: Ele controla quais itens são buscados da API, quais categorias estão disponíveis, o termo de busca atual, a categoria selecionada para filtro e quais itens estão selecionados pelo usuário.</li>
-<li>Buscar dados iniciais: Ao ser montado, ele busca a lista de itens e categorias da API (simulada pelo json-server).</li>
-<li>Orquestrar os componentes filhos: Ele renderiza e passa dados e funções para os componentes SearchBar, FilterOptions e ItemList.</li>
-<li>Lidar com a lógica de filtragem e seleção: Ele calcula quais itens devem ser exibidos com base nos filtros e na busca, e gerencia a lista de itens selecionados.</li>
-</ul>
-<h4 id="componente-de-busca"><strong>Componente de Busca:</strong></h4>
-<p>Um input simples para o usuário digitar o termo de busca.</p>
-<pre><code class="language-jsx">// src/components/SearchBar.jsx
-import React, { useState } from 'react';
-
-function SearchBar({ onSearch }) {
-  const [inputValue, setInputValue] = useState('');
-
-  const handleChange = (event) =&gt; {
-    setInputValue(event.target.value);
-    onSearch(event.target.value); // Chama onSearch em cada mudança
-  };
-
-  return (
-    &lt;div className=&quot;search-bar&quot;&gt;
-      &lt;input
-        type=&quot;text&quot;
-        placeholder=&quot;Buscar itens...&quot;
-        value={inputValue}
-        onChange={handleChange}
-      /&gt;
-    &lt;/div&gt;
-  );
-}
-
-export default SearchBar;
-</code></pre>
-<h4 id="componente-de-filtros"><strong>Componente de Filtros</strong></h4>
-<p>Um select (ou botões/checkboxes) para filtrar por categoria.</p>
-<pre><code class="language-jsx">// src/components/FilterOptions.jsx
-import React from 'react';
-
-function FilterOptions({ categories, selectedCategory, onCategoryChange }) {
-  return (
-    &lt;div className=&quot;filter-options&quot;&gt;
-      &lt;label htmlFor=&quot;category-select&quot;&gt;Filtrar por Categoria: &lt;/label&gt;
-      &lt;select
-        id=&quot;category-select&quot;
-        value={selectedCategory}
-        onChange={(e) =&gt; onCategoryChange(e.target.value)}
-      &gt;
-        &lt;option value=&quot;&quot;&gt;Todas&lt;/option&gt;
-        {categories.map(category =&gt; (
-          &lt;option key={category.id || category.name} value={category.name}&gt;
-            {category.name}
-          &lt;/option&gt;
-        ))}
-      &lt;/select&gt;
-    &lt;/div&gt;
-  );
-}
-
-export default FilterOptions;
-</code></pre>
-<h4 id="componente-de-lista-de-itens-srccomponentsitemlistjsx">Componente de Lista de Itens (src/components/ItemList.jsx):</h4>
-<p>Renderiza a lista de componentes Item.</p>
-<pre><code class="language-jsx">// src/components/ItemList.jsx
-import React from 'react';
-import Item from './Item';
-
-function ItemList({ items, selectedItems, onItemSelect }) {
-  if (items.length === 0) {
-    return &lt;p&gt;Nenhum item encontrado.&lt;/p&gt;;
-  }
-
-  return (
-    &lt;ul className=&quot;item-list&quot;&gt;
-      {items.map(item =&gt; (
-        &lt;Item
-          key={item.id}
-          item={item}
-          isSelected={selectedItems.has(item.id)}
-          onSelect={() =&gt; onItemSelect(item.id)}
-        /&gt;
-      ))}
-    &lt;/ul&gt;
-  );
-}
-
-export default ItemList;
-</code></pre>
-<ul>
-<li>O componente FilterOptions é um elemento de UI reutilizável para filtragem baseada em categorias.</li>
-<li>Ele recebe a lista de categories disponíveis e a selectedCategory como props para exibir o estado atual.</li>
-<li>Quando o usuário altera a seleção no menu suspenso, ele chama a função onCategoryChange (também passada como prop), permitindo que um componente pai (como App.jsx) atualize o estado da aplicação e filtre novamente os itens de acordo.</li>
-<li>Inclui uma opção padrão "Todas" para limpar o filtro de categoria.</li>
-</ul>
-<h4 id="componente-de-item-srccomponentsitemjsx">Componente de Item (src/components/Item.jsx):</h4>
-<p>Exibe as informações de um único item e lida com sua seleção.</p>
-<pre><code class="language-jsx">// src/components/Item.jsx
-import React from 'react';
-
-function Item({ item, isSelected, onSelect }) {
-  const itemStyle = {
-    border: '1px solid #ccc',
-    padding: '10px',
-    margin: '5px 0',
-    borderRadius: '4px',
-    backgroundColor: isSelected ? '#e0f7fa' : '#fff', // Destaque visual para selecionado
-    cursor: 'pointer',
-  };
-
-  return (
-    &lt;li style={itemStyle} onClick={onSelect}&gt;
-      &lt;h3&gt;{item.name}&lt;/h3&gt;
-      &lt;p&gt;Categoria: {item.category}&lt;/p&gt;
-      &lt;p&gt;Preço: R$ {item.price.toFixed(2)}&lt;/p&gt;
-      &lt;p&gt;Em estoque: {item.inStock ? 'Sim' : 'Não'}&lt;/p&gt;
-      {isSelected &amp;&amp; &lt;p&gt;&lt;strong&gt;Selecionado&lt;/strong&gt;&lt;/p&gt;}
-    &lt;/li&gt;
-  );
-}
-
-export default Item;
-</code></pre>
-<h4 id="estilos-basicos-srcappcss-ou-srcindexcss">Estilos Básicos (src/App.css ou src/index.css):</h4>
-<p>Adicione alguns estilos para tornar a aplicação mais apresentável.</p>
-<pre><code class="language-css">/* src/App.css ou src/index.css */
-body {
-  font-family: sans-serif;
-  margin: 0;
-  padding: 20px;
-  background-color: #f4f4f4;
-}
-
-.app-container {
-  max-width: 800px;
-  margin: 0 auto;
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.controls {
-  display: flex;
-  gap: 20px;
-  margin-bottom: 20px;
-  align-items: center;
-}
-
-.search-bar input,
-.filter-options select {
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  font-size: 1em;
-}
-
-.search-bar input {
-  flex-grow: 1;
-}
-
-.item-list {
-  list-style-type: none;
-  padding: 0;
-}
-
-.selection-info {
-  background-color: #fff3cd;
-  border: 1px solid #ffeeba;
-  color: #856404;
-  padding: 10px;
-  margin-bottom: 15px;
-  border-radius: 4px;
-}
-</code></pre>
-<h3 id="conceitos-de-react-demonstrados">Conceitos de React Demonstrados:</h3>
-<ul>
-<li>Componentização: Divisão da UI em SearchBar, FilterOptions, ItemList, Item.</li>
-<li>Estado (useState): Gerenciamento de searchTerm, selectedCategory, allItems, selectedItems.</li>
-<li>Efeitos (useEffect): Para buscar dados da API quando o componente é montado.</li>
-<li>Props: Passagem de dados e funções de callback entre componentes (ex: onSearch, items).</li>
-<li>Renderização Condicional: Exibir "Nenhum item encontrado" ou a mensagem de itens selecionados.</li>
-<li>Renderização de Listas (map): Para exibir os itens e as opções de categoria.</li>
-<li>Event Handling: onChange nos inputs/selects, onClick nos itens.</li>
-<li>Lifting State Up: O estado da busca, filtro e seleção é gerenciado no App.jsx e passado para os componentes filhos.</li>
-<li>Memoização (useMemo): Para otimizar o cálculo da lista filtrada, evitando recálculos desnecessários se as dependências (allItems, searchTerm, selectedCategory) não mudarem.</li>
-<li>Imutabilidade: Ao atualizar o Set de selectedItems, criamos um novo Set para garantir que o React detecte a mudança de estado corretamente.</li>
-</ul>
-<h3 id="conclusao">Conclusão:</h3>
-<p>Nessa aplicação, voce pode buscar itens, filtrar por categoria, selecionar itens individualmente ou em grupo, e exibir informações sobre os itens selecionados.</p></div>
-            </div>
-        </div>
-
-        <footer class="col-md-12">
-            <hr>
-            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
-        </footer>
-        <script src="../../js/bootstrap.bundle.min.js"></script>
-        <script>
-            var base_url = "../..",
-                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
-        </script>
-        <script src="../../js/base.js"></script>
-        <script src="../../js/open_in_new_tab.js"></script>
-
-        <div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-              <table class="table">
-                <thead>
-                  <tr>
-                    <th style="width: 20%;">Keys</th>
-                    <th>Action</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td class="help shortcut"><kbd>?</kbd></td>
-                    <td>Open this help</td>
-                  </tr>
-                  <tr>
-                    <td class="next shortcut"><kbd>n</kbd></td>
-                    <td>Next page</td>
-                  </tr>
-                  <tr>
-                    <td class="prev shortcut"><kbd>p</kbd></td>
-                    <td>Previous page</td>
-                  </tr>
-                  <tr>
-                    <td class="search shortcut"><kbd>s</kbd></td>
-                    <td>Search</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-            <div class="modal-footer">
-            </div>
-        </div>
-    </div>
-</div>
-
-    </body>
-</html>
+<!doctype html><html lang=en class=no-js> <head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=author content="Jonh Carvalho"><link href=../13_FetchApi/ rel=prev><link href=../../_Design%20Thinking/5w2h/ rel=next><link rel=icon href=../../assets/images/favicon.png><meta name=generator content="mkdocs-1.6.1, mkdocs-material-9.6.14"><title>14 - Filtros - PFE_25.1_8001</title><link rel=stylesheet href=../../assets/stylesheets/main.342714a4.min.css><link rel=stylesheet href=../../assets/stylesheets/palette.06af60db.min.css><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link rel=stylesheet href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback"><style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style><link rel=stylesheet href=../../stylesheets/extra.css><script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script></head> <body dir=ltr data-md-color-scheme=default data-md-color-primary=indigo data-md-color-accent=indigo> <input class=md-toggle data-md-toggle=drawer type=checkbox id=__drawer autocomplete=off> <input class=md-toggle data-md-toggle=search type=checkbox id=__search autocomplete=off> <label class=md-overlay for=__drawer></label> <div data-md-component=skip> <a href=#14-filtros class=md-skip> Skip to content </a> </div> <div data-md-component=announce> </div> <header class=md-header data-md-component=header> <nav class="md-header__inner md-grid" aria-label=Header> <a href=../.. title=PFE_25.1_8001 class="md-header__button md-logo" aria-label=PFE_25.1_8001 data-md-component=logo> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg> </a> <label class="md-header__button md-icon" for=__drawer> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg> </label> <div class=md-header__title data-md-component=header-title> <div class=md-header__ellipsis> <div class=md-header__topic> <span class=md-ellipsis> PFE_25.1_8001 </span> </div> <div class=md-header__topic data-md-component=header-topic> <span class=md-ellipsis> 14 - Filtros </span> </div> </div> </div> <form class=md-header__option data-md-component=palette> <input class=md-option data-md-color-media=(prefers-color-scheme) data-md-color-scheme=default data-md-color-primary=indigo data-md-color-accent=indigo aria-label="Switch to light mode" type=radio name=__palette id=__palette_0> <label class="md-header__button md-icon" title="Switch to light mode" for=__palette_1 hidden> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1M8 13h8v-2H8zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4a5 5 0 0 0 5-5 5 5 0 0 0-5-5"/></svg> </label> <input class=md-option data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme=default data-md-color-primary=deep-orange data-md-color-accent=amber aria-label="Switch to dark mode" type=radio name=__palette id=__palette_1> <label class="md-header__button md-icon" title="Switch to dark mode" for=__palette_2 hidden> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg> </label> <input class=md-option data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme=slate data-md-color-primary=black data-md-color-accent=indigo aria-label="Switch to system preference" type=radio name=__palette id=__palette_2> <label class="md-header__button md-icon" title="Switch to system preference" for=__palette_0 hidden> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5M7 15a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg> </label> </form> <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script> <label class="md-header__button md-icon" for=__search> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg> </label> <div class=md-search data-md-component=search role=dialog> <label class=md-search__overlay for=__search></label> <div class=md-search__inner role=search> <form class=md-search__form name=search> <input type=text class=md-search__input name=query aria-label=Search placeholder=Search autocapitalize=off autocorrect=off autocomplete=off spellcheck=false data-md-component=search-query required> <label class="md-search__icon md-icon" for=__search> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg> </label> <nav class=md-search__options aria-label=Search> <a href=javascript:void(0) class="md-search__icon md-icon" title=Share aria-label=Share data-clipboard data-clipboard-text data-md-component=search-share tabindex=-1> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg> </a> <button type=reset class="md-search__icon md-icon" title=Clear aria-label=Clear tabindex=-1> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg> </button> </nav> <div class=md-search__suggest data-md-component=search-suggest></div> </form> <div class=md-search__output> <div class=md-search__scrollwrap tabindex=0 data-md-scrollfix> <div class=md-search-result data-md-component=search-result> <div class=md-search-result__meta> Initializing search </div> <ol class=md-search-result__list role=presentation></ol> </div> </div> </div> </div> </div> <div class=md-header__source> <a href=https://github.com/jonh-carvalho/PFE_25.1_8001 title="Go to repository" class=md-source data-md-component=source> <div class="md-source__icon md-icon"> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 496 512"><!-- Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg> </div> <div class=md-source__repository> GitHub </div> </a> </div> </nav> </header> <div class=md-container data-md-component=container> <nav class=md-tabs aria-label=Tabs data-md-component=tabs> <div class=md-grid> <ul class=md-tabs__list> <li class=md-tabs__item> <a href=../.. class=md-tabs__link> Home </a> </li> <li class=md-tabs__item> <a href=../../Disciplina/Aulas/ class=md-tabs__link> Disciplina </a> </li> <li class="md-tabs__item md-tabs__item--active"> <a href=../01_Intro/ class=md-tabs__link> React </a> </li> <li class=md-tabs__item> <a href=../../_Design%20Thinking/5w2h/ class=md-tabs__link> Design Thinking </a> </li> <li class=md-tabs__item> <a href=../../_Sprint%20Planning/sprint/ class=md-tabs__link> Sprint Planning </a> </li> </ul> </div> </nav> <main class=md-main data-md-component=main> <div class="md-main__inner md-grid"> <div class="md-sidebar md-sidebar--primary" data-md-component=sidebar data-md-type=navigation> <div class=md-sidebar__scrollwrap> <div class=md-sidebar__inner> <nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label=Navigation data-md-level=0> <label class=md-nav__title for=__drawer> <a href=../.. title=PFE_25.1_8001 class="md-nav__button md-logo" aria-label=PFE_25.1_8001 data-md-component=logo> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg> </a> PFE_25.1_8001 </label> <div class=md-nav__source> <a href=https://github.com/jonh-carvalho/PFE_25.1_8001 title="Go to repository" class=md-source data-md-component=source> <div class="md-source__icon md-icon"> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 496 512"><!-- Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg> </div> <div class=md-source__repository> GitHub </div> </a> </div> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../.. class=md-nav__link> <span class=md-ellipsis> Home </span> </a> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle " type=checkbox id=__nav_2> <label class=md-nav__link for=__nav_2 id=__nav_2_label tabindex=0> <span class=md-ellipsis> Disciplina </span> <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav data-md-level=1 aria-labelledby=__nav_2_label aria-expanded=false> <label class=md-nav__title for=__nav_2> <span class="md-nav__icon md-icon"></span> Disciplina </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../Disciplina/Aulas/ class=md-nav__link> <span class=md-ellipsis> Aulas </span> </a> </li> <li class=md-nav__item> <a href=../../Disciplina/CodeSpace/ class=md-nav__link> <span class=md-ellipsis> GitHub Codespaces </span> </a> </li> <li class=md-nav__item> <a href=../../Disciplina/github/ class=md-nav__link> <span class=md-ellipsis> Versionamento </span> </a> </li> <li class=md-nav__item> <a href=../../Disciplina/mkdocs/ class=md-nav__link> <span class=md-ellipsis> MkDocs </span> </a> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle " type=checkbox id=__nav_2_5> <label class=md-nav__link for=__nav_2_5 id=__nav_2_5_label tabindex=0> <span class=md-ellipsis> Roteiros </span> <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav data-md-level=2 aria-labelledby=__nav_2_5_label aria-expanded=false> <label class=md-nav__title for=__nav_2_5> <span class="md-nav__icon md-icon"></span> Roteiros </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../Disciplina/Roteiros/Aht/ class=md-nav__link> <span class=md-ellipsis> 06 - Análise de Tarefas </span> </a> </li> <li class=md-nav__item> <a href=../../Disciplina/Roteiros/DesignThinking/ class=md-nav__link> <span class=md-ellipsis> 04 - Design Thinking </span> </a> </li> <li class=md-nav__item> <a href=../../Disciplina/Roteiros/EpicsFeaturesUserStories/ class=md-nav__link> <span class=md-ellipsis> 09 - Histórias de usuário </span> </a> </li> <li class=md-nav__item> <a href=../../Disciplina/Roteiros/receitas/ class=md-nav__link> <span class=md-ellipsis> 04 - Compartilhamento de Receitas </span> </a> </li> </ul> </nav> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested"> <input class="md-nav__toggle md-toggle " type=checkbox id=__nav_3 checked> <label class=md-nav__link for=__nav_3 id=__nav_3_label tabindex> <span class=md-ellipsis> React </span> <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav data-md-level=1 aria-labelledby=__nav_3_label aria-expanded=true> <label class=md-nav__title for=__nav_3> <span class="md-nav__icon md-icon"></span> React </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../01_Intro/ class=md-nav__link> <span class=md-ellipsis> 01 - Introdução ao React com HTML e CDN </span> </a> </li> <li class=md-nav__item> <a href=../02_NodeViteReact/ class=md-nav__link> <span class=md-ellipsis> 02 - Criando um App React com Vite </span> </a> </li> <li class=md-nav__item> <a href=../03_Spa/ class=md-nav__link> <span class=md-ellipsis> 03 - Criando um App React SPA </span> </a> </li> <li class=md-nav__item> <a href=../04_Componentes/ class=md-nav__link> <span class=md-ellipsis> 04 - Componentes em uma SPA </span> </a> </li> <li class=md-nav__item> <a href=../05_Pages_Components/ class=md-nav__link> <span class=md-ellipsis> 05 - Pages e Components </span> </a> </li> <li class=md-nav__item> <a href=../06_Estilizando%20React/ class=md-nav__link> <span class=md-ellipsis> 06 - Estilizar um app React </span> </a> </li> <li class=md-nav__item> <a href=../07_Props/ class=md-nav__link> <span class=md-ellipsis> 07 - Props </span> </a> </li> <li class=md-nav__item> <a href=../08_Forms_Props/ class=md-nav__link> <span class=md-ellipsis> 08 - Forms Props </span> </a> </li> <li class=md-nav__item> <a href=../09_UseState_useRef/ class=md-nav__link> <span class=md-ellipsis> 09 - useState e useRef </span> </a> </li> <li class=md-nav__item> <a href=../10_Hooks/ class=md-nav__link> <span class=md-ellipsis> 10 - Hooks (Foco em Componentes Funcionais) </span> </a> </li> <li class=md-nav__item> <a href=../10_Http/ class=md-nav__link> <span class=md-ellipsis> 10 - Protocolo HTTP </span> </a> </li> <li class=md-nav__item> <a href=../11_Lendo%20Dados/ class=md-nav__link> <span class=md-ellipsis> 11 Lendo Dados </span> </a> </li> <li class=md-nav__item> <a href=../12_Fetch/ class=md-nav__link> <span class=md-ellipsis> 12 - Fetch </span> </a> </li> <li class=md-nav__item> <a href=../13_FetchApi/ class=md-nav__link> <span class=md-ellipsis> 13 - Consumir Fetch API Pública </span> </a> </li> <li class="md-nav__item md-nav__item--active"> <input class="md-nav__toggle md-toggle" type=checkbox id=__toc> <label class="md-nav__link md-nav__link--active" for=__toc> <span class=md-ellipsis> 14 - Filtros </span> <span class="md-nav__icon md-icon"></span> </label> <a href=./ class="md-nav__link md-nav__link--active"> <span class=md-ellipsis> 14 - Filtros </span> </a> <nav class="md-nav md-nav--secondary" aria-label="Table of contents"> <label class=md-nav__title for=__toc> <span class="md-nav__icon md-icon"></span> Table of contents </label> <ul class=md-nav__list data-md-component=toc data-md-scrollfix> <li class=md-nav__item> <a href=#objetivo-do-aplicativo class=md-nav__link> <span class=md-ellipsis> Objetivo do Aplicativo: </span> </a> </li> <li class=md-nav__item> <a href=#tecnologias class=md-nav__link> <span class=md-ellipsis> Tecnologias: </span> </a> <nav class=md-nav aria-label=Tecnologias:> <ul class=md-nav__list> <li class=md-nav__item> <a href=#passos-e-conceitos-a-serem-abordados class=md-nav__link> <span class=md-ellipsis> Passos e Conceitos a Serem Abordados: </span> </a> <nav class=md-nav aria-label="Passos e Conceitos a Serem Abordados:"> <ul class=md-nav__list> <li class=md-nav__item> <a href=#componente-principal class=md-nav__link> <span class=md-ellipsis> Componente Principal </span> </a> </li> <li class=md-nav__item> <a href=#componente-de-busca class=md-nav__link> <span class=md-ellipsis> Componente de Busca: </span> </a> </li> <li class=md-nav__item> <a href=#componente-de-filtros class=md-nav__link> <span class=md-ellipsis> Componente de Filtros </span> </a> </li> <li class=md-nav__item> <a href=#componente-de-lista-de-itens-srccomponentsitemlistjsx class=md-nav__link> <span class=md-ellipsis> Componente de Lista de Itens (src/components/ItemList.jsx): </span> </a> </li> <li class=md-nav__item> <a href=#componente-de-item-srccomponentsitemjsx class=md-nav__link> <span class=md-ellipsis> Componente de Item (src/components/Item.jsx): </span> </a> </li> <li class=md-nav__item> <a href=#estilos-basicos-srcappcss-ou-srcindexcss class=md-nav__link> <span class=md-ellipsis> Estilos Básicos (src/App.css ou src/index.css): </span> </a> </li> </ul> </nav> </li> <li class=md-nav__item> <a href=#conceitos-de-react-demonstrados class=md-nav__link> <span class=md-ellipsis> Conceitos de React Demonstrados: </span> </a> </li> <li class=md-nav__item> <a href=#conclusao class=md-nav__link> <span class=md-ellipsis> Conclusão: </span> </a> </li> </ul> </nav> </li> </ul> </nav> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle " type=checkbox id=__nav_4> <label class=md-nav__link for=__nav_4 id=__nav_4_label tabindex=0> <span class=md-ellipsis> Design Thinking </span> <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav data-md-level=1 aria-labelledby=__nav_4_label aria-expanded=false> <label class=md-nav__title for=__nav_4> <span class="md-nav__icon md-icon"></span> Design Thinking </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../_Design%20Thinking/5w2h/ class=md-nav__link> <span class=md-ellipsis> 5W2H </span> </a> </li> <li class=md-nav__item> <a href=../../_Design%20Thinking/Brainstorm/ class=md-nav__link> <span class=md-ellipsis> Brainstorm </span> </a> </li> <li class=md-nav__item> <a href=../../_Design%20Thinking/designthinking/ class=md-nav__link> <span class=md-ellipsis> Design Thinking </span> </a> </li> <li class=md-nav__item> <a href=../../_Design%20Thinking/historiasdeusuario/ class=md-nav__link> <span class=md-ellipsis> História de Usuário </span> </a> </li> <li class=md-nav__item> <a href=../../_Design%20Thinking/mapa_mental/ class=md-nav__link> <span class=md-ellipsis> Mapas Mentais </span> </a> </li> <li class=md-nav__item> <a href=../../_Design%20Thinking/pesquisa/ class=md-nav__link> <span class=md-ellipsis> Pesquisa </span> </a> </li> <li class=md-nav__item> <a href=../../_Design%20Thinking/prototipo_baixa_fidelidade/ class=md-nav__link> <span class=md-ellipsis> Protótipo </span> </a> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle " type=checkbox id=__nav_5> <label class=md-nav__link for=__nav_5 id=__nav_5_label tabindex=0> <span class=md-ellipsis> Sprint Planning </span> <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav data-md-level=1 aria-labelledby=__nav_5_label aria-expanded=false> <label class=md-nav__title for=__nav_5> <span class="md-nav__icon md-icon"></span> Sprint Planning </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../_Sprint%20Planning/sprint/ class=md-nav__link> <span class=md-ellipsis> Sprint Planning </span> </a> </li> </ul> </nav> </li> </ul> </nav> </div> </div> </div> <div class=md-content data-md-component=content> <article class="md-content__inner md-typeset"> <h1 id=14-filtros>14 - Filtros<a class=headerlink href=#14-filtros title="Permanent link">&para;</a></h1> <h2 id=objetivo-do-aplicativo>Objetivo do Aplicativo:<a class=headerlink href=#objetivo-do-aplicativo title="Permanent link">&para;</a></h2> <p>Criar uma lista de itens (por exemplo, produtos, tarefas, posts) que podem ser buscados por texto, filtrados por categorias (ou outros critérios) e selecionados individualmente ou em grupo.</p> <h2 id=tecnologias>Tecnologias:<a class=headerlink href=#tecnologias title="Permanent link">&para;</a></h2> <ul> <li>Vite: Para um setup de projeto React rápido e moderno.</li> <li>React: Para a construção da interface do usuário.</li> <li>json-server: Para simular uma API RESTful de forma simples.</li> </ul> <p><strong>Estrutura de Pastas Sugerida:</strong></p> <div class="language-text highlight"><pre><span></span><code><span id=__span-0-1><a id=__codelineno-0-1 name=__codelineno-0-1 href=#__codelineno-0-1></a>/meu-app-react
+</span><span id=__span-0-2><a id=__codelineno-0-2 name=__codelineno-0-2 href=#__codelineno-0-2></a>|-- public/
+</span><span id=__span-0-3><a id=__codelineno-0-3 name=__codelineno-0-3 href=#__codelineno-0-3></a>|-- src/
+</span><span id=__span-0-4><a id=__codelineno-0-4 name=__codelineno-0-4 href=#__codelineno-0-4></a>|   |-- assets/
+</span><span id=__span-0-5><a id=__codelineno-0-5 name=__codelineno-0-5 href=#__codelineno-0-5></a>|   |-- components/
+</span><span id=__span-0-6><a id=__codelineno-0-6 name=__codelineno-0-6 href=#__codelineno-0-6></a>|   |   |-- SearchBar.jsx
+</span><span id=__span-0-7><a id=__codelineno-0-7 name=__codelineno-0-7 href=#__codelineno-0-7></a>|   |   |-- FilterOptions.jsx
+</span><span id=__span-0-8><a id=__codelineno-0-8 name=__codelineno-0-8 href=#__codelineno-0-8></a>|   |   |-- ItemList.jsx
+</span><span id=__span-0-9><a id=__codelineno-0-9 name=__codelineno-0-9 href=#__codelineno-0-9></a>|   |   |-- Item.jsx
+</span><span id=__span-0-10><a id=__codelineno-0-10 name=__codelineno-0-10 href=#__codelineno-0-10></a>|   |-- services/
+</span><span id=__span-0-11><a id=__codelineno-0-11 name=__codelineno-0-11 href=#__codelineno-0-11></a>|   |   |-- api.js
+</span><span id=__span-0-12><a id=__codelineno-0-12 name=__codelineno-0-12 href=#__codelineno-0-12></a>|   |-- hooks/
+</span><span id=__span-0-13><a id=__codelineno-0-13 name=__codelineno-0-13 href=#__codelineno-0-13></a>|   |   |-- useItems.js
+</span><span id=__span-0-14><a id=__codelineno-0-14 name=__codelineno-0-14 href=#__codelineno-0-14></a>|   |-- App.jsx
+</span><span id=__span-0-15><a id=__codelineno-0-15 name=__codelineno-0-15 href=#__codelineno-0-15></a>|   |-- main.jsx
+</span><span id=__span-0-16><a id=__codelineno-0-16 name=__codelineno-0-16 href=#__codelineno-0-16></a>|   |-- index.css
+</span><span id=__span-0-17><a id=__codelineno-0-17 name=__codelineno-0-17 href=#__codelineno-0-17></a>|-- db.json  (para o json-server)
+</span><span id=__span-0-18><a id=__codelineno-0-18 name=__codelineno-0-18 href=#__codelineno-0-18></a>|-- package.json
+</span><span id=__span-0-19><a id=__codelineno-0-19 name=__codelineno-0-19 href=#__codelineno-0-19></a>|-- vite.config.js
+</span></code></pre></div> <h3 id=passos-e-conceitos-a-serem-abordados>Passos e Conceitos a Serem Abordados:<a class=headerlink href=#passos-e-conceitos-a-serem-abordados title="Permanent link">&para;</a></h3> <p><strong>Configuração do Ambiente:</strong></p> <ul> <li>Criar um novo projeto Vite com React: </li> </ul> <div class="language-bash highlight"><pre><span></span><code><span id=__span-1-1><a id=__codelineno-1-1 name=__codelineno-1-1 href=#__codelineno-1-1></a>npm<span class=w> </span>create<span class=w> </span>vite@latest<span class=w> </span>meu-app-react<span class=w> </span>--<span class=w> </span>--template<span class=w> </span>react
+</span></code></pre></div> <ul> <li>Instalar json-server: </li> </ul> <div class="language-bash highlight"><pre><span></span><code><span id=__span-2-1><a id=__codelineno-2-1 name=__codelineno-2-1 href=#__codelineno-2-1></a>npm<span class=w> </span>install<span class=w> </span>json-server<span class=w> </span><span class=o>(</span>ou<span class=w> </span>npm<span class=w> </span>install<span class=w> </span>-g<span class=w> </span>json-server<span class=w> </span>para<span class=w> </span>instalação<span class=w> </span>global<span class=o>)</span>.
+</span></code></pre></div> <ul> <li> <p>Criar o arquivo db.json na raiz do projeto.</p> </li> <li> <p>Adicionar um script no package.json para iniciar o json-server:</p> </li> </ul> <div class="language-json highlight"><pre><span></span><code><span id=__span-3-1><a id=__codelineno-3-1 name=__codelineno-3-1 href=#__codelineno-3-1></a><span class=p>{</span>
+</span><span id=__span-3-2><a id=__codelineno-3-2 name=__codelineno-3-2 href=#__codelineno-3-2></a><span class=w>  </span><span class=nt>&quot;scripts&quot;</span><span class=p>:</span><span class=w> </span><span class=p>{</span>
+</span><span id=__span-3-3><a id=__codelineno-3-3 name=__codelineno-3-3 href=#__codelineno-3-3></a><span class=w>    </span><span class=nt>&quot;dev&quot;</span><span class=p>:</span><span class=w> </span><span class=s2>&quot;vite&quot;</span><span class=p>,</span>
+</span><span id=__span-3-4><a id=__codelineno-3-4 name=__codelineno-3-4 href=#__codelineno-3-4></a><span class=w>    </span><span class=nt>&quot;build&quot;</span><span class=p>:</span><span class=w> </span><span class=s2>&quot;vite build&quot;</span><span class=p>,</span>
+</span><span id=__span-3-5><a id=__codelineno-3-5 name=__codelineno-3-5 href=#__codelineno-3-5></a><span class=w>    </span><span class=nt>&quot;lint&quot;</span><span class=p>:</span><span class=w> </span><span class=s2>&quot;eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0&quot;</span><span class=p>,</span>
+</span><span id=__span-3-6><a id=__codelineno-3-6 name=__codelineno-3-6 href=#__codelineno-3-6></a><span class=w>    </span><span class=nt>&quot;preview&quot;</span><span class=p>:</span><span class=w> </span><span class=s2>&quot;vite preview&quot;</span><span class=p>,</span>
+</span><span id=__span-3-7><a id=__codelineno-3-7 name=__codelineno-3-7 href=#__codelineno-3-7></a><span class=w>    </span><span class=nt>&quot;server&quot;</span><span class=p>:</span><span class=w> </span><span class=s2>&quot;json-server --watch db.json --port 3001&quot;</span>
+</span><span id=__span-3-8><a id=__codelineno-3-8 name=__codelineno-3-8 href=#__codelineno-3-8></a><span class=w>  </span><span class=p>}</span>
+</span><span id=__span-3-9><a id=__codelineno-3-9 name=__codelineno-3-9 href=#__codelineno-3-9></a><span class=p>}</span>
+</span></code></pre></div> <ul> <li>Iniciar o json-server em um terminal: npm run server.</li> <li>Iniciar o app Vite em outro terminal: npm run dev.</li> </ul> <blockquote> <p>db.json (Exemplo de Dados): Este arquivo servirá como nosso "banco de dados" para o json-server.</p> </blockquote> <div class="language-json highlight"><pre><span></span><code><span id=__span-4-1><a id=__codelineno-4-1 name=__codelineno-4-1 href=#__codelineno-4-1></a><span class=p>{</span>
+</span><span id=__span-4-2><a id=__codelineno-4-2 name=__codelineno-4-2 href=#__codelineno-4-2></a><span class=w>  </span><span class=nt>&quot;items&quot;</span><span class=p>:</span><span class=w> </span><span class=p>[</span>
+</span><span id=__span-4-3><a id=__codelineno-4-3 name=__codelineno-4-3 href=#__codelineno-4-3></a><span class=w>    </span><span class=p>{</span><span class=w> </span><span class=nt>&quot;id&quot;</span><span class=p>:</span><span class=w> </span><span class=mi>1</span><span class=p>,</span><span class=w> </span><span class=nt>&quot;name&quot;</span><span class=p>:</span><span class=w> </span><span class=s2>&quot;Laptop Moderno&quot;</span><span class=p>,</span><span class=w> </span><span class=nt>&quot;category&quot;</span><span class=p>:</span><span class=w> </span><span class=s2>&quot;Eletrônicos&quot;</span><span class=p>,</span><span class=w> </span><span class=nt>&quot;price&quot;</span><span class=p>:</span><span class=w> </span><span class=mf>4500.00</span><span class=p>,</span><span class=w> </span><span class=nt>&quot;inStock&quot;</span><span class=p>:</span><span class=w> </span><span class=kc>true</span><span class=w> </span><span class=p>},</span>
+</span><span id=__span-4-4><a id=__codelineno-4-4 name=__codelineno-4-4 href=#__codelineno-4-4></a><span class=w>    </span><span class=p>{</span><span class=w> </span><span class=nt>&quot;id&quot;</span><span class=p>:</span><span class=w> </span><span class=mi>2</span><span class=p>,</span><span class=w> </span><span class=nt>&quot;name&quot;</span><span class=p>:</span><span class=w> </span><span class=s2>&quot;Smartphone Avançado&quot;</span><span class=p>,</span><span class=w> </span><span class=nt>&quot;category&quot;</span><span class=p>:</span><span class=w> </span><span class=s2>&quot;Eletrônicos&quot;</span><span class=p>,</span><span class=w> </span><span class=nt>&quot;price&quot;</span><span class=p>:</span><span class=w> </span><span class=mf>3200.00</span><span class=p>,</span><span class=w> </span><span class=nt>&quot;inStock&quot;</span><span class=p>:</span><span class=w> </span><span class=kc>false</span><span class=w> </span><span class=p>},</span>
+</span><span id=__span-4-5><a id=__codelineno-4-5 name=__codelineno-4-5 href=#__codelineno-4-5></a><span class=w>    </span><span class=p>{</span><span class=w> </span><span class=nt>&quot;id&quot;</span><span class=p>:</span><span class=w> </span><span class=mi>3</span><span class=p>,</span><span class=w> </span><span class=nt>&quot;name&quot;</span><span class=p>:</span><span class=w> </span><span class=s2>&quot;Livro de React&quot;</span><span class=p>,</span><span class=w> </span><span class=nt>&quot;category&quot;</span><span class=p>:</span><span class=w> </span><span class=s2>&quot;Livros&quot;</span><span class=p>,</span><span class=w> </span><span class=nt>&quot;price&quot;</span><span class=p>:</span><span class=w> </span><span class=mf>120.00</span><span class=p>,</span><span class=w> </span><span class=nt>&quot;inStock&quot;</span><span class=p>:</span><span class=w> </span><span class=kc>true</span><span class=w> </span><span class=p>},</span>
+</span><span id=__span-4-6><a id=__codelineno-4-6 name=__codelineno-4-6 href=#__codelineno-4-6></a><span class=w>    </span><span class=p>{</span><span class=w> </span><span class=nt>&quot;id&quot;</span><span class=p>:</span><span class=w> </span><span class=mi>4</span><span class=p>,</span><span class=w> </span><span class=nt>&quot;name&quot;</span><span class=p>:</span><span class=w> </span><span class=s2>&quot;Cafeteira Elétrica&quot;</span><span class=p>,</span><span class=w> </span><span class=nt>&quot;category&quot;</span><span class=p>:</span><span class=w> </span><span class=s2>&quot;Casa&quot;</span><span class=p>,</span><span class=w> </span><span class=nt>&quot;price&quot;</span><span class=p>:</span><span class=w> </span><span class=mf>250.00</span><span class=p>,</span><span class=w> </span><span class=nt>&quot;inStock&quot;</span><span class=p>:</span><span class=w> </span><span class=kc>true</span><span class=w> </span><span class=p>},</span>
+</span><span id=__span-4-7><a id=__codelineno-4-7 name=__codelineno-4-7 href=#__codelineno-4-7></a><span class=w>    </span><span class=p>{</span><span class=w> </span><span class=nt>&quot;id&quot;</span><span class=p>:</span><span class=w> </span><span class=mi>5</span><span class=p>,</span><span class=w> </span><span class=nt>&quot;name&quot;</span><span class=p>:</span><span class=w> </span><span class=s2>&quot;Fone de Ouvido Bluetooth&quot;</span><span class=p>,</span><span class=w> </span><span class=nt>&quot;category&quot;</span><span class=p>:</span><span class=w> </span><span class=s2>&quot;Eletrônicos&quot;</span><span class=p>,</span><span class=w> </span><span class=nt>&quot;price&quot;</span><span class=p>:</span><span class=w> </span><span class=mf>350.00</span><span class=p>,</span><span class=w> </span><span class=nt>&quot;inStock&quot;</span><span class=p>:</span><span class=w> </span><span class=kc>true</span><span class=w> </span><span class=p>},</span>
+</span><span id=__span-4-8><a id=__codelineno-4-8 name=__codelineno-4-8 href=#__codelineno-4-8></a><span class=w>    </span><span class=p>{</span><span class=w> </span><span class=nt>&quot;id&quot;</span><span class=p>:</span><span class=w> </span><span class=mi>6</span><span class=p>,</span><span class=w> </span><span class=nt>&quot;name&quot;</span><span class=p>:</span><span class=w> </span><span class=s2>&quot;Teclado Mecânico&quot;</span><span class=p>,</span><span class=w> </span><span class=nt>&quot;category&quot;</span><span class=p>:</span><span class=w> </span><span class=s2>&quot;Acessórios&quot;</span><span class=p>,</span><span class=w> </span><span class=nt>&quot;price&quot;</span><span class=p>:</span><span class=w> </span><span class=mf>450.00</span><span class=p>,</span><span class=w> </span><span class=nt>&quot;inStock&quot;</span><span class=p>:</span><span class=w> </span><span class=kc>false</span><span class=w> </span><span class=p>},</span>
+</span><span id=__span-4-9><a id=__codelineno-4-9 name=__codelineno-4-9 href=#__codelineno-4-9></a><span class=w>    </span><span class=p>{</span><span class=w> </span><span class=nt>&quot;id&quot;</span><span class=p>:</span><span class=w> </span><span class=mi>7</span><span class=p>,</span><span class=w> </span><span class=nt>&quot;name&quot;</span><span class=p>:</span><span class=w> </span><span class=s2>&quot;Mouse Gamer&quot;</span><span class=p>,</span><span class=w> </span><span class=nt>&quot;category&quot;</span><span class=p>:</span><span class=w> </span><span class=s2>&quot;Acessórios&quot;</span><span class=p>,</span><span class=w> </span><span class=nt>&quot;price&quot;</span><span class=p>:</span><span class=w> </span><span class=mf>220.00</span><span class=p>,</span><span class=w> </span><span class=nt>&quot;inStock&quot;</span><span class=p>:</span><span class=w> </span><span class=kc>true</span><span class=w> </span><span class=p>}</span>
+</span><span id=__span-4-10><a id=__codelineno-4-10 name=__codelineno-4-10 href=#__codelineno-4-10></a><span class=w>  </span><span class=p>],</span>
+</span><span id=__span-4-11><a id=__codelineno-4-11 name=__codelineno-4-11 href=#__codelineno-4-11></a><span class=w>  </span><span class=nt>&quot;categories&quot;</span><span class=p>:</span><span class=w> </span><span class=p>[</span>
+</span><span id=__span-4-12><a id=__codelineno-4-12 name=__codelineno-4-12 href=#__codelineno-4-12></a><span class=w>    </span><span class=p>{</span><span class=w> </span><span class=nt>&quot;id&quot;</span><span class=p>:</span><span class=w> </span><span class=s2>&quot;cat1&quot;</span><span class=p>,</span><span class=w> </span><span class=nt>&quot;name&quot;</span><span class=p>:</span><span class=w> </span><span class=s2>&quot;Eletrônicos&quot;</span><span class=w> </span><span class=p>},</span>
+</span><span id=__span-4-13><a id=__codelineno-4-13 name=__codelineno-4-13 href=#__codelineno-4-13></a><span class=w>    </span><span class=p>{</span><span class=w> </span><span class=nt>&quot;id&quot;</span><span class=p>:</span><span class=w> </span><span class=s2>&quot;cat2&quot;</span><span class=p>,</span><span class=w> </span><span class=nt>&quot;name&quot;</span><span class=p>:</span><span class=w> </span><span class=s2>&quot;Livros&quot;</span><span class=w> </span><span class=p>},</span>
+</span><span id=__span-4-14><a id=__codelineno-4-14 name=__codelineno-4-14 href=#__codelineno-4-14></a><span class=w>    </span><span class=p>{</span><span class=w> </span><span class=nt>&quot;id&quot;</span><span class=p>:</span><span class=w> </span><span class=s2>&quot;cat3&quot;</span><span class=p>,</span><span class=w> </span><span class=nt>&quot;name&quot;</span><span class=p>:</span><span class=w> </span><span class=s2>&quot;Casa&quot;</span><span class=w> </span><span class=p>},</span>
+</span><span id=__span-4-15><a id=__codelineno-4-15 name=__codelineno-4-15 href=#__codelineno-4-15></a><span class=w>    </span><span class=p>{</span><span class=w> </span><span class=nt>&quot;id&quot;</span><span class=p>:</span><span class=w> </span><span class=s2>&quot;cat4&quot;</span><span class=p>,</span><span class=w> </span><span class=nt>&quot;name&quot;</span><span class=p>:</span><span class=w> </span><span class=s2>&quot;Acessórios&quot;</span><span class=w> </span><span class=p>}</span>
+</span><span id=__span-4-16><a id=__codelineno-4-16 name=__codelineno-4-16 href=#__codelineno-4-16></a><span class=w>  </span><span class=p>]</span>
+</span><span id=__span-4-17><a id=__codelineno-4-17 name=__codelineno-4-17 href=#__codelineno-4-17></a><span class=p>}</span>
+</span></code></pre></div> <p>Serviço da API (src/services/api.js): Um módulo para centralizar as chamadas à API.</p> <div class="language-jsx highlight"><pre><span></span><code><span id=__span-5-1><a id=__codelineno-5-1 name=__codelineno-5-1 href=#__codelineno-5-1></a><span class=c1>// javascript</span>
+</span><span id=__span-5-2><a id=__codelineno-5-2 name=__codelineno-5-2 href=#__codelineno-5-2></a><span class=c1>// src/services/api.js</span>
+</span><span id=__span-5-3><a id=__codelineno-5-3 name=__codelineno-5-3 href=#__codelineno-5-3></a><span class=kd>const</span><span class=w> </span><span class=nx>API_URL</span><span class=w> </span><span class=o>=</span><span class=w> </span><span class=s1>&#39;http://localhost:3001&#39;</span><span class=p>;</span>
+</span><span id=__span-5-4><a id=__codelineno-5-4 name=__codelineno-5-4 href=#__codelineno-5-4></a>
+</span><span id=__span-5-5><a id=__codelineno-5-5 name=__codelineno-5-5 href=#__codelineno-5-5></a><span class=k>export</span><span class=w> </span><span class=kd>const</span><span class=w> </span><span class=nx>fetchItems</span><span class=w> </span><span class=o>=</span><span class=w> </span><span class=k>async</span><span class=w> </span><span class=p>()</span><span class=w> </span><span class=p>=&gt;</span><span class=w> </span><span class=p>{</span>
+</span><span id=__span-5-6><a id=__codelineno-5-6 name=__codelineno-5-6 href=#__codelineno-5-6></a><span class=w>  </span><span class=k>try</span><span class=w> </span><span class=p>{</span>
+</span><span id=__span-5-7><a id=__codelineno-5-7 name=__codelineno-5-7 href=#__codelineno-5-7></a><span class=w>    </span><span class=kd>const</span><span class=w> </span><span class=nx>response</span><span class=w> </span><span class=o>=</span><span class=w> </span><span class=k>await</span><span class=w> </span><span class=nx>fetch</span><span class=p>(</span><span class=sb>`</span><span class=si>${</span><span class=nx>API_URL</span><span class=si>}</span><span class=sb>/items`</span><span class=p>);</span>
+</span><span id=__span-5-8><a id=__codelineno-5-8 name=__codelineno-5-8 href=#__codelineno-5-8></a><span class=w>    </span><span class=k>if</span><span class=w> </span><span class=p>(</span><span class=o>!</span><span class=nx>response</span><span class=p>.</span><span class=nx>ok</span><span class=p>)</span><span class=w> </span><span class=p>{</span>
+</span><span id=__span-5-9><a id=__codelineno-5-9 name=__codelineno-5-9 href=#__codelineno-5-9></a><span class=w>      </span><span class=k>throw</span><span class=w> </span><span class=ow>new</span><span class=w> </span><span class=ne>Error</span><span class=p>(</span><span class=s1>&#39;Erro ao buscar itens&#39;</span><span class=p>);</span>
+</span><span id=__span-5-10><a id=__codelineno-5-10 name=__codelineno-5-10 href=#__codelineno-5-10></a><span class=w>    </span><span class=p>}</span>
+</span><span id=__span-5-11><a id=__codelineno-5-11 name=__codelineno-5-11 href=#__codelineno-5-11></a><span class=w>    </span><span class=k>return</span><span class=w> </span><span class=k>await</span><span class=w> </span><span class=nx>response</span><span class=p>.</span><span class=nx>json</span><span class=p>();</span>
+</span><span id=__span-5-12><a id=__codelineno-5-12 name=__codelineno-5-12 href=#__codelineno-5-12></a><span class=w>  </span><span class=p>}</span><span class=w> </span><span class=k>catch</span><span class=w> </span><span class=p>(</span><span class=nx>error</span><span class=p>)</span><span class=w> </span><span class=p>{</span>
+</span><span id=__span-5-13><a id=__codelineno-5-13 name=__codelineno-5-13 href=#__codelineno-5-13></a><span class=w>    </span><span class=nx>console</span><span class=p>.</span><span class=nx>error</span><span class=p>(</span><span class=s2>&quot;Falha ao buscar itens:&quot;</span><span class=p>,</span><span class=w> </span><span class=nx>error</span><span class=p>);</span>
+</span><span id=__span-5-14><a id=__codelineno-5-14 name=__codelineno-5-14 href=#__codelineno-5-14></a><span class=w>    </span><span class=k>return</span><span class=w> </span><span class=p>[];</span><span class=w> </span><span class=c1>// Retorna array vazio em caso de erro para não quebrar a UI</span>
+</span><span id=__span-5-15><a id=__codelineno-5-15 name=__codelineno-5-15 href=#__codelineno-5-15></a><span class=w>  </span><span class=p>}</span>
+</span><span id=__span-5-16><a id=__codelineno-5-16 name=__codelineno-5-16 href=#__codelineno-5-16></a><span class=p>};</span>
+</span><span id=__span-5-17><a id=__codelineno-5-17 name=__codelineno-5-17 href=#__codelineno-5-17></a>
+</span><span id=__span-5-18><a id=__codelineno-5-18 name=__codelineno-5-18 href=#__codelineno-5-18></a><span class=k>export</span><span class=w> </span><span class=kd>const</span><span class=w> </span><span class=nx>fetchCategories</span><span class=w> </span><span class=o>=</span><span class=w> </span><span class=k>async</span><span class=w> </span><span class=p>()</span><span class=w> </span><span class=p>=&gt;</span><span class=w> </span><span class=p>{</span>
+</span><span id=__span-5-19><a id=__codelineno-5-19 name=__codelineno-5-19 href=#__codelineno-5-19></a><span class=w>  </span><span class=k>try</span><span class=w> </span><span class=p>{</span>
+</span><span id=__span-5-20><a id=__codelineno-5-20 name=__codelineno-5-20 href=#__codelineno-5-20></a><span class=w>    </span><span class=kd>const</span><span class=w> </span><span class=nx>response</span><span class=w> </span><span class=o>=</span><span class=w> </span><span class=k>await</span><span class=w> </span><span class=nx>fetch</span><span class=p>(</span><span class=sb>`</span><span class=si>${</span><span class=nx>API_URL</span><span class=si>}</span><span class=sb>/categories`</span><span class=p>);</span>
+</span><span id=__span-5-21><a id=__codelineno-5-21 name=__codelineno-5-21 href=#__codelineno-5-21></a><span class=w>    </span><span class=k>if</span><span class=w> </span><span class=p>(</span><span class=o>!</span><span class=nx>response</span><span class=p>.</span><span class=nx>ok</span><span class=p>)</span><span class=w> </span><span class=p>{</span>
+</span><span id=__span-5-22><a id=__codelineno-5-22 name=__codelineno-5-22 href=#__codelineno-5-22></a><span class=w>      </span><span class=k>throw</span><span class=w> </span><span class=ow>new</span><span class=w> </span><span class=ne>Error</span><span class=p>(</span><span class=s1>&#39;Erro ao buscar categorias&#39;</span><span class=p>);</span>
+</span><span id=__span-5-23><a id=__codelineno-5-23 name=__codelineno-5-23 href=#__codelineno-5-23></a><span class=w>    </span><span class=p>}</span>
+</span><span id=__span-5-24><a id=__codelineno-5-24 name=__codelineno-5-24 href=#__codelineno-5-24></a><span class=w>    </span><span class=k>return</span><span class=w> </span><span class=k>await</span><span class=w> </span><span class=nx>response</span><span class=p>.</span><span class=nx>json</span><span class=p>();</span>
+</span><span id=__span-5-25><a id=__codelineno-5-25 name=__codelineno-5-25 href=#__codelineno-5-25></a><span class=w>  </span><span class=p>}</span><span class=w> </span><span class=k>catch</span><span class=w> </span><span class=p>(</span><span class=nx>error</span><span class=p>)</span><span class=w> </span><span class=p>{</span>
+</span><span id=__span-5-26><a id=__codelineno-5-26 name=__codelineno-5-26 href=#__codelineno-5-26></a><span class=w>    </span><span class=nx>console</span><span class=p>.</span><span class=nx>error</span><span class=p>(</span><span class=s2>&quot;Falha ao buscar categorias:&quot;</span><span class=p>,</span><span class=w> </span><span class=nx>error</span><span class=p>);</span>
+</span><span id=__span-5-27><a id=__codelineno-5-27 name=__codelineno-5-27 href=#__codelineno-5-27></a><span class=w>    </span><span class=k>return</span><span class=w> </span><span class=p>[];</span>
+</span><span id=__span-5-28><a id=__codelineno-5-28 name=__codelineno-5-28 href=#__codelineno-5-28></a><span class=w>  </span><span class=p>}</span>
+</span><span id=__span-5-29><a id=__codelineno-5-29 name=__codelineno-5-29 href=#__codelineno-5-29></a><span class=p>};</span>
+</span><span id=__span-5-30><a id=__codelineno-5-30 name=__codelineno-5-30 href=#__codelineno-5-30></a>
+</span><span id=__span-5-31><a id=__codelineno-5-31 name=__codelineno-5-31 href=#__codelineno-5-31></a>
+</span><span id=__span-5-32><a id=__codelineno-5-32 name=__codelineno-5-32 href=#__codelineno-5-32></a><span class=c1>// Poderíamos adicionar aqui funções para buscar itens com filtros/query do json-server</span>
+</span><span id=__span-5-33><a id=__codelineno-5-33 name=__codelineno-5-33 href=#__codelineno-5-33></a><span class=c1>// Ex: export const fetchItemsByQuery = async (query) =&gt; { ... fetch(`${API_URL}/items?${query}`) ... }</span>
+</span></code></pre></div> <h4 id=componente-principal><strong>Componente Principal</strong><a class=headerlink href=#componente-principal title="Permanent link">&para;</a></h4> <p>Este componente orquestrará os demais e gerenciará o estado principal (lista de itens, termo de busca, filtro selecionado, itens selecionados).</p> <div class="language-jsx highlight"><pre><span></span><code><span id=__span-6-1><a id=__codelineno-6-1 name=__codelineno-6-1 href=#__codelineno-6-1></a><span class=c1>// src/App.jsx</span>
+</span><span id=__span-6-2><a id=__codelineno-6-2 name=__codelineno-6-2 href=#__codelineno-6-2></a><span class=k>import</span><span class=w> </span><span class=nx>React</span><span class=p>,</span><span class=w> </span><span class=p>{</span><span class=w> </span><span class=nx>useState</span><span class=p>,</span><span class=w> </span><span class=nx>useEffect</span><span class=p>,</span><span class=w> </span><span class=nx>useMemo</span><span class=w> </span><span class=p>}</span><span class=w> </span><span class=kr>from</span><span class=w> </span><span class=s1>&#39;react&#39;</span><span class=p>;</span>
+</span><span id=__span-6-3><a id=__codelineno-6-3 name=__codelineno-6-3 href=#__codelineno-6-3></a><span class=k>import</span><span class=w> </span><span class=nx>SearchBar</span><span class=w> </span><span class=kr>from</span><span class=w> </span><span class=s1>&#39;./components/SearchBar&#39;</span><span class=p>;</span>
+</span><span id=__span-6-4><a id=__codelineno-6-4 name=__codelineno-6-4 href=#__codelineno-6-4></a><span class=k>import</span><span class=w> </span><span class=nx>FilterOptions</span><span class=w> </span><span class=kr>from</span><span class=w> </span><span class=s1>&#39;./components/FilterOptions&#39;</span><span class=p>;</span>
+</span><span id=__span-6-5><a id=__codelineno-6-5 name=__codelineno-6-5 href=#__codelineno-6-5></a><span class=k>import</span><span class=w> </span><span class=nx>ItemList</span><span class=w> </span><span class=kr>from</span><span class=w> </span><span class=s1>&#39;./components/ItemList&#39;</span><span class=p>;</span>
+</span><span id=__span-6-6><a id=__codelineno-6-6 name=__codelineno-6-6 href=#__codelineno-6-6></a><span class=k>import</span><span class=w> </span><span class=p>{</span><span class=w> </span><span class=nx>fetchItems</span><span class=p>,</span><span class=w> </span><span class=nx>fetchCategories</span><span class=w> </span><span class=p>}</span><span class=w> </span><span class=kr>from</span><span class=w> </span><span class=s1>&#39;./services/api&#39;</span><span class=p>;</span>
+</span><span id=__span-6-7><a id=__codelineno-6-7 name=__codelineno-6-7 href=#__codelineno-6-7></a><span class=k>import</span><span class=w> </span><span class=s1>&#39;./App.css&#39;</span><span class=p>;</span><span class=w> </span><span class=c1>// Crie este arquivo para estilos básicos</span>
+</span><span id=__span-6-8><a id=__codelineno-6-8 name=__codelineno-6-8 href=#__codelineno-6-8></a>
+</span><span id=__span-6-9><a id=__codelineno-6-9 name=__codelineno-6-9 href=#__codelineno-6-9></a><span class=kd>function</span><span class=w> </span><span class=nx>App</span><span class=p>()</span><span class=w> </span><span class=p>{</span>
+</span><span id=__span-6-10><a id=__codelineno-6-10 name=__codelineno-6-10 href=#__codelineno-6-10></a><span class=w>  </span><span class=kd>const</span><span class=w> </span><span class=p>[</span><span class=nx>allItems</span><span class=p>,</span><span class=w> </span><span class=nx>setAllItems</span><span class=p>]</span><span class=w> </span><span class=o>=</span><span class=w> </span><span class=nx>useState</span><span class=p>([]);</span>
+</span><span id=__span-6-11><a id=__codelineno-6-11 name=__codelineno-6-11 href=#__codelineno-6-11></a><span class=w>  </span><span class=kd>const</span><span class=w> </span><span class=p>[</span><span class=nx>categories</span><span class=p>,</span><span class=w> </span><span class=nx>setCategories</span><span class=p>]</span><span class=w> </span><span class=o>=</span><span class=w> </span><span class=nx>useState</span><span class=p>([]);</span>
+</span><span id=__span-6-12><a id=__codelineno-6-12 name=__codelineno-6-12 href=#__codelineno-6-12></a><span class=w>  </span><span class=kd>const</span><span class=w> </span><span class=p>[</span><span class=nx>searchTerm</span><span class=p>,</span><span class=w> </span><span class=nx>setSearchTerm</span><span class=p>]</span><span class=w> </span><span class=o>=</span><span class=w> </span><span class=nx>useState</span><span class=p>(</span><span class=s1>&#39;&#39;</span><span class=p>);</span>
+</span><span id=__span-6-13><a id=__codelineno-6-13 name=__codelineno-6-13 href=#__codelineno-6-13></a><span class=w>  </span><span class=kd>const</span><span class=w> </span><span class=p>[</span><span class=nx>selectedCategory</span><span class=p>,</span><span class=w> </span><span class=nx>setSelectedCategory</span><span class=p>]</span><span class=w> </span><span class=o>=</span><span class=w> </span><span class=nx>useState</span><span class=p>(</span><span class=s1>&#39;&#39;</span><span class=p>);</span><span class=w> </span><span class=c1>// &#39;all&#39; ou &#39;&#39; para todos</span>
+</span><span id=__span-6-14><a id=__codelineno-6-14 name=__codelineno-6-14 href=#__codelineno-6-14></a><span class=w>  </span><span class=kd>const</span><span class=w> </span><span class=p>[</span><span class=nx>selectedItems</span><span class=p>,</span><span class=w> </span><span class=nx>setSelectedItems</span><span class=p>]</span><span class=w> </span><span class=o>=</span><span class=w> </span><span class=nx>useState</span><span class=p>(</span><span class=ow>new</span><span class=w> </span><span class=nb>Set</span><span class=p>());</span><span class=w> </span><span class=c1>// Usar Set para IDs únicos</span>
+</span><span id=__span-6-15><a id=__codelineno-6-15 name=__codelineno-6-15 href=#__codelineno-6-15></a>
+</span><span id=__span-6-16><a id=__codelineno-6-16 name=__codelineno-6-16 href=#__codelineno-6-16></a><span class=w>  </span><span class=nx>useEffect</span><span class=p>(()</span><span class=w> </span><span class=p>=&gt;</span><span class=w> </span><span class=p>{</span>
+</span><span id=__span-6-17><a id=__codelineno-6-17 name=__codelineno-6-17 href=#__codelineno-6-17></a><span class=w>    </span><span class=kd>const</span><span class=w> </span><span class=nx>loadData</span><span class=w> </span><span class=o>=</span><span class=w> </span><span class=k>async</span><span class=w> </span><span class=p>()</span><span class=w> </span><span class=p>=&gt;</span><span class=w> </span><span class=p>{</span>
+</span><span id=__span-6-18><a id=__codelineno-6-18 name=__codelineno-6-18 href=#__codelineno-6-18></a><span class=w>      </span><span class=kd>const</span><span class=w> </span><span class=nx>itemsData</span><span class=w> </span><span class=o>=</span><span class=w> </span><span class=k>await</span><span class=w> </span><span class=nx>fetchItems</span><span class=p>();</span>
+</span><span id=__span-6-19><a id=__codelineno-6-19 name=__codelineno-6-19 href=#__codelineno-6-19></a><span class=w>      </span><span class=kd>const</span><span class=w> </span><span class=nx>categoriesData</span><span class=w> </span><span class=o>=</span><span class=w> </span><span class=k>await</span><span class=w> </span><span class=nx>fetchCategories</span><span class=p>();</span>
+</span><span id=__span-6-20><a id=__codelineno-6-20 name=__codelineno-6-20 href=#__codelineno-6-20></a><span class=w>      </span><span class=nx>setAllItems</span><span class=p>(</span><span class=nx>itemsData</span><span class=p>);</span>
+</span><span id=__span-6-21><a id=__codelineno-6-21 name=__codelineno-6-21 href=#__codelineno-6-21></a><span class=w>      </span><span class=nx>setCategories</span><span class=p>(</span><span class=nx>categoriesData</span><span class=p>);</span>
+</span><span id=__span-6-22><a id=__codelineno-6-22 name=__codelineno-6-22 href=#__codelineno-6-22></a><span class=w>    </span><span class=p>};</span>
+</span><span id=__span-6-23><a id=__codelineno-6-23 name=__codelineno-6-23 href=#__codelineno-6-23></a><span class=w>    </span><span class=nx>loadData</span><span class=p>();</span>
+</span><span id=__span-6-24><a id=__codelineno-6-24 name=__codelineno-6-24 href=#__codelineno-6-24></a><span class=w>  </span><span class=p>},</span><span class=w> </span><span class=p>[]);</span>
+</span><span id=__span-6-25><a id=__codelineno-6-25 name=__codelineno-6-25 href=#__codelineno-6-25></a>
+</span><span id=__span-6-26><a id=__codelineno-6-26 name=__codelineno-6-26 href=#__codelineno-6-26></a><span class=w>  </span><span class=kd>const</span><span class=w> </span><span class=nx>handleSearchChange</span><span class=w> </span><span class=o>=</span><span class=w> </span><span class=p>(</span><span class=nx>term</span><span class=p>)</span><span class=w> </span><span class=p>=&gt;</span><span class=w> </span><span class=p>{</span>
+</span><span id=__span-6-27><a id=__codelineno-6-27 name=__codelineno-6-27 href=#__codelineno-6-27></a><span class=w>    </span><span class=nx>setSearchTerm</span><span class=p>(</span><span class=nx>term</span><span class=p>.</span><span class=nx>toLowerCase</span><span class=p>());</span>
+</span><span id=__span-6-28><a id=__codelineno-6-28 name=__codelineno-6-28 href=#__codelineno-6-28></a><span class=w>  </span><span class=p>};</span>
+</span><span id=__span-6-29><a id=__codelineno-6-29 name=__codelineno-6-29 href=#__codelineno-6-29></a>
+</span><span id=__span-6-30><a id=__codelineno-6-30 name=__codelineno-6-30 href=#__codelineno-6-30></a><span class=w>  </span><span class=kd>const</span><span class=w> </span><span class=nx>handleCategoryChange</span><span class=w> </span><span class=o>=</span><span class=w> </span><span class=p>(</span><span class=nx>category</span><span class=p>)</span><span class=w> </span><span class=p>=&gt;</span><span class=w> </span><span class=p>{</span>
+</span><span id=__span-6-31><a id=__codelineno-6-31 name=__codelineno-6-31 href=#__codelineno-6-31></a><span class=w>    </span><span class=nx>setSelectedCategory</span><span class=p>(</span><span class=nx>category</span><span class=p>);</span>
+</span><span id=__span-6-32><a id=__codelineno-6-32 name=__codelineno-6-32 href=#__codelineno-6-32></a><span class=w>  </span><span class=p>};</span>
+</span><span id=__span-6-33><a id=__codelineno-6-33 name=__codelineno-6-33 href=#__codelineno-6-33></a>
+</span><span id=__span-6-34><a id=__codelineno-6-34 name=__codelineno-6-34 href=#__codelineno-6-34></a><span class=w>  </span><span class=kd>const</span><span class=w> </span><span class=nx>handleItemSelect</span><span class=w> </span><span class=o>=</span><span class=w> </span><span class=p>(</span><span class=nx>itemId</span><span class=p>)</span><span class=w> </span><span class=p>=&gt;</span><span class=w> </span><span class=p>{</span>
+</span><span id=__span-6-35><a id=__codelineno-6-35 name=__codelineno-6-35 href=#__codelineno-6-35></a><span class=w>    </span><span class=nx>setSelectedItems</span><span class=p>(</span><span class=nx>prevSelectedItems</span><span class=w> </span><span class=p>=&gt;</span><span class=w> </span><span class=p>{</span>
+</span><span id=__span-6-36><a id=__codelineno-6-36 name=__codelineno-6-36 href=#__codelineno-6-36></a><span class=w>      </span><span class=kd>const</span><span class=w> </span><span class=nx>newSelectedItems</span><span class=w> </span><span class=o>=</span><span class=w> </span><span class=ow>new</span><span class=w> </span><span class=nb>Set</span><span class=p>(</span><span class=nx>prevSelectedItems</span><span class=p>);</span>
+</span><span id=__span-6-37><a id=__codelineno-6-37 name=__codelineno-6-37 href=#__codelineno-6-37></a><span class=w>      </span><span class=k>if</span><span class=w> </span><span class=p>(</span><span class=nx>newSelectedItems</span><span class=p>.</span><span class=nx>has</span><span class=p>(</span><span class=nx>itemId</span><span class=p>))</span><span class=w> </span><span class=p>{</span>
+</span><span id=__span-6-38><a id=__codelineno-6-38 name=__codelineno-6-38 href=#__codelineno-6-38></a><span class=w>        </span><span class=nx>newSelectedItems</span><span class=p>.</span><span class=ow>delete</span><span class=p>(</span><span class=nx>itemId</span><span class=p>);</span>
+</span><span id=__span-6-39><a id=__codelineno-6-39 name=__codelineno-6-39 href=#__codelineno-6-39></a><span class=w>      </span><span class=p>}</span><span class=w> </span><span class=k>else</span><span class=w> </span><span class=p>{</span>
+</span><span id=__span-6-40><a id=__codelineno-6-40 name=__codelineno-6-40 href=#__codelineno-6-40></a><span class=w>        </span><span class=nx>newSelectedItems</span><span class=p>.</span><span class=nx>add</span><span class=p>(</span><span class=nx>itemId</span><span class=p>);</span>
+</span><span id=__span-6-41><a id=__codelineno-6-41 name=__codelineno-6-41 href=#__codelineno-6-41></a><span class=w>      </span><span class=p>}</span>
+</span><span id=__span-6-42><a id=__codelineno-6-42 name=__codelineno-6-42 href=#__codelineno-6-42></a><span class=w>      </span><span class=k>return</span><span class=w> </span><span class=nx>newSelectedItems</span><span class=p>;</span>
+</span><span id=__span-6-43><a id=__codelineno-6-43 name=__codelineno-6-43 href=#__codelineno-6-43></a><span class=w>    </span><span class=p>});</span>
+</span><span id=__span-6-44><a id=__codelineno-6-44 name=__codelineno-6-44 href=#__codelineno-6-44></a><span class=w>  </span><span class=p>};</span>
+</span><span id=__span-6-45><a id=__codelineno-6-45 name=__codelineno-6-45 href=#__codelineno-6-45></a>
+</span><span id=__span-6-46><a id=__codelineno-6-46 name=__codelineno-6-46 href=#__codelineno-6-46></a><span class=w>  </span><span class=kd>const</span><span class=w> </span><span class=nx>filteredItems</span><span class=w> </span><span class=o>=</span><span class=w> </span><span class=nx>useMemo</span><span class=p>(()</span><span class=w> </span><span class=p>=&gt;</span><span class=w> </span><span class=p>{</span>
+</span><span id=__span-6-47><a id=__codelineno-6-47 name=__codelineno-6-47 href=#__codelineno-6-47></a><span class=w>    </span><span class=k>return</span><span class=w> </span><span class=nx>allItems</span>
+</span><span id=__span-6-48><a id=__codelineno-6-48 name=__codelineno-6-48 href=#__codelineno-6-48></a><span class=w>      </span><span class=p>.</span><span class=nx>filter</span><span class=p>(</span><span class=nx>item</span><span class=w> </span><span class=p>=&gt;</span>
+</span><span id=__span-6-49><a id=__codelineno-6-49 name=__codelineno-6-49 href=#__codelineno-6-49></a><span class=w>        </span><span class=nx>item</span><span class=p>.</span><span class=nx>name</span><span class=p>.</span><span class=nx>toLowerCase</span><span class=p>().</span><span class=nx>includes</span><span class=p>(</span><span class=nx>searchTerm</span><span class=p>)</span>
+</span><span id=__span-6-50><a id=__codelineno-6-50 name=__codelineno-6-50 href=#__codelineno-6-50></a><span class=w>      </span><span class=p>)</span>
+</span><span id=__span-6-51><a id=__codelineno-6-51 name=__codelineno-6-51 href=#__codelineno-6-51></a><span class=w>      </span><span class=p>.</span><span class=nx>filter</span><span class=p>(</span><span class=nx>item</span><span class=w> </span><span class=p>=&gt;</span>
+</span><span id=__span-6-52><a id=__codelineno-6-52 name=__codelineno-6-52 href=#__codelineno-6-52></a><span class=w>        </span><span class=nx>selectedCategory</span><span class=w> </span><span class=o>===</span><span class=w> </span><span class=s1>&#39;&#39;</span><span class=w> </span><span class=o>||</span><span class=w> </span><span class=nx>item</span><span class=p>.</span><span class=nx>category</span><span class=w> </span><span class=o>===</span><span class=w> </span><span class=nx>selectedCategory</span>
+</span><span id=__span-6-53><a id=__codelineno-6-53 name=__codelineno-6-53 href=#__codelineno-6-53></a><span class=w>      </span><span class=p>);</span>
+</span><span id=__span-6-54><a id=__codelineno-6-54 name=__codelineno-6-54 href=#__codelineno-6-54></a><span class=w>  </span><span class=p>},</span><span class=w> </span><span class=p>[</span><span class=nx>allItems</span><span class=p>,</span><span class=w> </span><span class=nx>searchTerm</span><span class=p>,</span><span class=w> </span><span class=nx>selectedCategory</span><span class=p>]);</span>
+</span><span id=__span-6-55><a id=__codelineno-6-55 name=__codelineno-6-55 href=#__codelineno-6-55></a>
+</span><span id=__span-6-56><a id=__codelineno-6-56 name=__codelineno-6-56 href=#__codelineno-6-56></a><span class=w>  </span><span class=k>return</span><span class=w> </span><span class=p>(</span>
+</span><span id=__span-6-57><a id=__codelineno-6-57 name=__codelineno-6-57 href=#__codelineno-6-57></a><span class=w>    </span><span class=p>&lt;</span><span class=nt>div</span><span class=w> </span><span class=na>className</span><span class=o>=</span><span class=s>&quot;app-container&quot;</span><span class=p>&gt;</span>
+</span><span id=__span-6-58><a id=__codelineno-6-58 name=__codelineno-6-58 href=#__codelineno-6-58></a><span class=w>      </span><span class=p>&lt;</span><span class=nt>h1</span><span class=p>&gt;</span><span class=nx>Catálogo</span><span class=w> </span><span class=nx>de</span><span class=w> </span><span class=nx>Itens</span><span class=w> </span><span class=nx>Interativo</span><span class=p>&lt;/</span><span class=nt>h1</span><span class=p>&gt;</span>
+</span><span id=__span-6-59><a id=__codelineno-6-59 name=__codelineno-6-59 href=#__codelineno-6-59></a>
+</span><span id=__span-6-60><a id=__codelineno-6-60 name=__codelineno-6-60 href=#__codelineno-6-60></a><span class=w>      </span><span class=p>&lt;</span><span class=nt>div</span><span class=w> </span><span class=na>className</span><span class=o>=</span><span class=s>&quot;controls&quot;</span><span class=p>&gt;</span>
+</span><span id=__span-6-61><a id=__codelineno-6-61 name=__codelineno-6-61 href=#__codelineno-6-61></a><span class=w>        </span><span class=p>&lt;</span><span class=nt>SearchBar</span><span class=w> </span><span class=na>onSearch</span><span class=o>=</span><span class=p>{</span><span class=nx>handleSearchChange</span><span class=p>}</span><span class=w> </span><span class=p>/&gt;</span>
+</span><span id=__span-6-62><a id=__codelineno-6-62 name=__codelineno-6-62 href=#__codelineno-6-62></a><span class=w>        </span><span class=p>&lt;</span><span class=nt>FilterOptions</span>
+</span><span id=__span-6-63><a id=__codelineno-6-63 name=__codelineno-6-63 href=#__codelineno-6-63></a><span class=w>          </span><span class=na>categories</span><span class=o>=</span><span class=p>{</span><span class=nx>categories</span><span class=p>}</span>
+</span><span id=__span-6-64><a id=__codelineno-6-64 name=__codelineno-6-64 href=#__codelineno-6-64></a><span class=w>          </span><span class=na>selectedCategory</span><span class=o>=</span><span class=p>{</span><span class=nx>selectedCategory</span><span class=p>}</span>
+</span><span id=__span-6-65><a id=__codelineno-6-65 name=__codelineno-6-65 href=#__codelineno-6-65></a><span class=w>          </span><span class=na>onCategoryChange</span><span class=o>=</span><span class=p>{</span><span class=nx>handleCategoryChange</span><span class=p>}</span>
+</span><span id=__span-6-66><a id=__codelineno-6-66 name=__codelineno-6-66 href=#__codelineno-6-66></a><span class=w>        </span><span class=p>/&gt;</span>
+</span><span id=__span-6-67><a id=__codelineno-6-67 name=__codelineno-6-67 href=#__codelineno-6-67></a><span class=w>      </span><span class=p>&lt;/</span><span class=nt>div</span><span class=p>&gt;</span>
+</span><span id=__span-6-68><a id=__codelineno-6-68 name=__codelineno-6-68 href=#__codelineno-6-68></a>
+</span><span id=__span-6-69><a id=__codelineno-6-69 name=__codelineno-6-69 href=#__codelineno-6-69></a><span class=w>      </span><span class=p>{</span><span class=nx>selectedItems</span><span class=p>.</span><span class=nx>size</span><span class=w> </span><span class=o>&gt;</span><span class=w> </span><span class=mf>0</span><span class=w> </span><span class=o>&amp;&amp;</span><span class=w> </span><span class=p>(</span>
+</span><span id=__span-6-70><a id=__codelineno-6-70 name=__codelineno-6-70 href=#__codelineno-6-70></a><span class=w>        </span><span class=p>&lt;</span><span class=nt>div</span><span class=w> </span><span class=na>className</span><span class=o>=</span><span class=s>&quot;selection-info&quot;</span><span class=p>&gt;</span>
+</span><span id=__span-6-71><a id=__codelineno-6-71 name=__codelineno-6-71 href=#__codelineno-6-71></a><span class=w>          </span><span class=p>&lt;</span><span class=nt>p</span><span class=p>&gt;{</span><span class=nx>selectedItems</span><span class=p>.</span><span class=nx>size</span><span class=p>}</span><span class=w> </span><span class=nx>item</span><span class=p>(</span><span class=nx>s</span><span class=p>)</span><span class=w> </span><span class=nx>selecionado</span><span class=p>(</span><span class=nx>s</span><span class=p>).&lt;/</span><span class=nt>p</span><span class=p>&gt;</span>
+</span><span id=__span-6-72><a id=__codelineno-6-72 name=__codelineno-6-72 href=#__codelineno-6-72></a><span class=w>          </span><span class=p>{</span><span class=cm>/* Poderia adicionar botões de ação para itens selecionados aqui */</span><span class=p>}</span>
+</span><span id=__span-6-73><a id=__codelineno-6-73 name=__codelineno-6-73 href=#__codelineno-6-73></a><span class=w>        </span><span class=p>&lt;/</span><span class=nt>div</span><span class=p>&gt;</span>
+</span><span id=__span-6-74><a id=__codelineno-6-74 name=__codelineno-6-74 href=#__codelineno-6-74></a><span class=w>      </span><span class=p>)}</span>
+</span><span id=__span-6-75><a id=__codelineno-6-75 name=__codelineno-6-75 href=#__codelineno-6-75></a>
+</span><span id=__span-6-76><a id=__codelineno-6-76 name=__codelineno-6-76 href=#__codelineno-6-76></a><span class=w>      </span><span class=p>&lt;</span><span class=nt>ItemList</span>
+</span><span id=__span-6-77><a id=__codelineno-6-77 name=__codelineno-6-77 href=#__codelineno-6-77></a><span class=w>        </span><span class=na>items</span><span class=o>=</span><span class=p>{</span><span class=nx>filteredItems</span><span class=p>}</span>
+</span><span id=__span-6-78><a id=__codelineno-6-78 name=__codelineno-6-78 href=#__codelineno-6-78></a><span class=w>        </span><span class=na>selectedItems</span><span class=o>=</span><span class=p>{</span><span class=nx>selectedItems</span><span class=p>}</span>
+</span><span id=__span-6-79><a id=__codelineno-6-79 name=__codelineno-6-79 href=#__codelineno-6-79></a><span class=w>        </span><span class=na>onItemSelect</span><span class=o>=</span><span class=p>{</span><span class=nx>handleItemSelect</span><span class=p>}</span>
+</span><span id=__span-6-80><a id=__codelineno-6-80 name=__codelineno-6-80 href=#__codelineno-6-80></a><span class=w>      </span><span class=p>/&gt;</span>
+</span><span id=__span-6-81><a id=__codelineno-6-81 name=__codelineno-6-81 href=#__codelineno-6-81></a><span class=w>    </span><span class=p>&lt;/</span><span class=nt>div</span><span class=p>&gt;</span>
+</span><span id=__span-6-82><a id=__codelineno-6-82 name=__codelineno-6-82 href=#__codelineno-6-82></a><span class=w>  </span><span class=p>);</span>
+</span><span id=__span-6-83><a id=__codelineno-6-83 name=__codelineno-6-83 href=#__codelineno-6-83></a><span class=p>}</span>
+</span><span id=__span-6-84><a id=__codelineno-6-84 name=__codelineno-6-84 href=#__codelineno-6-84></a>
+</span><span id=__span-6-85><a id=__codelineno-6-85 name=__codelineno-6-85 href=#__codelineno-6-85></a>
+</span><span id=__span-6-86><a id=__codelineno-6-86 name=__codelineno-6-86 href=#__codelineno-6-86></a><span class=k>export</span><span class=w> </span><span class=k>default</span><span class=w> </span><span class=nx>App</span><span class=p>;</span>
+</span></code></pre></div> <p>Este componente é responsável por:</p> <ul> <li>Gerenciar o estado geral da aplicação: Ele controla quais itens são buscados da API, quais categorias estão disponíveis, o termo de busca atual, a categoria selecionada para filtro e quais itens estão selecionados pelo usuário.</li> <li>Buscar dados iniciais: Ao ser montado, ele busca a lista de itens e categorias da API (simulada pelo json-server).</li> <li>Orquestrar os componentes filhos: Ele renderiza e passa dados e funções para os componentes SearchBar, FilterOptions e ItemList.</li> <li>Lidar com a lógica de filtragem e seleção: Ele calcula quais itens devem ser exibidos com base nos filtros e na busca, e gerencia a lista de itens selecionados.</li> </ul> <h4 id=componente-de-busca><strong>Componente de Busca:</strong><a class=headerlink href=#componente-de-busca title="Permanent link">&para;</a></h4> <p>Um input simples para o usuário digitar o termo de busca.</p> <div class="language-jsx highlight"><pre><span></span><code><span id=__span-7-1><a id=__codelineno-7-1 name=__codelineno-7-1 href=#__codelineno-7-1></a><span class=c1>// src/components/SearchBar.jsx</span>
+</span><span id=__span-7-2><a id=__codelineno-7-2 name=__codelineno-7-2 href=#__codelineno-7-2></a><span class=k>import</span><span class=w> </span><span class=nx>React</span><span class=p>,</span><span class=w> </span><span class=p>{</span><span class=w> </span><span class=nx>useState</span><span class=w> </span><span class=p>}</span><span class=w> </span><span class=kr>from</span><span class=w> </span><span class=s1>&#39;react&#39;</span><span class=p>;</span>
+</span><span id=__span-7-3><a id=__codelineno-7-3 name=__codelineno-7-3 href=#__codelineno-7-3></a>
+</span><span id=__span-7-4><a id=__codelineno-7-4 name=__codelineno-7-4 href=#__codelineno-7-4></a><span class=kd>function</span><span class=w> </span><span class=nx>SearchBar</span><span class=p>({</span><span class=w> </span><span class=nx>onSearch</span><span class=w> </span><span class=p>})</span><span class=w> </span><span class=p>{</span>
+</span><span id=__span-7-5><a id=__codelineno-7-5 name=__codelineno-7-5 href=#__codelineno-7-5></a><span class=w>  </span><span class=kd>const</span><span class=w> </span><span class=p>[</span><span class=nx>inputValue</span><span class=p>,</span><span class=w> </span><span class=nx>setInputValue</span><span class=p>]</span><span class=w> </span><span class=o>=</span><span class=w> </span><span class=nx>useState</span><span class=p>(</span><span class=s1>&#39;&#39;</span><span class=p>);</span>
+</span><span id=__span-7-6><a id=__codelineno-7-6 name=__codelineno-7-6 href=#__codelineno-7-6></a>
+</span><span id=__span-7-7><a id=__codelineno-7-7 name=__codelineno-7-7 href=#__codelineno-7-7></a><span class=w>  </span><span class=kd>const</span><span class=w> </span><span class=nx>handleChange</span><span class=w> </span><span class=o>=</span><span class=w> </span><span class=p>(</span><span class=nx>event</span><span class=p>)</span><span class=w> </span><span class=p>=&gt;</span><span class=w> </span><span class=p>{</span>
+</span><span id=__span-7-8><a id=__codelineno-7-8 name=__codelineno-7-8 href=#__codelineno-7-8></a><span class=w>    </span><span class=nx>setInputValue</span><span class=p>(</span><span class=nx>event</span><span class=p>.</span><span class=nx>target</span><span class=p>.</span><span class=nx>value</span><span class=p>);</span>
+</span><span id=__span-7-9><a id=__codelineno-7-9 name=__codelineno-7-9 href=#__codelineno-7-9></a><span class=w>    </span><span class=nx>onSearch</span><span class=p>(</span><span class=nx>event</span><span class=p>.</span><span class=nx>target</span><span class=p>.</span><span class=nx>value</span><span class=p>);</span><span class=w> </span><span class=c1>// Chama onSearch em cada mudança</span>
+</span><span id=__span-7-10><a id=__codelineno-7-10 name=__codelineno-7-10 href=#__codelineno-7-10></a><span class=w>  </span><span class=p>};</span>
+</span><span id=__span-7-11><a id=__codelineno-7-11 name=__codelineno-7-11 href=#__codelineno-7-11></a>
+</span><span id=__span-7-12><a id=__codelineno-7-12 name=__codelineno-7-12 href=#__codelineno-7-12></a><span class=w>  </span><span class=k>return</span><span class=w> </span><span class=p>(</span>
+</span><span id=__span-7-13><a id=__codelineno-7-13 name=__codelineno-7-13 href=#__codelineno-7-13></a><span class=w>    </span><span class=p>&lt;</span><span class=nt>div</span><span class=w> </span><span class=na>className</span><span class=o>=</span><span class=s>&quot;search-bar&quot;</span><span class=p>&gt;</span>
+</span><span id=__span-7-14><a id=__codelineno-7-14 name=__codelineno-7-14 href=#__codelineno-7-14></a><span class=w>      </span><span class=p>&lt;</span><span class=nt>input</span>
+</span><span id=__span-7-15><a id=__codelineno-7-15 name=__codelineno-7-15 href=#__codelineno-7-15></a><span class=w>        </span><span class=na>type</span><span class=o>=</span><span class=s>&quot;text&quot;</span>
+</span><span id=__span-7-16><a id=__codelineno-7-16 name=__codelineno-7-16 href=#__codelineno-7-16></a><span class=w>        </span><span class=na>placeholder</span><span class=o>=</span><span class=s>&quot;Buscar itens...&quot;</span>
+</span><span id=__span-7-17><a id=__codelineno-7-17 name=__codelineno-7-17 href=#__codelineno-7-17></a><span class=w>        </span><span class=na>value</span><span class=o>=</span><span class=p>{</span><span class=nx>inputValue</span><span class=p>}</span>
+</span><span id=__span-7-18><a id=__codelineno-7-18 name=__codelineno-7-18 href=#__codelineno-7-18></a><span class=w>        </span><span class=na>onChange</span><span class=o>=</span><span class=p>{</span><span class=nx>handleChange</span><span class=p>}</span>
+</span><span id=__span-7-19><a id=__codelineno-7-19 name=__codelineno-7-19 href=#__codelineno-7-19></a><span class=w>      </span><span class=p>/&gt;</span>
+</span><span id=__span-7-20><a id=__codelineno-7-20 name=__codelineno-7-20 href=#__codelineno-7-20></a><span class=w>    </span><span class=p>&lt;/</span><span class=nt>div</span><span class=p>&gt;</span>
+</span><span id=__span-7-21><a id=__codelineno-7-21 name=__codelineno-7-21 href=#__codelineno-7-21></a><span class=w>  </span><span class=p>);</span>
+</span><span id=__span-7-22><a id=__codelineno-7-22 name=__codelineno-7-22 href=#__codelineno-7-22></a><span class=p>}</span>
+</span><span id=__span-7-23><a id=__codelineno-7-23 name=__codelineno-7-23 href=#__codelineno-7-23></a>
+</span><span id=__span-7-24><a id=__codelineno-7-24 name=__codelineno-7-24 href=#__codelineno-7-24></a><span class=k>export</span><span class=w> </span><span class=k>default</span><span class=w> </span><span class=nx>SearchBar</span><span class=p>;</span>
+</span></code></pre></div> <h4 id=componente-de-filtros><strong>Componente de Filtros</strong><a class=headerlink href=#componente-de-filtros title="Permanent link">&para;</a></h4> <p>Um select (ou botões/checkboxes) para filtrar por categoria.</p> <div class="language-jsx highlight"><pre><span></span><code><span id=__span-8-1><a id=__codelineno-8-1 name=__codelineno-8-1 href=#__codelineno-8-1></a><span class=c1>// src/components/FilterOptions.jsx</span>
+</span><span id=__span-8-2><a id=__codelineno-8-2 name=__codelineno-8-2 href=#__codelineno-8-2></a><span class=k>import</span><span class=w> </span><span class=nx>React</span><span class=w> </span><span class=kr>from</span><span class=w> </span><span class=s1>&#39;react&#39;</span><span class=p>;</span>
+</span><span id=__span-8-3><a id=__codelineno-8-3 name=__codelineno-8-3 href=#__codelineno-8-3></a>
+</span><span id=__span-8-4><a id=__codelineno-8-4 name=__codelineno-8-4 href=#__codelineno-8-4></a><span class=kd>function</span><span class=w> </span><span class=nx>FilterOptions</span><span class=p>({</span><span class=w> </span><span class=nx>categories</span><span class=p>,</span><span class=w> </span><span class=nx>selectedCategory</span><span class=p>,</span><span class=w> </span><span class=nx>onCategoryChange</span><span class=w> </span><span class=p>})</span><span class=w> </span><span class=p>{</span>
+</span><span id=__span-8-5><a id=__codelineno-8-5 name=__codelineno-8-5 href=#__codelineno-8-5></a><span class=w>  </span><span class=k>return</span><span class=w> </span><span class=p>(</span>
+</span><span id=__span-8-6><a id=__codelineno-8-6 name=__codelineno-8-6 href=#__codelineno-8-6></a><span class=w>    </span><span class=p>&lt;</span><span class=nt>div</span><span class=w> </span><span class=na>className</span><span class=o>=</span><span class=s>&quot;filter-options&quot;</span><span class=p>&gt;</span>
+</span><span id=__span-8-7><a id=__codelineno-8-7 name=__codelineno-8-7 href=#__codelineno-8-7></a><span class=w>      </span><span class=p>&lt;</span><span class=nt>label</span><span class=w> </span><span class=na>htmlFor</span><span class=o>=</span><span class=s>&quot;category-select&quot;</span><span class=p>&gt;</span><span class=nx>Filtrar</span><span class=w> </span><span class=nx>por</span><span class=w> </span><span class=nx>Categoria</span><span class=o>:</span><span class=w> </span><span class=p>&lt;/</span><span class=nt>label</span><span class=p>&gt;</span>
+</span><span id=__span-8-8><a id=__codelineno-8-8 name=__codelineno-8-8 href=#__codelineno-8-8></a><span class=w>      </span><span class=p>&lt;</span><span class=nt>select</span>
+</span><span id=__span-8-9><a id=__codelineno-8-9 name=__codelineno-8-9 href=#__codelineno-8-9></a><span class=w>        </span><span class=na>id</span><span class=o>=</span><span class=s>&quot;category-select&quot;</span>
+</span><span id=__span-8-10><a id=__codelineno-8-10 name=__codelineno-8-10 href=#__codelineno-8-10></a><span class=w>        </span><span class=na>value</span><span class=o>=</span><span class=p>{</span><span class=nx>selectedCategory</span><span class=p>}</span>
+</span><span id=__span-8-11><a id=__codelineno-8-11 name=__codelineno-8-11 href=#__codelineno-8-11></a><span class=w>        </span><span class=na>onChange</span><span class=o>=</span><span class=p>{(</span><span class=nx>e</span><span class=p>)</span><span class=w> </span><span class=p>=&gt;</span><span class=w> </span><span class=nx>onCategoryChange</span><span class=p>(</span><span class=nx>e</span><span class=p>.</span><span class=nx>target</span><span class=p>.</span><span class=nx>value</span><span class=p>)}</span>
+</span><span id=__span-8-12><a id=__codelineno-8-12 name=__codelineno-8-12 href=#__codelineno-8-12></a><span class=w>      </span><span class=p>&gt;</span>
+</span><span id=__span-8-13><a id=__codelineno-8-13 name=__codelineno-8-13 href=#__codelineno-8-13></a><span class=w>        </span><span class=p>&lt;</span><span class=nt>option</span><span class=w> </span><span class=na>value</span><span class=o>=</span><span class=s>&quot;&quot;</span><span class=p>&gt;</span><span class=nx>Todas</span><span class=p>&lt;/</span><span class=nt>option</span><span class=p>&gt;</span>
+</span><span id=__span-8-14><a id=__codelineno-8-14 name=__codelineno-8-14 href=#__codelineno-8-14></a><span class=w>        </span><span class=p>{</span><span class=nx>categories</span><span class=p>.</span><span class=nx>map</span><span class=p>(</span><span class=nx>category</span><span class=w> </span><span class=p>=&gt;</span><span class=w> </span><span class=p>(</span>
+</span><span id=__span-8-15><a id=__codelineno-8-15 name=__codelineno-8-15 href=#__codelineno-8-15></a><span class=w>          </span><span class=p>&lt;</span><span class=nt>option</span><span class=w> </span><span class=na>key</span><span class=o>=</span><span class=p>{</span><span class=nx>category</span><span class=p>.</span><span class=nx>id</span><span class=w> </span><span class=o>||</span><span class=w> </span><span class=nx>category</span><span class=p>.</span><span class=nx>name</span><span class=p>}</span><span class=w> </span><span class=na>value</span><span class=o>=</span><span class=p>{</span><span class=nx>category</span><span class=p>.</span><span class=nx>name</span><span class=p>}&gt;</span>
+</span><span id=__span-8-16><a id=__codelineno-8-16 name=__codelineno-8-16 href=#__codelineno-8-16></a><span class=w>            </span><span class=p>{</span><span class=nx>category</span><span class=p>.</span><span class=nx>name</span><span class=p>}</span>
+</span><span id=__span-8-17><a id=__codelineno-8-17 name=__codelineno-8-17 href=#__codelineno-8-17></a><span class=w>          </span><span class=p>&lt;/</span><span class=nt>option</span><span class=p>&gt;</span>
+</span><span id=__span-8-18><a id=__codelineno-8-18 name=__codelineno-8-18 href=#__codelineno-8-18></a><span class=w>        </span><span class=p>))}</span>
+</span><span id=__span-8-19><a id=__codelineno-8-19 name=__codelineno-8-19 href=#__codelineno-8-19></a><span class=w>      </span><span class=p>&lt;/</span><span class=nt>select</span><span class=p>&gt;</span>
+</span><span id=__span-8-20><a id=__codelineno-8-20 name=__codelineno-8-20 href=#__codelineno-8-20></a><span class=w>    </span><span class=p>&lt;/</span><span class=nt>div</span><span class=p>&gt;</span>
+</span><span id=__span-8-21><a id=__codelineno-8-21 name=__codelineno-8-21 href=#__codelineno-8-21></a><span class=w>  </span><span class=p>);</span>
+</span><span id=__span-8-22><a id=__codelineno-8-22 name=__codelineno-8-22 href=#__codelineno-8-22></a><span class=p>}</span>
+</span><span id=__span-8-23><a id=__codelineno-8-23 name=__codelineno-8-23 href=#__codelineno-8-23></a>
+</span><span id=__span-8-24><a id=__codelineno-8-24 name=__codelineno-8-24 href=#__codelineno-8-24></a><span class=k>export</span><span class=w> </span><span class=k>default</span><span class=w> </span><span class=nx>FilterOptions</span><span class=p>;</span>
+</span></code></pre></div> <h4 id=componente-de-lista-de-itens-srccomponentsitemlistjsx>Componente de Lista de Itens (src/components/ItemList.jsx):<a class=headerlink href=#componente-de-lista-de-itens-srccomponentsitemlistjsx title="Permanent link">&para;</a></h4> <p>Renderiza a lista de componentes Item.</p> <div class="language-jsx highlight"><pre><span></span><code><span id=__span-9-1><a id=__codelineno-9-1 name=__codelineno-9-1 href=#__codelineno-9-1></a><span class=c1>// src/components/ItemList.jsx</span>
+</span><span id=__span-9-2><a id=__codelineno-9-2 name=__codelineno-9-2 href=#__codelineno-9-2></a><span class=k>import</span><span class=w> </span><span class=nx>React</span><span class=w> </span><span class=kr>from</span><span class=w> </span><span class=s1>&#39;react&#39;</span><span class=p>;</span>
+</span><span id=__span-9-3><a id=__codelineno-9-3 name=__codelineno-9-3 href=#__codelineno-9-3></a><span class=k>import</span><span class=w> </span><span class=nx>Item</span><span class=w> </span><span class=kr>from</span><span class=w> </span><span class=s1>&#39;./Item&#39;</span><span class=p>;</span>
+</span><span id=__span-9-4><a id=__codelineno-9-4 name=__codelineno-9-4 href=#__codelineno-9-4></a>
+</span><span id=__span-9-5><a id=__codelineno-9-5 name=__codelineno-9-5 href=#__codelineno-9-5></a><span class=kd>function</span><span class=w> </span><span class=nx>ItemList</span><span class=p>({</span><span class=w> </span><span class=nx>items</span><span class=p>,</span><span class=w> </span><span class=nx>selectedItems</span><span class=p>,</span><span class=w> </span><span class=nx>onItemSelect</span><span class=w> </span><span class=p>})</span><span class=w> </span><span class=p>{</span>
+</span><span id=__span-9-6><a id=__codelineno-9-6 name=__codelineno-9-6 href=#__codelineno-9-6></a><span class=w>  </span><span class=k>if</span><span class=w> </span><span class=p>(</span><span class=nx>items</span><span class=p>.</span><span class=nx>length</span><span class=w> </span><span class=o>===</span><span class=w> </span><span class=mf>0</span><span class=p>)</span><span class=w> </span><span class=p>{</span>
+</span><span id=__span-9-7><a id=__codelineno-9-7 name=__codelineno-9-7 href=#__codelineno-9-7></a><span class=w>    </span><span class=k>return</span><span class=w> </span><span class=p>&lt;</span><span class=nt>p</span><span class=p>&gt;</span><span class=nx>Nenhum</span><span class=w> </span><span class=nx>item</span><span class=w> </span><span class=nx>encontrado</span><span class=p>.&lt;/</span><span class=nt>p</span><span class=p>&gt;;</span>
+</span><span id=__span-9-8><a id=__codelineno-9-8 name=__codelineno-9-8 href=#__codelineno-9-8></a><span class=w>  </span><span class=p>}</span>
+</span><span id=__span-9-9><a id=__codelineno-9-9 name=__codelineno-9-9 href=#__codelineno-9-9></a>
+</span><span id=__span-9-10><a id=__codelineno-9-10 name=__codelineno-9-10 href=#__codelineno-9-10></a><span class=w>  </span><span class=k>return</span><span class=w> </span><span class=p>(</span>
+</span><span id=__span-9-11><a id=__codelineno-9-11 name=__codelineno-9-11 href=#__codelineno-9-11></a><span class=w>    </span><span class=p>&lt;</span><span class=nt>ul</span><span class=w> </span><span class=na>className</span><span class=o>=</span><span class=s>&quot;item-list&quot;</span><span class=p>&gt;</span>
+</span><span id=__span-9-12><a id=__codelineno-9-12 name=__codelineno-9-12 href=#__codelineno-9-12></a><span class=w>      </span><span class=p>{</span><span class=nx>items</span><span class=p>.</span><span class=nx>map</span><span class=p>(</span><span class=nx>item</span><span class=w> </span><span class=p>=&gt;</span><span class=w> </span><span class=p>(</span>
+</span><span id=__span-9-13><a id=__codelineno-9-13 name=__codelineno-9-13 href=#__codelineno-9-13></a><span class=w>        </span><span class=p>&lt;</span><span class=nt>Item</span>
+</span><span id=__span-9-14><a id=__codelineno-9-14 name=__codelineno-9-14 href=#__codelineno-9-14></a><span class=w>          </span><span class=na>key</span><span class=o>=</span><span class=p>{</span><span class=nx>item</span><span class=p>.</span><span class=nx>id</span><span class=p>}</span>
+</span><span id=__span-9-15><a id=__codelineno-9-15 name=__codelineno-9-15 href=#__codelineno-9-15></a><span class=w>          </span><span class=na>item</span><span class=o>=</span><span class=p>{</span><span class=nx>item</span><span class=p>}</span>
+</span><span id=__span-9-16><a id=__codelineno-9-16 name=__codelineno-9-16 href=#__codelineno-9-16></a><span class=w>          </span><span class=na>isSelected</span><span class=o>=</span><span class=p>{</span><span class=nx>selectedItems</span><span class=p>.</span><span class=nx>has</span><span class=p>(</span><span class=nx>item</span><span class=p>.</span><span class=nx>id</span><span class=p>)}</span>
+</span><span id=__span-9-17><a id=__codelineno-9-17 name=__codelineno-9-17 href=#__codelineno-9-17></a><span class=w>          </span><span class=na>onSelect</span><span class=o>=</span><span class=p>{()</span><span class=w> </span><span class=p>=&gt;</span><span class=w> </span><span class=nx>onItemSelect</span><span class=p>(</span><span class=nx>item</span><span class=p>.</span><span class=nx>id</span><span class=p>)}</span>
+</span><span id=__span-9-18><a id=__codelineno-9-18 name=__codelineno-9-18 href=#__codelineno-9-18></a><span class=w>        </span><span class=p>/&gt;</span>
+</span><span id=__span-9-19><a id=__codelineno-9-19 name=__codelineno-9-19 href=#__codelineno-9-19></a><span class=w>      </span><span class=p>))}</span>
+</span><span id=__span-9-20><a id=__codelineno-9-20 name=__codelineno-9-20 href=#__codelineno-9-20></a><span class=w>    </span><span class=p>&lt;/</span><span class=nt>ul</span><span class=p>&gt;</span>
+</span><span id=__span-9-21><a id=__codelineno-9-21 name=__codelineno-9-21 href=#__codelineno-9-21></a><span class=w>  </span><span class=p>);</span>
+</span><span id=__span-9-22><a id=__codelineno-9-22 name=__codelineno-9-22 href=#__codelineno-9-22></a><span class=p>}</span>
+</span><span id=__span-9-23><a id=__codelineno-9-23 name=__codelineno-9-23 href=#__codelineno-9-23></a>
+</span><span id=__span-9-24><a id=__codelineno-9-24 name=__codelineno-9-24 href=#__codelineno-9-24></a><span class=k>export</span><span class=w> </span><span class=k>default</span><span class=w> </span><span class=nx>ItemList</span><span class=p>;</span>
+</span></code></pre></div> <ul> <li>O componente FilterOptions é um elemento de UI reutilizável para filtragem baseada em categorias.</li> <li>Ele recebe a lista de categories disponíveis e a selectedCategory como props para exibir o estado atual.</li> <li>Quando o usuário altera a seleção no menu suspenso, ele chama a função onCategoryChange (também passada como prop), permitindo que um componente pai (como App.jsx) atualize o estado da aplicação e filtre novamente os itens de acordo.</li> <li>Inclui uma opção padrão "Todas" para limpar o filtro de categoria.</li> </ul> <h4 id=componente-de-item-srccomponentsitemjsx>Componente de Item (src/components/Item.jsx):<a class=headerlink href=#componente-de-item-srccomponentsitemjsx title="Permanent link">&para;</a></h4> <p>Exibe as informações de um único item e lida com sua seleção.</p> <div class="language-jsx highlight"><pre><span></span><code><span id=__span-10-1><a id=__codelineno-10-1 name=__codelineno-10-1 href=#__codelineno-10-1></a><span class=c1>// src/components/Item.jsx</span>
+</span><span id=__span-10-2><a id=__codelineno-10-2 name=__codelineno-10-2 href=#__codelineno-10-2></a><span class=k>import</span><span class=w> </span><span class=nx>React</span><span class=w> </span><span class=kr>from</span><span class=w> </span><span class=s1>&#39;react&#39;</span><span class=p>;</span>
+</span><span id=__span-10-3><a id=__codelineno-10-3 name=__codelineno-10-3 href=#__codelineno-10-3></a>
+</span><span id=__span-10-4><a id=__codelineno-10-4 name=__codelineno-10-4 href=#__codelineno-10-4></a><span class=kd>function</span><span class=w> </span><span class=nx>Item</span><span class=p>({</span><span class=w> </span><span class=nx>item</span><span class=p>,</span><span class=w> </span><span class=nx>isSelected</span><span class=p>,</span><span class=w> </span><span class=nx>onSelect</span><span class=w> </span><span class=p>})</span><span class=w> </span><span class=p>{</span>
+</span><span id=__span-10-5><a id=__codelineno-10-5 name=__codelineno-10-5 href=#__codelineno-10-5></a><span class=w>  </span><span class=kd>const</span><span class=w> </span><span class=nx>itemStyle</span><span class=w> </span><span class=o>=</span><span class=w> </span><span class=p>{</span>
+</span><span id=__span-10-6><a id=__codelineno-10-6 name=__codelineno-10-6 href=#__codelineno-10-6></a><span class=w>    </span><span class=nx>border</span><span class=o>:</span><span class=w> </span><span class=s1>&#39;1px solid #ccc&#39;</span><span class=p>,</span>
+</span><span id=__span-10-7><a id=__codelineno-10-7 name=__codelineno-10-7 href=#__codelineno-10-7></a><span class=w>    </span><span class=nx>padding</span><span class=o>:</span><span class=w> </span><span class=s1>&#39;10px&#39;</span><span class=p>,</span>
+</span><span id=__span-10-8><a id=__codelineno-10-8 name=__codelineno-10-8 href=#__codelineno-10-8></a><span class=w>    </span><span class=nx>margin</span><span class=o>:</span><span class=w> </span><span class=s1>&#39;5px 0&#39;</span><span class=p>,</span>
+</span><span id=__span-10-9><a id=__codelineno-10-9 name=__codelineno-10-9 href=#__codelineno-10-9></a><span class=w>    </span><span class=nx>borderRadius</span><span class=o>:</span><span class=w> </span><span class=s1>&#39;4px&#39;</span><span class=p>,</span>
+</span><span id=__span-10-10><a id=__codelineno-10-10 name=__codelineno-10-10 href=#__codelineno-10-10></a><span class=w>    </span><span class=nx>backgroundColor</span><span class=o>:</span><span class=w> </span><span class=nx>isSelected</span><span class=w> </span><span class=o>?</span><span class=w> </span><span class=s1>&#39;#e0f7fa&#39;</span><span class=w> </span><span class=o>:</span><span class=w> </span><span class=s1>&#39;#fff&#39;</span><span class=p>,</span><span class=w> </span><span class=c1>// Destaque visual para selecionado</span>
+</span><span id=__span-10-11><a id=__codelineno-10-11 name=__codelineno-10-11 href=#__codelineno-10-11></a><span class=w>    </span><span class=nx>cursor</span><span class=o>:</span><span class=w> </span><span class=s1>&#39;pointer&#39;</span><span class=p>,</span>
+</span><span id=__span-10-12><a id=__codelineno-10-12 name=__codelineno-10-12 href=#__codelineno-10-12></a><span class=w>  </span><span class=p>};</span>
+</span><span id=__span-10-13><a id=__codelineno-10-13 name=__codelineno-10-13 href=#__codelineno-10-13></a>
+</span><span id=__span-10-14><a id=__codelineno-10-14 name=__codelineno-10-14 href=#__codelineno-10-14></a><span class=w>  </span><span class=k>return</span><span class=w> </span><span class=p>(</span>
+</span><span id=__span-10-15><a id=__codelineno-10-15 name=__codelineno-10-15 href=#__codelineno-10-15></a><span class=w>    </span><span class=p>&lt;</span><span class=nt>li</span><span class=w> </span><span class=na>style</span><span class=o>=</span><span class=p>{</span><span class=nx>itemStyle</span><span class=p>}</span><span class=w> </span><span class=na>onClick</span><span class=o>=</span><span class=p>{</span><span class=nx>onSelect</span><span class=p>}&gt;</span>
+</span><span id=__span-10-16><a id=__codelineno-10-16 name=__codelineno-10-16 href=#__codelineno-10-16></a><span class=w>      </span><span class=p>&lt;</span><span class=nt>h3</span><span class=p>&gt;{</span><span class=nx>item</span><span class=p>.</span><span class=nx>name</span><span class=p>}&lt;/</span><span class=nt>h3</span><span class=p>&gt;</span>
+</span><span id=__span-10-17><a id=__codelineno-10-17 name=__codelineno-10-17 href=#__codelineno-10-17></a><span class=w>      </span><span class=p>&lt;</span><span class=nt>p</span><span class=p>&gt;</span><span class=nx>Categoria</span><span class=o>:</span><span class=w> </span><span class=p>{</span><span class=nx>item</span><span class=p>.</span><span class=nx>category</span><span class=p>}&lt;/</span><span class=nt>p</span><span class=p>&gt;</span>
+</span><span id=__span-10-18><a id=__codelineno-10-18 name=__codelineno-10-18 href=#__codelineno-10-18></a><span class=w>      </span><span class=p>&lt;</span><span class=nt>p</span><span class=p>&gt;</span><span class=nx>Preço</span><span class=o>:</span><span class=w> </span><span class=nx>R$</span><span class=w> </span><span class=p>{</span><span class=nx>item</span><span class=p>.</span><span class=nx>price</span><span class=p>.</span><span class=nx>toFixed</span><span class=p>(</span><span class=mf>2</span><span class=p>)}&lt;/</span><span class=nt>p</span><span class=p>&gt;</span>
+</span><span id=__span-10-19><a id=__codelineno-10-19 name=__codelineno-10-19 href=#__codelineno-10-19></a><span class=w>      </span><span class=p>&lt;</span><span class=nt>p</span><span class=p>&gt;</span><span class=nx>Em</span><span class=w> </span><span class=nx>estoque</span><span class=o>:</span><span class=w> </span><span class=p>{</span><span class=nx>item</span><span class=p>.</span><span class=nx>inStock</span><span class=w> </span><span class=o>?</span><span class=w> </span><span class=s1>&#39;Sim&#39;</span><span class=w> </span><span class=o>:</span><span class=w> </span><span class=s1>&#39;Não&#39;</span><span class=p>}&lt;/</span><span class=nt>p</span><span class=p>&gt;</span>
+</span><span id=__span-10-20><a id=__codelineno-10-20 name=__codelineno-10-20 href=#__codelineno-10-20></a><span class=w>      </span><span class=p>{</span><span class=nx>isSelected</span><span class=w> </span><span class=o>&amp;&amp;</span><span class=w> </span><span class=p>&lt;</span><span class=nt>p</span><span class=p>&gt;&lt;</span><span class=nt>strong</span><span class=p>&gt;</span><span class=nx>Selecionado</span><span class=p>&lt;/</span><span class=nt>strong</span><span class=p>&gt;&lt;/</span><span class=nt>p</span><span class=p>&gt;}</span>
+</span><span id=__span-10-21><a id=__codelineno-10-21 name=__codelineno-10-21 href=#__codelineno-10-21></a><span class=w>    </span><span class=p>&lt;/</span><span class=nt>li</span><span class=p>&gt;</span>
+</span><span id=__span-10-22><a id=__codelineno-10-22 name=__codelineno-10-22 href=#__codelineno-10-22></a><span class=w>  </span><span class=p>);</span>
+</span><span id=__span-10-23><a id=__codelineno-10-23 name=__codelineno-10-23 href=#__codelineno-10-23></a><span class=p>}</span>
+</span><span id=__span-10-24><a id=__codelineno-10-24 name=__codelineno-10-24 href=#__codelineno-10-24></a>
+</span><span id=__span-10-25><a id=__codelineno-10-25 name=__codelineno-10-25 href=#__codelineno-10-25></a><span class=k>export</span><span class=w> </span><span class=k>default</span><span class=w> </span><span class=nx>Item</span><span class=p>;</span>
+</span></code></pre></div> <h4 id=estilos-basicos-srcappcss-ou-srcindexcss>Estilos Básicos (src/App.css ou src/index.css):<a class=headerlink href=#estilos-basicos-srcappcss-ou-srcindexcss title="Permanent link">&para;</a></h4> <p>Adicione alguns estilos para tornar a aplicação mais apresentável.</p> <div class="language-css highlight"><pre><span></span><code><span id=__span-11-1><a id=__codelineno-11-1 name=__codelineno-11-1 href=#__codelineno-11-1></a><span class=c>/* src/App.css ou src/index.css */</span>
+</span><span id=__span-11-2><a id=__codelineno-11-2 name=__codelineno-11-2 href=#__codelineno-11-2></a><span class=nt>body</span><span class=w> </span><span class=p>{</span>
+</span><span id=__span-11-3><a id=__codelineno-11-3 name=__codelineno-11-3 href=#__codelineno-11-3></a><span class=w>  </span><span class=k>font-family</span><span class=p>:</span><span class=w> </span><span class=kc>sans-serif</span><span class=p>;</span>
+</span><span id=__span-11-4><a id=__codelineno-11-4 name=__codelineno-11-4 href=#__codelineno-11-4></a><span class=w>  </span><span class=k>margin</span><span class=p>:</span><span class=w> </span><span class=mi>0</span><span class=p>;</span>
+</span><span id=__span-11-5><a id=__codelineno-11-5 name=__codelineno-11-5 href=#__codelineno-11-5></a><span class=w>  </span><span class=k>padding</span><span class=p>:</span><span class=w> </span><span class=mi>20</span><span class=kt>px</span><span class=p>;</span>
+</span><span id=__span-11-6><a id=__codelineno-11-6 name=__codelineno-11-6 href=#__codelineno-11-6></a><span class=w>  </span><span class=k>background-color</span><span class=p>:</span><span class=w> </span><span class=mh>#f4f4f4</span><span class=p>;</span>
+</span><span id=__span-11-7><a id=__codelineno-11-7 name=__codelineno-11-7 href=#__codelineno-11-7></a><span class=p>}</span>
+</span><span id=__span-11-8><a id=__codelineno-11-8 name=__codelineno-11-8 href=#__codelineno-11-8></a>
+</span><span id=__span-11-9><a id=__codelineno-11-9 name=__codelineno-11-9 href=#__codelineno-11-9></a><span class=p>.</span><span class=nc>app-container</span><span class=w> </span><span class=p>{</span>
+</span><span id=__span-11-10><a id=__codelineno-11-10 name=__codelineno-11-10 href=#__codelineno-11-10></a><span class=w>  </span><span class=k>max-width</span><span class=p>:</span><span class=w> </span><span class=mi>800</span><span class=kt>px</span><span class=p>;</span>
+</span><span id=__span-11-11><a id=__codelineno-11-11 name=__codelineno-11-11 href=#__codelineno-11-11></a><span class=w>  </span><span class=k>margin</span><span class=p>:</span><span class=w> </span><span class=mi>0</span><span class=w> </span><span class=kc>auto</span><span class=p>;</span>
+</span><span id=__span-11-12><a id=__codelineno-11-12 name=__codelineno-11-12 href=#__codelineno-11-12></a><span class=w>  </span><span class=k>background-color</span><span class=p>:</span><span class=w> </span><span class=mh>#fff</span><span class=p>;</span>
+</span><span id=__span-11-13><a id=__codelineno-11-13 name=__codelineno-11-13 href=#__codelineno-11-13></a><span class=w>  </span><span class=k>padding</span><span class=p>:</span><span class=w> </span><span class=mi>20</span><span class=kt>px</span><span class=p>;</span>
+</span><span id=__span-11-14><a id=__codelineno-11-14 name=__codelineno-11-14 href=#__codelineno-11-14></a><span class=w>  </span><span class=k>border-radius</span><span class=p>:</span><span class=w> </span><span class=mi>8</span><span class=kt>px</span><span class=p>;</span>
+</span><span id=__span-11-15><a id=__codelineno-11-15 name=__codelineno-11-15 href=#__codelineno-11-15></a><span class=w>  </span><span class=k>box-shadow</span><span class=p>:</span><span class=w> </span><span class=mi>0</span><span class=w> </span><span class=mi>0</span><span class=w> </span><span class=mi>10</span><span class=kt>px</span><span class=w> </span><span class=nb>rgba</span><span class=p>(</span><span class=mi>0</span><span class=p>,</span><span class=w> </span><span class=mi>0</span><span class=p>,</span><span class=w> </span><span class=mi>0</span><span class=p>,</span><span class=w> </span><span class=mf>0.1</span><span class=p>);</span>
+</span><span id=__span-11-16><a id=__codelineno-11-16 name=__codelineno-11-16 href=#__codelineno-11-16></a><span class=p>}</span>
+</span><span id=__span-11-17><a id=__codelineno-11-17 name=__codelineno-11-17 href=#__codelineno-11-17></a>
+</span><span id=__span-11-18><a id=__codelineno-11-18 name=__codelineno-11-18 href=#__codelineno-11-18></a><span class=p>.</span><span class=nc>controls</span><span class=w> </span><span class=p>{</span>
+</span><span id=__span-11-19><a id=__codelineno-11-19 name=__codelineno-11-19 href=#__codelineno-11-19></a><span class=w>  </span><span class=k>display</span><span class=p>:</span><span class=w> </span><span class=kc>flex</span><span class=p>;</span>
+</span><span id=__span-11-20><a id=__codelineno-11-20 name=__codelineno-11-20 href=#__codelineno-11-20></a><span class=w>  </span><span class=k>gap</span><span class=p>:</span><span class=w> </span><span class=mi>20</span><span class=kt>px</span><span class=p>;</span>
+</span><span id=__span-11-21><a id=__codelineno-11-21 name=__codelineno-11-21 href=#__codelineno-11-21></a><span class=w>  </span><span class=k>margin-bottom</span><span class=p>:</span><span class=w> </span><span class=mi>20</span><span class=kt>px</span><span class=p>;</span>
+</span><span id=__span-11-22><a id=__codelineno-11-22 name=__codelineno-11-22 href=#__codelineno-11-22></a><span class=w>  </span><span class=k>align-items</span><span class=p>:</span><span class=w> </span><span class=kc>center</span><span class=p>;</span>
+</span><span id=__span-11-23><a id=__codelineno-11-23 name=__codelineno-11-23 href=#__codelineno-11-23></a><span class=p>}</span>
+</span><span id=__span-11-24><a id=__codelineno-11-24 name=__codelineno-11-24 href=#__codelineno-11-24></a>
+</span><span id=__span-11-25><a id=__codelineno-11-25 name=__codelineno-11-25 href=#__codelineno-11-25></a><span class=p>.</span><span class=nc>search-bar</span><span class=w> </span><span class=nt>input</span><span class=o>,</span>
+</span><span id=__span-11-26><a id=__codelineno-11-26 name=__codelineno-11-26 href=#__codelineno-11-26></a><span class=p>.</span><span class=nc>filter-options</span><span class=w> </span><span class=nt>select</span><span class=w> </span><span class=p>{</span>
+</span><span id=__span-11-27><a id=__codelineno-11-27 name=__codelineno-11-27 href=#__codelineno-11-27></a><span class=w>  </span><span class=k>padding</span><span class=p>:</span><span class=w> </span><span class=mi>10</span><span class=kt>px</span><span class=p>;</span>
+</span><span id=__span-11-28><a id=__codelineno-11-28 name=__codelineno-11-28 href=#__codelineno-11-28></a><span class=w>  </span><span class=k>border</span><span class=p>:</span><span class=w> </span><span class=mi>1</span><span class=kt>px</span><span class=w> </span><span class=kc>solid</span><span class=w> </span><span class=mh>#ccc</span><span class=p>;</span>
+</span><span id=__span-11-29><a id=__codelineno-11-29 name=__codelineno-11-29 href=#__codelineno-11-29></a><span class=w>  </span><span class=k>border-radius</span><span class=p>:</span><span class=w> </span><span class=mi>4</span><span class=kt>px</span><span class=p>;</span>
+</span><span id=__span-11-30><a id=__codelineno-11-30 name=__codelineno-11-30 href=#__codelineno-11-30></a><span class=w>  </span><span class=k>font-size</span><span class=p>:</span><span class=w> </span><span class=mi>1</span><span class=kt>em</span><span class=p>;</span>
+</span><span id=__span-11-31><a id=__codelineno-11-31 name=__codelineno-11-31 href=#__codelineno-11-31></a><span class=p>}</span>
+</span><span id=__span-11-32><a id=__codelineno-11-32 name=__codelineno-11-32 href=#__codelineno-11-32></a>
+</span><span id=__span-11-33><a id=__codelineno-11-33 name=__codelineno-11-33 href=#__codelineno-11-33></a><span class=p>.</span><span class=nc>search-bar</span><span class=w> </span><span class=nt>input</span><span class=w> </span><span class=p>{</span>
+</span><span id=__span-11-34><a id=__codelineno-11-34 name=__codelineno-11-34 href=#__codelineno-11-34></a><span class=w>  </span><span class=k>flex-grow</span><span class=p>:</span><span class=w> </span><span class=mi>1</span><span class=p>;</span>
+</span><span id=__span-11-35><a id=__codelineno-11-35 name=__codelineno-11-35 href=#__codelineno-11-35></a><span class=p>}</span>
+</span><span id=__span-11-36><a id=__codelineno-11-36 name=__codelineno-11-36 href=#__codelineno-11-36></a>
+</span><span id=__span-11-37><a id=__codelineno-11-37 name=__codelineno-11-37 href=#__codelineno-11-37></a><span class=p>.</span><span class=nc>item-list</span><span class=w> </span><span class=p>{</span>
+</span><span id=__span-11-38><a id=__codelineno-11-38 name=__codelineno-11-38 href=#__codelineno-11-38></a><span class=w>  </span><span class=k>list-style-type</span><span class=p>:</span><span class=w> </span><span class=kc>none</span><span class=p>;</span>
+</span><span id=__span-11-39><a id=__codelineno-11-39 name=__codelineno-11-39 href=#__codelineno-11-39></a><span class=w>  </span><span class=k>padding</span><span class=p>:</span><span class=w> </span><span class=mi>0</span><span class=p>;</span>
+</span><span id=__span-11-40><a id=__codelineno-11-40 name=__codelineno-11-40 href=#__codelineno-11-40></a><span class=p>}</span>
+</span><span id=__span-11-41><a id=__codelineno-11-41 name=__codelineno-11-41 href=#__codelineno-11-41></a>
+</span><span id=__span-11-42><a id=__codelineno-11-42 name=__codelineno-11-42 href=#__codelineno-11-42></a><span class=p>.</span><span class=nc>selection-info</span><span class=w> </span><span class=p>{</span>
+</span><span id=__span-11-43><a id=__codelineno-11-43 name=__codelineno-11-43 href=#__codelineno-11-43></a><span class=w>  </span><span class=k>background-color</span><span class=p>:</span><span class=w> </span><span class=mh>#fff3cd</span><span class=p>;</span>
+</span><span id=__span-11-44><a id=__codelineno-11-44 name=__codelineno-11-44 href=#__codelineno-11-44></a><span class=w>  </span><span class=k>border</span><span class=p>:</span><span class=w> </span><span class=mi>1</span><span class=kt>px</span><span class=w> </span><span class=kc>solid</span><span class=w> </span><span class=mh>#ffeeba</span><span class=p>;</span>
+</span><span id=__span-11-45><a id=__codelineno-11-45 name=__codelineno-11-45 href=#__codelineno-11-45></a><span class=w>  </span><span class=k>color</span><span class=p>:</span><span class=w> </span><span class=mh>#856404</span><span class=p>;</span>
+</span><span id=__span-11-46><a id=__codelineno-11-46 name=__codelineno-11-46 href=#__codelineno-11-46></a><span class=w>  </span><span class=k>padding</span><span class=p>:</span><span class=w> </span><span class=mi>10</span><span class=kt>px</span><span class=p>;</span>
+</span><span id=__span-11-47><a id=__codelineno-11-47 name=__codelineno-11-47 href=#__codelineno-11-47></a><span class=w>  </span><span class=k>margin-bottom</span><span class=p>:</span><span class=w> </span><span class=mi>15</span><span class=kt>px</span><span class=p>;</span>
+</span><span id=__span-11-48><a id=__codelineno-11-48 name=__codelineno-11-48 href=#__codelineno-11-48></a><span class=w>  </span><span class=k>border-radius</span><span class=p>:</span><span class=w> </span><span class=mi>4</span><span class=kt>px</span><span class=p>;</span>
+</span><span id=__span-11-49><a id=__codelineno-11-49 name=__codelineno-11-49 href=#__codelineno-11-49></a><span class=p>}</span>
+</span></code></pre></div> <h3 id=conceitos-de-react-demonstrados>Conceitos de React Demonstrados:<a class=headerlink href=#conceitos-de-react-demonstrados title="Permanent link">&para;</a></h3> <ul> <li>Componentização: Divisão da UI em SearchBar, FilterOptions, ItemList, Item.</li> <li>Estado (useState): Gerenciamento de searchTerm, selectedCategory, allItems, selectedItems.</li> <li>Efeitos (useEffect): Para buscar dados da API quando o componente é montado.</li> <li>Props: Passagem de dados e funções de callback entre componentes (ex: onSearch, items).</li> <li>Renderização Condicional: Exibir "Nenhum item encontrado" ou a mensagem de itens selecionados.</li> <li>Renderização de Listas (map): Para exibir os itens e as opções de categoria.</li> <li>Event Handling: onChange nos inputs/selects, onClick nos itens.</li> <li>Lifting State Up: O estado da busca, filtro e seleção é gerenciado no App.jsx e passado para os componentes filhos.</li> <li>Memoização (useMemo): Para otimizar o cálculo da lista filtrada, evitando recálculos desnecessários se as dependências (allItems, searchTerm, selectedCategory) não mudarem.</li> <li>Imutabilidade: Ao atualizar o Set de selectedItems, criamos um novo Set para garantir que o React detecte a mudança de estado corretamente.</li> </ul> <h3 id=conclusao>Conclusão:<a class=headerlink href=#conclusao title="Permanent link">&para;</a></h3> <p>Nessa aplicação, voce pode buscar itens, filtrar por categoria, selecionar itens individualmente ou em grupo, e exibir informações sobre os itens selecionados.</p> </article> </div> <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script> </div> <button type=button class="md-top md-icon" data-md-component=top hidden> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg> Back to top </button> </main> <footer class=md-footer> <div class="md-footer-meta md-typeset"> <div class="md-footer-meta__inner md-grid"> <div class=md-copyright> <div class=md-copyright__highlight> Copyright ©️ 2025, jonh-carvalho / 2025, Jonh Carvalho </div> Made with <a href=https://squidfunk.github.io/mkdocs-material/ target=_blank rel=noopener> Material for MkDocs </a> </div> </div> </div> </footer> </div> <div class=md-dialog data-md-component=dialog> <div class="md-dialog__inner md-typeset"></div> </div> <div class=md-progress data-md-component=progress role=progressbar></div> <script id=__config type=application/json>{"base": "../..", "features": ["content.code.copy", "navigation.indexes", "navigation.instant", "navigation.instant.progress", "navigation.path", "navigation.tabs", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.follow", "toc.integrate"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script> <script src=../../assets/javascripts/bundle.13a4f30d.min.js></script> </body> </html>
