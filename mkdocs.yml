@@ -83,6 +83,8 @@ theme:
     code: Roboto Mono
   icon:
     repo: fontawesome/brands/github
+    logo: simple/React
+    favicon: simple/react
   name: material
   palette:
     - media: "(prefers-color-scheme)"
